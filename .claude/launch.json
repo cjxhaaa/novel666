@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "studio-web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "studio", "run", "web"],
+      "port": 5199,
+      "url": "http://127.0.0.1:5199"
+    }
+  ]
+}

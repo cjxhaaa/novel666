@@ -1,5 +1,358 @@
 [
   {
+    "aliases": [],
+    "eraId": null,
+    "id": "tianxia",
+    "name": "九天十地",
+    "kind": "world",
+    "description": "整个世界。九天是上界，飞升的去处；十地是下界大陆群，四面环海。"
+  },
+  {
+    "id": "beihuang",
+    "name": "北荒",
+    "aliases": [],
+    "eraId": null,
+    "region": "十地",
+    "description": "故事舞台，灵气偏贫，废土和旧遗迹多。",
+    "kind": "continent",
+    "parentId": "tianxia",
+    "x": 500,
+    "y": 215,
+    "r": 165
+  },
+  {
+    "id": "zhongzhou",
+    "name": "中州",
+    "aliases": [],
+    "eraId": null,
+    "region": "十地",
+    "description": "十地中心，宗门林立，资源集中。月神教在中州方向。",
+    "kind": "continent",
+    "parentId": "tianxia",
+    "x": 500,
+    "y": 520,
+    "r": 150
+  },
+  {
+    "id": "jiutian",
+    "name": "九天",
+    "aliases": [],
+    "eraId": null,
+    "region": "上界",
+    "description": "上界，飞升的去处，前中期只作远景。",
+    "kind": "realm",
+    "parentId": "tianxia",
+    "x": 500,
+    "y": 42
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "nanjiang",
+    "name": "南疆",
+    "kind": "continent",
+    "parentId": "tianxia",
+    "x": 500,
+    "y": 818,
+    "r": 135,
+    "draft": true,
+    "description": "十地之一，在中州以南。湿热多瘴，山林深密。可以和古代藏经阁那本《瘴地行记》呼应。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "ximo",
+    "name": "西漠",
+    "kind": "continent",
+    "parentId": "tianxia",
+    "x": 215,
+    "y": 520,
+    "r": 130,
+    "draft": true,
+    "description": "十地之一，在中州以西。大漠与戈壁，风沙里埋着古城。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "dongzhou",
+    "name": "东洲",
+    "kind": "continent",
+    "parentId": "tianxia",
+    "x": 790,
+    "y": 505,
+    "r": 120,
+    "draft": true,
+    "description": "十地之一，在中州以东，东临大海。港口多，商路通海外诸洲。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "yingzhou",
+    "name": "瀛洲",
+    "kind": "continent",
+    "parentId": "tianxia",
+    "x": 905,
+    "y": 215,
+    "r": 62,
+    "draft": true,
+    "description": "十地之一，东海外的仙洲。传说多仙草灵芝。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "liuzhou",
+    "name": "流洲",
+    "kind": "continent",
+    "parentId": "tianxia",
+    "x": 925,
+    "y": 765,
+    "r": 55,
+    "draft": true,
+    "description": "十地之一，海外之洲，出产昆吾石，可炼剑。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "yanzhou",
+    "name": "炎洲",
+    "kind": "continent",
+    "parentId": "tianxia",
+    "x": 700,
+    "y": 950,
+    "r": 52,
+    "draft": true,
+    "description": "十地之一，南海外的火山之洲，火属灵气旺盛。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "fenglinzhou",
+    "name": "凤麟洲",
+    "kind": "continent",
+    "parentId": "tianxia",
+    "x": 85,
+    "y": 820,
+    "r": 55,
+    "draft": true,
+    "description": "十地之一，西海外。传说凤凰、麒麟群居。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "xuanzhou",
+    "name": "玄洲",
+    "kind": "continent",
+    "parentId": "tianxia",
+    "x": 95,
+    "y": 195,
+    "r": 58,
+    "draft": true,
+    "description": "十地之一，西北海外，终年寒雾。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "donghai",
+    "name": "东海",
+    "kind": "sea",
+    "parentId": "tianxia",
+    "x": 900,
+    "y": 470,
+    "draft": true,
+    "description": "东洲以东的大海，通瀛洲、流洲。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "nanhai",
+    "name": "南海",
+    "kind": "sea",
+    "parentId": "tianxia",
+    "x": 330,
+    "y": 950,
+    "draft": true,
+    "description": "南疆以南的大海，通炎洲。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "xihai",
+    "name": "西海",
+    "kind": "sea",
+    "parentId": "tianxia",
+    "x": 50,
+    "y": 520,
+    "draft": true,
+    "description": "西漠以西的大海，通凤麟洲、玄洲。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "shenlou",
+    "name": "蜃楼",
+    "kind": "secret",
+    "parentId": "tianxia",
+    "x": 965,
+    "y": 385,
+    "draft": true,
+    "description": "东海上时隐时现的秘境。"
+  },
+  {
+    "id": "hantiekuang",
+    "name": "北荒寒铁矿",
+    "aliases": [
+      "寒铁矿"
+    ],
+    "eraId": "modern",
+    "region": "北荒",
+    "description": "外门年终考核末五名发北荒寒铁矿服役三年；李胖子的二叔在矿上冻掉脚趾。",
+    "kind": "site",
+    "parentId": "beihuang",
+    "x": 380,
+    "y": 210
+  },
+  {
+    "id": "qingyunshan",
+    "name": "青云山",
+    "aliases": [
+      "青云宗"
+    ],
+    "eraId": null,
+    "region": "北荒",
+    "description": "青云宗从建宗起就在北荒青云山，从未搬迁。鼎盛时势力辐射中州，但宗门本身一直在北荒。现代的没落是原地衰败。",
+    "kind": "sect",
+    "parentId": "beihuang",
+    "x": 470,
+    "y": 640,
+    "r": 70
+  },
+  {
+    "id": "shijiaao",
+    "name": "石家坳",
+    "aliases": [],
+    "eraId": "ancient",
+    "region": "北荒",
+    "description": "石砚的家乡。去年兽潮石家坳替宗门守山道死七人，石砚是人情名额。",
+    "kind": "village",
+    "parentId": "beihuang",
+    "x": 405,
+    "y": 715
+  },
+  {
+    "id": "wanyaogu",
+    "name": "万妖谷",
+    "aliases": [],
+    "eraId": null,
+    "region": "北荒外缘",
+    "description": "北荒外缘的势力，暂时只留名字。",
+    "kind": "faction",
+    "parentId": "beihuang",
+    "x": 870,
+    "y": 330,
+    "r": 60
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "yueshenjiao",
+    "name": "月神教",
+    "kind": "faction",
+    "parentId": "zhongzhou",
+    "x": 650,
+    "y": 360,
+    "r": 70,
+    "description": "中州方向的神秘势力，暂时只留名字。"
+  },
+  {
+    "aliases": [],
+    "eraId": "ancient",
+    "id": "beihuang-sanjia",
+    "name": "北荒三家",
+    "kind": "clan",
+    "parentId": "beihuang",
+    "x": 590,
+    "y": 520,
+    "r": 55,
+    "description": "【古】北荒的三家势力，派使者给圣女送贺礼（第 4 章）。三家的名字还没定。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "tianxu",
+    "name": "天墟",
+    "kind": "secret",
+    "parentId": "zhongzhou",
+    "x": 300,
+    "y": 660,
+    "draft": true,
+    "description": "中州的上古秘境，按年开启。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "beihuang-feitu",
+    "name": "北荒废土",
+    "kind": "region",
+    "parentId": "beihuang",
+    "x": 240,
+    "y": 470,
+    "r": 120,
+    "draft": true,
+    "description": "北荒西部的废土，旧遗迹多（设定集写北荒“废土和旧遗迹多”，具体在哪是草案）。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "tianyanzong",
+    "name": "天衍宗",
+    "kind": "sect",
+    "parentId": "zhongzhou",
+    "x": 380,
+    "y": 400,
+    "r": 60,
+    "draft": true,
+    "description": "中州正道大宗之一。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "daxia",
+    "name": "大夏王朝",
+    "kind": "nation",
+    "parentId": "zhongzhou",
+    "x": 520,
+    "y": 600,
+    "r": 130,
+    "draft": true,
+    "description": "中州的凡人王朝。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "wanbaolou",
+    "name": "万宝楼",
+    "kind": "faction",
+    "parentId": "zhongzhou",
+    "x": 610,
+    "y": 520,
+    "r": 45,
+    "draft": true,
+    "description": "遍布十地的商会，总楼在中州。"
+  },
+  {
+    "aliases": [],
+    "eraId": null,
+    "id": "zhangdi",
+    "name": "瘴地",
+    "kind": "region",
+    "parentId": "nanjiang",
+    "x": 520,
+    "y": 560,
+    "r": 160,
+    "draft": true,
+    "description": "南疆腹地的毒瘴之地。"
+  },
+  {
     "id": "luoxingting-gu",
     "name": "落星亭",
     "aliases": [],
@@ -9,7 +362,9 @@
     "counterpartId": "luoxingting-jin",
     "region": "青云山",
     "x": 500,
-    "y": 300
+    "y": 300,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "luoxingting-jin",
@@ -23,19 +378,23 @@
     "counterpartId": "luoxingting-gu",
     "region": "青云山",
     "x": 500,
-    "y": 300
+    "y": 300,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "ziqi-lingquan",
     "name": "紫气灵泉",
     "aliases": [],
-    "description": "落星亭后庭，泉水温，紫气甜。近年新涌出来，掌门视为祥瑞，开泉大典专门庆祝。",
+    "description": "落星亭后十几步，中间隔一排矮灌木。泉水温，紫气甜。第一卷开始前一个多月才涌出紫气，掌门视为祥瑞，开泉大典专门庆祝。",
     "notes": "因果同源；蜜罐埋在这里。",
     "eraId": "ancient",
     "counterpartId": "tianshuikeng",
     "region": "青云山",
     "x": 500,
-    "y": 220
+    "y": 220,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "tianshuikeng",
@@ -50,7 +409,9 @@
     "counterpartId": "ziqi-lingquan",
     "region": "青云山",
     "x": 500,
-    "y": 220
+    "y": 220,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "cangjingge-gu",
@@ -61,7 +422,9 @@
     "counterpartId": "cangjingge-yuanzhi",
     "region": "青云山",
     "x": 500,
-    "y": 370
+    "y": 370,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "cangjingge-yuanzhi",
@@ -72,7 +435,9 @@
     "counterpartId": "cangjingge-gu",
     "region": "青云山",
     "x": 500,
-    "y": 370
+    "y": 370,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "lanyueju",
@@ -87,7 +452,9 @@
     "counterpartId": "lanyuepo",
     "region": "青云山",
     "x": 250,
-    "y": 260
+    "y": 260,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "lanyuepo",
@@ -102,7 +469,9 @@
     "counterpartId": "lanyueju",
     "region": "青云山",
     "x": 250,
-    "y": 260
+    "y": 260,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "jianfeng-yanwuping",
@@ -115,7 +484,9 @@
     "counterpartId": "yanwuchang",
     "region": "青云山",
     "x": 780,
-    "y": 460
+    "y": 460,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "yanwuchang",
@@ -129,7 +500,9 @@
     "counterpartId": "jianfeng-yanwuping",
     "region": "青云山",
     "x": 780,
-    "y": 460
+    "y": 460,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "zhentang",
@@ -141,7 +514,9 @@
     "counterpartId": "zhenfasi",
     "region": "青云山",
     "x": 660,
-    "y": 540
+    "y": 540,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "zhenfasi",
@@ -153,7 +528,9 @@
     "counterpartId": "zhentang",
     "region": "青云山",
     "x": 660,
-    "y": 540
+    "y": 540,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "baiweitang",
@@ -167,7 +544,9 @@
     "counterpartId": "waimen-shitang",
     "region": "青云山",
     "x": 370,
-    "y": 600
+    "y": 600,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "waimen-shitang",
@@ -181,7 +560,9 @@
     "counterpartId": "baiweitang",
     "region": "青云山",
     "x": 370,
-    "y": 600
+    "y": 600,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "zhifatang",
@@ -193,7 +574,9 @@
     "counterpartId": "waiwufang",
     "region": "青云山",
     "x": 610,
-    "y": 720
+    "y": 720,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "waiwufang",
@@ -207,7 +590,9 @@
     "counterpartId": "zhifatang",
     "region": "青云山",
     "x": 610,
-    "y": 720
+    "y": 720,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "zixiaodian",
@@ -218,7 +603,9 @@
     "counterpartId": "qingyundian",
     "region": "青云山",
     "x": 500,
-    "y": 80
+    "y": 80,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "qingyundian",
@@ -229,7 +616,9 @@
     "counterpartId": "zixiaodian",
     "region": "青云山",
     "x": 500,
-    "y": 80
+    "y": 80,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "shanmen-gu",
@@ -242,7 +631,9 @@
     "counterpartId": "paifang",
     "region": "青云山",
     "x": 500,
-    "y": 950
+    "y": 950,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "paifang",
@@ -253,7 +644,9 @@
     "counterpartId": "shanmen-gu",
     "region": "青云山",
     "x": 500,
-    "y": 950
+    "y": 950,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "yaowangding",
@@ -265,7 +658,9 @@
     "counterpartId": "shidun",
     "region": "青云山",
     "x": 565,
-    "y": 300
+    "y": 300,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "shidun",
@@ -277,7 +672,9 @@
     "counterpartId": "yaowangding",
     "region": "青云山",
     "x": 565,
-    "y": 300
+    "y": 300,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "zizhulin",
@@ -289,7 +686,9 @@
     "counterpartId": "kuzhuang",
     "region": "青云山",
     "x": 385,
-    "y": 320
+    "y": 320,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "kuzhuang",
@@ -301,7 +700,9 @@
     "counterpartId": "zizhulin",
     "region": "青云山",
     "x": 385,
-    "y": 320
+    "y": 320,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "fengling",
@@ -312,8 +713,10 @@
     "eraId": "ancient",
     "counterpartId": "xiutieding",
     "region": "青云山",
-    "x": 455,
-    "y": 255
+    "x": 500,
+    "y": 420,
+    "parentId": "luoxingting-gu",
+    "kind": "site"
   },
   {
     "id": "xiutieding",
@@ -324,8 +727,10 @@
     "eraId": "modern",
     "counterpartId": "fengling",
     "region": "青云山",
-    "x": 455,
-    "y": 255
+    "x": 500,
+    "y": 420,
+    "parentId": "luoxingting-jin",
+    "kind": "site"
   },
   {
     "id": "cangjingge-jin",
@@ -335,7 +740,9 @@
     "region": "青云山",
     "description": "现代藏经阁搬到主峰半山，是一间小楼；要贡献点才能进。只剩残卷、残阵、残史，很多是错的。",
     "x": 560,
-    "y": 160
+    "y": 160,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "julingzhen",
@@ -345,7 +752,9 @@
     "region": "青云山",
     "description": "现代外门聚灵阵：演武场东小院，阵心一块灵石；辰到午归内门，午到酉归外门正式弟子，其余时段杂役自己抢，寅时最冷也最好抢。",
     "x": 880,
-    "y": 470
+    "y": 470,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "tangji",
@@ -357,7 +766,9 @@
     "region": "青云山",
     "description": "唐果的铺子，朱砂一钱一包，日息三分；修阵摊由唐记代收。",
     "x": 430,
-    "y": 670
+    "y": 670,
+    "parentId": "qingyunshan",
+    "kind": "site"
   },
   {
     "id": "liudaye-shutan",
@@ -369,64 +780,8 @@
     "region": "青云山",
     "description": "刘大爷的旧书摊，林凡在这里用修好一盏灯换来泡过水的《青云通史》。",
     "x": 330,
-    "y": 720
-  },
-  {
-    "id": "hantiekuang",
-    "name": "北荒寒铁矿",
-    "aliases": [
-      "寒铁矿"
-    ],
-    "eraId": "modern",
-    "region": "北荒",
-    "description": "外门年终考核末五名发北荒寒铁矿服役三年；李胖子的二叔在矿上冻掉脚趾。"
-  },
-  {
-    "id": "qingyunshan",
-    "name": "青云山",
-    "aliases": [],
-    "eraId": null,
-    "region": "北荒",
-    "description": "青云宗从建宗起就在北荒青云山，从未搬迁。鼎盛时势力辐射中州，但宗门本身一直在北荒。现代的没落是原地衰败。"
-  },
-  {
-    "id": "shijiaao",
-    "name": "石家坳",
-    "aliases": [],
-    "eraId": "ancient",
-    "region": "北荒",
-    "description": "石砚的家乡。去年兽潮石家坳替宗门守山道死七人，石砚是人情名额。"
-  },
-  {
-    "id": "beihuang",
-    "name": "北荒",
-    "aliases": [],
-    "eraId": null,
-    "region": "十地",
-    "description": "故事舞台，灵气偏贫，废土和旧遗迹多。"
-  },
-  {
-    "id": "zhongzhou",
-    "name": "中州",
-    "aliases": [],
-    "eraId": null,
-    "region": "十地",
-    "description": "十地中心，宗门林立，资源集中。月神教在中州方向。"
-  },
-  {
-    "id": "wanyaogu",
-    "name": "万妖谷",
-    "aliases": [],
-    "eraId": null,
-    "region": "北荒外缘",
-    "description": "北荒外缘的势力，暂时只留名字。"
-  },
-  {
-    "id": "jiutian",
-    "name": "九天",
-    "aliases": [],
-    "eraId": null,
-    "region": "上界",
-    "description": "上界，飞升的去处，前中期只作远景。"
+    "y": 720,
+    "parentId": "qingyunshan",
+    "kind": "site"
   }
 ]

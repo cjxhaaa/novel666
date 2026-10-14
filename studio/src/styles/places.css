@@ -1,0 +1,314 @@
+/* 地点页：层级树、面包屑、分层地图 */
+:root {
+  --land-a: #2a2f3f;
+  --land-b: #1c2030;
+  --wave: rgba(143, 179, 255, 0.12);
+  --k-world: #e8c27a;
+  --k-continent: #d9b77a;
+  --k-sea: #6fb6e8;
+  --k-region: #9ccc65;
+  --k-nation: #f0a35a;
+  --k-sect: #e8c27a;
+  --k-clan: #f78fb3;
+  --k-faction: #e0644f;
+  --k-secret: #c792ea;
+  --k-city: #8fb3ff;
+  --k-site: #a5aecb;
+}
+:root[data-theme='paper'] {
+  --land-a: #e6d6b4;
+  --land-b: #d6c29a;
+  --wave: rgba(58, 100, 184, 0.16);
+}
+
+.crumbs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  font-family: var(--font-display);
+  font-size: 15px;
+}
+.crumb {
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: var(--text-2);
+  cursor: pointer;
+}
+.crumb:hover {
+  background: var(--hover);
+  color: var(--text);
+}
+.crumb.on {
+  color: var(--gold);
+  background: var(--gold-soft);
+}
+
+/* 层级树 */
+.place-tree {
+  padding: 10px 6px;
+}
+.tree-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: var(--text-2);
+  font-size: 13px;
+}
+.tree-row:hover {
+  background: var(--hover);
+  color: var(--text);
+}
+.tree-row.here {
+  color: var(--gold);
+}
+.tree-row.active {
+  background: var(--gold-soft);
+  color: var(--text);
+  box-shadow: inset 2px 0 0 var(--gold);
+}
+.tree-row.draft .ellipsis {
+  opacity: 0.75;
+}
+.tree-caret {
+  width: 12px;
+  display: grid;
+  place-items: center;
+  color: var(--text-3);
+}
+.kind-glyph {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-size: 11.5px;
+  color: var(--kc, var(--k-site));
+  border: 1px solid color-mix(in srgb, var(--kc, var(--k-site)) 55%, transparent);
+  background: color-mix(in srgb, var(--kc, var(--k-site)) 12%, transparent);
+}
+.kind-glyph.lg {
+  width: 26px;
+  height: 26px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.k-world { --kc: var(--k-world); }
+.k-realm { --kc: var(--k-world); }
+.k-continent { --kc: var(--k-continent); }
+.k-sea { --kc: var(--k-sea); }
+.k-region { --kc: var(--k-region); }
+.k-nation { --kc: var(--k-nation); }
+.k-sect { --kc: var(--k-sect); }
+.k-clan { --kc: var(--k-clan); }
+.k-faction { --kc: var(--k-faction); }
+.k-secret { --kc: var(--k-secret); }
+.k-city,
+.k-village { --kc: var(--k-city); }
+.k-site { --kc: var(--k-site); }
+
+.draft-tag {
+  flex: none;
+  font-size: 10px;
+  padding: 0 5px;
+  border-radius: 6px;
+  color: var(--text-3);
+  border: 1px dashed var(--line-strong);
+}
+.tag.dashed {
+  border-style: dashed;
+  opacity: 0.8;
+}
+.draft-box {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px dashed var(--line-strong);
+  font-size: 12px;
+  color: var(--text-3);
+  cursor: pointer;
+  line-height: 1.6;
+}
+.draft-box.on {
+  border-color: var(--warn);
+  color: var(--warn);
+}
+.draft-box input {
+  margin-top: 3px;
+}
+
+/* 地图通用 */
+.map-wrap {
+  margin: 0 0 20px 0 !important;
+}
+.map-ocean {
+  background: radial-gradient(circle at 50% 45%, #10223f, #070d1a 75%);
+}
+:root[data-theme='paper'] .map-ocean {
+  background: radial-gradient(circle at 50% 45%, #cfdcea, #b9c9dc 75%);
+}
+.map-empty {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 8px;
+  text-align: center;
+  pointer-events: none;
+}
+.offmap {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* 界 */
+.realm-label {
+  font-family: var(--font-display);
+  font-size: 30px;
+  letter-spacing: 0.4em;
+  fill: #f3d595;
+  opacity: 0.85;
+  pointer-events: none;
+}
+.realm-sub {
+  font-size: 13px;
+  fill: var(--text-3);
+  letter-spacing: 0.2em;
+  pointer-events: none;
+}
+.realm {
+  cursor: pointer;
+}
+.realm.sel .realm-label {
+  fill: var(--gold);
+}
+
+/* 片区 */
+.area {
+  cursor: pointer;
+}
+.area .coast {
+  fill: none;
+  stroke: #9fd0ff;
+  stroke-width: 10;
+  opacity: 0.18;
+}
+.area-shape {
+  fill: color-mix(in srgb, var(--c, var(--kc)) 14%, transparent);
+  stroke: color-mix(in srgb, var(--c, var(--kc)) 70%, transparent);
+  stroke-width: 1.6;
+  transition: fill 0.2s, stroke-width 0.2s;
+}
+.area.k-continent .area-shape {
+  fill: url(#land-fill);
+  stroke: color-mix(in srgb, var(--k-continent) 65%, transparent);
+  stroke-width: 2;
+}
+.area.k-region .area-shape,
+.area.k-nation .area-shape {
+  stroke-dasharray: 8 6;
+}
+.area:hover .area-shape {
+  stroke-width: 3;
+}
+.area.sel .area-shape {
+  stroke: var(--gold);
+  stroke-width: 3.5;
+  filter: drop-shadow(0 0 10px rgba(232, 194, 122, 0.6));
+}
+.area.draft .area-shape {
+  stroke-dasharray: 5 6;
+  opacity: 0.75;
+}
+.area.draft.k-continent .area-shape {
+  stroke-dasharray: 10 7;
+}
+.area-label {
+  font-family: var(--font-display);
+  font-size: 18px;
+  fill: var(--text);
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 5px;
+  pointer-events: none;
+}
+.area-label.big {
+  font-size: 28px;
+  letter-spacing: 0.15em;
+}
+.area.sel .area-label {
+  fill: var(--gold);
+}
+.draft-label {
+  font-size: 11px;
+  fill: var(--text-3);
+  letter-spacing: 0.2em;
+  pointer-events: none;
+}
+.grand circle {
+  fill: var(--gold);
+  opacity: 0.75;
+}
+.grand.draft circle {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1;
+  opacity: 0.6;
+}
+.grand text {
+  font-size: 7px;
+  fill: var(--text-2);
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 2px;
+  pointer-events: none;
+}
+
+/* 海 */
+.sea {
+  cursor: pointer;
+}
+.sea-label {
+  font-family: var(--font-display);
+  font-size: 24px;
+  letter-spacing: 0.6em;
+  fill: var(--k-sea);
+  opacity: 0.7;
+  font-style: italic;
+}
+.sea.draft .sea-label {
+  opacity: 0.45;
+}
+.sea.sel .sea-label {
+  fill: var(--gold);
+  opacity: 1;
+}
+
+/* 点 */
+.pin.draft .pin-core {
+  fill-opacity: 0.25;
+  stroke: currentColor;
+  stroke-dasharray: 3 2;
+}
+.pin.k-secret .pin-halo {
+  animation: secretPulse 2.6s ease-in-out infinite;
+}
+@keyframes secretPulse {
+  50% {
+    opacity: 0.6;
+  }
+}

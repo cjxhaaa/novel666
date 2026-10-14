@@ -1,6 +1,7 @@
 // 正文扫描、按章计算状态、设定守卫、写作上下文。都是纯函数，方便缓存。
 import type { Chapter, Character, Location, Project, Relation, StoryData } from '../../shared/types';
 import { resolveCodex } from './docs';
+import { pathLabel } from './places';
 
 /** 汉字、字母、数字计数（不算空白和 markdown 符号） */
 export function countChars(text: string) {
@@ -408,12 +409,14 @@ export function contextPack(data: StoryData, texts: Record<number, string>, char
     if (re && re.test(planText)) placeIds.add(l.id);
   }
   const places = locations.filter((l) => placeIds.has(l.id));
+  const locById = new Map(locations.map((l) => [l.id, l]));
   if (places.length) {
     L.push('## 相关地点');
     L.push('');
     for (const l of places) {
       const other = l.counterpartId ? locations.find((x) => x.id === l.counterpartId) : undefined;
-      L.push(`- **${l.name}**${l.eraId ? `〔${eraOf(project, l.eraId)?.name}〕` : ''}：${l.description}${other ? `　↔ 对应「${other.name}」：${other.description}` : ''}`);
+      const where = l.parentId ? `（${pathLabel(l, locById)}）` : '';
+      L.push(`- **${l.name}**${where}${l.eraId ? `〔${eraOf(project, l.eraId)?.name}〕` : ''}${l.draft ? '〔草案，未定稿〕' : ''}：${l.description}${other ? `　↔ 对应「${other.name}」：${other.description}` : ''}`);
     }
     L.push('');
   }

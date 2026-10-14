@@ -151,6 +151,22 @@ export interface Relation {
   notes?: string;
 }
 
+/** 地点的层级类型：天下 › 界 / 大陆 / 海域 › 地域 / 国度 / 宗门 / 世家 / 势力 / 秘境 › 城镇 / 村落 / 地点 */
+export type LocationKind =
+  | 'world'
+  | 'realm'
+  | 'continent'
+  | 'sea'
+  | 'region'
+  | 'nation'
+  | 'sect'
+  | 'clan'
+  | 'faction'
+  | 'secret'
+  | 'city'
+  | 'village'
+  | 'site';
+
 export interface Location {
   id: ID;
   name: string;
@@ -158,11 +174,19 @@ export interface Location {
   eraId: ID | null; // null 表示古今同名同地
   /** 古今对照：另一个时代的同一地点 */
   counterpartId?: ID;
+  /** 层级类型，缺省当作“地点” */
+  kind?: LocationKind;
+  /** 上一级地点；没有就是最顶层 */
+  parentId?: ID;
   region?: string;
   description: string;
-  /** 地图坐标，0–1000 的归一化坐标；古今对照的地点通常共用坐标 */
+  /** 在上级地图上的坐标，0–1000 的归一化坐标；古今对照的地点通常共用坐标 */
   x?: number;
   y?: number;
+  /** 在上级地图上的范围半径（大陆、地域、势力范围），0–1000 坐标系 */
+  r?: number;
+  /** 草案：还没写进设定集、待作者确认的地点 */
+  draft?: boolean;
   notes?: string;
 }
 

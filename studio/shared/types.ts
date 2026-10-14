@@ -43,6 +43,9 @@ export interface Stage {
 export interface GuardSettings {
   bannedPhrases: string[]; // 套话黑名单
   maxNotXisY: number; // “不是……是……”每章上限
+  pauseBeats: string[]; // 停顿节拍：“没说话”“过了很久”这类，多了就成了固定节拍
+  maxPauseBeats: number; // 停顿节拍每章上限（合计）
+  maxScenes: number; // 每章场景数上限（按 --- 分隔计）
   crossEraCheck: boolean; // 配角不出圈
   locationEraCheck: boolean; // 古今地名混用
   debutCheck: boolean; // 未登场先出场

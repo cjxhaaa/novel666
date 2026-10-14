@@ -137,6 +137,8 @@ export const RULES: Record<string, { name: string; desc: string }> = {
   overdue: { name: '伏笔逾期', desc: '计划收伏笔的章已经写过，伏笔还没收' },
   banned: { name: '套话', desc: '写作规范里禁用或少用的说法' },
   notXisY: { name: '“不是……是……”过多', desc: '每章上限由项目设置决定' },
+  pause: { name: '停顿节拍过多', desc: '“没说话”“过了很久”这类停顿用多了就成了固定节拍，真正要紧的沉默反而显不出来' },
+  scenes: { name: '场景太碎', desc: '一章切成太多场景，每段戏写不够' },
   status: { name: '状态不符', desc: '章节状态和正文文件对不上' },
   timeFlow: { name: '时间倒流', desc: '同一条时间线上，后一章的故事日早于前一章' },
   codexRef: { name: '设定引用失效', desc: '设定条目引用的文档小节找不到了（可能改了标题）' },
@@ -244,6 +246,30 @@ export function runGuard(data: StoryData, texts: Record<number, string>, charM: 
         title: `“不是……是……”出现约 ${nxCount} 次（上限 ${g.maxNotXisY}）`,
         snip: snippet(text, nx),
       });
+
+    const beats = (g.pauseBeats ?? []).map((p) => p.trim()).filter(Boolean);
+    if (beats.length) {
+      const re = new RegExp(beats.map(escapeRe).join('|'), 'g');
+      const found = text.match(re) ?? [];
+      if (found.length > g.maxPauseBeats) {
+        const tally = new Map<string, number>();
+        for (const f of found) tally.set(f, (tally.get(f) ?? 0) + 1);
+        issues.push({
+          id: `pause-${n}`,
+          sig: found.length,
+          rule: 'pause',
+          severity: 'info',
+          chapter: n,
+          title: `停顿节拍 ${found.length} 处（上限 ${g.maxPauseBeats}）`,
+          detail: [...tally].map(([k, v]) => `${k}×${v}`).join('、'),
+          snip: snippet(text, re),
+        });
+      }
+    }
+
+    const scenes = (text.match(/^\s*---\s*$/gm)?.length ?? 0) + 1;
+    if (g.maxScenes && scenes > g.maxScenes)
+      issues.push({ id: `scenes-${n}`, sig: scenes, rule: 'scenes', severity: 'info', chapter: n, title: `本章 ${scenes} 个场景（上限 ${g.maxScenes}）` });
   }
 
   // 时间倒流：古、今各自一条时间线，亭章两边都算。只比较起始日，蒙太奇式的跨天章节允许重叠。
@@ -460,6 +486,14 @@ export function contextPack(data: StoryData, texts: Record<number, string>, char
     L.push('## 禁用套话');
     L.push('');
     L.push(project.guard.bannedPhrases.join('、') + `；“不是……是……”每章最多 ${project.guard.maxNotXisY} 次。`);
+    L.push('');
+  }
+  const gd = project.guard;
+  if (gd.pauseBeats?.length || gd.maxScenes) {
+    L.push('## 节奏上限');
+    L.push('');
+    if (gd.pauseBeats?.length) L.push(`- 停顿节拍（${gd.pauseBeats.join('、')}）每章合计最多 ${gd.maxPauseBeats} 处，只留给有含义的沉默。`);
+    if (gd.maxScenes) L.push(`- 每章最多 ${gd.maxScenes} 个场景（--- 分隔）。`);
     L.push('');
   }
   void texts;

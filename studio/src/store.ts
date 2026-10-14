@@ -86,7 +86,7 @@ const empty: StoryData = {
     volumes: [],
     stages: [],
     chapterFilePattern: 'chapters/chap{NN}.md',
-    guard: { bannedPhrases: [], maxNotXisY: 2, crossEraCheck: true, locationEraCheck: true, debutCheck: true, overdueCheck: true },
+    guard: { bannedPhrases: [], maxNotXisY: 2, pauseBeats: [], maxPauseBeats: 3, maxScenes: 3, crossEraCheck: true, locationEraCheck: true, debutCheck: true, overdueCheck: true },
   },
   chapters: [],
   plotlines: [],

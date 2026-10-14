@@ -39,7 +39,7 @@ export function Guard() {
 
   return (
     <div className="view">
-      <ViewHead title="设定守卫" sub="扫描全部正文：跨线人物、古今地名、提前登场、伏笔逾期、时间倒流、套话。改了正文或设定会自动重新检查。" />
+      <ViewHead title="设定守卫" sub="扫描全部正文：跨线人物、古今地名、提前登场、伏笔逾期、时间倒流、套话、停顿节拍、场景数。改了正文或设定会自动重新检查。" />
       <div className="split" style={{ gridTemplateColumns: '1fr 320px', flex: 1, minHeight: 0 }}>
         <div style={{ overflow: 'auto', padding: '0 24px 24px' }}>
           <div className="rule-cards">
@@ -142,6 +142,20 @@ export function Guard() {
           <div className="row">
             <span className="muted">“不是……是……”每章上限</span>
             <NumEdit value={guard.maxNotXisY} min={0} style={{ width: 60 }} onCommit={(v) => setG((g) => void (g.maxNotXisY = v ?? 2))} />
+          </div>
+          <div>
+            <div className="faint" style={{ fontSize: 12, marginBottom: 6 }}>
+              停顿节拍（回车添加）
+            </div>
+            <ChipInput values={guard.pauseBeats ?? []} onChange={(v) => setG((g) => void (g.pauseBeats = v))} />
+          </div>
+          <div className="row">
+            <span className="muted">停顿节拍每章上限</span>
+            <NumEdit value={guard.maxPauseBeats} min={0} style={{ width: 60 }} onCommit={(v) => setG((g) => void (g.maxPauseBeats = v ?? 3))} />
+          </div>
+          <div className="row">
+            <span className="muted">每章场景上限（0 不查）</span>
+            <NumEdit value={guard.maxScenes} min={0} style={{ width: 60 }} onCommit={(v) => setG((g) => void (g.maxScenes = v ?? 3))} />
           </div>
           <div className="faint" style={{ fontSize: 12, lineHeight: 1.8 }}>
             人物和地点的识别靠“名字 + 别名”。误报多的话，去人物或地点档案里调整别名；人物勾选“可跨时代”即可不受出圈检查。

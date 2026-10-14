@@ -20,6 +20,9 @@ export function defaultProject(title = '未命名小说'): Project {
     guard: {
       bannedPhrases: ['倒吸一口凉气', '一阵青一阵白', '陷入了短暂的沉默', '翻了个白眼'],
       maxNotXisY: 2,
+      pauseBeats: ['没说话', '没有说话', '没接话', '没有回答', '没有声音', '沉默', '过了很久', '好一会儿', '过了一会儿', '停了一下', '顿了顿', '“嗯。”'],
+      maxPauseBeats: 3,
+      maxScenes: 3,
       crossEraCheck: true,
       locationEraCheck: true,
       debutCheck: true,

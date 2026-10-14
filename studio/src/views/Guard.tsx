@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useStore } from '../store';
-import { useIssues } from '../lib/derived';
+import { useAllIssues } from '../lib/derived';
 import { RULES, type Severity } from '../lib/analysis';
 import { Icon } from '../components/Icon';
 import { ChapterLink, ChipInput, NumEdit, ViewHead } from '../components/ui';
@@ -14,19 +14,28 @@ const SEV: Record<Severity, { label: string; color: string; icon: string }> = {
 
 /** 设定守卫：把“凭空创作”的风险变成一条条可检查的提醒 */
 export function Guard() {
-  const issues = useIssues();
+  const all = useAllIssues();
   const guard = useStore((s) => s.data.project.guard);
   const mutate = useStore((s) => s.mutate);
   const go = useStore((s) => s.go);
   const [rule, setRule] = useState<string>('all');
   const [sev, setSev] = useState<Severity | 'all'>('all');
+  const [showIgnored, setShowIgnored] = useState(false);
+  const issues = useMemo(() => all.filter((i) => !i.ignored), [all]);
+  const ignoredCount = all.length - issues.length;
   const byRule = useMemo(() => {
     const m: Record<string, number> = {};
     for (const i of issues) m[i.rule] = (m[i.rule] ?? 0) + 1;
     return m;
   }, [issues]);
-  const list = issues.filter((i) => (rule === 'all' || i.rule === rule) && (sev === 'all' || i.severity === sev));
+  const list = (showIgnored ? all.filter((i) => i.ignored) : issues).filter((i) => (rule === 'all' || i.rule === rule) && (sev === 'all' || i.severity === sev));
   const setG = (fn: (g: GuardSettings) => void) => mutate('project', (d) => fn(d.guard as GuardSettings), '改守卫设置');
+  const toggleIgnore = (key: string, on: boolean) =>
+    setG((g) => {
+      const set = new Set(g.ignored ?? []);
+      on ? set.add(key) : set.delete(key);
+      g.ignored = [...set].sort();
+    });
 
   return (
     <div className="view">
@@ -51,10 +60,17 @@ export function Guard() {
                 {s === 'all' ? '所有级别' : SEV[s].label} {s === 'all' ? issues.length : issues.filter((i) => i.severity === s).length}
               </span>
             ))}
+            <span className="grow" />
+            {ignoredCount > 0 && (
+              <span className="tag click" style={{ ['--c' as any]: 'var(--jade)', opacity: showIgnored ? 1 : 0.6 }} onClick={() => setShowIgnored((v) => !v)} title="看过、确认没问题的提醒">
+                <Icon name="check" size={12} /> 已确认无误 {ignoredCount}
+              </span>
+            )}
           </div>
+          {showIgnored && <div className="faint" style={{ margin: '-4px 0 10px' }}>以下是已确认无误的提醒。正文里出现次数变了，会自动重新提醒。</div>}
           <div className="col" style={{ gap: 6 }}>
             {list.map((i) => (
-              <div key={i.id} className={`issue ${i.severity}`} style={{ ['--c' as any]: SEV[i.severity].color }}>
+              <div key={i.key} className={`issue ${i.severity}`} style={{ ['--c' as any]: SEV[i.severity].color }}>
                 <Icon name={SEV[i.severity].icon} size={17} style={{ color: SEV[i.severity].color, marginTop: 2 }} />
                 <div className="col grow" style={{ gap: 3, minWidth: 0 }}>
                   <div className="row" style={{ gap: 8 }}>
@@ -82,6 +98,13 @@ export function Guard() {
                       查看设定
                     </button>
                   )}
+                  <button
+                    className="btn ghost sm"
+                    title={i.ignored ? '重新提醒这一条' : '看过了，这里没问题（比如史书引文、子时对话里提到另一边的人）'}
+                    onClick={() => toggleIgnore(i.key, !i.ignored)}
+                  >
+                    <Icon name={i.ignored ? 'undo' : 'check'} size={13} /> {i.ignored ? '取消确认' : '确认无误'}
+                  </button>
                 </div>
               </div>
             ))}

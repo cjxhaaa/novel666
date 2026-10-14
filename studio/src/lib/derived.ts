@@ -27,7 +27,14 @@ export function useMentions() {
 let gKey: unknown[] = [];
 let gVal: Issue[] = [];
 
+/** 未被确认无误的提醒 */
 export function useIssues() {
+  const all = useAllIssues();
+  return useMemo(() => all.filter((i) => !i.ignored), [all]);
+}
+
+/** 全部提醒，含已确认无误的 */
+export function useAllIssues() {
   const data = useStore((s) => s.data);
   const texts = useStore((s) => s.texts);
   const docs = useStore((s) => s.docs);

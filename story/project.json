@@ -154,6 +154,11 @@
     "crossEraCheck": true,
     "locationEraCheck": true,
     "debutCheck": true,
-    "overdueCheck": true
+    "overdueCheck": true,
+    "ignored": [
+      "cross-19-tang-guo@1",
+      "cross-5-xuan-heng@2",
+      "loc-12-waimen-shitang@1"
+    ]
   }
 }

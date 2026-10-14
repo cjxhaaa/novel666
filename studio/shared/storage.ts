@@ -92,8 +92,10 @@ export async function openProject(root: string): Promise<OpenResult> {
   for (const name of COLLECTIONS) {
     (data as any)[name] = await readJson(path.join(dir, `${name}.json`), (base as any)[name]);
   }
-  // 老文件缺字段时补默认值
-  data.project = { ...base.project, ...data.project, guard: { ...base.project.guard, ...data.project.guard } };
+  // 老文件缺字段时补默认值；保持文件里原有的字段顺序，避免保存时无意义的改动
+  const p = data.project as any;
+  for (const [k, v] of Object.entries(base.project)) if (p[k] === undefined) p[k] = v;
+  for (const [k, v] of Object.entries(base.project.guard)) if (p.guard[k] === undefined) p.guard[k] = v;
   if (initialized) {
     for (const name of COLLECTIONS) await saveCollection(root, name, (data as any)[name]);
   }

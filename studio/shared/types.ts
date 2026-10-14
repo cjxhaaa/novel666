@@ -47,6 +47,8 @@ export interface GuardSettings {
   locationEraCheck: boolean; // 古今地名混用
   debutCheck: boolean; // 未登场先出场
   overdueCheck: boolean; // 伏笔逾期
+  /** 作者确认无误的守卫提醒（Issue.key）。出现次数变了会重新提醒。 */
+  ignored?: string[];
 }
 
 export interface Project {

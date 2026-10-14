@@ -116,6 +116,10 @@ export type Severity = 'error' | 'warn' | 'info';
 
 export interface Issue {
   id: string;
+  /** 用于“确认无误”的键：id 加上出现次数，次数变了就重新提醒 */
+  key: string;
+  /** 作者已确认无误 */
+  ignored?: boolean;
   rule: string;
   severity: Severity;
   chapter?: number;
@@ -140,7 +144,7 @@ export const RULES: Record<string, { name: string; desc: string }> = {
 export function runGuard(data: StoryData, texts: Record<number, string>, charM: MentionMap, locM: MentionMap, docs: Record<string, string> = {}): Issue[] {
   const { project, chapters, characters, locations, foreshadows } = data;
   const g = project.guard;
-  const issues: Issue[] = [];
+  const issues: (Omit<Issue, 'key'> & { sig?: number })[] = [];
   const byNum = new Map(chapters.map((c) => [c.num, c]));
   const done = latestDone(chapters);
 
@@ -164,6 +168,7 @@ export function runGuard(data: StoryData, texts: Record<number, string>, charM: 
         if (!cnt) continue;
         issues.push({
           id: `cross-${n}-${c.id}`,
+          sig: cnt,
           rule: 'crossEra',
           severity: 'warn',
           chapter: n,
@@ -188,6 +193,7 @@ export function runGuard(data: StoryData, texts: Record<number, string>, charM: 
         const other = l.counterpartId ? locations.find((x) => x.id === l.counterpartId) : undefined;
         issues.push({
           id: `loc-${n}-${l.id}`,
+          sig: cnt,
           rule: 'locationEra',
           severity: 'warn',
           chapter: n,
@@ -206,6 +212,7 @@ export function runGuard(data: StoryData, texts: Record<number, string>, charM: 
         if (!cnt) continue;
         issues.push({
           id: `debut-${n}-${c.id}`,
+          sig: cnt,
           rule: 'debut',
           severity: 'warn',
           chapter: n,
@@ -221,7 +228,7 @@ export function runGuard(data: StoryData, texts: Record<number, string>, charM: 
       const re = new RegExp(escapeRe(p.trim()), 'g');
       const cnt = text.match(re)?.length ?? 0;
       if (cnt)
-        issues.push({ id: `ban-${n}-${p}`, rule: 'banned', severity: 'warn', chapter: n, title: `套话「${p}」× ${cnt}`, snip: snippet(text, re) });
+        issues.push({ id: `ban-${n}-${p}`, sig: cnt, rule: 'banned', severity: 'warn', chapter: n, title: `套话「${p}」× ${cnt}`, snip: snippet(text, re) });
     }
 
     const nx = /不是[^。！？\n“”]{1,24}?[，,]\s*(?:而|就|才|那|这)?是/g;
@@ -229,6 +236,7 @@ export function runGuard(data: StoryData, texts: Record<number, string>, charM: 
     if (nxCount > g.maxNotXisY)
       issues.push({
         id: `nx-${n}`,
+        sig: nxCount,
         rule: 'notXisY',
         severity: 'info',
         chapter: n,
@@ -301,8 +309,13 @@ export function runGuard(data: StoryData, texts: Record<number, string>, charM: 
       });
   }
 
+  const ignored = new Set(g.ignored ?? []);
+  const keyed: Issue[] = issues.map(({ sig, ...i }) => {
+    const key = sig != null ? `${i.id}@${sig}` : i.id;
+    return { ...i, key, ignored: ignored.has(key) };
+  });
   const order: Record<Severity, number> = { error: 0, warn: 1, info: 2 };
-  return issues.sort((a, b) => order[a.severity] - order[b.severity] || (a.chapter ?? 0) - (b.chapter ?? 0));
+  return keyed.sort((a, b) => order[a.severity] - order[b.severity] || (a.chapter ?? 0) - (b.chapter ?? 0));
 }
 
 // ───────────────────────── 写作上下文 ─────────────────────────

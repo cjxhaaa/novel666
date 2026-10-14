@@ -1,301 +1,637 @@
 [
   {
-    "id": "c-0",
+    "id": "x-1.1",
     "category": "总纲",
     "title": "这是一本什么书",
-    "tags": [
-      "bible 0"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "0. 这是一本什么书"
+      "heading": "1.1 这是一本什么书"
     }
   },
   {
-    "id": "c-1-1",
+    "id": "x-1.2",
+    "category": "总纲",
+    "title": "全书走向",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "1.2 全书走向"
+    }
+  },
+  {
+    "id": "x-1.3",
+    "category": "总纲",
+    "title": "远期设定（第二卷以后，正文先别碰）",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "1.3 远期设定（第二卷以后，正文先别碰）"
+    }
+  },
+  {
+    "id": "x-2.1",
     "category": "世界",
     "title": "九天十地",
-    "tags": [
-      "bible 1.1"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "1.1 九天十地"
+      "heading": "2.1 九天十地"
     }
   },
   {
-    "id": "c-1-2",
-    "category": "世界",
-    "title": "青云宗",
-    "tags": [
-      "bible 1.2"
-    ],
-    "body": "",
-    "source": {
-      "doc": "bible.md",
-      "heading": "1.2 青云宗"
-    }
-  },
-  {
-    "id": "c-1-3",
+    "id": "x-2.2",
     "category": "世界",
     "title": "时间",
-    "tags": [
-      "bible 1.3"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "1.3 时间"
+      "heading": "2.2 时间"
     }
   },
   {
-    "id": "c-5-naming",
+    "id": "x-2.3",
     "category": "世界",
-    "title": "地点命名规矩",
-    "tags": [
-      "bible 5"
-    ],
+    "title": "地点与命名",
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "5. 地点（古今对照）"
+      "heading": "2.3 地点与命名"
     }
   },
   {
-    "id": "c-2-1",
+    "id": "x-3.1",
     "category": "落星亭",
     "title": "第一卷的规则",
-    "pinned": true,
-    "tags": [
-      "bible 2.1"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "2.1 第一卷的规则"
-    }
+      "heading": "3.1 第一卷的规则"
+    },
+    "pinned": true
   },
   {
-    "id": "c-2-2",
+    "id": "x-3.2",
     "category": "落星亭",
     "title": "以后怎么放开（第二卷起）",
-    "tags": [
-      "bible 2.2"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "2.2 以后怎么放开（第二卷起）"
+      "heading": "3.2 以后怎么放开（第二卷起）"
     }
   },
   {
-    "id": "c-2-3",
+    "id": "x-3.3",
     "category": "落星亭",
     "title": "历史改动",
-    "pinned": true,
-    "tags": [
-      "bible 2.3"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "2.3 历史改动"
+      "heading": "3.3 历史改动"
+    },
+    "pinned": true
+  },
+  {
+    "id": "x-4.1",
+    "category": "宗门",
+    "title": "概述",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.1 概述"
     }
   },
   {
-    "id": "c-3-1",
-    "category": "修炼体系",
+    "id": "x-4.2",
+    "category": "宗门",
+    "title": "古代：机构与身份",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.2 古代：机构与身份"
+    }
+  },
+  {
+    "id": "x-4.3",
+    "category": "宗门",
+    "title": "古代：门规、入门与考校",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.3 古代：门规、入门与考校"
+    }
+  },
+  {
+    "id": "x-4.4",
+    "category": "宗门",
+    "title": "古代：圣女的一天",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.4 古代：圣女的一天"
+    }
+  },
+  {
+    "id": "x-4.5",
+    "category": "宗门",
+    "title": "现代：机构与身份",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.5 现代：机构与身份"
+    }
+  },
+  {
+    "id": "x-4.6",
+    "category": "宗门",
+    "title": "现代：门规与手册",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.6 现代：门规与手册"
+    }
+  },
+  {
+    "id": "x-4.7",
+    "category": "宗门",
+    "title": "现代：钱",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.7 现代：钱"
+    }
+  },
+  {
+    "id": "x-4.8",
+    "category": "宗门",
+    "title": "现代：考核与淘汰",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.8 现代：考核与淘汰"
+    }
+  },
+  {
+    "id": "x-4.9",
+    "category": "宗门",
+    "title": "现代：聚灵阵配给",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.9 现代：聚灵阵配给"
+    }
+  },
+  {
+    "id": "x-4.10",
+    "category": "宗门",
+    "title": "宗门之外",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.10 宗门之外"
+    }
+  },
+  {
+    "id": "x-5.1",
+    "category": "资质",
+    "title": "概述",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "5.1 概述"
+    }
+  },
+  {
+    "id": "x-5.2",
+    "category": "资质",
     "title": "境界",
-    "pinned": true,
-    "tags": [
-      "bible 3.1"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "3.1 境界"
-    }
+      "heading": "5.2 境界"
+    },
+    "pinned": true
   },
   {
-    "id": "c-3-2",
-    "category": "修炼体系",
+    "id": "x-5.3",
+    "category": "资质",
     "title": "灵根",
-    "tags": [
-      "bible 3.2"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "3.2 灵根"
+      "heading": "5.3 灵根"
     }
   },
   {
-    "id": "c-3-3",
-    "category": "修炼体系",
+    "id": "x-5.4",
+    "category": "资质",
+    "title": "测资质",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "5.4 测资质"
+    }
+  },
+  {
+    "id": "x-5.5",
+    "category": "资质",
+    "title": "经脉与细脉",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "5.5 经脉与细脉"
+    }
+  },
+  {
+    "id": "x-5.6",
+    "category": "资质",
+    "title": "瓶颈与突破",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "5.6 瓶颈与突破"
+    }
+  },
+  {
+    "id": "x-6.1",
+    "category": "功法",
+    "title": "概述",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "6.1 概述"
+    }
+  },
+  {
+    "id": "x-6.2",
+    "category": "功法",
+    "title": "古代正统：心法、剑法与舞",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "6.2 古代正统：心法、剑法与舞"
+    }
+  },
+  {
+    "id": "x-6.3",
+    "category": "功法",
     "title": "《枯木汲气篇》",
-    "tags": [
-      "bible 3.3"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "3.3 《枯木汲气篇》"
+      "heading": "6.3 《枯木汲气篇》"
     }
   },
   {
-    "id": "c-3-4",
-    "category": "修炼体系",
-    "title": "阵法",
-    "tags": [
-      "bible 3.4"
-    ],
+    "id": "x-6.4",
+    "category": "功法",
+    "title": "林凡的吐纳法",
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "3.4 阵法"
+      "heading": "6.4 林凡的吐纳法"
     }
   },
   {
-    "id": "c-3-5",
-    "category": "资源与物价",
-    "title": "资源与钱",
-    "tags": [
-      "bible 3.5"
-    ],
+    "id": "x-6.5",
+    "category": "功法",
+    "title": "冷门书目",
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "3.5 资源与钱"
+      "heading": "6.5 冷门书目"
     }
   },
   {
-    "id": "c-4",
+    "id": "x-7.1",
+    "category": "丹药",
+    "title": "概述",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "7.1 概述"
+    }
+  },
+  {
+    "id": "x-7.2",
+    "category": "丹药",
+    "title": "已写到的灵膳与灵物",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "7.2 已写到的灵膳与灵物"
+    }
+  },
+  {
+    "id": "x-8.1",
+    "category": "符箓",
+    "title": "概述",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "8.1 概述"
+    }
+  },
+  {
+    "id": "x-8.2",
+    "category": "符箓",
+    "title": "画符的人与材料",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "8.2 画符的人与材料"
+    }
+  },
+  {
+    "id": "x-8.3",
+    "category": "符箓",
+    "title": "符箓一览",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "8.3 符箓一览"
+    }
+  },
+  {
+    "id": "x-9.1",
+    "category": "法器",
+    "title": "概述",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "9.1 概述"
+    }
+  },
+  {
+    "id": "x-9.2",
+    "category": "法器",
+    "title": "现代：日常法器",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "9.2 现代：日常法器"
+    }
+  },
+  {
+    "id": "x-9.3",
+    "category": "法器",
+    "title": "古代法器",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "9.3 古代法器"
+    }
+  },
+  {
+    "id": "x-9.4",
+    "category": "法器",
+    "title": "落星亭风铃",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "9.4 落星亭风铃"
+    }
+  },
+  {
+    "id": "x-10.1",
+    "category": "法宝",
+    "title": "概述",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "10.1 概述"
+    }
+  },
+  {
+    "id": "x-10.2",
+    "category": "法宝",
+    "title": "已有的法宝",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "10.2 已有的法宝"
+    }
+  },
+  {
+    "id": "x-11.1",
+    "category": "炼器",
+    "title": "概述",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "11.1 概述"
+    }
+  },
+  {
+    "id": "x-12.1",
+    "category": "炼丹",
+    "title": "概述",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "12.1 概述"
+    }
+  },
+  {
+    "id": "x-12.2",
+    "category": "炼丹",
+    "title": "丹峰与药王鼎",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "12.2 丹峰与药王鼎"
+    }
+  },
+  {
+    "id": "x-13.1",
+    "category": "阵法",
+    "title": "概述",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "13.1 概述"
+    }
+  },
+  {
+    "id": "x-13.2",
+    "category": "阵法",
+    "title": "基础",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "13.2 基础"
+    }
+  },
+  {
+    "id": "x-13.3",
+    "category": "阵法",
+    "title": "古今阵法的差别",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "13.3 古今阵法的差别"
+    }
+  },
+  {
+    "id": "x-13.4",
+    "category": "阵法",
+    "title": "聚灵阵",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "13.4 聚灵阵"
+    }
+  },
+  {
+    "id": "x-13.5",
+    "category": "阵法",
+    "title": "护山大阵与守阵",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "13.5 护山大阵与守阵"
+    }
+  },
+  {
+    "id": "x-13.6",
+    "category": "阵法",
+    "title": "封印",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "13.6 封印"
+    }
+  },
+  {
+    "id": "x-13.7",
+    "category": "阵法",
+    "title": "修阵这门手艺",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "13.7 修阵这门手艺"
+    }
+  },
+  {
+    "id": "x-14.1",
+    "category": "御兽",
+    "title": "概述",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "14.1 概述"
+    }
+  },
+  {
+    "id": "x-14.2",
+    "category": "御兽",
+    "title": "大白",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "14.2 大白"
+    }
+  },
+  {
+    "id": "x-14.3",
+    "category": "御兽",
+    "title": "兽潮与万妖谷",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "14.3 兽潮与万妖谷"
+    }
+  },
+  {
+    "id": "x-15.1",
+    "category": "傀儡",
+    "title": "概述",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "15.1 概述"
+    }
+  },
+  {
+    "id": "x-16.1",
     "category": "紫气与黑雾",
-    "title": "紫气与黑雾（总述）",
-    "tags": [
-      "bible 4"
-    ],
+    "title": "概述",
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "4. 紫气与黑雾"
+      "heading": "16.1 概述"
     }
   },
   {
-    "id": "c-4-1",
+    "id": "x-16.2",
     "category": "紫气与黑雾",
     "title": "古代：紫气灵泉",
-    "tags": [
-      "bible 4.1"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "4.1 古代：紫气灵泉"
+      "heading": "16.2 古代：紫气灵泉"
     }
   },
   {
-    "id": "c-4-2",
+    "id": "x-16.3",
     "category": "紫气与黑雾",
     "title": "现代：甜水坑",
-    "tags": [
-      "bible 4.2"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "4.2 现代：甜水坑"
+      "heading": "16.3 现代：甜水坑"
     }
   },
   {
-    "id": "c-4-3",
+    "id": "x-16.4",
     "category": "紫气与黑雾",
     "title": "真相（作者留底，最后一卷揭开）",
-    "tags": [
-      "bible 4.3",
-      "作者留底"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "4.3 真相（作者留底，最后一卷揭开）"
+      "heading": "16.4 真相（作者留底，最后一卷揭开）"
     }
   },
   {
-    "id": "c-6-4",
-    "category": "名词",
-    "title": "其他名词",
-    "tags": [
-      "bible 6.4"
-    ],
+    "id": "x-17.1",
+    "category": "人物",
+    "title": "档案在哪",
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "6.4 其他名词"
+      "heading": "17.1 档案在哪"
     }
   },
   {
-    "id": "c-6-5",
-    "category": "跨线规则",
-    "title": "跨线规则",
-    "pinned": true,
-    "tags": [
-      "bible 6.5"
-    ],
-    "body": "",
-    "source": {
-      "doc": "bible.md",
-      "heading": "6.5 跨线规则"
-    }
-  },
-  {
-    "id": "c-6-1-two",
-    "category": "跨线规则",
+    "id": "x-17.2",
+    "category": "人物",
     "title": "两人之间",
-    "tags": [
-      "bible 6.1"
-    ],
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "6.1 两人之间"
+      "heading": "17.2 两人之间"
     }
   },
   {
-    "id": "c-6-circles-jin",
-    "category": "跨线规则",
-    "title": "现代圈子",
+    "id": "x-17.3",
+    "category": "人物",
+    "title": "两个圈子",
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "6.2 现代圈子"
+      "heading": "17.3 两个圈子"
     }
   },
   {
-    "id": "c-6-circles-gu",
-    "category": "跨线规则",
-    "title": "古代圈子",
+    "id": "x-17.4",
+    "category": "人物",
+    "title": "跨线规则",
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "6.3 古代圈子"
-    }
-  },
-  {
-    "id": "c-7",
-    "category": "远期设定",
-    "title": "远期设定（第二卷以后，正文先别碰）",
-    "tags": [
-      "bible 7"
-    ],
-    "body": "",
-    "source": {
-      "doc": "bible.md",
-      "heading": "7. 远期设定（第二卷以后，正文先别碰）"
-    }
+      "heading": "17.4 跨线规则"
+    },
+    "pinned": true
   },
   {
     "id": "x-style-pace",

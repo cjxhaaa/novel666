@@ -20,6 +20,8 @@ export interface Selection {
   character?: string;
   location?: string;
   codex?: string;
+  /** 设定页当前打开的大类 */
+  codexCat?: string;
   foreshadow?: string;
   event?: string;
   doc?: string;

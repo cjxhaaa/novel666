@@ -7,22 +7,39 @@ import { Icon } from '../components/Icon';
 import { Edit, Empty, Seg, confirmDelete } from '../components/ui';
 import type { CodexEntry } from '../../shared/types';
 
-/** 设定条目 + 仓库里的 markdown 文档 */
+/** 设定：左侧大类可展开出小类，右侧一个大类一页，每个小类一张可展开的卡片 */
 export function Codex() {
   const codex = useStore((s) => s.data.codex);
   const sel = useStore((s) => s.sel);
   const select = useStore((s) => s.select);
-  const mutate = useStore((s) => s.mutate);
+  const docsMap = useStore((s) => s.docs);
   const [q, setQ] = useState('');
   const [docs, setDocs] = useState<string[]>([]);
+  const [open, setOpen] = useState<Set<string>>(new Set());
   useEffect(() => {
     api.listDocs().then(setDocs).catch(() => setDocs([]));
   }, []);
 
-  const docsMap = useStore((s) => s.docs);
-  const list = q ? codex.filter((e) => `${e.title}${e.category}${resolveCodex(e, docsMap).body}`.includes(q)) : codex;
-  const cats = useMemo(() => [...new Set(list.map((e) => e.category))], [list]);
-  const current = sel.doc ? null : codex.find((e) => e.id === sel.codex) ?? list[0];
+  const allCats = useMemo(() => [...new Set(codex.map((e) => e.category))], [codex]);
+  const query = q.trim();
+  const list = query ? codex.filter((e) => `${e.title}${e.category}${resolveCodex(e, docsMap).body}`.includes(query)) : codex;
+  const cats = query ? allCats.filter((c) => list.some((e) => e.category === c)) : allCats;
+  const focused = codex.find((e) => e.id === sel.codex);
+  // 选中了具体条目就跟着条目走（搜索面板跳过来时 codexCat 可能是旧的）
+  const cat = focused?.category ?? (sel.codexCat && allCats.includes(sel.codexCat) ? sel.codexCat : allCats[0]);
+
+  // 跳到某个条目时（比如从搜索面板过来），展开它所在的大类
+  useEffect(() => {
+    if (focused) setOpen((o) => (o.has(focused.category) ? o : new Set(o).add(focused.category)));
+  }, [focused]);
+
+  const toggle = (c: string) =>
+    setOpen((o) => {
+      const n = new Set(o);
+      if (n.has(c)) n.delete(c);
+      else n.add(c);
+      return n;
+    });
 
   return (
     <div className="view">
@@ -30,33 +47,48 @@ export function Codex() {
         <aside className="side">
           <div className="row" style={{ padding: '4px 4px 8px' }}>
             <input className="input" placeholder="搜索设定全文…" value={q} onChange={(e) => setQ(e.target.value)} />
-            <button
-              className="btn icon"
-              title="新建设定条目"
-              onClick={() => {
-                const id = uid('x');
-                mutate('codex', (d) => void d.push({ id, category: current?.category ?? '未分类', title: '新条目', body: '' }), '新建设定');
-                select({ codex: id, doc: undefined });
-              }}
-            >
-              <Icon name="plus" size={16} />
-            </button>
           </div>
-          {cats.map((c) => (
-            <div key={c}>
-              <div className="group-title">{c}</div>
-              {list
-                .filter((e) => e.category === c)
-                .map((e) => (
-                  <div key={e.id} className={`list-item ${current?.id === e.id ? 'active' : ''}`} onClick={() => select({ codex: e.id, doc: undefined })}>
-                    <span className="ellipsis grow">{e.title}</span>
-                    {e.source && <Icon name="link" size={12} style={{ color: 'var(--text-3)' }} />}
-                    {e.pinned && <Icon name="pin" size={13} style={{ color: 'var(--gold)' }} />}
-                  </div>
-                ))}
+          {cats.map((c) => {
+            const items = list.filter((e) => e.category === c);
+            const expanded = !!query || open.has(c);
+            const todo = items.some((e) => resolveCodex(e, docsMap).body.trim().startsWith('**暂无'));
+            const active = cat === c && !sel.doc;
+            return (
+              <div key={c} className="cx-group">
+                <div
+                  className={`cx-cat ${active ? 'active' : ''}`}
+                  onClick={() => {
+                    if (active) toggle(c);
+                    else setOpen((o) => new Set(o).add(c));
+                    select({ codexCat: c, codex: undefined, doc: undefined });
+                  }}
+                >
+                  <Icon name="right" size={13} style={{ transform: expanded ? 'rotate(90deg)' : undefined, transition: 'transform .15s', color: 'var(--text-3)' }} />
+                  <span className="seal" style={{ ['--c' as any]: 'var(--gold)' }}>
+                    {c.slice(0, 1)}
+                  </span>
+                  <span className="grow ellipsis">{c}</span>
+                  {todo && <span className="cx-todo">待补</span>}
+                  <span className="faint nums" style={{ fontSize: 11 }}>
+                    {items.length}
+                  </span>
+                </div>
+                {expanded &&
+                  items.map((e) => (
+                    <div key={e.id} className={`cx-sub ${sel.codex === e.id && !sel.doc ? 'active' : ''}`} onClick={() => select({ codexCat: c, codex: e.id, doc: undefined })}>
+                      <span className="ellipsis grow">{e.title}</span>
+                      {e.pinned && <Icon name="pin" size={12} style={{ color: 'var(--gold)' }} />}
+                    </div>
+                  ))}
+              </div>
+            );
+          })}
+          {query && !cats.length && (
+            <div className="faint" style={{ padding: 10 }}>
+              没有找到
             </div>
-          ))}
-          <div className="group-title" style={{ marginTop: 10 }}>
+          )}
+          <div className="group-title" style={{ marginTop: 14 }}>
             <Icon name="folder" size={13} /> 仓库文档
           </div>
           {docs.map((d) => (
@@ -66,119 +98,202 @@ export function Codex() {
             </div>
           ))}
         </aside>
-        {sel.doc ? <DocPane key={sel.doc + (sel.heading ?? '')} rel={sel.doc} heading={sel.heading} /> : current ? <EntryPane key={current.id} e={current} /> : <Empty title="还没有设定条目" icon="codex" />}
+        {sel.doc ? (
+          <DocPane key={sel.doc + (sel.heading ?? '')} rel={sel.doc} heading={sel.heading} />
+        ) : cat ? (
+          <CategoryPane key={cat} cat={cat} focusId={sel.codex} />
+        ) : (
+          <Empty title="还没有设定条目" icon="codex" />
+        )}
       </div>
     </div>
   );
 }
 
-function EntryPane({ e }: { e: CodexEntry }) {
+/** 一段 markdown 的纯文本开头，用作收起时的预览 */
+function preview(md: string) {
+  return md
+    .replace(/^\s*\|.*$/gm, '')
+    .replace(/[*#`>|]/g, '')
+    .replace(/^\s*(?:[-]|\d+\.)\s+/gm, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 80);
+}
+
+function sourceDocsOf(entries: CodexEntry[]) {
+  return [...new Set(entries.map((e) => e.source?.doc).filter((d): d is string => !!d))];
+}
+
+function CategoryPane({ cat, focusId }: { cat: string; focusId?: string }) {
+  const codex = useStore((s) => s.data.codex);
   const mutate = useStore((s) => s.mutate);
   const select = useStore((s) => s.select);
   const docs = useStore((s) => s.docs);
   const loadDocs = useStore((s) => s.loadDocs);
+  const entries = useMemo(() => codex.filter((e) => e.category === cat), [codex, cat]);
+  const bodyRef = useRef<HTMLDivElement>(null);
+  // 默认只展开第一张（通常是“概述”），点进来的那张也展开
+  const [open, setOpen] = useState<Set<string>>(() => new Set([entries[0]?.id, focusId].filter((x): x is string => !!x)));
+
+  useEffect(() => {
+    const need = sourceDocsOf(entries).filter((d) => !(d in docs));
+    if (need.length) loadDocs(need);
+  }, [entries, docs, loadDocs]);
+
+  useEffect(() => {
+    if (!focusId) return;
+    setOpen((o) => (o.has(focusId) ? o : new Set(o).add(focusId)));
+    // 等卡片展开、内容变高之后再滚，不然靠后的卡片滚不到顶
+    const t = setTimeout(() => {
+      const box = bodyRef.current;
+      const el = box?.querySelector(`[data-entry="${focusId}"]`);
+      if (box && el) box.scrollTop += el.getBoundingClientRect().top - box.getBoundingClientRect().top - 12;
+    }, 60);
+    return () => clearTimeout(t);
+  }, [focusId]);
+
+  const pinnedN = entries.filter((e) => e.pinned).length;
+  const allOpen = entries.length > 0 && entries.every((e) => open.has(e.id));
+
+  return (
+    <section className="codex-pane">
+      <div className="codex-head">
+        <span className="seal lg" style={{ ['--c' as any]: 'var(--gold)' }}>
+          {cat.slice(0, 1)}
+        </span>
+        <div className="col grow" style={{ gap: 2 }}>
+          <h2 style={{ fontSize: 26 }}>{cat}</h2>
+          <span className="faint" style={{ fontSize: 12 }}>
+            {entries.length} 个小类{pinnedN ? ` · 写作必带 ${pinnedN}` : ''}
+          </span>
+        </div>
+        <button className="btn ghost" onClick={() => setOpen(allOpen ? new Set() : new Set(entries.map((e) => e.id)))}>
+          {allOpen ? '全部收起' : '全部展开'}
+        </button>
+        <button
+          className="btn"
+          title="在这个大类下新建一条只存在软件里的笔记"
+          onClick={() => {
+            const id = uid('x');
+            mutate('codex', (d) => void d.push({ id, category: cat, title: '新条目', body: '' }), '新建设定');
+            setOpen((o) => new Set(o).add(id));
+            select({ codex: id });
+          }}
+        >
+          <Icon name="plus" size={15} /> 小类
+        </button>
+      </div>
+      <div className="codex-body cx-cards" ref={bodyRef}>
+        {entries.map((e) => (
+          <EntryCard
+            key={e.id}
+            e={e}
+            open={open.has(e.id)}
+            onToggle={() =>
+              setOpen((o) => {
+                const n = new Set(o);
+                if (n.has(e.id)) n.delete(e.id);
+                else n.add(e.id);
+                return n;
+              })
+            }
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function EntryCard({ e, open, onToggle }: { e: CodexEntry; open: boolean; onToggle: () => void }) {
+  const mutate = useStore((s) => s.mutate);
+  const select = useStore((s) => s.select);
+  const docs = useStore((s) => s.docs);
+  const [editing, setEditing] = useState(false);
   const resolved = resolveCodex(e, docs);
   const srcDoc = e.source ? docs[e.source.doc] : undefined;
-  const headings = useMemo(() => (srcDoc ? headingsOf(srcDoc) : []), [srcDoc]);
-  useEffect(() => {
-    if (e.source && !(e.source.doc in docs)) loadDocs([e.source.doc]);
-  }, [e.source, docs, loadDocs]);
-  const codex = useStore((s) => s.data.codex);
-  const categories = useMemo(() => [...new Set(codex.map((x) => x.category))], [codex]);
-  const [mode, setMode] = useState<'read' | 'edit'>('read');
+  const headings = useMemo(() => (srcDoc && open ? headingsOf(srcDoc) : []), [srcDoc, open]);
+  const html = useMemo(() => (open ? (marked.parse(resolved.body || '*（空）*') as string) : ''), [open, resolved.body]);
   const upd = (fn: (x: CodexEntry) => void, label = '编辑设定') =>
     mutate('codex', (d) => {
       const x = d.find((y) => y.id === e.id);
       if (x) fn(x as CodexEntry);
     }, label);
+
   return (
-    <section className="codex-pane">
-      <div className="codex-head">
-        <div className="col grow" style={{ gap: 4 }}>
-          <div className="row">
-            <input className="input bare faint" list="codex-cats" defaultValue={e.category} style={{ width: 160, fontSize: 12 }} onBlur={(ev) => ev.target.value !== e.category && upd((x) => void (x.category = ev.target.value || '未分类'))} />
-            <datalist id="codex-cats">
-              {categories.map((c) => (
-                <option key={c} value={c} />
-              ))}
-            </datalist>
-          </div>
-          <Edit value={e.title} bare className="display name-edit" style={{ fontSize: 26 }} onCommit={(v) => upd((x) => void (x.title = v))} />
-        </div>
-        <button className={`btn ${e.pinned ? 'primary' : ''}`} title="写作必带：生成写作上下文时总是附上这一条" onClick={() => upd((x) => void (x.pinned = !x.pinned), '切换写作必带')}>
-          <Icon name="pin" size={15} /> {e.pinned ? '写作必带' : '设为写作必带'}
-        </button>
-        {!e.source && (
-          <Seg
-            value={mode}
-            onChange={setMode}
-            options={[
-              { value: 'read', label: '阅读' },
-              { value: 'edit', label: '编辑' },
-            ]}
-          />
-        )}
+    <div className={`cx-card ${open ? 'open' : ''} ${resolved.broken ? 'broken' : ''}`} data-entry={e.id}>
+      <div className="cx-card-head" onClick={onToggle}>
+        <Icon name="right" size={14} style={{ transform: open ? 'rotate(90deg)' : undefined, transition: 'transform .15s', color: 'var(--text-3)' }} />
+        <span className="cx-title">{e.title}</span>
+        {!open && <span className="cx-preview ellipsis">{preview(resolved.body)}</span>}
+        <span className="grow" />
         <button
-          className="btn ghost icon danger"
-          title="删除条目"
-          onClick={() => {
-            if (!confirmDelete(e.title)) return;
-            mutate('codex', (d) => d.filter((x) => x.id !== e.id) as any, '删除设定');
+          className={`btn ghost sm icon ${e.pinned ? 'pinned' : ''}`}
+          title={e.pinned ? '写作必带（点击取消）' : '设为写作必带：生成写作上下文时总是附上这一条'}
+          onClick={(ev) => {
+            ev.stopPropagation();
+            upd((x) => void (x.pinned = !x.pinned), '切换写作必带');
           }}
         >
-          <Icon name="trash" size={15} />
+          <Icon name="pin" size={14} />
         </button>
       </div>
-      <div className="codex-body">
-        {e.source ? (
-          <div className="source-bar">
-            <Icon name="link" size={15} />
-            <span className="faint">内容来自</span>
-            <span>{e.source.doc}</span>
-            <span className="faint">›</span>
-            <select
-              className="select"
-              style={{ width: 280 }}
-              value={e.source.heading}
-              onChange={(ev) => upd((x) => void (x.source = { doc: x.source!.doc, heading: ev.target.value }), '改引用小节')}
-            >
-              {!headings.includes(e.source.heading) && <option value={e.source.heading}>{e.source.heading}（找不到）</option>}
-              {headings.map((h) => (
-                <option key={h} value={h}>
-                  {h}
-                </option>
-              ))}
-            </select>
-            <span className="grow" />
-            <button className="btn sm" onClick={() => select({ doc: e.source!.doc, heading: e.source!.heading })}>
-              <Icon name="edit" size={13} /> 在原文中编辑
-            </button>
+      {open && (
+        <div className="cx-card-body">
+          {resolved.broken && <div className="issue-mini error">引用的小节找不到了，可能 {e.source!.doc} 改了标题。请在下面重新选择。</div>}
+          {!e.source && editing ? (
+            <div className="col">
+              <Edit value={e.title} onCommit={(v) => upd((x) => void (x.title = v))} />
+              <Edit multiline rows={10} value={e.body} className="mono-ish" onCommit={(v) => upd((x) => void (x.body = v))} />
+            </div>
+          ) : (
+            <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
+          )}
+          <div className="cx-card-foot">
+            {e.source ? (
+              <>
+                <Icon name="link" size={13} />
+                <span>{e.source.doc}</span>
+                <span>›</span>
+                <select
+                  className="select"
+                  style={{ width: 'auto', minWidth: 180, height: 26, padding: '0 26px 0 8px', fontSize: 12 }}
+                  value={e.source.heading}
+                  onChange={(ev) => upd((x) => void (x.source = { doc: x.source!.doc, heading: ev.target.value }), '改引用小节')}
+                >
+                  {!headings.includes(e.source.heading) && <option value={e.source.heading}>{e.source.heading}</option>}
+                  {headings.map((h) => (
+                    <option key={h} value={h}>
+                      {h}
+                    </option>
+                  ))}
+                </select>
+                <span className="grow" />
+                <button className="btn sm" onClick={() => select({ doc: e.source!.doc, heading: e.source!.heading })}>
+                  <Icon name="edit" size={13} /> 在原文中编辑
+                </button>
+              </>
+            ) : (
+              <>
+                <span className="grow">只存在软件里的笔记。世界观最好写进 bible.md。</span>
+                <button className="btn sm" onClick={() => setEditing((v) => !v)}>
+                  <Icon name={editing ? 'check' : 'edit'} size={13} /> {editing ? '完成' : '编辑'}
+                </button>
+                <button
+                  className="btn sm ghost danger"
+                  onClick={() => {
+                    if (!confirmDelete(e.title)) return;
+                    mutate('codex', (d) => d.filter((x) => x.id !== e.id) as any, '删除设定');
+                  }}
+                >
+                  <Icon name="trash" size={13} />
+                </button>
+              </>
+            )}
           </div>
-        ) : (
-          <div className="source-bar faint">
-            <span className="grow">这一条只存在 story/codex.json 里。世界观最好写进 bible.md，再在这里引用。</span>
-            <button
-              className="btn sm ghost"
-              onClick={async () => {
-                await loadDocs(['bible.md']);
-                const first = headingsOf(useStore.getState().docs['bible.md'] ?? '')[1];
-                if (first) upd((x) => void (x.source = { doc: 'bible.md', heading: first }), '改为引用');
-              }}
-            >
-              <Icon name="link" size={13} /> 改为引用 bible.md 的一节
-            </button>
-          </div>
-        )}
-        {resolved.broken && <div className="issue-mini error">引用的小节找不到了，可能 bible.md 改了标题。请在上面重新选择。</div>}
-        {e.source ? (
-          <div className="markdown" dangerouslySetInnerHTML={{ __html: marked.parse(resolved.body || '*（这一节是空的）*') as string }} />
-        ) : mode === 'read' ? (
-          <div className="markdown" onDoubleClick={() => setMode('edit')} dangerouslySetInnerHTML={{ __html: (marked.parse(e.body || '*（空，双击开始编辑）*') as string) }} />
-        ) : (
-          <Edit multiline rows={20} value={e.body} className="mono-ish" onCommit={(v) => upd((x) => void (x.body = v))} />
-        )}
-      </div>
-    </section>
+        </div>
+      )}
+    </div>
   );
 }
 

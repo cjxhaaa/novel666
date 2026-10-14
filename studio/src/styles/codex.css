@@ -1,0 +1,125 @@
+/* 设定页：左侧大类 / 小类，右侧小类卡片 */
+.cx-group {
+  margin-bottom: 2px;
+}
+.cx-cat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-2);
+  font-family: var(--font-display);
+  font-size: 15px;
+  transition: background 0.12s, color 0.12s;
+}
+.cx-cat:hover {
+  background: var(--hover);
+  color: var(--text);
+}
+.cx-cat.active {
+  background: var(--gold-soft);
+  color: var(--text);
+  box-shadow: inset 2px 0 0 var(--gold);
+}
+.cx-todo {
+  font-family: var(--font-ui);
+  font-size: 10.5px;
+  padding: 0 6px;
+  border-radius: 8px;
+  color: var(--text-3);
+  border: 1px dashed var(--line-strong);
+}
+.cx-sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 30px;
+  padding: 5px 10px;
+  border-left: 1px solid var(--line-strong);
+  font-size: 13px;
+  color: var(--text-3);
+  cursor: pointer;
+}
+.cx-sub:hover {
+  color: var(--text);
+  background: var(--hover);
+}
+.cx-sub.active {
+  color: var(--gold);
+  border-left-color: var(--gold);
+}
+
+.cx-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
+  /* 留出空白，最后一张卡也能滚到顶 */
+  padding-bottom: 60vh;
+}
+.cx-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.cx-card:hover {
+  border-color: var(--line-strong);
+}
+.cx-card.open {
+  border-color: color-mix(in srgb, var(--gold) 35%, var(--line));
+  box-shadow: var(--shadow);
+}
+.cx-card.broken {
+  border-color: var(--danger);
+}
+.cx-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  cursor: pointer;
+  min-width: 0;
+}
+.cx-title {
+  flex: none;
+  font-family: var(--font-display);
+  font-size: 17px;
+}
+.cx-card.open .cx-title {
+  color: var(--gold);
+}
+.cx-preview {
+  flex: 1;
+  min-width: 0;
+  font-size: 12.5px;
+  color: var(--text-3);
+}
+.cx-card-head .btn.pinned {
+  color: var(--gold);
+}
+.cx-card-head .btn:not(.pinned) {
+  opacity: 0.3;
+}
+.cx-card-head:hover .btn:not(.pinned) {
+  opacity: 1;
+}
+.cx-card-body {
+  padding: 0 20px 14px 38px;
+  animation: fadeIn 0.2s ease-out;
+}
+.cx-card-body .markdown > :first-child {
+  margin-top: 0;
+}
+.cx-card-foot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+  font-size: 12px;
+  color: var(--text-3);
+}

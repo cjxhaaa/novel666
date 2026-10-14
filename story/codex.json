@@ -1,0 +1,322 @@
+[
+  {
+    "id": "c-0",
+    "category": "总纲",
+    "title": "这是一本什么书",
+    "tags": [
+      "bible 0"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "0. 这是一本什么书"
+    }
+  },
+  {
+    "id": "c-1-1",
+    "category": "世界",
+    "title": "九天十地",
+    "tags": [
+      "bible 1.1"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "1.1 九天十地"
+    }
+  },
+  {
+    "id": "c-1-2",
+    "category": "世界",
+    "title": "青云宗",
+    "tags": [
+      "bible 1.2"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "1.2 青云宗"
+    }
+  },
+  {
+    "id": "c-1-3",
+    "category": "世界",
+    "title": "时间",
+    "tags": [
+      "bible 1.3"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "1.3 时间"
+    }
+  },
+  {
+    "id": "c-5-naming",
+    "category": "世界",
+    "title": "地点命名规矩",
+    "tags": [
+      "bible 5"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "5. 地点（古今对照）"
+    }
+  },
+  {
+    "id": "c-2-1",
+    "category": "落星亭",
+    "title": "第一卷的规则",
+    "pinned": true,
+    "tags": [
+      "bible 2.1"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "2.1 第一卷的规则"
+    }
+  },
+  {
+    "id": "c-2-2",
+    "category": "落星亭",
+    "title": "以后怎么放开（第二卷起）",
+    "tags": [
+      "bible 2.2"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "2.2 以后怎么放开（第二卷起）"
+    }
+  },
+  {
+    "id": "c-2-3",
+    "category": "落星亭",
+    "title": "历史改动",
+    "pinned": true,
+    "tags": [
+      "bible 2.3"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "2.3 历史改动"
+    }
+  },
+  {
+    "id": "c-3-1",
+    "category": "修炼体系",
+    "title": "境界",
+    "pinned": true,
+    "tags": [
+      "bible 3.1"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "3.1 境界"
+    }
+  },
+  {
+    "id": "c-3-2",
+    "category": "修炼体系",
+    "title": "灵根",
+    "tags": [
+      "bible 3.2"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "3.2 灵根"
+    }
+  },
+  {
+    "id": "c-3-3",
+    "category": "修炼体系",
+    "title": "《枯木汲气篇》",
+    "tags": [
+      "bible 3.3"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "3.3 《枯木汲气篇》"
+    }
+  },
+  {
+    "id": "c-3-4",
+    "category": "修炼体系",
+    "title": "阵法",
+    "tags": [
+      "bible 3.4"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "3.4 阵法"
+    }
+  },
+  {
+    "id": "c-3-5",
+    "category": "资源与物价",
+    "title": "资源与钱",
+    "tags": [
+      "bible 3.5"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "3.5 资源与钱"
+    }
+  },
+  {
+    "id": "c-4",
+    "category": "紫气与黑雾",
+    "title": "紫气与黑雾（总述）",
+    "tags": [
+      "bible 4"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4. 紫气与黑雾"
+    }
+  },
+  {
+    "id": "c-4-1",
+    "category": "紫气与黑雾",
+    "title": "古代：紫气灵泉",
+    "tags": [
+      "bible 4.1"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.1 古代：紫气灵泉"
+    }
+  },
+  {
+    "id": "c-4-2",
+    "category": "紫气与黑雾",
+    "title": "现代：甜水坑",
+    "tags": [
+      "bible 4.2"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.2 现代：甜水坑"
+    }
+  },
+  {
+    "id": "c-4-3",
+    "category": "紫气与黑雾",
+    "title": "真相（作者留底，最后一卷揭开）",
+    "tags": [
+      "bible 4.3",
+      "作者留底"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "4.3 真相（作者留底，最后一卷揭开）"
+    }
+  },
+  {
+    "id": "c-6-4",
+    "category": "名词",
+    "title": "其他名词",
+    "tags": [
+      "bible 6.4"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "6.4 其他名词"
+    }
+  },
+  {
+    "id": "c-6-5",
+    "category": "跨线规则",
+    "title": "跨线规则",
+    "pinned": true,
+    "tags": [
+      "bible 6.5"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "6.5 跨线规则"
+    }
+  },
+  {
+    "id": "c-6-1-two",
+    "category": "跨线规则",
+    "title": "两人之间",
+    "tags": [
+      "bible 6.1"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "6.1 两人之间"
+    }
+  },
+  {
+    "id": "c-6-circles-jin",
+    "category": "跨线规则",
+    "title": "现代圈子",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "6.2 现代圈子"
+    }
+  },
+  {
+    "id": "c-6-circles-gu",
+    "category": "跨线规则",
+    "title": "古代圈子",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "6.3 古代圈子"
+    }
+  },
+  {
+    "id": "c-7",
+    "category": "远期设定",
+    "title": "远期设定（第二卷以后，正文先别碰）",
+    "tags": [
+      "bible 7"
+    ],
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "7. 远期设定（第二卷以后，正文先别碰）"
+    }
+  },
+  {
+    "id": "x-style-pace",
+    "category": "写作规范",
+    "title": "节奏",
+    "body": "",
+    "source": {
+      "doc": ".claude/skills/novel-writer/SKILL.md",
+      "heading": "节奏"
+    },
+    "pinned": true
+  },
+  {
+    "id": "x-style-prose",
+    "category": "写作规范",
+    "title": "文风",
+    "body": "",
+    "source": {
+      "doc": ".claude/skills/novel-writer/SKILL.md",
+      "heading": "文风"
+    },
+    "pinned": true
+  }
+]

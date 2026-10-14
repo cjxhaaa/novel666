@@ -1,0 +1,176 @@
+@import 'lxgw-wenkai-webfont/lxgwwenkai-regular.css';
+
+:root {
+  --bg: #060913;
+  --bg-2: #0b1020;
+  --panel: rgba(17, 23, 43, 0.72);
+  --panel-solid: #10162b;
+  --panel-2: rgba(26, 34, 62, 0.7);
+  --hover: rgba(143, 179, 255, 0.07);
+  --line: rgba(150, 170, 255, 0.1);
+  --line-strong: rgba(150, 170, 255, 0.2);
+  --text: #e7eaf6;
+  --text-2: #a5aecb;
+  --text-3: #6c7597;
+  --gold: #e8c27a;
+  --gold-soft: rgba(232, 194, 122, 0.14);
+  --cinnabar: #e0644f;
+  --moon: #8fb3ff;
+  --jade: #6fd1b5;
+  --danger: #ff6b6b;
+  --warn: #f0b45a;
+  --shadow: 0 18px 50px -20px rgba(0, 0, 0, 0.7);
+  --glow: 0 0 0 1px rgba(232, 194, 122, 0.35), 0 0 24px -4px rgba(232, 194, 122, 0.35);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --font-display: 'LXGW WenKai', 'KaiTi', 'STKaiti', serif;
+  --font-ui: 'Microsoft YaHei UI', 'PingFang SC', 'Segoe UI', system-ui, sans-serif;
+  --font-read: 'LXGW WenKai', 'Songti SC', 'SimSun', serif;
+  --font-mono: 'Cascadia Mono', 'Consolas', monospace;
+  --titlebar: 40px;
+  --rail: 72px;
+  color-scheme: dark;
+}
+
+:root[data-theme='paper'] {
+  --bg: #efe8d9;
+  --bg-2: #e7dfcd;
+  --panel: rgba(251, 248, 240, 0.82);
+  --panel-solid: #fbf8f0;
+  --panel-2: rgba(240, 233, 218, 0.85);
+  --hover: rgba(120, 80, 30, 0.07);
+  --line: rgba(90, 60, 25, 0.13);
+  --line-strong: rgba(90, 60, 25, 0.25);
+  --text: #2a241c;
+  --text-2: #5e5446;
+  --text-3: #958a77;
+  --gold: #a8741f;
+  --gold-soft: rgba(168, 116, 31, 0.12);
+  --cinnabar: #c23b25;
+  --moon: #3a64b8;
+  --jade: #2f8f73;
+  --danger: #c93030;
+  --warn: #b7791f;
+  --shadow: 0 18px 40px -24px rgba(80, 50, 10, 0.45);
+  --glow: 0 0 0 1px rgba(168, 116, 31, 0.4), 0 0 20px -6px rgba(168, 116, 31, 0.35);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 13.5px;
+  line-height: 1.55;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: rgba(232, 194, 122, 0.35);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 170, 255, 0.16);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 170, 255, 0.3);
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+:root[data-theme='paper'] ::-webkit-scrollbar-thumb {
+  background: rgba(90, 60, 25, 0.2);
+  background-clip: padding-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.display {
+  font-family: var(--font-display);
+}
+.muted {
+  color: var(--text-2);
+}
+.faint {
+  color: var(--text-3);
+}
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+.nums {
+  font-variant-numeric: tabular-nums;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.grow {
+  flex: 1;
+  min-width: 0;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.selectable {
+  user-select: text;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

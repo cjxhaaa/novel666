@@ -1,0 +1,206 @@
+[
+  {
+    "id": "r-lin-su",
+    "from": "lin-fan",
+    "to": "su-qingyue",
+    "label": "互相怀疑：妖孽对骗子",
+    "progressions": [
+      {
+        "chapter": 7,
+        "label": "做交易：我给你古法，你给我新奇"
+      },
+      {
+        "chapter": 15,
+        "label": "互相嫌弃的搭子：天天斗嘴，一天不说又难受"
+      },
+      {
+        "chapter": 23,
+        "label": "能听懂对方：不用说，就听得出"
+      },
+      {
+        "chapter": 31,
+        "label": "第一次被现实砸中：知道三年后的结局"
+      },
+      {
+        "chapter": 39,
+        "label": "互相托底：轮流在对方最难的时候撑着"
+      }
+    ],
+    "keyChapters": [
+      6,
+      7,
+      21,
+      23,
+      35,
+      40,
+      49
+    ],
+    "notes": "标志：林凡念出“剑法凝滞”那一行，她信了（6）；第一块整灵石全换了朱砂（7）；隔着声音替他数呼吸，陪他突破凝气三层（21）；“你今天声音不对。”（23）；三夜空等，“一万年后，青云宗的人吃得饱吗？”（35）；大典前他替她稳孩子（40）；禁足中她溜出来陪他练（49）。第一卷的边界：两人的感情停在“离不开对方，但谁都没想过这叫什么”，不点破；两人都没见过对方的脸。"
+  },
+  {
+    "id": "r-lin-li",
+    "from": "lin-fan",
+    "to": "li-pangzi",
+    "label": "室友，互相蹭饭",
+    "progressions": [
+      {
+        "chapter": 25,
+        "label": "李胖子以为林凡中了邪"
+      },
+      {
+        "chapter": 54,
+        "label": "李胖子开始替林凡打掩护，虽然他以为林凡中了邪"
+      }
+    ],
+    "keyChapters": [
+      25,
+      54
+    ]
+  },
+  {
+    "id": "r-lin-tang",
+    "from": "lin-fan",
+    "to": "tang-guo",
+    "label": "债主和欠债的",
+    "progressions": [
+      {
+        "chapter": 18,
+        "label": "合伙人（修阵摊，四六分）"
+      },
+      {
+        "chapter": 54,
+        "label": "合伙人，账还是照算"
+      }
+    ],
+    "keyChapters": [
+      18,
+      47,
+      54
+    ]
+  },
+  {
+    "id": "r-li-tang",
+    "from": "li-pangzi",
+    "to": "tang-guo",
+    "label": "互相看不顺眼",
+    "progressions": [
+      {
+        "chapter": 18,
+        "label": "小摊的“前台”和“后厨”，吵吵闹闹地配合"
+      }
+    ],
+    "keyChapters": [
+      18,
+      44
+    ],
+    "notes": "大纲关键章节写的是 18、44；第 44 章是【古】桂嬷嬷的钥匙，待作者确认。"
+  },
+  {
+    "id": "r-lin-ma",
+    "from": "lin-fan",
+    "to": "ma-papi",
+    "label": "管事和杂役",
+    "progressions": [
+      {
+        "chapter": 20,
+        "label": "结了梁子"
+      },
+      {
+        "chapter": 54,
+        "label": "结了梁子，林凡被马扒皮记得更牢"
+      }
+    ],
+    "keyChapters": [
+      20,
+      50,
+      51,
+      52,
+      53
+    ]
+  },
+  {
+    "id": "r-su-liu",
+    "from": "su-qingyue",
+    "to": "liu-ruyan",
+    "label": "无话不谈的师姐妹",
+    "progressions": [
+      {
+        "chapter": 56,
+        "label": "表面没变；读者能看出柳如烟在往紫气那边滑"
+      }
+    ],
+    "keyChapters": [
+      14,
+      26,
+      43,
+      56
+    ]
+  },
+  {
+    "id": "r-su-gui",
+    "from": "su-qingyue",
+    "to": "gui-momo",
+    "label": "看管与被看管",
+    "progressions": [
+      {
+        "chapter": 44,
+        "label": "心照不宣"
+      }
+    ],
+    "keyChapters": [
+      4,
+      44
+    ]
+  },
+  {
+    "id": "r-su-qin",
+    "from": "su-qingyue",
+    "to": "qin-zhao",
+    "label": "天天拒绝",
+    "progressions": [
+      {
+        "chapter": 19,
+        "label": "勉强算朋友，他自己认为是“对手”"
+      }
+    ],
+    "keyChapters": [
+      4,
+      19
+    ]
+  },
+  {
+    "id": "r-su-shi",
+    "from": "su-qingyue",
+    "to": "shi-yan",
+    "label": "圣女和垫底的学生",
+    "progressions": [
+      {
+        "chapter": 42,
+        "label": "她第一次护着一个人"
+      }
+    ],
+    "keyChapters": [
+      12,
+      28,
+      42,
+      56
+    ]
+  },
+  {
+    "id": "r-su-xuan",
+    "from": "su-qingyue",
+    "to": "xuan-heng",
+    "label": "师徒，她一直听话",
+    "progressions": [
+      {
+        "chapter": 42,
+        "label": "第一次违背师命，师父失望"
+      }
+    ],
+    "keyChapters": [
+      22,
+      42,
+      43
+    ]
+  }
+]

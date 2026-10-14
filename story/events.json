@@ -1,0 +1,719 @@
+[
+  {
+    "id": "e-kaishan",
+    "title": "青阳子开山建宗",
+    "kind": "history",
+    "eraId": null,
+    "yearLabel": "上古",
+    "description": "青云开山祖师青阳子在北荒青云山建宗。青云宗从建宗起就在北荒青云山，从未搬迁。",
+    "characters": [
+      "qingyangzi"
+    ],
+    "locations": [
+      "qingyunshan"
+    ]
+  },
+  {
+    "id": "e-kumu",
+    "title": "枯木献书被拒",
+    "kind": "history",
+    "eraId": null,
+    "yearLabel": "古代以前（年代不详）",
+    "description": "古代一个边荒穷修（枯木，北荒极北散修）专为灵气枯竭之地写出《枯木汲气篇》，献书求杂役位被拒，“虽迟，不死”。盛世里没人看得上，被丢在藏经阁五层的冷门书堆里，现代早已失传。",
+    "characters": [
+      "kumu"
+    ],
+    "locations": [
+      "cangjingge-gu"
+    ]
+  },
+  {
+    "id": "e-guishu",
+    "title": "桂嬷嬷种下桂树",
+    "kind": "history",
+    "eraId": "ancient",
+    "year": 31990,
+    "yearLabel": "约 31990 年（第一卷时“十年前”）",
+    "description": "揽月居门外的桂树，桂嬷嬷十年前种的。",
+    "characters": [
+      "gui-momo"
+    ],
+    "locations": [
+      "lanyueju"
+    ]
+  },
+  {
+    "id": "e-shijiaao",
+    "title": "石家坳兽潮",
+    "kind": "history",
+    "eraId": "ancient",
+    "year": 31999,
+    "yearLabel": "约 31999 年（第一卷时“去年”）",
+    "description": "去年兽潮，石家坳替宗门守山道死七人；石砚因此得了人情名额。",
+    "characters": [
+      "shi-yan"
+    ],
+    "locations": [
+      "shijiaao"
+    ]
+  },
+  {
+    "id": "e-ziqi",
+    "title": "紫气灵泉涌出",
+    "kind": "history",
+    "eraId": "ancient",
+    "year": 32000,
+    "yearLabel": "32000 年前后（近年新涌出）",
+    "description": "落星亭后庭近年新涌出紫气灵泉，温暖、发甜，掌门视为祥瑞，开泉大典专门庆祝。",
+    "characters": [
+      "xuan-heng"
+    ],
+    "locations": [
+      "ziqi-lingquan"
+    ]
+  },
+  {
+    "id": "e-gu-now",
+    "title": "古代：青云历 32000 年，盛世",
+    "kind": "history",
+    "eraId": "ancient",
+    "year": 32000,
+    "description": "弟子数千，各峰齐全；护山大阵完好，连乌鸦都挡在外面；灵气浓郁纯净；藏经阁九层，原版功法、阵图齐全。门规第一条：尊师重道，勿忘本心。",
+    "locations": [
+      "qingyunshan"
+    ]
+  },
+  {
+    "id": "e-dajie",
+    "title": "三年大劫",
+    "kind": "future",
+    "eraId": "ancient",
+    "year": 32003,
+    "yearLabel": "约 32003 年（从第一卷开始算还剩约三年）",
+    "description": "《青云通史》末页记载，三年后大劫，高层尽亡，宗门从此衰败。大事有惯性，不会因为一句话就改掉。",
+    "locations": [
+      "qingyunshan"
+    ]
+  },
+  {
+    "id": "e-liu-fall",
+    "title": "柳如烟堕魔",
+    "kind": "future",
+    "eraId": "ancient",
+    "yearLabel": "第二卷",
+    "description": "柳如烟第二卷堕魔。现代《妖异志》里有“柳氏堕魔”的记载。与紫气有关。",
+    "characters": [
+      "liu-ruyan"
+    ]
+  },
+  {
+    "id": "e-zhangmen-coma",
+    "title": "掌门重伤昏迷，苏清月代理掌门",
+    "kind": "future",
+    "eraId": "ancient",
+    "yearLabel": "第二卷",
+    "description": "第二卷掌门重伤昏迷，苏清月以掌门印成为代理掌门。掌门后来的重伤和紫气有关。",
+    "characters": [
+      "xuan-heng",
+      "su-qingyue"
+    ]
+  },
+  {
+    "id": "e-hushan-tamper",
+    "title": "护山大阵被动过手脚",
+    "kind": "future",
+    "eraId": null,
+    "yearLabel": "第二卷末露头",
+    "description": "护山大阵被人动过，而且不止一次；第二卷末露头，不急着查。"
+  },
+  {
+    "id": "e-mangbox",
+    "title": "盲盒三件",
+    "kind": "future",
+    "eraId": null,
+    "yearLabel": "第三卷",
+    "description": "《万阵源流图》、绝灵剑、纯血魔核，第三卷埋下。"
+  },
+  {
+    "id": "e-tianshui",
+    "title": "甜水泉变黑",
+    "kind": "history",
+    "eraId": null,
+    "yearLabel": "古今之间（老辈人传说）",
+    "description": "刘大爷：那坑以前是甜水泉，后来变黑，外门往里倒垃圾是为了“压着它，压不住就要出事”，老话还有一句“甜水别喝”。",
+    "characters": [
+      "liu-daye"
+    ],
+    "locations": [
+      "tianshuikeng"
+    ]
+  },
+  {
+    "id": "e-hushan-shell",
+    "title": "护山大阵只剩壳子",
+    "kind": "history",
+    "eraId": "modern",
+    "year": 41970,
+    "yearLabel": "约 41970 年（三十年前）",
+    "description": "护山大阵三十年前就只剩壳子，每年过年开一次给山下看。",
+    "locations": [
+      "qingyunshan"
+    ]
+  },
+  {
+    "id": "e-lin-parents",
+    "title": "林凡父母死于兽潮",
+    "kind": "history",
+    "eraId": "modern",
+    "year": 41990,
+    "yearLabel": "约 41990 年（十年前）",
+    "description": "林凡的父母是宗门采办，十年前死于兽潮。",
+    "characters": [
+      "lin-fan"
+    ]
+  },
+  {
+    "id": "e-jin-now",
+    "title": "现代：青云历 42000 年，末法",
+    "kind": "history",
+    "eraId": "modern",
+    "year": 42000,
+    "description": "全宗不足百人：外门约六十，内门十余，长老几位，掌门一人。灵气稀薄驳杂，靠聚灵阵按时段配给；只剩残卷、残阵、残史。门规第一条：按月缴供，不得拖欠（“尊师重道”排到了第十二条）。",
+    "locations": [
+      "qingyunshan"
+    ]
+  },
+  {
+    "id": "e-lin-zuzhang",
+    "title": "林凡升为组长",
+    "kind": "future",
+    "eraId": "modern",
+    "yearLabel": "第二卷",
+    "description": "林凡在现代升为组长。",
+    "characters": [
+      "lin-fan"
+    ]
+  },
+  {
+    "id": "e-chenzimo",
+    "title": "陈子墨招揽林凡",
+    "kind": "future",
+    "eraId": "modern",
+    "yearLabel": "第二卷",
+    "description": "现代内门真传陈子墨第二卷登场，招揽林凡。",
+    "characters": [
+      "chen-zimo",
+      "lin-fan"
+    ]
+  },
+  {
+    "id": "e-d01",
+    "title": "落星亭第一次接通",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 1,
+    "chapter": 1,
+    "description": "林凡为赶马扒皮的验收熬夜补完落星亭阵纹，石桌亮起，听见苏清月抱怨紫气打坐，两人互报年份，差了一万年。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "luoxingting-jin",
+      "luoxingting-gu"
+    ]
+  },
+  {
+    "id": "e-d03-shi",
+    "title": "林凡得到《青云通史》",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 3,
+    "chapter": 5,
+    "description": "刘大爷用垫锅的《青云通史》换林凡修灯；书后半本粘成一坨。",
+    "characters": [
+      "lin-fan",
+      "liu-daye"
+    ],
+    "locations": [
+      "liudaye-shutan"
+    ]
+  },
+  {
+    "id": "e-d03-ningzhi",
+    "title": "念出“剑法凝滞”",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 3,
+    "chapter": 6,
+    "description": "林凡念出紫气和剑意凝滞两行，苏清月信了，得知柳如烟看出过。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "luoxingting-jin",
+      "luoxingting-gu"
+    ]
+  },
+  {
+    "id": "e-d04-zao",
+    "title": "古版聚火纹修好食堂灶台",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 4,
+    "chapter": 7,
+    "description": "第 4–6 天。截断限火纹、收窄引灵口后成功；马扒皮抽走两块赏钱。",
+    "characters": [
+      "lin-fan",
+      "ma-papi"
+    ],
+    "locations": [
+      "waimen-shitang"
+    ]
+  },
+  {
+    "id": "e-d07",
+    "title": "约法三章",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 7,
+    "chapter": 8,
+    "description": "不问年纪长相；没来等一刻钟；不叫妖孽（她“考虑考虑”）。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "luoxingting-jin",
+      "luoxingting-gu"
+    ]
+  },
+  {
+    "id": "e-d09",
+    "title": "十二个新弟子交给苏清月",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 9,
+    "chapter": 10,
+    "description": "开泉大典定在三十六日后（约第 45 天）；掌门把十二个新弟子交给苏清月。",
+    "characters": [
+      "su-qingyue",
+      "xuan-heng"
+    ]
+  },
+  {
+    "id": "e-d11",
+    "title": "测灵石：石砚五灵根",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 11,
+    "chapter": 12,
+    "description": "石砚被叫“五花石”，大典后考校引不了气就送回家。",
+    "characters": [
+      "shi-yan",
+      "su-qingyue",
+      "lu-ming"
+    ]
+  },
+  {
+    "id": "e-d13-kumu",
+    "title": "找到《枯木汲气篇》",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 13,
+    "chapter": 14,
+    "description": "苏清月和柳如烟在藏经阁五层冷门书堆里翻出《枯木汲气篇》。",
+    "characters": [
+      "su-qingyue",
+      "liu-ruyan"
+    ],
+    "locations": [
+      "cangjingge-gu"
+    ]
+  },
+  {
+    "id": "e-d13-liu",
+    "title": "柳如烟开始丑时坐紫气",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 13,
+    "chapter": 14,
+    "description": "柳如烟丑时坐紫气，“像喝了一口热蜜水”。",
+    "characters": [
+      "liu-ruyan"
+    ],
+    "locations": [
+      "ziqi-lingquan"
+    ]
+  },
+  {
+    "id": "e-d22-tan",
+    "title": "修阵摊开张",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 22,
+    "chapter": 18,
+    "description": "第 22–24 天。三人开“修阵摊”，第一单周婆婆的暖炉，第一天总收九分。",
+    "characters": [
+      "lin-fan",
+      "tang-guo",
+      "li-pangzi",
+      "zhou-popo"
+    ],
+    "locations": [
+      "tangji"
+    ]
+  },
+  {
+    "id": "e-d25",
+    "title": "摊位费冲突",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 25,
+    "chapter": 20,
+    "description": "马扒皮立摊位费，林凡反将一军，从此被记恨。",
+    "characters": [
+      "lin-fan",
+      "ma-papi"
+    ],
+    "locations": [
+      "waiwufang"
+    ]
+  },
+  {
+    "id": "e-d26",
+    "title": "林凡突破凝气三层",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 26,
+    "chapter": 21,
+    "description": "第 26 天子时，苏清月隔着石桌数他的呼吸，第四十八数时层壁“自己开了”。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "luoxingting-jin"
+    ]
+  },
+  {
+    "id": "e-d27",
+    "title": "苏清月冲金丹失败",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 27,
+    "chapter": 22,
+    "description": "最后一圈凝滞，丹裂，吐血，灵液散三成；当夜子时林凡听出她声音不对（第 23 章）。",
+    "characters": [
+      "su-qingyue",
+      "xuan-heng",
+      "gui-momo"
+    ]
+  },
+  {
+    "id": "e-d28",
+    "title": "外门停灵三天",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 28,
+    "chapter": 24,
+    "description": "第 28–30 天。聚灵阵灵石裂，停三天；林凡在坑边碰到一缕甜的东西。",
+    "characters": [
+      "lin-fan"
+    ],
+    "locations": [
+      "julingzhen",
+      "tianshuikeng"
+    ]
+  },
+  {
+    "id": "e-d31",
+    "title": "驱鬼符断线一夜",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 31,
+    "chapter": 25,
+    "description": "李胖子请唐果的镇邪符贴在石桌底下，第 31 天子时石桌不亮；两人各自等了一夜（第 25–26 章）。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "li-pangzi",
+      "tang-guo"
+    ],
+    "locations": [
+      "luoxingting-jin",
+      "luoxingting-gu"
+    ]
+  },
+  {
+    "id": "e-d34",
+    "title": "末位淘汰名单公布",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 34,
+    "chapter": 27,
+    "description": "外门年终考核下月十五（约第 60 天），末五名发北荒寒铁矿服役三年。",
+    "characters": [
+      "lin-fan",
+      "li-pangzi",
+      "tang-guo",
+      "ma-papi"
+    ]
+  },
+  {
+    "id": "e-d35",
+    "title": "孩子们的第一次小考",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 35,
+    "chapter": 28,
+    "description": "测烛小考，十一人过，石砚不过；雷渊路过：“规矩就是规矩”。",
+    "characters": [
+      "su-qingyue",
+      "shi-yan",
+      "lei-yuan"
+    ]
+  },
+  {
+    "id": "e-d39",
+    "title": "刘大爷讲甜水坑",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 39,
+    "chapter": 30,
+    "description": "刘大爷说那坑老辈人叫“甜水坑”，“甜水别喝”。",
+    "characters": [
+      "lin-fan",
+      "liu-daye"
+    ],
+    "locations": [
+      "tianshuikeng"
+    ]
+  },
+  {
+    "id": "e-d40",
+    "title": "读到《青云通史》末页",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 40,
+    "chapter": 31,
+    "description": "故事第 40 天前后（计划）。三年后大劫，高层尽亡。",
+    "characters": [
+      "lin-fan"
+    ]
+  },
+  {
+    "id": "e-d45",
+    "title": "开泉大典",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 45,
+    "chapter": 41,
+    "description": "约第 45 天（计划，第 41–42 章）。紫气开泉，全宗吐纳；小石头第一个倒下，苏清月当众打断大典去救人。",
+    "characters": [
+      "su-qingyue",
+      "shi-yan",
+      "xuan-heng"
+    ],
+    "locations": [
+      "ziqi-lingquan"
+    ]
+  },
+  {
+    "id": "e-heiwu",
+    "title": "黑雾冒了个头",
+    "kind": "story",
+    "eraId": "modern",
+    "chapter": 46,
+    "description": "垃圾坑冒出一缕黑雾，林凡只知道不对劲（计划）。",
+    "characters": [
+      "lin-fan"
+    ],
+    "locations": [
+      "tianshuikeng"
+    ]
+  },
+  {
+    "id": "e-d55",
+    "title": "新弟子考校",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 55,
+    "description": "约第 55 天（计划），执法堂主持。引不了气就送回家。",
+    "characters": [
+      "lei-yuan",
+      "shi-yan"
+    ],
+    "locations": [
+      "zhifatang"
+    ]
+  },
+  {
+    "id": "e-d60",
+    "title": "外门考核",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 60,
+    "chapter": 51,
+    "description": "约第 60 天（计划，第 51–53 章）。修为关、阵法关；马扒皮做手脚，王长老注意到林凡。",
+    "characters": [
+      "lin-fan",
+      "ma-papi",
+      "wang-zhanglao"
+    ],
+    "locations": [
+      "yanwuchang",
+      "zhenfasi"
+    ]
+  },
+  {
+    "id": "e-chg-paomian",
+    "title": "泡面变成“圣女面”",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 17,
+    "description": "林凡讲泡面，百味堂管事照做，命名“圣女面”；次日现代所有泡面都变了，只有林凡记得原来的牌子。历史改动第一次（笑点）。",
+    "before": "老坛酸菜灵面",
+    "after": "青云圣女面·万年老字号（比原来酸）",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "liu-daye"
+    ],
+    "locations": [
+      "baiweitang"
+    ]
+  },
+  {
+    "id": "e-chg-shiyan",
+    "title": "石砚那一行",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 58,
+    "description": "留下石砚。林凡翻《青云通史》，多了一行，墨迹像新写的；阵法司名牌墙上果然有一块“石”字牌。他确认历史能改（计划，主线）。",
+    "before": "史书里没有这一行，名牌墙上没有“石”字牌",
+    "after": "“圣女首徒石氏，五灵根，后掌阵堂”；阵法司名牌墙上有一块“石”字牌",
+    "characters": [
+      "lin-fan",
+      "shi-yan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "zhenfasi",
+      "zhentang"
+    ]
+  },
+  {
+    "id": "e-chg-liu",
+    "title": "柳如烟那一页",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 59,
+    "description": "救下石砚的同时，柳如烟那一页也变了：改动会牵连，而且不受控（计划，钩子）。",
+    "before": "（变之前的内容大纲未写）",
+    "after": "“是岁冬，圣女师妹柳氏……”后面的字洇开了，看不清",
+    "characters": [
+      "lin-fan",
+      "liu-ruyan"
+    ]
+  },
+  {
+    "id": "e-tr-dabai",
+    "title": "大白 → 秃毛鹤徽记",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 2,
+    "description": "宗门徽记上的秃毛鹤，原型就是掌门的老灵鹤大白。她抱怨大白掉毛，林凡低头看见自己衣服上的徽记，愣住了（痕迹，笑点）。",
+    "characters": [
+      "da-bai",
+      "lin-fan",
+      "su-qingyue"
+    ]
+  },
+  {
+    "id": "e-tr-yaowangding",
+    "title": "药王鼎 → 石墩",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 2,
+    "description": "落星亭东三丈的药王鼎，现代是埋进土里的石墩，露出三个鼎足坑，外门拿来磨刀。今昔对照。",
+    "locations": [
+      "yaowangding",
+      "shidun"
+    ]
+  },
+  {
+    "id": "e-tr-zizhulin",
+    "title": "紫竹林 → 枯桩",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 2,
+    "description": "落星亭西的紫竹林，现代是一片砍剩的枯桩，外门每年入冬来砍柴。今昔对照。",
+    "locations": [
+      "zizhulin",
+      "kuzhuang"
+    ]
+  },
+  {
+    "id": "e-tr-fengling",
+    "title": "风铃 → 锈铁钉",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 2,
+    "description": "落星亭檐角四十九只铜胎鎏金风铃，现代只剩一排锈铁钉。第 30 章刘大爷送的锈铜铃挂回第七颗钉子上，不响。",
+    "locations": [
+      "fengling",
+      "xiutieding"
+    ]
+  },
+  {
+    "id": "e-tr-guishu",
+    "title": "桂树 → 树桩",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 29,
+    "description": "揽月坡杂役宿舍门口晾衣服的树桩，就是桂嬷嬷在揽月居门外种的桂树（痕迹，温情）。",
+    "characters": [
+      "gui-momo",
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "lanyueju",
+      "lanyuepo"
+    ]
+  },
+  {
+    "id": "e-tr-jianhen",
+    "title": "秦照剑痕 → 老石头",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 51,
+    "description": "秦照每被拒一次就在演武坪的青石上刻一道剑痕（第 19 章说破）；外门演武场边那块刻满划痕的老石头，林凡认出来是秦照的剑痕，当场笑场（计划，痕迹，笑点）。",
+    "characters": [
+      "qin-zhao",
+      "lin-fan"
+    ],
+    "locations": [
+      "jianfeng-yanwuping",
+      "yanwuchang"
+    ]
+  },
+  {
+    "id": "e-tr-miguan",
+    "title": "蜜罐",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 37,
+    "description": "第 36 章苏清月把一罐灵蜜埋进灵泉边的石缝；第 37 章林凡挖出石化的罐子，灵气早散尽了，只剩甜味和土味，罐底刻的字还在。由此定下规矩：盲盒要用封印（计划，埋物）。",
+    "characters": [
+      "su-qingyue",
+      "lin-fan"
+    ],
+    "locations": [
+      "ziqi-lingquan",
+      "tianshuikeng"
+    ]
+  }
+]

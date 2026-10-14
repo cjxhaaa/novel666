@@ -1,0 +1,455 @@
+[
+  {
+    "id": "f-01",
+    "text": "马扒皮账上三十包朱砂没发到落星亭，林凡当面戳破过",
+    "planted": [
+      1
+    ],
+    "payoff": "第 20 章摊位费冲突、考核做手脚",
+    "payoffChapters": [
+      20
+    ],
+    "status": "open",
+    "notes": "第 20 章摊位费冲突已写，“考核做手脚”在第 50–53 章，故仍为 open。"
+  },
+  {
+    "id": "f-02",
+    "text": "垃圾坑飘出“甜腥味”",
+    "planted": [
+      1
+    ],
+    "payoff": "第 30 章甜水坑",
+    "payoffChapters": [
+      30
+    ],
+    "status": "resolved",
+    "resolvedIn": 30,
+    "notes": "第 30 章刘大爷说那坑叫“甜水坑”"
+  },
+  {
+    "id": "f-03",
+    "text": "传音阵正中圆环的断口“像被刻意截过”",
+    "planted": [
+      1
+    ],
+    "payoff": "远期（传音阵为什么断、谁截的）",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-04",
+    "text": "两人不知道对方长相（林凡问她多大被骂）",
+    "planted": [
+      2
+    ],
+    "payoff": "第一卷长线笑料，第二卷开放画面时兑现",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-05",
+    "text": "护山大阵在现代三十年前就只剩壳子",
+    "planted": [
+      2
+    ],
+    "payoff": "远期",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-06",
+    "text": "秦照被拒后走到青石边拔剑（刻剑痕）",
+    "planted": [
+      4
+    ],
+    "payoff": "第 19 章说破，第 51 章林凡认出",
+    "payoffChapters": [
+      19,
+      51
+    ],
+    "status": "open",
+    "notes": "第 19 章已说破，第 51 章林凡认出尚未写。"
+  },
+  {
+    "id": "f-07",
+    "text": "柳如烟“我倒喜欢甜的”",
+    "planted": [
+      4
+    ],
+    "payoff": "第 13 章让出紫气时段、第 26 章",
+    "payoffChapters": [
+      13,
+      26
+    ],
+    "status": "resolved",
+    "resolvedIn": 26,
+    "notes": "第 13 章让出紫气时段、第 26 章柳如烟的焦虑均已写"
+  },
+  {
+    "id": "f-08",
+    "text": "《清源飞天舞》在桂嬷嬷日程上",
+    "planted": [
+      4
+    ],
+    "payoff": "第 39 章大典彩排",
+    "payoffChapters": [
+      39
+    ],
+    "status": "open"
+  },
+  {
+    "id": "f-09",
+    "text": "苏清月想对师尊说落星亭的事，没说出口",
+    "planted": [
+      4
+    ],
+    "payoff": "师徒关系，第 43 章",
+    "payoffChapters": [
+      43
+    ],
+    "status": "open"
+  },
+  {
+    "id": "f-10",
+    "text": "《青云通史》后半本粘住（末页三年大劫在里面）",
+    "planted": [
+      5
+    ],
+    "payoff": "第 31 章",
+    "payoffChapters": [
+      31
+    ],
+    "status": "open"
+  },
+  {
+    "id": "f-11",
+    "text": "刘大爷吃“老坛酸菜灵面”",
+    "planted": [
+      5
+    ],
+    "payoff": "第 17 章变成圣女面",
+    "payoffChapters": [
+      17
+    ],
+    "status": "resolved",
+    "resolvedIn": 17,
+    "notes": "第 17 章变成圣女面"
+  },
+  {
+    "id": "f-12",
+    "text": "刘大爷祖上世代在青云山扫地",
+    "planted": [
+      5
+    ],
+    "payoff": "第 30 章甜水坑",
+    "payoffChapters": [
+      30
+    ],
+    "status": "resolved",
+    "resolvedIn": 30,
+    "notes": "第 30 章刘大爷讲甜水坑老黄历"
+  },
+  {
+    "id": "f-13",
+    "text": "柳如烟的《灯下杂录》记下了师姐的剑意凝滞",
+    "planted": [
+      6
+    ],
+    "payoff": "第二卷",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-14",
+    "text": "马扒皮两次盯着落星亭的圆环看，起疑",
+    "planted": [
+      3,
+      5
+    ],
+    "payoff": "后续马扒皮线",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-15",
+    "text": "唐果：“下回有这种活先跟我说”",
+    "planted": [
+      7
+    ],
+    "payoff": "第 18 章修阵小摊",
+    "payoffChapters": [
+      18
+    ],
+    "status": "resolved",
+    "resolvedIn": 18,
+    "notes": "第 18 章三人开修阵摊"
+  },
+  {
+    "id": "f-16",
+    "text": "大白吞了一块中品灵石",
+    "planted": [
+      8
+    ],
+    "payoff": "笑料，可回扣",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-17",
+    "text": "柳如烟丑寅坐紫气（林凡出的摸鱼主意）",
+    "planted": [
+      13,
+      14
+    ],
+    "payoff": "第 26、43、56 章；第二卷苏清月的愧疚",
+    "payoffChapters": [
+      26,
+      43,
+      56
+    ],
+    "status": "open"
+  },
+  {
+    "id": "f-18",
+    "text": "枯木前辈献书被拒、“虽迟，不死”",
+    "planted": [
+      14
+    ],
+    "payoff": "远期可回扣",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-19",
+    "text": "石砚的小本子（记数）",
+    "planted": [
+      16
+    ],
+    "payoff": "第 28、42、56 章",
+    "payoffChapters": [
+      28,
+      42,
+      56
+    ],
+    "status": "open",
+    "notes": "正文里石砚的小本子不记数而是画线（第 16 章）。"
+  },
+  {
+    "id": "f-20",
+    "text": "回络（肘弯细脉）没走通",
+    "planted": [
+      16
+    ],
+    "payoff": "第 21 章突破前后",
+    "payoffChapters": [
+      21
+    ],
+    "status": "resolved",
+    "resolvedIn": 21,
+    "notes": "第 21 章“回络走通后数字飙升”"
+  },
+  {
+    "id": "f-21",
+    "text": "林凡估算四十天到三层（按慢速算错了）",
+    "planted": [
+      16
+    ],
+    "payoff": "已收（第 21 章十天突破）",
+    "payoffChapters": [
+      21
+    ],
+    "status": "resolved",
+    "resolvedIn": 21,
+    "notes": "计划写明“已收”"
+  },
+  {
+    "id": "f-22",
+    "text": "圣女面：历史改动第一次，只有林凡记得",
+    "planted": [
+      17
+    ],
+    "payoff": "第 58 章",
+    "payoffChapters": [
+      58
+    ],
+    "status": "open"
+  },
+  {
+    "id": "f-23",
+    "text": "苏清月“往后做事要小心些”",
+    "planted": [
+      17
+    ],
+    "payoff": "第 58–59 章",
+    "payoffChapters": [
+      58,
+      59
+    ],
+    "status": "open"
+  },
+  {
+    "id": "f-24",
+    "text": "马扒皮：“落星亭圆环每早都淡，你夜里在干什么”",
+    "planted": [
+      20
+    ],
+    "payoff": "后续马扒皮线、第 25 章前后",
+    "payoffChapters": [
+      25
+    ],
+    "status": "open",
+    "notes": "第 25 章是李胖子跟踪，没有兑现马扒皮这条，仍为 open。"
+  },
+  {
+    "id": "f-25",
+    "text": "林凡按月白修外务房（能进出外务房、账房）",
+    "planted": [
+      20
+    ],
+    "payoff": "远期可看见马扒皮的账",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-26",
+    "text": "唐果“此账另记，迟早连本带利”",
+    "planted": [
+      20
+    ],
+    "payoff": "远期",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-27",
+    "text": "秦照看出凝滞没说",
+    "planted": [
+      19
+    ],
+    "payoff": "远期",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-28",
+    "text": "苏清月冲金丹失败，凝滞第五次；师命坐六个时辰",
+    "planted": [
+      22
+    ],
+    "payoff": "第 26、41 章",
+    "payoffChapters": [
+      26,
+      41
+    ],
+    "status": "open",
+    "notes": "第 26 章已写（坐满六个时辰），第 41 章未写。"
+  },
+  {
+    "id": "f-29",
+    "text": "林凡：“不够是空，卡住是堵”",
+    "planted": [
+      23
+    ],
+    "payoff": "第 41 章她起疑",
+    "payoffChapters": [
+      41
+    ],
+    "status": "open"
+  },
+  {
+    "id": "f-30",
+    "text": "坑边那缕甜的、分不开、往丹田钻的东西；石柱上“圈里一个点”",
+    "planted": [
+      24
+    ],
+    "payoff": "第 45–46 章",
+    "payoffChapters": [
+      45,
+      46
+    ],
+    "status": "open"
+  },
+  {
+    "id": "f-31",
+    "text": "刘大爷：甜水坑、“压着它”、“甜水别喝”",
+    "planted": [
+      30
+    ],
+    "payoff": "第 45–46 章；远期（外门倒垃圾其实在压黑雾）",
+    "payoffChapters": [
+      45,
+      46
+    ],
+    "status": "open"
+  },
+  {
+    "id": "f-32",
+    "text": "锈铜铃（落星亭第七只风铃）挂回第七颗钉子，不响",
+    "planted": [
+      30
+    ],
+    "payoff": "远期（第一卷尾或第二卷可让它在子时响一次）",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-33",
+    "text": "唐果起疑：“你不想说就别说”",
+    "planted": [
+      25
+    ],
+    "payoff": "远期",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-34",
+    "text": "两人都违背“等一刻钟”的约法，各自等了一夜",
+    "planted": [
+      25,
+      26
+    ],
+    "payoff": "关系",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-35",
+    "text": "雷渊主持考校：“规矩就是规矩”",
+    "planted": [
+      28
+    ],
+    "payoff": "第 43 章禁足、石砚考校",
+    "payoffChapters": [
+      43
+    ],
+    "status": "open"
+  },
+  {
+    "id": "f-36",
+    "text": "柳如烟坐泉边是苏清月为保密安排的",
+    "planted": [
+      26
+    ],
+    "payoff": "第二卷愧疚",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-37",
+    "text": "考核预排名单与马扒皮的备注",
+    "planted": [
+      27
+    ],
+    "payoff": "第 49–54 章",
+    "payoffChapters": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+    ],
+    "status": "open"
+  }
+]

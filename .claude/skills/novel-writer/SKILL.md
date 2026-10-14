@@ -5,11 +5,21 @@ description: 写或改小说《落星传音》的正文章节、调整大纲、�
 
 # 写作规范
 
+## 资料在哪
+
+- **世界观和规则**：`bible.md`（世界、落星亭、修炼体系、紫气、命名规矩、名词、跨线规则）。
+- **人物、关系、地点、伏笔、剧情线、章节规划**：`story/*.json`，由星图书房（`studio/`）维护。人物“当前状态”是 `characters.json` 里每人的 `progressions`：从第几章起，哪一项变成什么。
+- **写到哪了**：`progress.md`。
+
 ## 开写前
 
-1. 读 `progress.md`：写到哪了，人物当前状态，有哪些已埋未收的伏笔。
+1. 生成并读写作上下文：
+   ```bash
+   node studio/scripts/cli.mjs context N
+   ```
+   输出到 `story/context/chapNN.md`。里面有本章计划和各剧情线任务、前五章实际写了什么、后三章安排（别提前写掉）、相关人物在本章开写时的状态和关系、相关地点（含古今对照）、未收伏笔、已发生的历史改动、必守设定。如果 `studio/node_modules` 不存在，先在 `studio/` 里 `npm install`。
 2. 读 `outline.md`：本章及前后两章的安排。
-3. 读 `bible.md` 里和本章相关的部分。凡是涉及落星亭、境界、地点、紫气，都先查，不凭记忆写。
+3. 上下文里没覆盖、但本章涉及的设定，去 `bible.md` 或 `story/` 里查。凡是涉及落星亭、境界、地点、紫气，都先查，不凭记忆写。
 
 默认一次写 1–2 章，写完等用户看过再继续，除非用户要求连写。
 
@@ -51,22 +61,34 @@ description: 写或改小说《落星传音》的正文章节、调整大纲、�
    grep -nE "狠狠干|倒吸一口凉气|一阵青一阵白|短暂的沉默|翻了个白眼" chapters/chapNN.md
    ```
    查出来的改掉；“不是……是……”自己数一遍。
-2. **查设定**：
+2. **跑守卫**：
+   ```bash
+   node studio/scripts/cli.mjs guard N
+   ```
+   会查配角出圈、古今地名混用、人物提前登场、伏笔逾期、时间倒流、套话和“不是……是……”的次数。逐条看：真有问题就改正文；是误报（比如史书引文里提到古人）就说明一下。
+3. **查设定**：
    - 落星亭：只在子时、只传声、离亭即断。
-   - 境界、地点与 `bible.md` 一致。
-   - 古今地名没有混用。
-3. **查人物**：苏清月给出帮助时，有没有写出她的局限或误判？林凡是不是又太顺了？
-4. **查结尾**：最后一段有没有感悟或总结？
-5. **查厚度**：删掉对白之后，还剩不剩一个具体的场面？
+   - 境界与 `story/characters.json`、地点与 `story/locations.json`、规则与 `bible.md` 一致。
+4. **查人物**：苏清月给出帮助时，有没有写出她的局限或误判？林凡是不是又太顺了？
+5. **查结尾**：最后一段有没有感悟或总结？
+6. **查厚度**：删掉对白之后，还剩不剩一个具体的场面？
 
 ## 写完同步
 
-- **`progress.md`**：已写章节加一行；更新人物状态（境界、伤势、关系、知道的秘密）；增删伏笔。
-- **出现新的有名字的人物或地点**：补进 `bible.md`。
-- **正文偏离了大纲**：改 `outline.md` 对应章节，并告诉用户改了什么。
+直接改 JSON（两空格缩进，保持原有字段顺序）。星图书房开着时会自动同步。
+
+- **`progress.md`**：更新“进度”，已写章节加一行。
+- **`story/chapters.json`**：本章 `status` 改为 `"done"`，填 `recap`（和 progress.md 那一行一致）、`days`、`dayStart`、`dayEnd`。
+- **`story/characters.json`**：人物状态有变化（境界、伤势、处境、知道的秘密、称呼……）就给那个人加一条 `{ "chapter": N, "key": "…", "value": "…" }`，同一个 key 的新值会盖住旧值。本章原有带“（计划）”的条目，按正文实际写的改掉或删掉。
+- **`story/relations.json`**：关系进入新阶段时，在 `progressions` 里加 `{ "chapter": N, "label": "…" }`。
+- **`story/foreshadows.json`**：新埋的伏笔加一条（`planted`、`payoff`、`payoffChapters`，远期留空数组）；收了的改 `"status": "resolved"` 并填 `resolvedIn`。
+- **`story/events.json`**：发生历史改动时加一条 `kind: "change"`，写清 `before` / `after` 和 `chapter`。
+- **出现新的有名字的人物或地点**：加进 `story/characters.json` / `story/locations.json`（别名写进 `aliases`，古今对照用 `counterpartId` 互相指向并共用坐标）。新的世界观、规则、名词才写进 `bible.md`。
+- **正文偏离了大纲**：改 `outline.md` 对应章节和 `story/chapters.json` 的 `plan`，并告诉用户改了什么。
 
 ## 改大纲或设定
 
 - **改大纲**：近的章节写到章级（标题 + 一两句内容），远的只写阶段目标。
-- **改设定**：只改 `bible.md`。不要在大纲、进度或本文件里另写一份设定。
+- **改设定**：世界观和规则只改 `bible.md`；人物、地点、伏笔只改 `story/`。不要在大纲、进度或本文件里另写一份。
+- **改了 `bible.md` 的小节标题**：星图书房的设定条目按标题引用 `bible.md`，改完跑一遍 `node studio/scripts/cli.mjs guard`，有“设定引用失效”就去 `story/codex.json` 把 `source.heading` 改成新标题。
 - **大改**（新机制、新的主要人物、改结局方向）：先跟用户确认，再动文件。

@@ -1,0 +1,432 @@
+[
+  {
+    "id": "luoxingting-gu",
+    "name": "落星亭",
+    "aliases": [],
+    "description": "藏经阁后院观星亭，白玉石柱；石桌上刻着上古传音阵。檐角四十九只铜胎鎏金风铃。",
+    "notes": "唯一的直接交汇点。",
+    "eraId": "ancient",
+    "counterpartId": "luoxingting-jin",
+    "region": "青云山",
+    "x": 500,
+    "y": 300
+  },
+  {
+    "id": "luoxingting-jin",
+    "name": "落星亭",
+    "aliases": [
+      "残亭"
+    ],
+    "description": "残亭，柱子只剩半截，荒草齐腰；檐角只剩一排锈铁钉。林凡负责修补这里的废阵纹。",
+    "notes": "唯一的直接交汇点。第 30 章林凡把锈铜铃挂在檐下第七颗钉子上。",
+    "eraId": "modern",
+    "counterpartId": "luoxingting-gu",
+    "region": "青云山",
+    "x": 500,
+    "y": 300
+  },
+  {
+    "id": "ziqi-lingquan",
+    "name": "紫气灵泉",
+    "aliases": [],
+    "description": "落星亭后庭，泉水温，紫气甜。近年新涌出来，掌门视为祥瑞，开泉大典专门庆祝。",
+    "notes": "因果同源；蜜罐埋在这里。",
+    "eraId": "ancient",
+    "counterpartId": "tianshuikeng",
+    "region": "青云山",
+    "x": 500,
+    "y": 220
+  },
+  {
+    "id": "tianshuikeng",
+    "name": "甜水坑",
+    "aliases": [
+      "垃圾坑",
+      "黑雾坑"
+    ],
+    "description": "落星亭后面倒垃圾的坑，老辈人叫它“甜水坑”，偶尔冒出黑雾，鸟都绕着飞。",
+    "notes": "因果同源；蜜罐在这里挖出来。刘大爷：以前是甜水泉，后来变黑，外门往里倒垃圾是为了“压着它”。",
+    "eraId": "modern",
+    "counterpartId": "ziqi-lingquan",
+    "region": "青云山",
+    "x": 500,
+    "y": 220
+  },
+  {
+    "id": "cangjingge-gu",
+    "name": "藏经阁",
+    "aliases": [],
+    "description": "九层，落星亭是它的后院。第五层冷门书堆里有《枯木汲气篇》。",
+    "eraId": "ancient",
+    "counterpartId": "cangjingge-yuanzhi",
+    "region": "青云山",
+    "x": 500,
+    "y": 370
+  },
+  {
+    "id": "cangjingge-yuanzhi",
+    "name": "藏经阁旧址",
+    "aliases": [],
+    "description": "原址只剩台基；第五层冷门书堆所在，原址只剩碎砖。",
+    "eraId": "modern",
+    "counterpartId": "cangjingge-gu",
+    "region": "青云山",
+    "x": 500,
+    "y": 370
+  },
+  {
+    "id": "lanyueju",
+    "name": "揽月峰揽月居",
+    "aliases": [
+      "揽月居",
+      "揽月峰"
+    ],
+    "description": "圣女居所，窗外有桂嬷嬷种的桂树。",
+    "notes": "圣女峰有夜禁（bible 2.1）；圣女峰是否即揽月峰待确认。",
+    "eraId": "ancient",
+    "counterpartId": "lanyuepo",
+    "region": "青云山",
+    "x": 250,
+    "y": 260
+  },
+  {
+    "id": "lanyuepo",
+    "name": "揽月坡杂役宿舍",
+    "aliases": [
+      "揽月坡",
+      "杂役宿舍"
+    ],
+    "description": "林凡和李胖子同住；门口的枯树桩用来晾衣服。",
+    "notes": "树桩就是那棵桂树（第 29 章发现）。",
+    "eraId": "modern",
+    "counterpartId": "lanyueju",
+    "region": "青云山",
+    "x": 250,
+    "y": 260
+  },
+  {
+    "id": "jianfeng-yanwuping",
+    "name": "剑峰演武坪",
+    "aliases": [
+      "演武坪"
+    ],
+    "description": "秦照每被拒一次，就在青石上刻一道剑痕。",
+    "eraId": "ancient",
+    "counterpartId": "yanwuchang",
+    "region": "青云山",
+    "x": 780,
+    "y": 460
+  },
+  {
+    "id": "yanwuchang",
+    "name": "外门演武场",
+    "aliases": [
+      "演武场"
+    ],
+    "description": "外门考核场地，坪边有块刻满划痕的老石头。",
+    "notes": "剑痕留到了现代（第 51 章林凡认出）。",
+    "eraId": "modern",
+    "counterpartId": "jianfeng-yanwuping",
+    "region": "青云山",
+    "x": 780,
+    "y": 460
+  },
+  {
+    "id": "zhentang",
+    "name": "阵堂",
+    "aliases": [],
+    "description": "古代阵堂。",
+    "notes": "石砚“后掌阵堂”。",
+    "eraId": "ancient",
+    "counterpartId": "zhenfasi",
+    "region": "青云山",
+    "x": 660,
+    "y": 540
+  },
+  {
+    "id": "zhenfasi",
+    "name": "阵法司",
+    "aliases": [],
+    "description": "王长老坐镇，正堂挂历代主事名牌。修一个照明盘要三钱。",
+    "notes": "名牌墙上有一块“石”字牌（第 58 章）。外门考核阵法关的考场在正堂。",
+    "eraId": "modern",
+    "counterpartId": "zhentang",
+    "region": "青云山",
+    "x": 660,
+    "y": 540
+  },
+  {
+    "id": "baiweitang",
+    "name": "百味堂",
+    "aliases": [
+      "膳房"
+    ],
+    "description": "讲究的膳房。",
+    "notes": "圣女面、古法火锅。",
+    "eraId": "ancient",
+    "counterpartId": "waimen-shitang",
+    "region": "青云山",
+    "x": 370,
+    "y": 600
+  },
+  {
+    "id": "waimen-shitang",
+    "name": "外门食堂",
+    "aliases": [
+      "食堂"
+    ],
+    "description": "伙食差，李胖子在这里帮厨，胡师傅掌勺。外门一顿饭约一钱。",
+    "notes": "圣女面、古法火锅。第 7 章修好灶台。",
+    "eraId": "modern",
+    "counterpartId": "baiweitang",
+    "region": "青云山",
+    "x": 370,
+    "y": 600
+  },
+  {
+    "id": "zhifatang",
+    "name": "执法堂",
+    "aliases": [],
+    "description": "雷渊管夜禁、管处罚。门口石兽镇邪。",
+    "notes": "与外务管事房是同一座建筑。",
+    "eraId": "ancient",
+    "counterpartId": "waiwufang",
+    "region": "青云山",
+    "x": 610,
+    "y": 720
+  },
+  {
+    "id": "waiwufang",
+    "name": "外务管事房",
+    "aliases": [
+      "外务房"
+    ],
+    "description": "马扒皮收摊位费、管考核名单。门口石兽挂收费木牌。",
+    "notes": "与执法堂是同一座建筑。第 20 章起林凡按月白修外务房。",
+    "eraId": "modern",
+    "counterpartId": "zhifatang",
+    "region": "青云山",
+    "x": 610,
+    "y": 720
+  },
+  {
+    "id": "zixiaodian",
+    "name": "紫霄殿",
+    "aliases": [],
+    "description": "掌门殿。",
+    "eraId": "ancient",
+    "counterpartId": "qingyundian",
+    "region": "青云山",
+    "x": 500,
+    "y": 80
+  },
+  {
+    "id": "qingyundian",
+    "name": "青云殿",
+    "aliases": [],
+    "description": "宗门唯一还像样的建筑。",
+    "eraId": "modern",
+    "counterpartId": "zixiaodian",
+    "region": "青云山",
+    "x": 500,
+    "y": 80
+  },
+  {
+    "id": "shanmen-gu",
+    "name": "九重白玉山门",
+    "aliases": [
+      "白玉山门"
+    ],
+    "description": "九重白玉山门。",
+    "eraId": "ancient",
+    "counterpartId": "paifang",
+    "region": "青云山",
+    "x": 500,
+    "y": 950
+  },
+  {
+    "id": "paifang",
+    "name": "破牌坊",
+    "aliases": [],
+    "description": "“青”字缺了半边。",
+    "eraId": "modern",
+    "counterpartId": "shanmen-gu",
+    "region": "青云山",
+    "x": 500,
+    "y": 950
+  },
+  {
+    "id": "yaowangding",
+    "name": "药王鼎",
+    "aliases": [],
+    "description": "落星亭东三丈，青铜三足两耳，左耳缺一角（苏清月小时候摔下来磕掉的）。",
+    "notes": "第 2 章今昔对照。",
+    "eraId": "ancient",
+    "counterpartId": "shidun",
+    "region": "青云山",
+    "x": 565,
+    "y": 300
+  },
+  {
+    "id": "shidun",
+    "name": "石墩",
+    "aliases": [],
+    "description": "埋进土里的石墩，露出三个鼎足坑，外门拿来磨刀。",
+    "notes": "第 2 章今昔对照。名字是转写时取的，设定集只写“石墩”。",
+    "eraId": "modern",
+    "counterpartId": "yaowangding",
+    "region": "青云山",
+    "x": 565,
+    "y": 300
+  },
+  {
+    "id": "zizhulin",
+    "name": "紫竹林",
+    "aliases": [],
+    "description": "落星亭西，碗口粗，一直连到山脚。",
+    "notes": "第 2 章今昔对照。",
+    "eraId": "ancient",
+    "counterpartId": "kuzhuang",
+    "region": "青云山",
+    "x": 385,
+    "y": 320
+  },
+  {
+    "id": "kuzhuang",
+    "name": "紫竹林枯桩",
+    "aliases": [],
+    "description": "一片砍剩的枯桩，外门每年入冬来砍柴。",
+    "notes": "第 2 章今昔对照。名字是转写时取的。",
+    "eraId": "modern",
+    "counterpartId": "zizhulin",
+    "region": "青云山",
+    "x": 385,
+    "y": 320
+  },
+  {
+    "id": "fengling",
+    "name": "落星亭檐角风铃",
+    "aliases": [],
+    "description": "四十九只铜胎鎏金风铃。",
+    "notes": "第 2 章。",
+    "eraId": "ancient",
+    "counterpartId": "xiutieding",
+    "region": "青云山",
+    "x": 455,
+    "y": 255
+  },
+  {
+    "id": "xiutieding",
+    "name": "落星亭檐角锈铁钉",
+    "aliases": [],
+    "description": "一排锈铁钉。",
+    "notes": "第 2 章。第 30 章刘大爷送的锈铜铃（鎏金铜胎，铃身纹路和石桌一样，不响）挂回第七颗钉子上。",
+    "eraId": "modern",
+    "counterpartId": "fengling",
+    "region": "青云山",
+    "x": 455,
+    "y": 255
+  },
+  {
+    "id": "cangjingge-jin",
+    "name": "藏经阁",
+    "aliases": [],
+    "eraId": "modern",
+    "region": "青云山",
+    "description": "现代藏经阁搬到主峰半山，是一间小楼；要贡献点才能进。只剩残卷、残阵、残史，很多是错的。",
+    "x": 560,
+    "y": 160
+  },
+  {
+    "id": "julingzhen",
+    "name": "演武场东小院聚灵阵",
+    "aliases": [],
+    "eraId": "modern",
+    "region": "青云山",
+    "description": "现代外门聚灵阵：演武场东小院，阵心一块灵石；辰到午归内门，午到酉归外门正式弟子，其余时段杂役自己抢，寅时最冷也最好抢。",
+    "x": 880,
+    "y": 470
+  },
+  {
+    "id": "tangji",
+    "name": "唐记杂货",
+    "aliases": [
+      "唐记"
+    ],
+    "eraId": "modern",
+    "region": "青云山",
+    "description": "唐果的铺子，朱砂一钱一包，日息三分；修阵摊由唐记代收。",
+    "x": 430,
+    "y": 670
+  },
+  {
+    "id": "liudaye-shutan",
+    "name": "刘大爷旧书摊",
+    "aliases": [
+      "旧书摊"
+    ],
+    "eraId": "modern",
+    "region": "青云山",
+    "description": "刘大爷的旧书摊，林凡在这里用修好一盏灯换来泡过水的《青云通史》。",
+    "x": 330,
+    "y": 720
+  },
+  {
+    "id": "hantiekuang",
+    "name": "北荒寒铁矿",
+    "aliases": [
+      "寒铁矿"
+    ],
+    "eraId": "modern",
+    "region": "北荒",
+    "description": "外门年终考核末五名发北荒寒铁矿服役三年；李胖子的二叔在矿上冻掉脚趾。"
+  },
+  {
+    "id": "qingyunshan",
+    "name": "青云山",
+    "aliases": [],
+    "eraId": null,
+    "region": "北荒",
+    "description": "青云宗从建宗起就在北荒青云山，从未搬迁。鼎盛时势力辐射中州，但宗门本身一直在北荒。现代的没落是原地衰败。"
+  },
+  {
+    "id": "shijiaao",
+    "name": "石家坳",
+    "aliases": [],
+    "eraId": "ancient",
+    "region": "北荒",
+    "description": "石砚的家乡。去年兽潮石家坳替宗门守山道死七人，石砚是人情名额。"
+  },
+  {
+    "id": "beihuang",
+    "name": "北荒",
+    "aliases": [],
+    "eraId": null,
+    "region": "十地",
+    "description": "故事舞台，灵气偏贫，废土和旧遗迹多。"
+  },
+  {
+    "id": "zhongzhou",
+    "name": "中州",
+    "aliases": [],
+    "eraId": null,
+    "region": "十地",
+    "description": "十地中心，宗门林立，资源集中。月神教在中州方向。"
+  },
+  {
+    "id": "wanyaogu",
+    "name": "万妖谷",
+    "aliases": [],
+    "eraId": null,
+    "region": "北荒外缘",
+    "description": "北荒外缘的势力，暂时只留名字。"
+  },
+  {
+    "id": "jiutian",
+    "name": "九天",
+    "aliases": [],
+    "eraId": null,
+    "region": "上界",
+    "description": "上界，飞升的去处，前中期只作远景。"
+  }
+]

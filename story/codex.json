@@ -30,6 +30,16 @@
     }
   },
   {
+    "id": "x-1.4",
+    "category": "总纲",
+    "title": "古今差别的总原则",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "1.4 古今差别的总原则"
+    }
+  },
+  {
     "id": "x-2.1",
     "category": "世界",
     "title": "九天十地",
@@ -315,11 +325,51 @@
   {
     "id": "x-7.2",
     "category": "丹药",
+    "title": "品级与丹毒",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "7.2 品级与丹毒"
+    }
+  },
+  {
+    "id": "x-7.3",
+    "category": "丹药",
+    "title": "常见丹药",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "7.3 常见丹药"
+    }
+  },
+  {
+    "id": "x-7.4",
+    "category": "丹药",
+    "title": "古代：份例",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "7.4 古代：份例"
+    }
+  },
+  {
+    "id": "x-7.5",
+    "category": "丹药",
+    "title": "现代：贵丹、粗丹与灵面",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "7.5 现代：贵丹、粗丹与灵面"
+    }
+  },
+  {
+    "id": "x-7.6",
+    "category": "丹药",
     "title": "已写到的灵膳与灵物",
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "7.2 已写到的灵膳与灵物"
+      "heading": "7.6 已写到的灵膳与灵物"
     }
   },
   {
@@ -423,6 +473,36 @@
     }
   },
   {
+    "id": "x-11.2",
+    "category": "炼器",
+    "title": "怎么炼",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "11.2 怎么炼"
+    }
+  },
+  {
+    "id": "x-11.3",
+    "category": "炼器",
+    "title": "古代：百炼峰",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "11.3 古代：百炼峰"
+    }
+  },
+  {
+    "id": "x-11.4",
+    "category": "炼器",
+    "title": "现代：修比炼多",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "11.4 现代：修比炼多"
+    }
+  },
+  {
     "id": "x-12.1",
     "category": "炼丹",
     "title": "概述",
@@ -435,11 +515,41 @@
   {
     "id": "x-12.2",
     "category": "炼丹",
-    "title": "丹峰与药王鼎",
+    "title": "怎么炼",
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "12.2 丹峰与药王鼎"
+      "heading": "12.2 怎么炼"
+    }
+  },
+  {
+    "id": "x-12.3",
+    "category": "炼丹",
+    "title": "古代：丹峰",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "12.3 古代：丹峰"
+    }
+  },
+  {
+    "id": "x-12.4",
+    "category": "炼丹",
+    "title": "现代：阵控火与土丹",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "12.4 现代：阵控火与土丹"
+    }
+  },
+  {
+    "id": "x-12.5",
+    "category": "炼丹",
+    "title": "药王鼎",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "12.5 药王鼎"
     }
   },
   {
@@ -525,21 +635,41 @@
   {
     "id": "x-14.2",
     "category": "御兽",
-    "title": "大白",
+    "title": "规矩",
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "14.2 大白"
+      "heading": "14.2 规矩"
     }
   },
   {
     "id": "x-14.3",
     "category": "御兽",
-    "title": "兽潮与万妖谷",
+    "title": "古代",
     "body": "",
     "source": {
       "doc": "bible.md",
-      "heading": "14.3 兽潮与万妖谷"
+      "heading": "14.3 古代"
+    }
+  },
+  {
+    "id": "x-14.4",
+    "category": "御兽",
+    "title": "现代",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "14.4 现代"
+    }
+  },
+  {
+    "id": "x-14.5",
+    "category": "御兽",
+    "title": "大白与它的后代",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "14.5 大白与它的后代"
     }
   },
   {
@@ -550,6 +680,36 @@
     "source": {
       "doc": "bible.md",
       "heading": "15.1 概述"
+    }
+  },
+  {
+    "id": "x-15.2",
+    "category": "傀儡",
+    "title": "怎么做",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "15.2 怎么做"
+    }
+  },
+  {
+    "id": "x-15.3",
+    "category": "傀儡",
+    "title": "古代",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "15.3 古代"
+    }
+  },
+  {
+    "id": "x-15.4",
+    "category": "傀儡",
+    "title": "现代",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "15.4 现代"
     }
   },
   {

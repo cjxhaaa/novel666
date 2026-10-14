@@ -652,7 +652,7 @@
     "id": "yaowangding",
     "name": "药王鼎",
     "aliases": [],
-    "description": "落星亭东三丈，青铜三足两耳，左耳缺一角（苏清月小时候摔下来磕掉的）。",
+    "description": "落星亭东三丈的上古青铜鼎，三足两耳，左耳缺一角。开山建落星亭打地基时意外挖出来，比青云宗还老，留在原地当镇物。",
     "notes": "第 2 章今昔对照。",
     "eraId": "ancient",
     "counterpartId": "shidun",
@@ -783,5 +783,55 @@
     "y": 720,
     "parentId": "qingyunshan",
     "kind": "site"
+  },
+  {
+    "aliases": [],
+    "id": "bailianfeng",
+    "name": "百炼峰",
+    "eraId": "ancient",
+    "counterpartId": "feilutai",
+    "kind": "site",
+    "parentId": "qingyunshan",
+    "description": "专门铸剑、炼器的一峰，宗门的兵器和法器都出自这里，剑修的佩剑要到这里求。",
+    "x": 860,
+    "y": 640
+  },
+  {
+    "aliases": [],
+    "id": "feilutai",
+    "name": "废炉台",
+    "eraId": "modern",
+    "counterpartId": "bailianfeng",
+    "kind": "site",
+    "parentId": "qingyunshan",
+    "description": "百炼峰只剩的一座废炉台，外务房拿来堆杂物。",
+    "x": 860,
+    "y": 640
+  },
+  {
+    "aliases": [],
+    "id": "danfeng",
+    "name": "丹峰",
+    "eraId": "ancient",
+    "counterpartId": "huang-yaotian",
+    "kind": "site",
+    "parentId": "qingyunshan",
+    "description": "陆长老坐镇的炼丹一峰，有药园，自种灵药。",
+    "x": 170,
+    "y": 520
+  },
+  {
+    "aliases": [
+      "荒药田"
+    ],
+    "id": "huang-yaotian",
+    "name": "后山荒药田",
+    "eraId": "modern",
+    "counterpartId": "danfeng",
+    "kind": "site",
+    "parentId": "qingyunshan",
+    "description": "丹峰的旧址，荒了的药田，外门拿来种菜，长满杂灵草。",
+    "x": 170,
+    "y": 520
   }
 ]

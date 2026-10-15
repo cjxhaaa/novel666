@@ -70,6 +70,17 @@
     }
   },
   {
+    "id": "x-2.4",
+    "category": "世界",
+    "title": "书名与引文",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "2.4 书名与引文"
+    },
+    "pinned": true
+  },
+  {
     "id": "x-3.1",
     "category": "落星亭",
     "title": "第一卷的规则",

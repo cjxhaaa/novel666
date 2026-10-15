@@ -5,15 +5,17 @@
     "planted": [
       1
     ],
-    "payoff": "第 20 章摊位费冲突（已写）；第 50–53 章考核做手脚",
+    "payoff": "第 20 章摊位费冲突（已写）；第 56–59 章考核做手脚；第 62 章交代三十包朱砂的去处",
     "payoffChapters": [
-      50,
-      51,
-      52,
-      53
+      56,
+      57,
+      58,
+      59,
+      62
     ],
-    "status": "open",
-    "notes": "第 20 章摊位费冲突已写；考核做手脚在第 50–53 章收。"
+    "status": "resolved",
+    "notes": "第 20 章摊位费冲突已写；考核做手脚在第 50–53 章收。",
+    "resolvedIn": 62
   },
   {
     "id": "f-02",
@@ -65,13 +67,14 @@
     "planted": [
       4
     ],
-    "payoff": "第 19 章说破，第 51 章林凡认出",
+    "payoff": "第 19 章说破，第 57 章林凡认出",
     "payoffChapters": [
       19,
-      51
+      57
     ],
-    "status": "open",
-    "notes": "第 19 章已说破，第 51 章林凡认出尚未写。"
+    "status": "resolved",
+    "notes": "第 19 章已说破，第 51 章林凡认出尚未写。",
+    "resolvedIn": 57
   },
   {
     "id": "f-07",
@@ -94,11 +97,12 @@
     "planted": [
       4
     ],
-    "payoff": "第 39 章大典彩排",
+    "payoff": "第 36 章大典彩排",
     "payoffChapters": [
-      39
+      36
     ],
-    "status": "open"
+    "status": "resolved",
+    "resolvedIn": 36
   },
   {
     "id": "f-09",
@@ -110,7 +114,8 @@
     "payoffChapters": [
       43
     ],
-    "status": "open"
+    "status": "resolved",
+    "resolvedIn": 43
   },
   {
     "id": "f-10",
@@ -122,7 +127,8 @@
     "payoffChapters": [
       31
     ],
-    "status": "open"
+    "status": "resolved",
+    "resolvedIn": 31
   },
   {
     "id": "f-11",
@@ -204,12 +210,8 @@
       13,
       14
     ],
-    "payoff": "第 26、43、56 章；第二卷苏清月的愧疚",
-    "payoffChapters": [
-      26,
-      43,
-      56
-    ],
+    "payoff": "第 26、49、64 章（柳如烟说禁足期间替师姐把那一份也坐了）；第二卷苏清月的愧疚",
+    "payoffChapters": [],
     "status": "open"
   },
   {
@@ -228,14 +230,13 @@
     "planted": [
       16
     ],
-    "payoff": "第 28、42、56 章",
+    "payoff": "第 28、42、54、64 章",
     "payoffChapters": [
-      28,
-      42,
-      56
+      64
     ],
-    "status": "open",
-    "notes": "正文里石砚的小本子不记数而是画线（第 16 章）。"
+    "status": "resolved",
+    "notes": "正文里石砚的小本子不记数而是画线（第 16 章）。",
+    "resolvedIn": 64
   },
   {
     "id": "f-20",
@@ -271,11 +272,12 @@
     "planted": [
       17
     ],
-    "payoff": "第 58 章",
+    "payoff": "第 66 章",
     "payoffChapters": [
-      58
+      66
     ],
-    "status": "open"
+    "status": "resolved",
+    "resolvedIn": 66
   },
   {
     "id": "f-23",
@@ -283,12 +285,13 @@
     "planted": [
       17
     ],
-    "payoff": "第 58–59 章",
+    "payoff": "第 66–67 章",
     "payoffChapters": [
-      58,
-      59
+      66,
+      67
     ],
-    "status": "open"
+    "status": "resolved",
+    "resolvedIn": 66
   },
   {
     "id": "f-24",
@@ -296,15 +299,17 @@
     "planted": [
       20
     ],
-    "payoff": "第 50–53 章：马扒皮一直怀疑林凡夜里在落星亭搞名堂，这是他在考核里专门给林凡设阵法陷阱的动机，和三十包朱砂的账一起爆",
+    "payoff": "第 56–59 章：马扒皮一直怀疑林凡夜里在落星亭搞名堂，这是他在考核里专门给林凡设阵法陷阱的动机；第 62 章外务房的账",
     "payoffChapters": [
-      50,
-      51,
-      52,
-      53
+      56,
+      57,
+      58,
+      59,
+      62
     ],
-    "status": "open",
-    "notes": "原计划第 25 章前后收，第 25 章写成了李胖子跟踪，没有兑现，改到考核（50–53）。"
+    "status": "resolved",
+    "notes": "原计划第 25 章前后收，第 25 章写成了李胖子跟踪，没有兑现，改到考核（50–53）。",
+    "resolvedIn": 62
   },
   {
     "id": "f-25",
@@ -342,13 +347,14 @@
     "planted": [
       22
     ],
-    "payoff": "第 26、41 章",
+    "payoff": "第 26、40 章",
     "payoffChapters": [
       26,
-      41
+      40
     ],
-    "status": "open",
-    "notes": "第 26 章已写（坐满六个时辰），第 41 章未写。"
+    "status": "resolved",
+    "notes": "第 26 章已写（坐满六个时辰），第 41 章未写。",
+    "resolvedIn": 40
   },
   {
     "id": "f-29",
@@ -356,11 +362,12 @@
     "planted": [
       23
     ],
-    "payoff": "第 41 章她起疑",
+    "payoff": "第 40 章她起疑",
     "payoffChapters": [
-      41
+      40
     ],
-    "status": "open"
+    "status": "resolved",
+    "resolvedIn": 40
   },
   {
     "id": "f-30",
@@ -368,12 +375,14 @@
     "planted": [
       24
     ],
-    "payoff": "第 45–46 章",
+    "payoff": "第 44、46 章",
     "payoffChapters": [
-      45,
+      44,
       46
     ],
-    "status": "open"
+    "status": "resolved",
+    "notes": "第 44 章林凡挖蜜罐的窟窿淌出黑雾，碰到浊气就退；他刻了第二个“圈里一个点”。第 46 章讲给她听",
+    "resolvedIn": 46
   },
   {
     "id": "f-31",
@@ -381,12 +390,10 @@
     "planted": [
       30
     ],
-    "payoff": "第 45–46 章；远期（外门倒垃圾其实在压黑雾）",
-    "payoffChapters": [
-      45,
-      46
-    ],
-    "status": "open"
+    "payoff": "第 44 章刘大爷讲压烟旧事，第 46 章林凡把垃圾坑讲给她；远期：外门倒垃圾其实在压黑雾",
+    "payoffChapters": [],
+    "status": "open",
+    "notes": "第 44 章刘大爷讲他爹那年推三车炉灰压烟。第 46 章林凡把“垃圾坑”告诉她"
   },
   {
     "id": "f-32",
@@ -425,11 +432,13 @@
     "planted": [
       28
     ],
-    "payoff": "第 43 章禁足、石砚考校",
+    "payoff": "第 43 章禁足、第 54 章石砚考校",
     "payoffChapters": [
-      43
+      43,
+      54
     ],
-    "status": "open"
+    "status": "resolved",
+    "resolvedIn": 54
   },
   {
     "id": "f-36",
@@ -447,16 +456,17 @@
     "planted": [
       27
     ],
-    "payoff": "第 49–54 章",
+    "payoff": "第 52–60 章",
     "payoffChapters": [
-      49,
-      50,
-      51,
       52,
-      53,
-      54
+      56,
+      57,
+      58,
+      59,
+      60
     ],
-    "status": "open"
+    "status": "resolved",
+    "resolvedIn": 60
   },
   {
     "id": "f-38",
@@ -464,13 +474,14 @@
     "planted": [
       1
     ],
-    "payoff": "第 33 章他用这句话解释为什么还是把大劫说了；第 42 章苏清月当众顶撞时说出这句",
+    "payoff": "第 34 章他用这句话解释为什么还是把大劫说了；第 42 章苏清月当众顶撞时说出这句",
     "payoffChapters": [
-      33,
+      34,
       42
     ],
-    "status": "open",
-    "notes": "全书母题（bible.md 1.1）的口头禅。第二次出现要换处境、换人说。"
+    "status": "resolved",
+    "notes": "全书母题（bible.md 1.1）的口头禅。第二次出现要换处境、换人说。",
+    "resolvedIn": 42
   },
   {
     "id": "f-39",
@@ -478,14 +489,71 @@
     "planted": [
       26
     ],
-    "payoff": "31–46 章一直没还，当作柳如烟的倒计时；第二卷柳如烟之夜",
-    "payoffChapters": [
-      36,
-      39,
-      41,
-      42
-    ],
+    "payoff": "31–49 章一直没还，当作柳如烟的倒计时；第二卷柳如烟之夜",
+    "payoffChapters": [],
     "status": "open",
-    "notes": "不再用“甜”字提示紫气，柳如烟每次出场只给一个能计量的变化（见 outline.md 阶段四末尾）。"
+    "notes": "不再用“甜”字提示紫气，柳如烟每次出场只给一个能计量的变化（见 outline.md 阶段四末尾）。第 33 章起还有一只暖手炉。"
+  },
+  {
+    "id": "f-40",
+    "text": "《青云通史》末页大劫那行下面的洇墨里，只剩半个“月”字",
+    "planted": [
+      31
+    ],
+    "payoff": "远期：底细分三步揭，先不说破是谁",
+    "payoffChapters": [],
+    "status": "open",
+    "notes": "可能指苏清月，也可能不是。只作悬念，正文不要急着解释。"
+  },
+  {
+    "id": "f-41",
+    "text": "两本账并排：停了紫气，她的手一日松一根手指；黑雾碰到浊气就退。两人都没说破",
+    "planted": [
+      45,
+      46
+    ],
+    "payoff": "远期：第二卷用浊气逼退黑雾（废丹爆破）；紫气与黑雾的关系",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-42",
+    "text": "桂嬷嬷在执法堂记档上写“亥时末，送药”，替圣女瞒夜出",
+    "planted": [
+      45
+    ],
+    "payoff": "远期：记档被人翻出来时，桂嬷嬷替她担",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-43",
+    "text": "柳如烟坐的地方离泉眼越来越近（三步→两步→一步半→一步）",
+    "planted": [
+      47
+    ],
+    "payoff": "柳如烟倒计时：第 49、64 章；第二卷柳如烟之夜",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-44",
+    "text": "苏清月嫌他手笨时随口教：被人动过手脚的阵纹，补过的、截过的，摸着发涩，灵力走到那儿会绕",
+    "planted": [
+      52
+    ],
+    "payoff": "第二卷护山大阵露头、子时断线时应验",
+    "payoffChapters": [],
+    "status": "open"
+  },
+  {
+    "id": "f-45",
+    "text": "《青云通史》新的一页：“是岁冬，圣女师妹柳氏……”后面一团新墨洇开（原是“大雪封山七日，百味堂开仓，诸峰弟子食粥三日”）",
+    "planted": [
+      67
+    ],
+    "payoff": "第二卷柳如烟之夜",
+    "payoffChapters": [],
+    "status": "open"
   }
 ]

@@ -47,13 +47,13 @@
       "id": "v1",
       "name": "第一卷：时空的回音",
       "from": 1,
-      "to": 60,
-      "summary": "现代线（林凡）：穷、修炼从零起步、小生意、末位淘汰；卷内高潮第 50–55 章外门考核，高潮后拿到一点立足资格。古代线（苏清月）：身份压力、带孩子、冲金丹、紫气的异样；卷内高潮第 41–43 章开泉大典，高潮后被禁足，开始怀疑紫气。两条线的高潮错开：苏清月出事时，林凡正在平淡地攒修为；林凡考试时，苏清月正在禁足。"
+      "to": 68,
+      "summary": "现代线（林凡）：穷、修炼从零起步、小生意、末位淘汰；卷内高潮第 56–61 章外门考核，高潮后拿到一点立足资格。古代线（苏清月）：身份压力、带孩子、冲金丹、紫气的异样；卷内高潮第 40–43 章开泉大典，高潮后被禁足，开始怀疑紫气。两条线的高潮错开：苏清月出事时，林凡正在平淡地攒修为；林凡考试时，苏清月正在禁足。"
     },
     {
       "id": "v2",
       "name": "第二卷：柳如烟",
-      "from": 61,
+      "from": 69,
       "summary": "对应旧稿（`archive_v1/chapters/`）7–23 章，充分展开：柳如烟之夜、长老之死、掌门昏迷、代理掌门、林凡升组长。落星亭的权限在这一卷首次放开，比如偶发看到画面，需要明确的条件和代价。"
     },
     {
@@ -97,24 +97,32 @@
       "volumeId": "v1",
       "name": "阶段四：中点",
       "from": 31,
-      "to": 38,
-      "summary": "《青云通史》末页三年大劫，三夜空等；蜜罐盲盒试验。"
+      "to": 39,
+      "summary": "《青云通史》末页三年大劫，他先瞒后说；两夜空等，她埋下蜜罐，回来问“吃得饱吗”；大典前夜排位。"
     },
     {
       "id": "s5",
       "volumeId": "v1",
       "name": "阶段五：古代高潮，开泉大典",
-      "from": 39,
-      "to": 46,
-      "summary": "古代高潮：开泉大典，小石头倒下，苏清月被禁足；灵泉对上垃圾坑，黑雾冒头。"
+      "from": 40,
+      "to": 47,
+      "summary": "古代高潮：开泉大典，小石头倒下，她当众顶撞，被禁足；灵泉对上垃圾坑，黑雾冒头；禁足中学封印。"
     },
     {
       "id": "s6",
       "volumeId": "v1",
       "name": "阶段六：现代高潮，外门考核",
-      "from": 47,
-      "to": 60,
-      "summary": "现代高潮：外门考核；卷尾石砚那一行、柳如烟那一页，确认历史能改。"
+      "from": 48,
+      "to": 63,
+      "summary": "现代高潮：外门考核。唐果翻面、土方子续经脉、石砚过了考校、李胖子靠膳务留下；考核后寒铁矿送人，外务房的账让林凡说不赢。"
+    },
+    {
+      "id": "s7",
+      "volumeId": "v1",
+      "name": "阶段七：卷尾，多出来的一行",
+      "from": 64,
+      "to": 68,
+      "summary": "解禁；一个人的落星亭；史书多出石砚那一行，柳如烟那一页也变了，确认历史能改。"
     }
   ],
   "chapterFilePattern": "chapters/chap{NN}.md",
@@ -173,11 +181,41 @@
     "overdueCheck": true,
     "ignored": [
       "cross-19-tang-guo@1",
+      "cross-31-da-bai@2",
+      "cross-31-lei-yuan@1",
+      "cross-31-xuan-heng@2",
+      "cross-33-li-pangzi@1",
+      "cross-33-tang-guo@1",
+      "cross-35-da-bai@1",
+      "cross-35-gui-momo@1",
+      "cross-39-da-bai@1",
+      "cross-44-da-bai@2",
       "cross-5-xuan-heng@2",
+      "cross-51-shi-yan@1",
+      "cross-56-da-bai@1",
+      "cross-56-lei-yuan@1",
+      "cross-56-shi-yan@1",
+      "cross-60-da-bai@2",
+      "cross-60-gui-momo@1",
+      "cross-65-da-bai@1",
+      "cross-65-xuan-heng@1",
+      "cross-66-xuan-heng@2",
+      "cross-67-liu-ruyan@4",
+      "cross-67-liu-ruyan@7",
+      "cross-67-shi-yan@1",
       "loc-12-waimen-shitang@1",
       "loc-3-yaowangding@1",
       "loc-3-zizhulin@1",
-      "pause-23@4"
+      "loc-31-zhifatang@1",
+      "loc-53-danfeng@2",
+      "loc-60-lanyueju@2",
+      "loc-64-yanwuchang@1",
+      "loc-66-zhentang@8",
+      "loc-66-zhentang@9",
+      "loc-67-baiweitang@3",
+      "loc-67-baiweitang@4",
+      "pause-23@4",
+      "time-modern-55"
     ]
   }
 }

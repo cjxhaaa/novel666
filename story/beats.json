@@ -411,7 +411,7 @@
     "id": "b-31-main-ting",
     "plotlineId": "main-ting",
     "chapter": 31,
-    "text": "关系阶梯·第一次被现实砸中（31–38）：知道三年后的结局。"
+    "text": "关系阶梯·第一次被现实砸中（31–37）：知道三年后的结局。"
   },
   {
     "id": "b-32-main-ting",
@@ -420,82 +420,112 @@
     "text": "他没说：他岔开话题，她听出来了。"
   },
   {
+    "id": "b2-33-liu",
+    "plotlineId": "liu",
+    "chapter": 33,
+    "text": "抄书的手：柳如烟抄几行就要歇，握笔的手在抖；走出灌木就冷。苏清月塞给她一只暖手炉，当成秋凉体弱。"
+  },
+  {
     "id": "b-33-main-ting",
     "plotlineId": "main-ting",
-    "chapter": 33,
+    "chapter": 34,
     "text": "他还是说了：落星亭最安静的一夜。"
   },
   {
     "id": "b-34-main-jin",
     "plotlineId": "main-jin",
-    "chapter": 34,
-    "text": "三夜空等：林凡每夜照样补纹，没有人说话，朱砂快用光了。"
-  },
-  {
-    "id": "b-35-main-ting",
-    "plotlineId": "main-ting",
     "chapter": 35,
-    "text": "她回来了：她第一句是“一万年后，青云宗的人吃得饱吗？”"
+    "text": "两夜空等：林凡每夜照样补纹，没有人说话，朱砂快用光了。"
   },
   {
     "id": "b-36-change",
     "plotlineId": "change",
     "chapter": 36,
-    "text": "【埋物】第一个蜜罐：盲盒试验，她把一罐灵蜜埋进灵泉边的石缝。"
-  },
-  {
-    "id": "b-37-change",
-    "plotlineId": "change",
-    "chapter": 37,
-    "text": "【埋物】一万年的蜂蜜：林凡挖出石化的罐子，灵气早散尽了，只剩甜味和土味，罐底刻的字还在；由此定下规矩：盲盒要用封印。"
-  },
-  {
-    "id": "b-38-main-gu",
-    "plotlineId": "main-gu",
-    "chapter": 38,
-    "text": "学封印：她开始学原本嫌弃的封印阵法，冲金丹的事暂时放下。"
+    "text": "【埋物】她没去落星亭的第二夜，把一罐灵蜜埋进灵泉边的石缝，罐底刻了一行字（她对“一万年后吃得饱吗”的回答）。"
   },
   {
     "id": "b-39-main-gu",
     "plotlineId": "main-gu",
-    "chapter": 39,
-    "text": "清源飞天舞：大典彩排，她要领舞，她非常不想跳。"
+    "chapter": 36,
+    "text": "大典彩排《清源飞天舞》，她领舞，非常不想跳；柳如烟不肯脱斗篷。"
+  },
+  {
+    "id": "b2-36-main-gu",
+    "plotlineId": "main-gu",
+    "chapter": 36,
+    "text": "她没去的两夜：白天照常彩排，夜里坐在亭外不进去，看见小石头一个人在桂树下练吐纳。"
+  },
+  {
+    "id": "b2-37-shiyan",
+    "plotlineId": "shiyan",
+    "chapter": 37,
+    "text": "大典前夜：石砚求站第一排，她答应了，这让他离泉眼最近。"
+  },
+  {
+    "id": "b2-37-liu",
+    "plotlineId": "liu",
+    "chapter": 37,
+    "text": "柳如烟主动请缨，在泉边领着各峰弟子吐纳。"
+  },
+  {
+    "id": "b-35-main-ting",
+    "plotlineId": "main-ting",
+    "chapter": 38,
+    "text": "她回来了：她第一句是“一万年后，青云宗的人吃得饱吗？”"
   },
   {
     "id": "b-39-main-ting",
     "plotlineId": "main-ting",
-    "chapter": 39,
-    "text": "关系阶梯·互相托底（39–60）：轮流在对方最难的时候撑着。"
+    "chapter": 38,
+    "text": "关系阶梯·互相托底（38–68）：轮流在对方最难的时候撑着。"
   },
   {
     "id": "b-40-main-ting",
     "plotlineId": "main-ting",
-    "chapter": 40,
-    "text": "【交汇·知识（反向）】林凡笑了一整夜，笑完帮她想办法稳住孩子们第一次上大场面的紧张。"
+    "chapter": 38,
+    "text": "【交汇·知识（反向）】她回来的那一夜，说到明天要领舞，林凡笑了半宿，笑完帮她想办法稳住孩子们第一次上大场面的紧张。"
+  },
+  {
+    "id": "b-37-change",
+    "plotlineId": "change",
+    "chapter": 39,
+    "text": "【埋物】一万年的蜂蜜：林凡挖出石化的罐子，灵气早散尽了，只剩甜味和土味，罐底刻的字还在；由此定下规矩：盲盒要用封印。"
   },
   {
     "id": "b-41-ziqi",
     "plotlineId": "ziqi",
-    "chapter": 41,
+    "chapter": 40,
     "text": "开泉大典（上）：紫气开泉，全宗吐纳，孩子们第一次吸紫气，脸都红了，说是甜的。"
   },
   {
     "id": "b-41-main-gu",
     "plotlineId": "main-gu",
-    "chapter": 41,
-    "text": "古代线高潮开始：开泉大典（41–43）。"
+    "chapter": 40,
+    "text": "古代线高潮开始：开泉大典（40–43）。"
   },
   {
     "id": "b-42-shiyan",
     "plotlineId": "shiyan",
-    "chapter": 42,
-    "text": "开泉大典（下）：小石头第一个倒下，五灵根把紫气全吞了进去。"
+    "chapter": 41,
+    "text": "开泉大典（中）：小石头第一个倒下，五灵根把紫气全吞了进去。"
   },
   {
     "id": "b-42-main-gu",
     "plotlineId": "main-gu",
+    "chapter": 41,
+    "text": "她当众打断大典去救人。苏清月×石砚：她第一次护着一个人。"
+  },
+  {
+    "id": "b2-42-main-gu",
+    "plotlineId": "main-gu",
     "chapter": 42,
-    "text": "她当众打断大典去救人。苏清月×石砚：她第一次护着一个人；苏清月×掌门：第一次违背师命。"
+    "text": "开泉大典（下）：当众对质，掌门要她回位，她不回，说出“我眼神好，没办法”。苏清月×掌门：第一次违背师命。"
+  },
+  {
+    "id": "b2-42-shiyan",
+    "plotlineId": "shiyan",
+    "chapter": 42,
+    "text": "石砚怀里那个小本子掉了出来。"
   },
   {
     "id": "b-43-main-gu",
@@ -504,165 +534,219 @@
     "text": "禁足：雷渊依规罚她，掌门失望，“祥瑞”这件事被压了下去。苏清月×掌门：师父失望。"
   },
   {
-    "id": "b-43-liu",
-    "plotlineId": "liu",
-    "chapter": 43,
-    "text": "柳如烟说紫气没有问题，她很喜欢。"
+    "id": "b-46-ziqi",
+    "plotlineId": "ziqi",
+    "chapter": 44,
+    "text": "黑雾冒了个头：垃圾坑冒出一缕黑雾，林凡只知道不对劲。"
   },
   {
     "id": "b-44-main-gu",
     "plotlineId": "main-gu",
-    "chapter": 44,
+    "chapter": 45,
     "text": "桂嬷嬷的钥匙：桂嬷嬷半夜替她开了门，什么都没问。苏清月×桂嬷嬷：心照不宣。"
   },
   {
     "id": "b-45-main-ting",
     "plotlineId": "main-ting",
-    "chapter": 45,
+    "chapter": 46,
     "text": "她讲给林凡听：林凡说，他这边那个地方是个垃圾坑。"
   },
   {
     "id": "b-45-ziqi",
     "plotlineId": "ziqi",
-    "chapter": 45,
+    "chapter": 46,
     "text": "【交汇·同地、同源】紫气灵泉对上垃圾坑。"
   },
   {
-    "id": "b-46-ziqi",
-    "plotlineId": "ziqi",
-    "chapter": 46,
-    "text": "黑雾冒了个头：垃圾坑冒出一缕黑雾，林凡只知道不对劲。"
+    "id": "b-38-main-gu",
+    "plotlineId": "main-gu",
+    "chapter": 47,
+    "text": "学封印：她开始学原本嫌弃的封印阵法，冲金丹的事暂时放下。"
   },
   {
     "id": "b-47-main-jin",
     "plotlineId": "main-jin",
-    "chapter": 47,
+    "chapter": 48,
     "text": "四层前夜：林凡卡在瓶颈，朱砂断货，唐果也赊不起了。林凡×唐果关键章。"
+  },
+  {
+    "id": "b2-49-liu",
+    "plotlineId": "liu",
+    "chapter": 49,
+    "text": "柳如烟来探禁足：斗篷、暖手炉不离手；说紫气没有问题，她很喜欢，大典那天松动了一层。苏清月只听进了后半句。"
+  },
+  {
+    "id": "b2-50-main-jin",
+    "plotlineId": "main-jin",
+    "chapter": 50,
+    "text": "唐果的三更（配角翻面）：她画符画到三更，要在考核实务里画出上品符让符箓堂看中；她爹当年被赊账拖垮了铺子。"
   },
   {
     "id": "b-48-main-jin",
     "plotlineId": "main-jin",
-    "chapter": 48,
+    "chapter": 51,
     "text": "凝气四层：突破了，但伤了经脉，离考核只剩七天。"
   },
   {
     "id": "b-49-main-ting",
     "plotlineId": "main-ting",
-    "chapter": 49,
+    "chapter": 52,
     "text": "【交汇·传声】禁足的教练：她自己被关着，每夜溜出来给他陪练。这一次轮到她托底。"
+  },
+  {
+    "id": "b2-53-main-jin",
+    "plotlineId": "main-jin",
+    "chapter": 53,
+    "text": "土方子：续脉丹买不起；苏清月口述古方，记错一味药的分量；后山荒药田的杂灵草代药，唐果用刻了聚火阵的陶罐熬，经脉勉强接上。"
+  },
+  {
+    "id": "b2-53-change",
+    "plotlineId": "change",
+    "chapter": 53,
+    "text": "【交汇·知识】古方续脉丹，现代用杂灵草代药。"
+  },
+  {
+    "id": "b2-54-shiyan",
+    "plotlineId": "shiyan",
+    "chapter": 54,
+    "text": "考校：石砚用林凡那套法子过了测烛，雷渊照规矩判他过；消息是桂嬷嬷带回来的，只说了一句。"
+  },
+  {
+    "id": "b2-54-change",
+    "plotlineId": "change",
+    "chapter": 54,
+    "text": "【交汇·知识（反向）】一万年后的法子让石砚留下来，是第 66 章史书改动的原因。"
+  },
+  {
+    "id": "b2-55-main-jin",
+    "plotlineId": "main-jin",
+    "chapter": 55,
+    "text": "胡师傅的考题：李胖子求放他一马不成，每天寅时剁三筐菜，剁了七天，手上全是口子。"
   },
   {
     "id": "b-50-ma",
     "plotlineId": "ma",
-    "chapter": 50,
+    "chapter": 56,
     "text": "马扒皮的名单：马扒皮把考核项目换成了林凡最弱的。"
   },
   {
     "id": "b-50-main-jin",
     "plotlineId": "main-jin",
-    "chapter": 50,
-    "text": "现代线高潮开始：外门考核（50–55）。"
+    "chapter": 56,
+    "text": "现代线高潮开始：外门考核（56–61）。"
   },
   {
     "id": "b-51-main-jin",
     "plotlineId": "main-jin",
-    "chapter": 51,
+    "chapter": 57,
     "text": "修为关：林凡狼狈过线。"
   },
   {
     "id": "b-51-change",
     "plotlineId": "change",
-    "chapter": 51,
+    "chapter": 57,
     "text": "【交汇·痕迹（笑点）】考场边那块刻满划痕的老石头，他认出来是秦照的剑痕，当场笑场。"
   },
   {
     "id": "b-52-ma",
     "plotlineId": "ma",
-    "chapter": 52,
+    "chapter": 58,
     "text": "阵法关（上）：马扒皮布下陷阱阵盘。动机是他一直怀疑林凡夜里在落星亭搞名堂（第 20 章“圆环每早都淡”）。"
   },
   {
     "id": "b-53-main-jin",
     "plotlineId": "main-jin",
-    "chapter": 53,
+    "chapter": 59,
     "text": "阵法关（下）：林凡用古法截断破局，王长老注意到他。"
   },
   {
     "id": "b-53-change",
     "plotlineId": "change",
-    "chapter": 53,
+    "chapter": 59,
     "text": "考场就在阵法司正堂，墙上挂着历代主事的名牌。"
   },
   {
     "id": "b-54-main-jin",
     "plotlineId": "main-jin",
-    "chapter": 54,
+    "chapter": 60,
     "text": "各自的结果：李胖子靠胡师傅打的膳务实务分爬出末五，被调进食堂当正式帮厨，他高兴坏了；末五名发往北荒寒铁矿；唐果被符箓堂看中；林凡留下了。李胖子开始替林凡打掩护；林凡×唐果：合伙人，账还是照算。"
   },
   {
     "id": "b-54-ma",
     "plotlineId": "ma",
-    "chapter": 54,
+    "chapter": 60,
     "text": "林凡留下了，但被马扒皮记得更牢。林凡×马扒皮：结了梁子。"
+  },
+  {
+    "id": "b2-61-main-jin",
+    "plotlineId": "main-jin",
+    "chapter": 61,
+    "text": "寒铁矿的车：末五名被送去寒铁矿，老孙头站在车边送；林凡算清这一卷“眼神好”的账。"
+  },
+  {
+    "id": "b2-62-ma",
+    "plotlineId": "ma",
+    "chapter": 62,
+    "text": "外务房的账：三十包朱砂补了过年点护山大阵的节点阵盘；“你戳破了，明年冬天谁饿着？”林凡说不赢。"
   },
   {
     "id": "b-55-main-ting",
     "plotlineId": "main-ting",
-    "chapter": 55,
+    "chapter": 63,
     "text": "子时，交换结果：两人笑闹着说各自的近况。"
   },
   {
     "id": "b-56-main-gu",
     "plotlineId": "main-gu",
-    "chapter": 56,
+    "chapter": 64,
     "text": "解禁：她回到日常。"
   },
   {
     "id": "b-56-shiyan",
     "plotlineId": "shiyan",
-    "chapter": 56,
+    "chapter": 64,
     "text": "小石头留在了她的班上。"
   },
   {
     "id": "b-56-liu",
     "plotlineId": "liu",
-    "chapter": 56,
+    "chapter": 64,
     "text": "柳如烟越来越怕冷。苏清月×柳如烟终点：表面没变；读者能看出柳如烟在往紫气那边滑。"
   },
   {
     "id": "b-57-main-jin",
     "plotlineId": "main-jin",
-    "chapter": 57,
+    "chapter": 65,
     "text": "一个人的落星亭：林凡难得有一个不用赶的夜晚，第一次好好看这座亭子。"
   },
   {
     "id": "b-58-change",
     "plotlineId": "change",
-    "chapter": 58,
+    "chapter": 66,
     "text": "【历史改动（主线）】多出来的一行：《青云通史》多了一行“圣女首徒石氏，五灵根，后掌阵堂”，墨迹像新写的；阵法司名牌墙上果然有一块“石”字牌，考试那天他就站在它底下。他确认历史能改。"
   },
   {
     "id": "b-58-shiyan",
     "plotlineId": "shiyan",
-    "chapter": 58,
+    "chapter": 66,
     "text": "留下石砚：史书多出一行，阵法司名牌墙上的“石”字牌。"
   },
   {
     "id": "b-59-change",
     "plotlineId": "change",
-    "chapter": 59,
+    "chapter": 67,
     "text": "【历史改动（钩子）】另一页也变了：柳如烟的名字出现在新的一页，“是岁冬，圣女师妹柳氏……”后面的字洇开了，看不清。"
   },
   {
     "id": "b-59-liu",
     "plotlineId": "liu",
-    "chapter": 59,
+    "chapter": 67,
     "text": "救下石砚的同时，柳如烟那一页也变了（改动会牵连，而且不受控）。"
   },
   {
     "id": "b-60-main-ting",
     "plotlineId": "main-ting",
-    "chapter": 60,
+    "chapter": 68,
     "text": "你那边今天怎么样：他还没想好怎么开口，她先问了这一句。第一卷的边界：离不开对方，但谁都没想过这叫什么，不点破；两人都没见过对方的脸。"
   }
 ]

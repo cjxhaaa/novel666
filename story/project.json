@@ -315,17 +315,57 @@
     },
     {
       "day": 45,
-      "label": "古代开泉大典（约）",
+      "label": "古代开泉大典",
       "eraId": "ancient"
     },
     {
       "day": 55,
-      "label": "古代新弟子考校（执法堂主持，约）",
+      "label": "古代新弟子考校",
       "eraId": "ancient"
     },
     {
       "day": 60,
-      "label": "现代外门考核（约）",
+      "label": "现代外门考核",
+      "eraId": "modern"
+    },
+    {
+      "day": 85,
+      "label": "冬至·柳如烟之夜",
+      "eraId": "ancient"
+    },
+    {
+      "day": 119,
+      "label": "苏清月结丹",
+      "eraId": "ancient"
+    },
+    {
+      "day": 134,
+      "label": "除夕点护山大阵",
+      "eraId": "modern"
+    },
+    {
+      "day": 353,
+      "label": "拓跋堡改写",
+      "eraId": null
+    },
+    {
+      "day": 490,
+      "label": "林凡筑基",
+      "eraId": "modern"
+    },
+    {
+      "day": 725,
+      "label": "天墟·古今同游",
+      "eraId": null
+    },
+    {
+      "day": 1180,
+      "label": "冬至·大劫",
+      "eraId": null
+    },
+    {
+      "day": 1245,
+      "label": "开春开门",
       "eraId": "modern"
     }
   ],

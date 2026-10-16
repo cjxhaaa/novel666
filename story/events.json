@@ -85,54 +85,42 @@
   },
   {
     "id": "e-dajie",
-    "title": "三年大劫",
-    "kind": "future",
+    "title": "大劫",
+    "kind": "history",
     "eraId": "ancient",
     "year": 32003,
-    "yearLabel": "约 32003 年（从第一卷开始算还剩约三年）",
-    "description": "《青云通史》末页记载，三年后大劫，高层尽亡，宗门从此衰败。大事有惯性，不会因为一句话就改掉。",
+    "yearLabel": "青云历 32003 年冬至（第 1180 天，第 348–360 章）",
+    "description": "原本的历史：抽灵阵翻转，宗门高层尽殁，诸峰十去其七，藏经阁焚其五层，北荒地眼被抽塌，末法从北荒开始（《青云通史》末页）。改动之后：抽灵阵被截断，掌门玄衡、雷渊战死，柳如烟死在泉边，苏清月破化神，把自己和地眼一起封住；藏经阁只烧了一层，末页改写。",
     "locations": [
       "qingyunshan"
     ]
   },
   {
-    "id": "e-liu-fall",
-    "title": "柳如烟堕魔",
-    "kind": "future",
-    "eraId": "ancient",
-    "yearLabel": "第二卷",
-    "description": "柳如烟第二卷堕魔。现代《妖异志》里有“柳氏堕魔”的记载。与紫气有关。",
+    "id": "e-fengyin",
+    "title": "苏清月封于地眼一万年",
+    "kind": "history",
+    "eraId": null,
+    "year": 32003.6,
+    "yearLabel": "青云历 32003 年冬至 → 42003 年冬至",
+    "description": "改动之后的历史：苏清月以化神之身把自己和地眼一起封住当守眼人，撑住北荒地脉一万年。石砚一脉（阵堂→阵法司）代代守着封印，传到最后只剩“坑得压着”“石牌不许动”“补阵岗月补朱砂”这几条没人懂的规矩。只有林凡记得旧版本：那原本是一道伤口。",
     "characters": [
-      "liu-ruyan"
+      "su-qingyue",
+      "shi-yan",
+      "lin-fan"
     ]
   },
   {
-    "id": "e-zhangmen-coma",
-    "title": "掌门重伤昏迷，苏清月代理掌门",
+    "id": "e-kaifeng",
+    "title": "开春开门，第一次见面",
     "kind": "future",
-    "eraId": "ancient",
-    "yearLabel": "第二卷",
-    "description": "第二卷掌门重伤昏迷，苏清月以掌门印成为代理掌门。掌门后来的重伤和紫气有关。",
+    "eraId": "modern",
+    "year": 42004,
+    "yearLabel": "青云历 42004 年开春（第 364–365 章）",
+    "description": "林凡用补全的守眼钟和她留下的九句口诀解开封印，苏清月醒来，十九岁，一万年过去了；两人第一次见面。末页改写，甜水坑的水重新变清。",
     "characters": [
-      "xuan-heng",
+      "lin-fan",
       "su-qingyue"
     ]
-  },
-  {
-    "id": "e-hushan-tamper",
-    "title": "护山大阵被动过手脚",
-    "kind": "future",
-    "eraId": null,
-    "yearLabel": "第二卷末露头",
-    "description": "护山大阵被人动过，而且不止一次；第二卷末露头，不急着查。"
-  },
-  {
-    "id": "e-mangbox",
-    "title": "盲盒三件",
-    "kind": "future",
-    "eraId": null,
-    "yearLabel": "第三卷",
-    "description": "《万阵源流图》、绝灵剑、纯血魔核，第三卷埋下。"
   },
   {
     "id": "e-tianshui",
@@ -181,29 +169,6 @@
     "description": "全宗不足百人：外门约六十，内门十余，长老几位，掌门一人。灵气稀薄驳杂，靠聚灵阵按时段配给；只剩残卷、残阵、残史。门规第一条：按月缴供，不得拖欠（“尊师重道”排到了第十二条）。",
     "locations": [
       "qingyunshan"
-    ]
-  },
-  {
-    "id": "e-lin-zuzhang",
-    "title": "林凡升为组长",
-    "kind": "future",
-    "eraId": "modern",
-    "yearLabel": "第二卷",
-    "description": "林凡在现代升为组长。",
-    "characters": [
-      "lin-fan"
-    ]
-  },
-  {
-    "id": "e-chenzimo",
-    "title": "陈子墨招揽林凡",
-    "kind": "future",
-    "eraId": "modern",
-    "yearLabel": "第二卷",
-    "description": "现代内门真传陈子墨第二卷登场，招揽林凡。",
-    "characters": [
-      "chen-zimo",
-      "lin-fan"
     ]
   },
   {

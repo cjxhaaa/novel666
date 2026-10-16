@@ -447,12 +447,20 @@ export function contextPack(data: StoryData, texts: Record<number, string>, char
     L.push('');
   }
 
+  // 只列本章之前已经埋下的；本章要埋的单列，往后才埋的不列，免得提前写掉
   const open = foreshadows.filter((f) => f.status === 'open');
-  const near = open.filter((f) => f.payoffChapters.some((p) => Math.abs(p - n) <= 3));
-  const far = open.filter((f) => !near.includes(f));
-  if (open.length) {
+  const plantedBefore = open.filter((f) => f.planted.length && Math.min(...f.planted) < n);
+  const plantHere = open.filter((f) => f.planted.includes(n) && !plantedBefore.includes(f));
+  const near = plantedBefore.filter((f) => f.payoffChapters.some((p) => Math.abs(p - n) <= 3));
+  const far = plantedBefore.filter((f) => !near.includes(f));
+  if (plantedBefore.length || plantHere.length) {
     L.push('## 伏笔');
     L.push('');
+    if (plantHere.length) {
+      L.push('**本章要埋的：**');
+      for (const f of plantHere) L.push(`- ${f.text}｜${f.payoff}`);
+      L.push('');
+    }
     if (near.length) {
       L.push('**本章前后计划收的：**');
       for (const f of near) L.push(`- ${f.text}｜埋在第 ${f.planted.join('、')} 章｜${f.payoff}`);

@@ -682,8 +682,8 @@
     "chapter": 2,
     "description": "落星亭檐角四十九只铜胎鎏金风铃，现代只剩一排锈铁钉。第 30 章刘大爷送的锈铜铃挂回第七颗钉子上，不响。",
     "locations": [
-      "fengling",
-      "xiutieding"
+      "luoxingting-gu",
+      "luoxingting-jin"
     ]
   },
   {
@@ -733,6 +733,2239 @@
     "locations": [
       "ziqi-lingquan",
       "tianshuikeng"
+    ]
+  },
+  {
+    "id": "e-shouyanzhong",
+    "title": "上古守眼人造守眼钟",
+    "kind": "history",
+    "eraId": null,
+    "yearLabel": "上古（比青云宗还老）",
+    "description": "十地每块大陆底下各有一口地眼，九天十地的灵气借地眼和天门成一个回环，一周一万年。上古守眼人为同一口地眼的前后守眼人隔着万年互相示警，造了十座守眼钟；落星亭石桌就是北荒这一座（钟身是石桌的阵，钟环是正中圆环，四十九只风铃是示警铃），第二座在中州天墟。青阳子是北荒这口地眼的守眼人，为守它建宗。（作者底牌，第三卷让读者知道，第四卷主角猜到，第五卷说破）",
+    "characters": [
+      "qingyangzi"
+    ],
+    "locations": [
+      "luoxingting-gu",
+      "tianxu"
+    ]
+  },
+  {
+    "id": "e-xubian",
+    "title": "墟变",
+    "kind": "history",
+    "eraId": "ancient",
+    "year": 30800,
+    "yearLabel": "约 30800 年（古代约一千二百年前）",
+    "description": "一个冬至夜，中州诸宗的大阵一夜“倒着走”，高层一夜尽殁，地陷成墟，次年秋分起每年开一回，就是天墟；中州那口地眼就此塌了。月神教次年开春在废墟上施药收孤起家。天衍宗推演一千年，结论是天数；闻人朔的推演第五卷交到苏清月手上（第 233、260、295 章）。",
+    "characters": [],
+    "locations": [
+      "tianxu",
+      "zhongzhou",
+      "yueshenjiao",
+      "tianyanzong"
+    ]
+  },
+  {
+    "id": "e-ningzhou",
+    "title": "玄微大修东段，宁舟“走火”",
+    "kind": "history",
+    "eraId": "ancient",
+    "year": 31980,
+    "yearLabel": "约 31980 年（第四卷时“二十年前”）",
+    "description": "玄微提议大修护山大阵东段，雷渊的弟子宁舟（筑基中期，十九岁）帮着年修时“走火”而死：执法堂记他亥时出的阵堂，阵堂记他戌时就死了，差一个时辰。东段的逆笔从这时起一层层嫁接上去（第 237、276、283 章揭开）。",
+    "characters": [
+      "lei-yuan",
+      "xuan-wei",
+      "ning-zhou"
+    ],
+    "locations": [
+      "zhentang",
+      "zhifatang",
+      "qingyunshan"
+    ]
+  },
+  {
+    "id": "e-xunyan-30",
+    "title": "月神教巡眼“修”护山大阵",
+    "kind": "history",
+    "eraId": "modern",
+    "year": 41970,
+    "yearLabel": "约 41970 年（三十年前）",
+    "description": "中州来过一拨“修阵的”，是月神教的巡眼：替青云“修”护山大阵，掌门（孟岳的师父）收了灵石；修完大阵连给山下看都勉强，就此只剩壳子（翻过一回的抽灵阵残骸）。那年冬天孟岳的师父冻死在青云殿，十九岁的孟岳看见了，一句没说；刘大爷他爹往坑里推了五车炉灰。（第 303、334 章揭开）",
+    "characters": [
+      "xiandai-zhangmen",
+      "liu-daye"
+    ],
+    "locations": [
+      "qingyunshan",
+      "qingyundian",
+      "tianshuikeng"
+    ]
+  },
+  {
+    "id": "e-d66-shoutu",
+    "title": "苏清月收石砚为首徒",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 66,
+    "chapter": 69,
+    "description": "第 66 天。揽月居拜师茶，桂嬷嬷一句一句提礼；石砚捧上画满线的小本子，她回一支六岁咬过牙印的阵笔。当夜子时《青云通史》那一行跟着变（第 70 章）。",
+    "characters": [
+      "su-qingyue",
+      "shi-yan",
+      "gui-momo",
+      "liu-ruyan"
+    ],
+    "locations": [
+      "lanyueju"
+    ]
+  },
+  {
+    "id": "e-chg-shoutu",
+    "title": "“圣女首徒石氏”",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 70,
+    "description": "第 66 天子时，她一开口就是“本座收徒弟了”，林凡就着照明盘翻书，那一行又变了一回（f-47 兑现）。落了地的改动还能再改。",
+    "before": "青云新弟子石氏，五灵根，后掌阵堂",
+    "after": "圣女首徒石氏，五灵根，后掌阵堂",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "shi-yan"
+    ],
+    "locations": [
+      "luoxingting-jin"
+    ]
+  },
+  {
+    "id": "e-d67-wuzu",
+    "title": "林凡任新编五组组长",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 67,
+    "chapter": 71,
+    "description": "第 67 天。末五走了，各组拆补，新编五组，组员是名单最末的老孙头、周婆婆、吴三斤、郝有田、葛小芽；月俸加十文，组员挨罚组长连带；住北坡最漏风的一排（北坡五组宿舍）。",
+    "characters": [
+      "lin-fan",
+      "ma-papi",
+      "lao-suntou",
+      "zhou-popo",
+      "wu-sanjin",
+      "hao-youtian",
+      "ge-xiaoya",
+      "zhao-er"
+    ],
+    "locations": [
+      "waiwufang",
+      "lanyuepo",
+      "beipo-wuzu"
+    ]
+  },
+  {
+    "id": "e-d71-xuanwei",
+    "title": "玄微登场，石砚阵堂旁听",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 71,
+    "chapter": 75,
+    "description": "第 71 天。阵堂主事玄微真人（掌门师弟，元婴圆满）许石砚每旬旁听一日，塞给他一块旧阵盘；苏清月托他劝掌门让柳如烟少坐，他什么都没许。",
+    "characters": [
+      "xuan-wei",
+      "shi-yan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "zhentang",
+      "zhentang-muqiang"
+    ]
+  },
+  {
+    "id": "e-tr-mangbox1",
+    "title": "第一个盲盒：中品灵石",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 80,
+    "description": "第 76 天子时两人定下埋处，第 77 天她把一块中品灵石封进石壳匣，埋在药王鼎左足底下；第 78 天林凡在磨刀石墩的左鼎足坑底下挖出，灵气剩三成。教训：封一万年要拿上品灵石作底。",
+    "characters": [
+      "su-qingyue",
+      "lin-fan",
+      "hao-youtian"
+    ],
+    "locations": [
+      "yaowangding",
+      "shidun"
+    ]
+  },
+  {
+    "id": "e-d79-wuceng",
+    "title": "林凡破凝气五层",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 79,
+    "chapter": 82,
+    "description": "第 79–80 天。照她教的主脉大周天破五层（外门合格线），中品灵石成了一块灰石头；马扒皮在存档上写“五层（存疑）”。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "ma-papi"
+    ],
+    "locations": [
+      "luoxingting-jin"
+    ]
+  },
+  {
+    "id": "e-d80-chenzimo",
+    "title": "陈子墨招揽林凡",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 80,
+    "chapter": 85,
+    "description": "第 80 天。内门真传陈子墨闻出林凡身上“有一股老灵气”，开价内门聚灵室每日一个时辰、月钱一块碎灵石，林凡推了。",
+    "characters": [
+      "chen-zimo",
+      "lin-fan"
+    ],
+    "locations": [
+      "julingzhen"
+    ]
+  },
+  {
+    "id": "e-d81-heiwu",
+    "title": "黑雾爬上落星亭台阶",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 81,
+    "chapter": 86,
+    "description": "第 80–81 天。冬至前坑最饿，五组倒垃圾倒在坑沿，坑沿冻裂；黑雾贴地爬上落星亭第一、二级台阶，子时线路发虚提前断。",
+    "characters": [
+      "lin-fan",
+      "liu-daye",
+      "wu-sanjin"
+    ],
+    "locations": [
+      "tianshuikeng",
+      "luoxingting-jin"
+    ]
+  },
+  {
+    "id": "e-d83-feidan",
+    "title": "五组废丹爆破",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 83,
+    "chapter": 88,
+    "description": "第 83 天。五组拿青石镇丹铺的废丹描松结纹、贴唐果的引火符，沿坑沿炸了一圈，浊气把黑雾逼回坑里（f-41）；刘大爷：“比炉灰管用。”王长老给五组记三十个贡献点（第 94 章）。",
+    "characters": [
+      "lin-fan",
+      "zhao-er",
+      "liu-daye",
+      "lao-suntou",
+      "ge-xiaoya",
+      "tang-guo"
+    ],
+    "locations": [
+      "tianshuikeng"
+    ]
+  },
+  {
+    "id": "e-d85-liuruyan",
+    "title": "柳如烟之夜",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 85,
+    "chapter": 93,
+    "description": "冬至，第 85 天子时（第 91–93 章）。苏清月带柳如烟进落星亭听“星语”，林凡第一次听见第三个人；子时正刻泉底一声，柳如烟走进泉里，中印入骨；月使白蘅从紫雾里走出来，护山大阵一声没响，把她接走。斗篷湿着叠好留在泉边石头上。雷渊看见大阵光里有一道缝在闭上，没说。",
+    "characters": [
+      "liu-ruyan",
+      "su-qingyue",
+      "bai-heng",
+      "lei-yuan",
+      "qin-zhao",
+      "da-bai",
+      "lin-fan"
+    ],
+    "locations": [
+      "ziqi-lingquan",
+      "luoxingting-gu"
+    ]
+  },
+  {
+    "id": "e-chg-liu-zi",
+    "title": "“圣女师妹柳氏”墨落成字",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 95,
+    "description": "第 86 天子时过后，第 67 章那团新墨干成了字（洇墨规则：古代那头落定，下一个子时墨变成字）。末页那半个“月”还在老墨里。",
+    "before": "是岁冬，圣女师妹柳氏……（一团新墨洇开）",
+    "after": "是岁冬至，圣女师妹柳氏堕魔，随月神教去，不知所终。",
+    "characters": [
+      "lin-fan",
+      "liu-ruyan"
+    ],
+    "locations": []
+  },
+  {
+    "id": "e-d86-yaoyizhi",
+    "title": "读到《北荒妖异志》",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 86,
+    "chapter": 94,
+    "description": "第 86 天。林凡拿贡献点进现代藏经阁，翻到《北荒妖异志》残本：“其后数日，丹峰药庐夜火，长老陆某、弟子周某同死焉，时人谓柳氏余毒。”两人第一次决定主动改历史（第 95 章）。",
+    "characters": [
+      "lin-fan",
+      "wang-zhanglao"
+    ],
+    "locations": [
+      "cangjingge-jin"
+    ]
+  },
+  {
+    "id": "e-d90-yaolu",
+    "title": "药庐火：陆长老死，周平得救",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 90,
+    "chapter": 99,
+    "description": "冬月十五（第 90 天）戌时，丹峰药庐炸炉，紫火吃灵力；她守的是子时，来晚了（会错）。她照林凡的废丹法子压住紫火拖出周平，陆长老死，说“不是祥瑞”。验泉“以丹火炼之”是玄微在茶室里提的（底牌）。本卷唯一一次主动改历史，只救下一半。",
+    "characters": [
+      "su-qingyue",
+      "lu-zhanglao",
+      "zhou-ping",
+      "lu-ming"
+    ],
+    "locations": [
+      "danfeng"
+    ]
+  },
+  {
+    "id": "e-chg-zhouping",
+    "title": "《妖异志》：周平负伤得免",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 100,
+    "description": "第 91 天，药庐那夜之后下一个子时落地。“时人谓柳氏余毒”那句没改掉。",
+    "before": "其后数日，丹峰药庐夜火，长老陆某、弟子周某同死焉，时人谓柳氏余毒。",
+    "after": "长老陆某死焉，弟子周某负伤得免；时人谓柳氏余毒。",
+    "characters": [
+      "lin-fan",
+      "zhou-ping",
+      "lu-zhanglao"
+    ],
+    "locations": [
+      "cangjingge-jin"
+    ]
+  },
+  {
+    "id": "e-chg-bei",
+    "title": "外门食堂碑与冬至粥",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 100,
+    "description": "周平被救的回响：外门食堂院里墙根下多了一块半人高的旧石碑，字磨得快平了；胖子说山下年年冬至有人送一车新米上山，放下就走，不留名，几千年了，冬至那天熬了冬至粥。林凡只记得那天吃的是饺子。碑不带“周”字（bible 2.7）。",
+    "before": "外门食堂院里没有碑；冬至那天外门吃饺子",
+    "after": "墙根下一块旧碑“冬至一石，以报再生”；年年冬至山下送一车新米，外门熬冬至粥",
+    "characters": [
+      "lin-fan",
+      "li-pangzi"
+    ],
+    "locations": [
+      "waimen-shitang"
+    ]
+  },
+  {
+    "id": "e-d92-fengquan",
+    "title": "掌门封泉昏迷，掌门印交给苏清月",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 92,
+    "chapter": 103,
+    "description": "第 92 天。玄衡独自以化神封泉，被抽灵阵顺着身上的印反噬，昏迷前把掌门印塞给苏清月：“紫气不是祥瑞，是我错了。印给你。泉……别让人开。”玄微守在灌木外。",
+    "characters": [
+      "xuan-heng",
+      "su-qingyue",
+      "xuan-wei",
+      "lei-yuan",
+      "da-bai"
+    ],
+    "locations": [
+      "ziqi-lingquan"
+    ]
+  },
+  {
+    "id": "e-d94-jieyin",
+    "title": "长老会；桂嬷嬷替圣女担罪，苏清月代理掌门",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 94,
+    "chapter": 106,
+    "description": "第 93–94 天（第 105–106 章）。长老会上方长老请调执法堂禁制记档，第三圈记着揽月居二十夜亥时末开；桂嬷嬷认下私开禁制，罚守藏经阁五层三年，雷渊没再往下问（f-42）。苏清月以亲传代持掌门印，任代理掌门。",
+    "characters": [
+      "su-qingyue",
+      "gui-momo",
+      "lei-yuan",
+      "fang-zhanglao",
+      "xuan-wei"
+    ],
+    "locations": [
+      "zixiaodian",
+      "cangjingge-gu",
+      "cangjingge-wuceng"
+    ]
+  },
+  {
+    "id": "e-d95-chiyin",
+    "title": "第一次持印接通，锈铜铃响了一声",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 95,
+    "chapter": 107,
+    "description": "第 95 天子时。掌门印一碰石桌，整张阵低低嗡了一声；林凡头顶第七颗钉子上那只锈了一万年的铃响了一声（f-32）。作者底牌：锈铃是守眼钟的示警铃，认出持印的人，响一声即示警。",
+    "characters": [
+      "su-qingyue",
+      "lin-fan"
+    ],
+    "locations": [
+      "luoxingting-jin",
+      "luoxingting-gu"
+    ]
+  },
+  {
+    "id": "e-d110-chuming",
+    "title": "“除名，待归”",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 110,
+    "chapter": 113,
+    "description": "第 109–110 天。长老会议柳如烟除名、通缉；苏清月照林凡教的开会法子先让方长老说完，许药庐重建、照看陆鸣，提笔写“除名，待归”，不写“逐出，缉拿”，盖印。",
+    "characters": [
+      "su-qingyue",
+      "fang-zhanglao",
+      "lei-yuan",
+      "xuan-wei",
+      "liu-ruyan",
+      "gui-momo"
+    ],
+    "locations": [
+      "zixiaodian"
+    ]
+  },
+  {
+    "id": "e-d112-luosuo",
+    "title": "马扒皮夜闯落星亭，后山落锁",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 112,
+    "chapter": 115,
+    "description": "腊八（第 112 天）子时。马扒皮走进亭子，看见石桌亮着、摸到圆环的灵力，认定林凡拿破阵吸地脉；从此后山入夜落锁，外务房派人守路口（f-14 推进）。",
+    "characters": [
+      "ma-papi",
+      "lin-fan"
+    ],
+    "locations": [
+      "luoxingting-jin"
+    ]
+  },
+  {
+    "id": "e-d114-lunkuo",
+    "title": "第一次看见对方的轮廓",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 114,
+    "chapter": 116,
+    "description": "第 114 天子时。持印、两人同按圆环，石桌上方浮起对方的轮廓，只有轮廓和光，看不清脸（f-04 部分兑现）；代价是当夜子时减半、她手疼三天。第 130 章第二回。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "luoxingting-jin",
+      "luoxingting-gu"
+    ]
+  },
+  {
+    "id": "e-d119-jiedan",
+    "title": "苏清月在落星亭结丹，金丹一品",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 119,
+    "chapter": 121,
+    "description": "第 119 天子时（第 120–121 章）。泉封着，印用细脉筛干净，凝滞全消；林凡隔着石桌数她的呼吸，教她留一成空；金丹一品，三块上品灵石全灰，四十九只风铃一起响。秦照：“这回不卡了。”",
+    "characters": [
+      "su-qingyue",
+      "lin-fan",
+      "qin-zhao",
+      "lei-yuan",
+      "xuan-wei"
+    ],
+    "locations": [
+      "luoxingting-gu",
+      "luoxingting-jin"
+    ]
+  },
+  {
+    "id": "e-d134-chuxi",
+    "title": "除夕点护山大阵：两层逆笔，林凡破六层",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 134,
+    "chapter": 127,
+    "description": "除夕（第 134 天，第 126–128 章）。孟岳在青云殿点阵眼，后山第七节点出事、子时断线；马扒皮被底座残印咬伤；林凡用“阵纹发涩”摸出底座上一老一新两层逆笔（上层就是考核那道回钩），截断时杂浊地气倒灌，破凝气六层；马扒皮站出来：“外务房叫他修的。这一笔，外务房记着。”陈子墨拓下一张逆笔。",
+    "characters": [
+      "lin-fan",
+      "ma-papi",
+      "xiandai-zhangmen",
+      "wang-zhanglao",
+      "chen-zimo",
+      "lao-suntou"
+    ],
+    "locations": [
+      "qingyundian",
+      "tianshuikeng",
+      "hushan-dazhen-jin"
+    ]
+  },
+  {
+    "id": "e-d136-mapapi",
+    "title": "马扒皮撤哨，朱砂入账",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 136,
+    "chapter": 131,
+    "description": "正月初二（第 136 天）。马扒皮翻开真账本，十九回“已登记”，这回连那两层纹一起报上去；后山撤锁，路口不派人，落星亭的朱砂记在账上（f-25）；派林凡初五带五组押车去寒铁矿。",
+    "characters": [
+      "ma-papi",
+      "lin-fan",
+      "wang-zhanglao"
+    ],
+    "locations": [
+      "waiwufang"
+    ]
+  },
+  {
+    "id": "e-d137-sanjia",
+    "title": "代理掌门接见北荒三家使者",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 137,
+    "chapter": 132,
+    "description": "正月初三、初四（第 137–138 天，第 132–134 章）。赫连烈、钟离岫、拓跋川上山；她当众对回钟离家开泉大典那笔账，居中作保三家买卖；定下开春亲去北荒；赫连烈留下玄铁剑胚：“圣女来北荒，先来玄铁峪。”",
+    "characters": [
+      "su-qingyue",
+      "helian-lie",
+      "zhongli-xiu",
+      "tuoba-chuan",
+      "qin-zhao",
+      "lei-yuan",
+      "xuan-wei"
+    ],
+    "locations": [
+      "zixiaodian",
+      "beihuang-sanjia"
+    ]
+  },
+  {
+    "id": "e-d139-yache",
+    "title": "五组押车北上寒铁矿",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 139,
+    "chapter": 137,
+    "description": "正月初五（第 139 天）出发，约第 149 天到寒铁矿（第 137–140 章）。孙小六、刘二丫、李长囤、赵四宝重逢；矿上补给账对不上，一文的暖身符卖二十文。",
+    "characters": [
+      "lin-fan",
+      "lao-suntou",
+      "zhao-er",
+      "hao-youtian",
+      "wu-sanjin",
+      "sun-xiaoliu",
+      "liu-erya",
+      "li-mantun",
+      "zhao-sibao"
+    ],
+    "locations": [
+      "hantiekuang",
+      "beihuang",
+      "laokuangdao"
+    ]
+  },
+  {
+    "id": "e-tr-helian",
+    "title": "寒铁矿老矿道 → 玄铁峪“赫连”",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 140,
+    "description": "寒铁矿废弃的老矿道最里头，黑石墙上刻着“赫连”和锤子压在火上的记号：寒铁矿就是古代赫连家的玄铁峪。第三卷第 141 章哑铁层上还有砧子和火苗的刻痕。",
+    "characters": [
+      "lin-fan",
+      "sun-xiaoliu"
+    ],
+    "locations": [
+      "hantiekuang",
+      "laokuangdao"
+    ]
+  },
+  {
+    "id": "e-d154-jiuceng",
+    "title": "九层取《万阵源流图》，图首“守眼”",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 154,
+    "chapter": 144,
+    "description": "第 154–158 天。掌门印第一次开藏经阁九层，她用神识读图三天，连破两品（金丹三品）；图首在“源”之前画着一道缺口圆环和“守眼”二字，和落星亭石桌一模一样（读者第一次知道守眼钟）。",
+    "characters": [
+      "su-qingyue",
+      "gui-momo"
+    ],
+    "locations": [
+      "cangjingge-gu"
+    ]
+  },
+  {
+    "id": "e-d163-fengsan",
+    "title": "“逢三逢八”之约",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 163,
+    "chapter": 146,
+    "description": "第 163 天，林凡回山后头一回接通。听脉纹要两头都描上才能用；原图要封好埋到他挖得到的地方；她在外头逢三逢八飞回来。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "luoxingting-jin",
+      "luoxingting-gu"
+    ]
+  },
+  {
+    "id": "e-d174-baorenbu",
+    "title": "临朔城立保人簿",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 174,
+    "chapter": 149,
+    "description": "第 174–182 天。她先在临朔城许出三百块中品灵石丢了脸（第 147 章），回去用两人对出的“保人簿”翻盘：借钱的人跑了，保人可凭保书挂失，借钱人的存项先尽保人；盟书画押。第 183 天子时落地（第 150 章）。",
+    "characters": [
+      "su-qingyue",
+      "zhongli-furen"
+    ],
+    "locations": [
+      "linshuocheng",
+      "beihuang-sanjia",
+      "zhonglihao-gu"
+    ]
+  },
+  {
+    "id": "e-d195-jianzhu",
+    "title": "玄铁峪一炉一剑七钉",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 195,
+    "chapter": 154,
+    "description": "第 189–197 天（第 153–154 章）。她把赫连家的地火阵截成三段救回炉火；赫连铮用祖宗最丢人的哑铁一炉铸出绝灵剑和七枚截灵钉，剑脊九道断纹。她握剑时身上一根往南拽的线断了（管子的第一个迹象）。",
+    "characters": [
+      "su-qingyue",
+      "helian-zheng",
+      "qin-zhao"
+    ],
+    "locations": [
+      "xuantieyu",
+      "hantiekuang",
+      "yatieceng-gu"
+    ]
+  },
+  {
+    "id": "e-d200-helian",
+    "title": "赫连结盟，原图封进祖祠地宫",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 200,
+    "chapter": 157,
+    "description": "第 200–212 天。赫连族老会上赫连铮第一个站起来；她在赫连城祖祠地宫以一块上品灵石作底，把《万阵源流图》封了九层，结只认杂的灵力；盟书按黑手印；她破金丹四品。",
+    "characters": [
+      "su-qingyue",
+      "helian-zheng",
+      "helian-laofuren"
+    ],
+    "locations": [
+      "helian-cheng",
+      "helian-zuci"
+    ]
+  },
+  {
+    "id": "e-d227-tangguo",
+    "title": "唐果收回老账，成了第一个知道落星亭的现代人",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 227,
+    "chapter": 163,
+    "description": "第 227 天（第 163–164 章）。钟离集钟离号，严掌柜翻出一万年没断的保人簿，唐果她爹十年前那张保书兑出本钱加五年利三十块碎灵石，“此账，结清”（f-26）；当夜林凡把落星亭告诉她（f-33）。",
+    "characters": [
+      "tang-guo",
+      "lin-fan",
+      "li-pangzi",
+      "yan-zhanggui"
+    ],
+    "locations": [
+      "zhonglji",
+      "zhonglihao-jin"
+    ]
+  },
+  {
+    "id": "e-chg-baorenbu",
+    "title": "钟离号的保人簿",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 163,
+    "description": "第 149 章她在临朔城立下的保人簿，第 183 天子时落地，林凡第 227 天在钟离集看见。唐果她爹替人作保被拖垮铺子这件事本身没变，变的是一万年后这笔账讨得回来了。",
+    "before": "唐果她爹十年前替人作保，借了二十块碎灵石的人跑了，铺子被拖垮，账无处可讨",
+    "after": "钟离号墙上挂着“保人簿，青云历三万二千零一年春，钟离夫人与青云代掌门议立”；簿子一万年没断，那人的存项一直挂着，唐果凭保书收回三十块碎灵石",
+    "characters": [
+      "tang-guo",
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "zhonglji",
+      "zhonglihao-jin"
+    ]
+  },
+  {
+    "id": "e-d236-suweng",
+    "title": "大白见素翁，吐出那块中品灵石",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 236,
+    "chapter": 167,
+    "description": "第 236–242 天。万妖谷谷主素翁（三千岁白鹤）骂大白秃，大白“哇”地吐出第一卷子时吞的那块中品灵石当见面礼，素翁收进嗉子（f-16）。素翁看了她一眼：“你身上原来有根线，谁替你剪了？”",
+    "characters": [
+      "da-bai",
+      "su-weng",
+      "su-qingyue"
+    ],
+    "locations": [
+      "wanyaogu"
+    ]
+  },
+  {
+    "id": "e-tr-tu",
+    "title": "《万阵源流图》：赫连祖祠 → 赫连故城东北角",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 171,
+    "description": "第 157 章她封进赫连城祖祠地宫，第 244 天林凡在赫连故城（黑城子）东北角的祖祠基址下挖出：只认杂的封印，筑基初期的陈子墨打不开，林凡七层的杂气一碰就松（盲盒兑现）。两人先错把祖祠定在城中心黑塔底下（第 155、168 章）。",
+    "characters": [
+      "lin-fan",
+      "chen-zimo",
+      "su-qingyue"
+    ],
+    "locations": [
+      "helian-cheng",
+      "helian-gucheng",
+      "beihuang-feitu",
+      "helian-zuci",
+      "zuci-jizhi"
+    ]
+  },
+  {
+    "id": "e-d263-tingmai",
+    "title": "节点共鸣开通",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 263,
+    "chapter": 175,
+    "description": "第 263 天子时，四十二夜后接通。他的朱砂掺唐果出的碎灵石粉，她把金丹灵力灌进石桌，钟里嗡了一声，她摸到北荒地脉哪里粗、哪里断、哪里一万年没动过（落星亭第三档权限）；东北一截断得齐齐的。她说：“这一回，咱们改。”",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "tang-guo"
+    ],
+    "locations": [
+      "luoxingting-jin",
+      "luoxingting-gu"
+    ]
+  },
+  {
+    "id": "e-d264-nibi",
+    "title": "林凡对出护山大阵是倒着写的",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 264,
+    "chapter": 176,
+    "description": "第 264–267 天。林凡把图里青云护山大阵的原图摊在节点阵盘旁一笔笔对：原图引上来、绕山一周、落回去；现代壳子在要紧处多出几笔，走向反了（主角猜到抽灵阵）。同日照母纹修好王长老四十年的旧阵盘。逆笔的事谁也没说。",
+    "characters": [
+      "lin-fan",
+      "wang-zhanglao"
+    ],
+    "locations": [
+      "waiwufang",
+      "zhenfasi"
+    ]
+  },
+  {
+    "id": "e-tr-jian",
+    "title": "绝灵剑：玄铁峪铁根 → 寒铁矿哑铁层下三丈",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 182,
+    "description": "第 178 章她在玄铁峪废剑坑底下的铁根里封好埋下，第 292 天林凡顺前朝风道下到寒铁矿哑铁层底下三丈挖出（扯开结时塌方压了孙小六，会错）；杜老秤一握就麻，林凡握着只是凉；他截断老镇岩阵，矿上当夜没人咳（盲盒兑现）。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "sun-xiaoliu",
+      "li-mantun",
+      "du-laocheng"
+    ],
+    "locations": [
+      "xuantieyu",
+      "hantiekuang",
+      "yatieceng-jin"
+    ]
+  },
+  {
+    "id": "e-d319-beimen",
+    "title": "秦照守北门断肋：“我看见了”",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 319,
+    "chapter": 188,
+    "description": "第 319–321 天。第三回节点共鸣那夜她灌过钟，狼牙符报警，她飞一夜回拓跋堡，灵力空着；秦照一人守了半夜北门断两根肋骨，拓跋小隼被咬伤；拓跋野当众问她逢三逢八去见谁。秦照：“当年你的剑卡住，我看见了，没说……我只说一句：我看见了。”（f-27）",
+    "characters": [
+      "su-qingyue",
+      "qin-zhao",
+      "tuoba-ye",
+      "tuoba-xiaosun"
+    ],
+    "locations": [
+      "tuobabao"
+    ]
+  },
+  {
+    "id": "e-d322-sanjia",
+    "title": "三家合力",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 322,
+    "chapter": 190,
+    "description": "第 322–335 天。钟离夫人押粮来（她头一个丈夫是拓跋家的人，死在兽潮里）；赫连铮铸哑铁链子；苏清月和石砚把小隼胳膊里的魔气引出来，拓跋野单膝跪下；素翁：“雪背交给你们。”",
+    "characters": [
+      "su-qingyue",
+      "shi-yan",
+      "zhongli-furen",
+      "helian-zheng",
+      "tuoba-ye",
+      "tuoba-xiaosun",
+      "su-weng"
+    ],
+    "locations": [
+      "tuobabao",
+      "beihuang-sanjia"
+    ]
+  },
+  {
+    "id": "e-d343-xuebei",
+    "title": "除霜罴雪背，金丹五品；与柳如烟第一次正面相遇",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 343,
+    "chapter": 192,
+    "description": "第 343 天（第 192–193 章）。地火炉在北坡沟口诱雪背下山，哑铁链子锁四肢，素翁约束谷中，她最后一剑破金丹五品。夜里柳如烟提着百味堂的点心来：“我结丹了，欠师姐的点心。”手是热的。雪背的核往南边山门那口泉拽（主角猜到中印的人是管子）。白蘅视角里读者知道：月神教要北荒地眼的精气，玄微是内应。",
+    "characters": [
+      "su-qingyue",
+      "liu-ruyan",
+      "bai-heng",
+      "su-weng",
+      "tuoba-ye",
+      "tuoba-xiaosun",
+      "xue-bei"
+    ],
+    "locations": [
+      "tuobabao",
+      "wanyaogu"
+    ]
+  },
+  {
+    "id": "e-d349-xinyue",
+    "title": "万妖谷重订约，堡门刻家规，魔核埋进堡心",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 349,
+    "chapter": 195,
+    "description": "第 349–352 天。素翁和拓跋野在北坡沟口重订约：兽不出谷，人不进谷；灵脉若断，兽走北坡，拓跋让道；素翁送一支鹤来堡里落脚。拓跋野在堡门刻家规：堡心石不许动；北坡不放牧；鹤来，让道；第四条是她自己添的“堡心石下之物，留与青云林氏”。纯血魔核封好埋进堡心。",
+    "characters": [
+      "su-qingyue",
+      "tuoba-ye",
+      "su-weng"
+    ],
+    "locations": [
+      "tuobabao",
+      "wanyaogu",
+      "baoxinshi-gu"
+    ]
+  },
+  {
+    "id": "e-chg-tuojiabao",
+    "title": "老堡子 → 拓家堡",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 196,
+    "description": "两人第一次有计划地改历史。第 194 天林凡看见那一条先变成一团新墨（约还没立）；第 349–352 天约立、兽王已除，第 353 天子时落地。回响：外务房跟拓家堡做了三十年皮货买卖（第 197 章）；堡门家规第四条“堡心石下之物，留与青云林氏”，堡里老辈传下来总有一天会有个姓林的青云人来（第 202 章）；万妖谷外缘的秃头白鹤一支在堡里塔楼上做窝。",
+    "before": "《钟离集志》：“老堡子，即古拓跋堡。大劫后二年，万妖谷兽王率兽潮南下，堡破，屠尽。今为遗址，鸦聚其上。”",
+    "after": "《钟离集志》：“拓家堡：兽潮自北坡绕堡而过，堡存。今堡民三百余，以皮货为业，堡中养秃鹤数只。”",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "tuoba-ye",
+      "su-weng",
+      "ma-papi",
+      "tuo-laoshuan"
+    ],
+    "locations": [
+      "tuobabao",
+      "tuojiabao"
+    ]
+  },
+  {
+    "id": "e-chg-sanqing",
+    "title": "牵连：月神教三请圣女",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 196,
+    "description": "改拓跋堡的牵连，两人都没想到：月神教因此盯上苏清月（第 199、203 章一请、二请，第 218 章三请之后去中州）。",
+    "before": "《青云通史》没有月神教请圣女的记载",
+    "after": "《青云通史》多出一行：“是岁秋，月神教使者三至青云，请圣女赴中州。”",
+    "characters": [
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "yueshenjiao"
+    ]
+  },
+  {
+    "id": "e-tr-lingshi",
+    "title": "大白吞的中品灵石 → 秃头白鹤",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 201,
+    "description": "第一卷大白吞了苏清月一块中品灵石（f-16）；第 167 章大白吐给素翁；一万年后万妖谷外缘的秃头白鹤还揣在嗉囊里，第 201 章林凡喊“大白，吐出来！”它吐出来又吞回去；第 215 章秃爷吐在落星亭石桌上，“那是本座的灵石”。",
+    "characters": [
+      "da-bai",
+      "su-weng",
+      "tu-ye",
+      "lin-fan",
+      "li-pangzi"
+    ],
+    "locations": [
+      "wanyaogu"
+    ]
+  },
+  {
+    "id": "e-tr-mohe",
+    "title": "纯血魔核：拓跋堡堡心 → 拓家堡堡心石",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 204,
+    "description": "第 195 章她把雪背的纯血魔核封好埋进堡心；第 388–392 天林凡照家规陪着堡里人挖开堡心石，核隔着封印还在一下一下跳，靠近的人力气被慢慢引过去；他没解封，照旧封着装进寒铁匣带回青云（第五卷当诱饵）。秃爷嫌那只匣子，却跟着走了。",
+    "characters": [
+      "lin-fan",
+      "li-pangzi",
+      "tu-ye",
+      "tuo-laoshuan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "tuobabao",
+      "tuojiabao",
+      "baoxinshi-gu",
+      "baoxinshi-jin"
+    ]
+  },
+  {
+    "id": "e-tr-kumu",
+    "title": "枯木的坟：冰河湾“虽迟，不死”",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 205,
+    "description": "北荒极北冰河湾，一块矮石上四个字“虽迟，不死”，像用指甲一笔笔划的；坟里是桦树皮订的《枯木汲气篇》下篇（回络里攒九十九滴再放进丹田）；塌了的窝棚墙上九十九道竖痕（f-18 兑现）。",
+    "characters": [
+      "kumu",
+      "lin-fan",
+      "li-pangzi"
+    ],
+    "locations": [
+      "beihuang-jibei",
+      "kumu-fen"
+    ]
+  },
+  {
+    "id": "e-d450-liupin",
+    "title": "冬至破六品，决定去中州",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 450,
+    "chapter": 209,
+    "description": "冬至，柳如烟之夜一周年（第 450 天）。她在藏经阁五层北荒散修架前坐到天黑，丹上长出第六道纹；决定去中州：去宗门大会，去找如烟，去看看月神教。",
+    "characters": [
+      "su-qingyue",
+      "gui-momo"
+    ],
+    "locations": [
+      "cangjingge-gu",
+      "cangjingge-wuceng"
+    ]
+  },
+  {
+    "id": "e-d455-qiaoke",
+    "title": "绝灵剑截断壳子往下拽的那一路",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 455,
+    "chapter": 211,
+    "description": "腊月（第 455–489 天）。林凡跟马扒皮描节点，摸到东段那几笔逆笔，拔剑截断壳子往地底下拽的那一路；壳子照样能亮，只是不再往下拽；断纹灭一道剩八道。刘大爷说今年坑里格外安生，除夕没断线。",
+    "characters": [
+      "lin-fan",
+      "ma-papi",
+      "liu-daye"
+    ],
+    "locations": [
+      "qingyunshan",
+      "tianshuikeng"
+    ]
+  },
+  {
+    "id": "e-d490-zhuji",
+    "title": "林凡除夕筑基",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 490,
+    "chapter": 212,
+    "description": "除夕（第 490 天）子时。照《枯木汲气篇》下篇攒满九十九滴，她压印见他坐得稳稳的，声音断在“慢慢”两个字上；他一个人把九十九滴放进丹田，筑基初期（现代外门几十年来第一个自己筑基的杂役出身）。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "tang-guo",
+      "wang-zhanglao",
+      "li-pangzi"
+    ],
+    "locations": [
+      "luoxingting-jin"
+    ]
+  },
+  {
+    "id": "e-d491-mengyue",
+    "title": "孟岳出关，提议林凡去中州",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 491,
+    "chapter": 213,
+    "description": "正月（第 491–505 天）。闭关二十年的掌门孟岳为林凡出关；陈子墨提议让林凡以外门执事身份去夏天的中州宗门大会、秋分的天墟。",
+    "characters": [
+      "xiandai-zhangmen",
+      "lin-fan",
+      "chen-zimo",
+      "ma-papi",
+      "tang-guo",
+      "li-pangzi"
+    ],
+    "locations": [
+      "qingyundian"
+    ]
+  },
+  {
+    "id": "e-d518-zhishi",
+    "title": "林凡任外门执事，唐果任符箓堂执事",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 518,
+    "chapter": 217,
+    "description": "第 518–525 天。孟岳给林凡外门执事铜牌（外门四十年没设过这个缺），全宗凑了四块下品灵石作宗籍费；同一天唐果领了符箓堂执事木牌。",
+    "characters": [
+      "lin-fan",
+      "tang-guo",
+      "xiandai-zhangmen",
+      "wang-zhanglao",
+      "li-pangzi",
+      "chen-zimo"
+    ],
+    "locations": [
+      "qingyundian"
+    ]
+  },
+  {
+    "id": "e-d538-shenjiwang",
+    "title": "沈既望量坑，坑醒了",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 538,
+    "chapter": 220,
+    "description": "第 538 天（第 220–221 章）。月神教巡眼使沈既望（自称游方阵师）在甜水坑边拿白瓷盘量“眼”，本子写“北荒眼：塌，余露三分，有人压”；林凡替他调准了引灵口（会错）。当夜黑雾顺白线爬向宿舍，外门全醒，林凡拔绝灵剑截断细线，三车炉灰压严。",
+    "characters": [
+      "shen-jiwang",
+      "lin-fan",
+      "liu-daye",
+      "li-pangzi",
+      "zhao-er",
+      "tang-guo"
+    ],
+    "locations": [
+      "tianshuikeng"
+    ]
+  },
+  {
+    "id": "e-d545-yuelu",
+    "title": "圣女当众喝月露，钟离号停运",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 545,
+    "chapter": 223,
+    "description": "第 545 天。月神教给三家送来成箱月露，她当着赫连铮、拓跋野、钟离夫人喝下一杯，流云回雪第七变卡了一下；钟离夫人“我再算算”，当晚钟离号停运月露。代价：她凝滞三天，林凡教她“吐三口”。",
+    "characters": [
+      "su-qingyue",
+      "helian-zheng",
+      "tuoba-ye",
+      "zhongli-furen",
+      "qin-zhao"
+    ],
+    "locations": [
+      "zixiaodian"
+    ]
+  },
+  {
+    "id": "e-d596-dahui",
+    "title": "中州宗门大会：末座",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 596,
+    "chapter": 227,
+    "description": "第 590–596 天（第 226–227 章）。青云别院许伯的灯点了四十年；天衍宗衍天台大会，青云列末座，头一日不许开口；柳如烟以月使身份讲月露的恩泽；白蘅问“苏掌门，手还凉吗”。她在末座石凳上刻下第一处字。",
+    "characters": [
+      "su-qingyue",
+      "qin-zhao",
+      "zhongli-furen",
+      "xu-bo",
+      "wenren-shuo",
+      "bai-heng",
+      "liu-ruyan"
+    ],
+    "locations": [
+      "tianyanzong",
+      "yantiantai",
+      "qingyun-bieyuan"
+    ]
+  },
+  {
+    "id": "e-d610-lunzhen",
+    "title": "论阵赢裴叙，金丹八品，墟牌三块",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 610,
+    "chapter": 229,
+    "description": "第 610 天。许伯翻出“代理者不在此列”，她以代理掌门下场论阵，截三段让中州阵道第一裴叙的阵朝自己炸，一道封印他解不开，认输；赢墟牌三块和发言权，破八品。第 615 天她提议联查月露，没人跟；闻人朔：“你拿不出东西，我只能当你没说。”",
+    "characters": [
+      "su-qingyue",
+      "pei-xu",
+      "wenren-shuo",
+      "qin-zhao",
+      "xu-bo",
+      "liu-ruyan",
+      "bai-heng"
+    ],
+    "locations": [
+      "tianyanzong",
+      "yantiantai"
+    ]
+  },
+  {
+    "id": "e-tr-kezi",
+    "title": "她留给他的刻字三处",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 244,
+    "description": "她用《青云阵典》第九篇的封印刻字，一万年磨不掉。一：衍天台末座石凳（第 227 章刻，第 244 章林凡在天衍宗老会台最后一条石凳读到，旁边一只单脚三根毛的鹤，他垫了一包圣女面、画了一只四根毛的鹤）；二：钟离号中州分号后院井栏（第 232 章刻，第 247 章在大胤王都陈府后园的老井栏读到，她欠钟离夫人一块上品灵石）；三：墟门边她坐了三天的石头（第 249 章刻，第 250 章在墟口分坛门前当台阶的石头上读到）。第 263 章他一条条回她。",
+    "characters": [
+      "su-qingyue",
+      "lin-fan",
+      "miao-xiaosui"
+    ],
+    "locations": [
+      "tianyanzong",
+      "daxia",
+      "tianxu",
+      "yantiantai",
+      "laohuitai",
+      "zhonglihao-zhongzhou",
+      "chenfu",
+      "xumen-shi",
+      "xukou-shi"
+    ]
+  },
+  {
+    "id": "e-d630-xubian",
+    "title": "天衍宗藏书楼里读到墟变",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 630,
+    "chapter": 233,
+    "description": "第 630–638 天。裴叙带她进天衍宗藏书楼看墟变的记载，几行和末页几乎一个口气；她抄下那一页。月神教是次年开春在废墟上施药收孤起家的。",
+    "characters": [
+      "su-qingyue",
+      "pei-xu"
+    ],
+    "locations": [
+      "tianyanzong"
+    ]
+  },
+  {
+    "id": "e-d655-leiyuan",
+    "title": "雷渊摊牌：七百一十三夜",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 655,
+    "chapter": 237,
+    "description": "第 655 天（f-46 兑现）。她在东段节点边把剑架上雷渊的脖子；雷渊开柜：二十年夜禁记档，“子时，圣女往后院”七百一十三条，条条“不报”；每批月白石都是亥时末拿阵堂令进的山门；宁舟的记档差一个时辰；玄微三次要她的出入记档，他起疑后给的都是假的。她猜到玄微；两人约定先拿证据。",
+    "characters": [
+      "su-qingyue",
+      "lei-yuan",
+      "ning-zhou",
+      "xuan-wei"
+    ],
+    "locations": [
+      "zhifatang",
+      "qingyunshan",
+      "hushan-dazhen-gu"
+    ]
+  },
+  {
+    "id": "e-d708-qingyunmen",
+    "title": "宗籍降为“青云门”",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 708,
+    "chapter": 245,
+    "description": "第 708 天。天衍宗推演堂宗籍校验，林凡展开《万阵源流图》一折作凭据，邵长老要借图三年；他不借，传承“存疑”，青云宗降为“青云门”，三年后再校。",
+    "characters": [
+      "lin-fan",
+      "li-pangzi",
+      "shao-zhanglao",
+      "pang-zhubu",
+      "chen-zimo"
+    ],
+    "locations": [
+      "tianyanzong",
+      "laohuitai"
+    ]
+  },
+  {
+    "id": "e-d718-chenziyu",
+    "title": "中秋供奉院：拔印失败，陈子墨坦白",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 718,
+    "chapter": 248,
+    "description": "中秋（第 718 天）。承月台外围供奉院，陈子墨的妹妹陈子瑜（十五岁，单灵根水，筑基初期）抱着手炉说“我快追上哥哥了”；林凡硬拔她的印，被印咬回细脉（会错）。当夜陈子墨坦白陈家是月神教外围，求他别再试。",
+    "characters": [
+      "lin-fan",
+      "chen-zimo",
+      "chen-ziyu"
+    ],
+    "locations": [
+      "daxia",
+      "yueshenjiao",
+      "gongfengyuan",
+      "chengyuetai"
+    ]
+  },
+  {
+    "id": "e-d725-tianxu",
+    "title": "古今同游：天墟一夜",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 725,
+    "chapter": 252,
+    "description": "秋分，第 725 天夜（第 251–257 章）。天墟整座秘境在第二座守眼钟里，两人各在自己的时代走同一条路，只听得见声音（落星亭第四档权限）。林凡黄昏在雾边破筑基中期；两人一个岔口一个岔口报路，她刻“林凡，此路通”；钟庭里两人认出第二座钟，盘背一列“管”当面说破；林凡把“丑”认成“卯”（会错），白蘅提前到。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "qin-zhao",
+      "bai-heng",
+      "liu-ruyan",
+      "miao-xiaosui",
+      "chen-zimo"
+    ],
+    "locations": [
+      "tianxu",
+      "zhongting-gu",
+      "zhongting-jin"
+    ]
+  },
+  {
+    "id": "e-d725-duanbi",
+    "title": "秦照断臂，截下引月盘",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 725,
+    "chapter": 255,
+    "description": "第 725 天夜寅时。白蘅、柳如烟背着装引月盘的匣子提前到；她和柳如烟第二次交手，流云回雪第七变没卡，抓住盘子；白蘅一剑从背后来，秦照拿右臂去挡，臂断在肘上；白蘅被引进林凡说过塌成坑的那道禁制。",
+    "characters": [
+      "su-qingyue",
+      "qin-zhao",
+      "bai-heng",
+      "liu-ruyan"
+    ],
+    "locations": [
+      "tianxu",
+      "zhongting-gu"
+    ]
+  },
+  {
+    "id": "e-d725-yuanying",
+    "title": "苏清月碎丹成婴，两座钟对上音",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 725,
+    "chapter": 257,
+    "description": "第 725 天夜卯时前。九品金丹被打斗搅裂，林凡替她数呼吸、教她留一成空，碎丹成婴，元婴初期，十八岁。她那头的钟响，他这头裂了的钟一万年来头一回跟着响，两座钟对上了音（第五卷补全圆环的条件）。这一声就是一次接通，改动当场落地。",
+    "characters": [
+      "su-qingyue",
+      "lin-fan",
+      "qin-zhao",
+      "miao-xiaosui"
+    ],
+    "locations": [
+      "tianxu",
+      "zhongting-gu",
+      "zhongting-jin"
+    ]
+  },
+  {
+    "id": "e-chg-fentan",
+    "title": "天墟分坛不存在了",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 257,
+    "description": "她在天墟截下引月盘，钟响即落地（第 257 章当场看见，第 258 章走出墟口）。只有林凡记得。现代绝灵剑在钟庭截断盘与钟之间那根粗线，断纹剩七道。人和物不洇，钟响时整个换掉。",
+    "before": "天墟入口被月神教的天墟分坛把着，月白灯笼一排，进墟要向分坛交钱，年年办镇钟祭；引月盘卡在现代钟庭的钟沿上一万年；苗小穗是分坛厨下杂役、供奉苗子，管林凡叫北荒阵师",
+    "after": "墟口没有分坛，门边是天衍宗的茶棚；顾三娘说“天墟这边从来没有他们的坛子”；陈子墨说是陪林凡来的；苗小穗有了娘，在墟口卖包子，不认得他；门前那块老石头和第三处刻字还在",
+    "characters": [
+      "lin-fan",
+      "miao-xiaosui",
+      "gu-sanniang",
+      "chen-zimo",
+      "li-pangzi",
+      "su-qingyue"
+    ],
+    "locations": [
+      "tianxu",
+      "yueshenjiao",
+      "wanbaolou",
+      "xukou",
+      "tianxu-fentan",
+      "zhongting-jin"
+    ]
+  },
+  {
+    "id": "e-d727-bieyuan",
+    "title": "青云别院大火，许伯死，青云被大会除名三十年",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 727,
+    "chapter": 260,
+    "description": "第 726–727 天。白蘅说“中州的灯，昨夜灭了一盏”；青云别院烧成黑地，许伯抱着灯和别院四十年的档死在祖师像前；天衍宗判“灯油走火”，地契作废；大会表决青云除名三十年；闻人朔私下交出墟变推演。她带许伯的棺材回北荒。",
+    "characters": [
+      "su-qingyue",
+      "xu-bo",
+      "wenren-shuo",
+      "bai-heng",
+      "zhongli-furen"
+    ],
+    "locations": [
+      "qingyun-bieyuan",
+      "tianyanzong",
+      "qingyunshan"
+    ]
+  },
+  {
+    "id": "e-d732-qiye",
+    "title": "落星亭七夜接不通",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 726,
+    "chapter": 262,
+    "description": "第 726–732 天（第 258–262 章）。天墟的钟借走了地眼一口气，这是同游的代价；第 732 天夜林凡赶回描环，石桌不亮，唐果陪他等到子时末；第 733 天子时才接上（第 263 章）。",
+    "characters": [
+      "lin-fan",
+      "tang-guo",
+      "su-qingyue"
+    ],
+    "locations": [
+      "luoxingting-jin"
+    ]
+  },
+  {
+    "id": "e-chg-yuanyingline",
+    "title": "《青云通史》：“归而元婴，年十八”",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 265,
+    "description": "天墟之后林凡翻《青云通史》，圣女那一页多出一行新墨。",
+    "before": "圣女那一页没有入天墟、元婴的记载",
+    "after": "是岁秋，圣女清月入天墟，归而元婴，年十八。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "tang-guo"
+    ],
+    "locations": []
+  },
+  {
+    "id": "e-d770-xing",
+    "title": "掌门立冬醒来：“我信了他二十年”",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 770,
+    "chapter": 267,
+    "description": "立冬（第 770 天）。玄衡醒来，当着雷渊和苏清月说：东段大修是玄微提的，紫气涌出是玄微说祥瑞、劝他开泉，封泉那夜阵往回咬的那一下是玄微的回钩。三人议定玄微管着阵，先不动。",
+    "characters": [
+      "xuan-heng",
+      "su-qingyue",
+      "lei-yuan",
+      "da-bai"
+    ],
+    "locations": [
+      "zixiaodian"
+    ]
+  },
+  {
+    "id": "e-d748-laji",
+    "title": "垃圾聚灵阵，林凡筑基后期",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 748,
+    "chapter": 268,
+    "description": "第 748–760 天。林凡照母纹拿墟口拉回的一车万宝楼废料搭出聚杂气的阵，五灵根、杂灵根坐上去长得最快，赵二头一个坐；一个半月外门三人破层，林凡破筑基后期。",
+    "characters": [
+      "lin-fan",
+      "zhao-er",
+      "li-pangzi",
+      "ma-papi"
+    ],
+    "locations": [
+      "qingyunshan",
+      "laji-julingzhen"
+    ]
+  },
+  {
+    "id": "e-d785-shiyan",
+    "title": "石砚截下东段第十七笔",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 785,
+    "chapter": 272,
+    "description": "第 785 天。玄微夜里派石砚一个人去描东段第十七处节点，和二十年前宁舟一样；石砚摸出“一股往下拽”，在回钩翻过来之前截成三段摘出，只烫了两根手指；雷渊赶到，在台阶上坐了很久。",
+    "characters": [
+      "shi-yan",
+      "lei-yuan",
+      "xuan-wei"
+    ],
+    "locations": [
+      "qingyunshan",
+      "hushan-dazhen-gu"
+    ]
+  },
+  {
+    "id": "e-d795-feidang",
+    "title": "五层收废档：宁舟的时辰对上",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 795,
+    "chapter": 276,
+    "description": "第 795 天。桂嬷嬷把阵堂二十年年修送来当废纸的稿子一张没扔；宁舟最后一次年修的稿子页边有玄微的批，落款戌时末，宁舟那时已“死了”。证据齐了。",
+    "characters": [
+      "gui-momo",
+      "su-qingyue",
+      "ning-zhou",
+      "xuan-wei"
+    ],
+    "locations": [
+      "cangjingge-gu",
+      "cangjingge-wuceng"
+    ]
+  },
+  {
+    "id": "e-d821-laba",
+    "title": "腊八：陈子墨站到青云这边",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 821,
+    "chapter": 279,
+    "description": "腊八（第 821 天），青石镇茶棚。沈既望读林凡仿的图，灵力在母纹那页自己掉头扎了他一下，在最拿手的事上头一回输；陈子瑜在轿里说“哥，别拿东西换我”；陈子墨把真图递给林凡：“我是青云的内门弟子。”沈既望把陈子瑜接回中州。随后陈子墨被陈家除名，睡进杂役通铺（第 282 章）。",
+    "characters": [
+      "lin-fan",
+      "chen-zimo",
+      "shen-jiwang",
+      "chen-ziyu",
+      "tang-guo",
+      "li-pangzi"
+    ],
+    "locations": [
+      "qingshizhen"
+    ]
+  },
+  {
+    "id": "e-d828-nianxiu",
+    "title": "年修说破玄微，阵心相持",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 828,
+    "chapter": 283,
+    "description": "第 828–829 天（第 283–284 章）。东段阵枢年修，她当众摊开引月盘的回钩、宁舟的时辰、钟离号那页、七百一十三夜的假记档、掌门的话：“师叔，月神教在青云的人，是你。”玄微退进阵堂底下的阵心，把护山大阵扣成死扣：“我们都等一年。”雷渊在阵心门口坐下相持。玄微视角里读者知道：冬至子时阵一翻，泉边坐得最久的人一夜抽干。",
+    "characters": [
+      "su-qingyue",
+      "xuan-wei",
+      "lei-yuan",
+      "xuan-heng",
+      "qin-zhao",
+      "shi-yan",
+      "gui-momo"
+    ],
+    "locations": [
+      "zhentang",
+      "qingyunshan",
+      "hushan-dazhen-gu"
+    ]
+  },
+  {
+    "id": "e-d833-mingzhu",
+    "title": "明烛在山门外露面",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 833,
+    "chapter": 287,
+    "description": "第 833 天大雪。月神教主明烛（元婴后期）提灯站在山门外，讲墟变那年冬天教里先人支锅熬粥，“你拿走的那只盘，是那锅粥的柴”；她驳不倒。他把灯留在山门石上：“许管事那盏，替他点着。”",
+    "characters": [
+      "ming-zhu",
+      "su-qingyue",
+      "lei-yuan"
+    ],
+    "locations": [
+      "shanmen-gu"
+    ]
+  },
+  {
+    "id": "e-d831-moye",
+    "title": "末页一字没动",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 831,
+    "chapter": 286,
+    "description": "第 831 天。第四卷改了天墟、分坛、元婴、掌门醒、玄微说破，林凡翻《青云通史》末页，“宗门高层尽殁”那一行一笔没变，老墨里还是半个“月”；唐果：“一个字都没动。”改的全是边上的，大事有惯性（第五卷第 301 章起才松动）。",
+    "characters": [
+      "lin-fan",
+      "tang-guo"
+    ],
+    "locations": []
+  },
+  {
+    "id": "e-d843-chuxi",
+    "title": "除夕改阵：十二节点逆笔截三段",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 843,
+    "chapter": 294,
+    "description": "除夕（第 843 天）。林凡不拦着点阵，他改阵：带着赵二和三个阵法司学徒把十二个节点的逆笔截成三段摘出、补上束光外圈；大阵三十年来最亮，初一粮商多拉两车米。前一天他已揭开壳子是抽灵阵残骸（第 293 章，f-05）。",
+    "characters": [
+      "lin-fan",
+      "zhao-er",
+      "ma-papi",
+      "xiandai-zhangmen"
+    ],
+    "locations": [
+      "qingyunshan"
+    ]
+  },
+  {
+    "id": "e-d844-guanzi",
+    "title": "推出大劫是翻转，四十一根管子",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 844,
+    "chapter": 295,
+    "description": "正月初一（第 844 天）。玄衡、雷渊、苏清月拆闻人朔的墟变推演：大阵一夜倒着走，和引月盘背面的“管”对得上，大劫就是抽灵阵翻转（主角猜到）。雷渊点出在泉边坐过一百夜以上的高层四十一个（元婴七、金丹三十四）。玄衡：“那就最后一个。”",
+    "characters": [
+      "xuan-heng",
+      "lei-yuan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "zixiaodian"
+    ]
+  },
+  {
+    "id": "e-d852-guanzi11",
+    "title": "十一只罐子：元婴拔管子",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 852,
+    "chapter": 299,
+    "description": "第 852–856 天。第 297 章拔方长老时手太快，他从七品掉到三品；这回石砚当“眼”，她元婴出窍分十一缕神识，主脉走《归元经》、细脉一道筛，一丝一丝引印进封口瓷罐，长老最多掉一两品。四十一剩三十。",
+    "characters": [
+      "su-qingyue",
+      "shi-yan",
+      "fang-zhanglao",
+      "lu-ming"
+    ],
+    "locations": [
+      "zixiaodian"
+    ]
+  },
+  {
+    "id": "e-chg-moye-song",
+    "title": "末页开始松动",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 301,
+    "description": "第五卷末页的倒计时（3.3 洇墨规则）：拔掉的管子让“尽”说不准了，大事有惯性，可惯性也有缝。之后：第 307 章“七”洇；第 323 章墨里浮出“圣女”“入”“眼”的残笔；第 333 章“山门十年无炊烟”洇；第 338 章整段洇成一团只剩“冬，大劫”；第 345 章浮出完整的“清月”；第 360 章落成新字。",
+    "before": "宗门高层尽殁（第四卷末一字没动）",
+    "after": "“尽”字洇开，新墨，边上还软；林凡在旁边画了个小圈",
+    "characters": [
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": []
+  },
+  {
+    "id": "e-d866-zhenxin",
+    "title": "阵心里的玄微讲九天回环",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 866,
+    "chapter": 302,
+    "description": "第 866 天。她下到阵心，玄微把月神说全：月神是早年从十地飞上九天的人，地眼一口口塌，回环一周比一周短，九天跟着枯，“月神是在保根，你们只看见抽，没看见回”；她驳不倒。“还剩三百一十四天。”",
+    "characters": [
+      "su-qingyue",
+      "xuan-wei",
+      "lei-yuan"
+    ],
+    "locations": [
+      "zhentang"
+    ]
+  },
+  {
+    "id": "e-d900-sanjia",
+    "title": "北荒三家上山",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 900,
+    "chapter": 306,
+    "description": "第 900 天。赫连铮教雷渊、石砚下截灵钉；她把中州欠钟离夫人那块上品灵石还了，钟离家账房在家规第一页写“青云宗之账，钟离家不催”；拓跋野带来素翁的话：冬至夜灵兽驮山下凡人去拓跋堡。",
+    "characters": [
+      "su-qingyue",
+      "helian-zheng",
+      "zhongli-furen",
+      "tuoba-ye",
+      "lei-yuan",
+      "shi-yan",
+      "qin-zhao",
+      "xuan-heng"
+    ],
+    "locations": [
+      "zixiaodian",
+      "beihuang-sanjia"
+    ]
+  },
+  {
+    "id": "e-d905-xiazhenxin",
+    "title": "信被看过，五位高层下了阵心",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 905,
+    "chapter": 308,
+    "description": "第 905–915 天。她给柳如烟的信路上被玄微看过（会错）；当夜百炼峰峰主韩钧等五位高层下了阵心，宁可留着修为；管子还是二十二根，够得着的只剩十七。第 318 章韩钧回头，二十一。",
+    "characters": [
+      "su-qingyue",
+      "liu-ruyan",
+      "han-jun",
+      "xuan-wei",
+      "lei-yuan"
+    ],
+    "locations": [
+      "zhentang"
+    ]
+  },
+  {
+    "id": "e-d918-baishan",
+    "title": "沈既望拜山：“冬至子时，来取”",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 918,
+    "chapter": 309,
+    "description": "第 918 天。沈既望带中州的茶和一匣灵石见孟岳；坑边念巡眼册“塌，余露三分，有人压，冬至可取”：冬至子时大劫正好一万年，残骸回潮，坑底剩下的三分会被逼上来；他的家乡旱县靠月神回赐的雨。林凡说不赢；两人当夜明白古今是同一个子时（第 310 章）。",
+    "characters": [
+      "shen-jiwang",
+      "lin-fan",
+      "xiandai-zhangmen"
+    ],
+    "locations": [
+      "tianshuikeng",
+      "qingyundian"
+    ]
+  },
+  {
+    "id": "e-d920-hushan",
+    "title": "现代护山阵真正亮起，林凡筑基圆满",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 920,
+    "chapter": 311,
+    "description": "第 920–935 天。她每夜照原图口授一个节点的护山纹，林凡改成现代杂气吃得动的版本，马扒皮拿出三十年的节点账；头一处只截两段烧了赵二的手；试阵那夜一群乌鸦撞在光上弹回去（第 2 章“连乌鸦都挡在外面”）。林凡在最后一个节点破筑基圆满；孟岳给他守山令。",
+    "characters": [
+      "lin-fan",
+      "ma-papi",
+      "zhao-er",
+      "xiandai-zhangmen",
+      "su-qingyue"
+    ],
+    "locations": [
+      "qingyunshan"
+    ]
+  },
+  {
+    "id": "e-d952-nibi7",
+    "title": "石砚摸出中枢七处逆笔",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 952,
+    "chapter": 314,
+    "description": "第 935–958 天（第 312–314 章）。十三岁的石砚带陆鸣、阿蛮、小满钻地脉沟摸中枢，专挑最乖、最工整的纹去摸，摸出七处要命的逆笔，第七处在泉眼口（“师尊的”）；玄微在自己最拿手的事上输给一个十三岁的五灵根。雷渊：“好眼神。”",
+    "characters": [
+      "shi-yan",
+      "lu-ming",
+      "a-man",
+      "xiao-man",
+      "lei-yuan",
+      "su-qingyue",
+      "xuan-wei"
+    ],
+    "locations": [
+      "ziqi-lingquan",
+      "hushan-dazhen-gu"
+    ]
+  },
+  {
+    "id": "e-tr-shiling",
+    "title": "阵堂石令：落星亭补阵岗的来历",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 315,
+    "description": "外务房旧账库里最老的一册（重抄过三十多回），每一版都原样抄着一行：“落星亭补阵岗，月补朱砂，不许撤。阵堂石令。”马扒皮第一卷想撤补阵岗省钱，被这行压着撤不掉。林凡第一章那份差事，是一万年前阵堂一个姓石的人定的（第 361 章石砚定令）。",
+    "characters": [
+      "ma-papi",
+      "lin-fan",
+      "shi-yan"
+    ],
+    "locations": [
+      "waiwufang"
+    ]
+  },
+  {
+    "id": "e-d972-shouzha",
+    "title": "青阳子手札：以身为门",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 972,
+    "chapter": 317,
+    "description": "第 972–978 天。玄衡从静室聚灵大阵阵心底下取出开山祖师青阳子的手札：“地眼伤则封之，守之者以身为门，万年而复。”中印的人封进去只会多接一根管子，所以玄衡不行。她看完什么都没说，第 321 章自己写下“守眼人，苏清月”。",
+    "characters": [
+      "xuan-heng",
+      "su-qingyue",
+      "qingyangzi"
+    ],
+    "locations": [
+      "zixiaodian"
+    ]
+  },
+  {
+    "id": "e-d1006-chao",
+    "title": "林凡看出她要进地眼，两人吵翻又和好",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 1006,
+    "chapter": 324,
+    "description": "第 1003–1010 天（第 322–326 章）。她问宿舍、圣女像、石牌、东壁大石头，他没听出来；第 1006 天末页浮出“圣女”“入”“眼”，他想明白了；子时“你又什么都自己扛”，他香没烧完就走出亭子。三夜后和好：“你倒欠两夜”（f-34）；开门要补全的钟、外锁、口诀，他得结丹；开春才推得开，“一万年零一个冬天”。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "li-pangzi",
+      "tang-guo"
+    ],
+    "locations": [
+      "luoxingting-jin",
+      "luoxingting-gu"
+    ]
+  },
+  {
+    "id": "e-d1012-guanzi35",
+    "title": "三十五只罐子：一夜拔十五根",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 1012,
+    "chapter": 327,
+    "description": "第 1012–1025 天。石砚当眼、韩钧旁观，她十五缕神识同时往外引，一夜拔掉剩下够得着的十五根；二十一剩六：玄衡、柳如烟、阵心四长老。玄衡：“为师这一根，留着有用。”",
+    "characters": [
+      "su-qingyue",
+      "shi-yan",
+      "han-jun",
+      "xuan-heng"
+    ],
+    "locations": [
+      "zixiaodian"
+    ]
+  },
+  {
+    "id": "e-d1042-chenziyu",
+    "title": "林凡拔出陈子瑜的印",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 1042,
+    "chapter": 331,
+    "description": "第 1042–1055 天。沈既望把撑不到冬至的陈子瑜送到钟离集；林凡先拿唐果的浊符围一圈，再用她第一卷救石砚的法子反着引，引一丝停三息，一整夜拔出（第四卷第 248 章失败的回报）。陈子瑜带来月神教的底：十二个供奉、引月盘冬至子时坐在残骸中枢上抽、要砸石桌，巡眼使会提前十天到。",
+    "characters": [
+      "lin-fan",
+      "chen-ziyu",
+      "chen-zimo",
+      "tang-guo",
+      "li-pangzi"
+    ],
+    "locations": [
+      "qingyunshan",
+      "zhonglji"
+    ]
+  },
+  {
+    "id": "e-d1076-sitiezi",
+    "title": "孟岳撕帖子",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 1076,
+    "chapter": 334,
+    "description": "中秋第二天（第 1076 天）。沈既望的人当众打开一百块中品灵石；孟岳想起三十年前看见巡眼“修”大阵、师父冻死，合上匣子撕了帖子，说冬至前他要冲金丹。“那坑底下是什么？”“一道伤口。”",
+    "characters": [
+      "xiandai-zhangmen",
+      "lin-fan",
+      "li-pangzi",
+      "shen-jiwang"
+    ],
+    "locations": [
+      "qingyundian"
+    ]
+  },
+  {
+    "id": "e-chg-qishisi",
+    "title": "演武场老石头：“七十四，准了”",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 336,
+    "description": "第 335 章秦照在演武坪青石上刻下“七十四，准了”（第七十四次约战，大劫以后），下一个子时落地。林凡数了刻痕，只报“他刻了准了”，没说三百一十一道（一年一道），替她看不见一回。",
+    "before": "演武场边晒被子的老石头上，只有秦照的七十二道剑痕和一个圈",
+    "after": "多出一行“七十四，准了”，底下一排一排单道刻痕，三百一十一道",
+    "characters": [
+      "qin-zhao",
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "jianfeng-yanwuping",
+      "yanwuchang"
+    ]
+  },
+  {
+    "id": "e-d1135-jiehuan",
+    "title": "守眼钟示警，玄微截环",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 1135,
+    "chapter": 338,
+    "description": "第 1135 天子时。冬至前四十五天，石桌没到时辰自己亮了一层，她那头四十九只风铃、他这头锈铃一齐响（f-32 再响）；石桌底下“咔”一声，玄微在阵心隔着阵脉截断圆环，两头一起断了（第 339 章，玄微字条“钟太吵”）。雷渊给自己记了一条“冬至子时，首座往东枢。不报”。",
+    "characters": [
+      "su-qingyue",
+      "lin-fan",
+      "xuan-wei",
+      "lei-yuan"
+    ],
+    "locations": [
+      "luoxingting-jin",
+      "luoxingting-gu",
+      "zhentang"
+    ]
+  },
+  {
+    "id": "e-d1136-buhuan",
+    "title": "两头补全圆环，四十九铃齐鸣",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 1136,
+    "chapter": 340,
+    "description": "第 1136 天子时（f-03 当面说破）。她照原版阵图、他用朱砂、母纹和筑基圆满的灵液，同一个子时两头补全；四十九铃齐鸣，锈铃跟响，守眼钟恢复全部功能：一整个子时都通，节点共鸣随时能用，还能完整传影一次。截口是玄微的，一万年的口子两头一起缝上。",
+    "characters": [
+      "su-qingyue",
+      "lin-fan",
+      "tu-ye"
+    ],
+    "locations": [
+      "luoxingting-jin",
+      "luoxingting-gu"
+    ]
+  },
+  {
+    "id": "e-d1157-kuang",
+    "title": "寒铁矿的车回来",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 1157,
+    "chapter": 341,
+    "description": "第 1157 天。孙小六、刘二丫、赵四宝、陈小禾、钱有余三年期满，带着二十来个自愿来的矿工回山，一身浊气不怕黑雾；胖子给刘二丫打汤多一勺（第 61 章许下的）；矿工当晚坐上垃圾聚灵阵。",
+    "characters": [
+      "sun-xiaoliu",
+      "liu-erya",
+      "zhao-sibao",
+      "chen-xiaohe",
+      "qian-youyu",
+      "li-pangzi",
+      "lao-suntou"
+    ],
+    "locations": [
+      "paifang",
+      "waimen-shitang",
+      "laji-julingzhen"
+    ]
+  },
+  {
+    "id": "e-d1170-zhang",
+    "title": "沈既望拿账打，钟离家不催账",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 1170,
+    "chapter": 343,
+    "description": "第 1170–1172 天（第 343–344 章）。沈既望提前十天到，带十二个供奉住青石镇，先买下外门欠粮商和钟离集的账上门催，粮车停了；唐果连夜去钟离集，钱庄翻出一万年的家规“青云宗之账，钟离家不催”，还把粮商手里的账买回来。沈既望：“那就按老办法。”",
+    "characters": [
+      "shen-jiwang",
+      "lin-fan",
+      "tang-guo",
+      "li-pangzi"
+    ],
+    "locations": [
+      "zhonglji",
+      "qingshizhen"
+    ]
+  },
+  {
+    "id": "e-chg-zhonglijia",
+    "title": "钟离家家规：“青云宗之账，钟离家不催”",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 344,
+    "description": "第 306 章她在古代把中州欠钟离夫人那块上品灵石还了（第四卷刻在井栏上那笔账，第 263 章林凡说“账还不了，我记着”），钟离家账房当场写进家规第一页；第 1171 天唐果在钟离集钱庄看见。唐果在账上记：“此账，钟离家记了一万年。”",
+    "before": "钟离号中州分号早没了，那块上品灵石的账还不了",
+    "after": "钟离集钱庄家规第一页“青云宗之账，钟离家不催”，旁边一行小字“青云苏氏，还上品灵石一块，结清”；钱庄不卖青云的账",
+    "characters": [
+      "tang-guo",
+      "lin-fan",
+      "su-qingyue",
+      "zhongli-furen"
+    ],
+    "locations": [
+      "zhonglji",
+      "zhonglihao-jin"
+    ]
+  },
+  {
+    "id": "e-d1180-dajie",
+    "title": "大劫夜（古）",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 1180,
+    "chapter": 352,
+    "description": "冬至子时，第 1180 天（第 348–358 章）。子时初玄微翻阵，玄衡以化神之身站在泉口拿自己当塞子吞住第一波，站着走的；阵心四长老被抽干。四段阵枢同时下截灵钉（西韩钧、南赫连铮、北素翁），雷渊在东段战死；石砚带三个孩子在地脉沟拆六处逆笔，秦照守沟口。藏经阁起火，桂嬷嬷在五层压住书架，只烧了一层。柳如烟看见五层窗里的灯，掉头拿身子接住玄微的剑、锁死他的灵脉；苏清月截断泉眼口偏东三尺那一笔，玄微伏诛；柳如烟死在泉边。",
+    "characters": [
+      "su-qingyue",
+      "xuan-heng",
+      "lei-yuan",
+      "shi-yan",
+      "lu-ming",
+      "a-man",
+      "xiao-man",
+      "qin-zhao",
+      "gui-momo",
+      "liu-ruyan",
+      "xuan-wei",
+      "han-jun",
+      "helian-zheng",
+      "su-weng",
+      "ming-zhu"
+    ],
+    "locations": [
+      "ziqi-lingquan",
+      "cangjingge-gu",
+      "zhentang",
+      "qingyunshan",
+      "hushan-dazhen-gu",
+      "cangjingge-wuceng"
+    ]
+  },
+  {
+    "id": "e-d1180-chuanying",
+    "title": "传影：两人对着同一口地眼看阵",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 1180,
+    "chapter": 354,
+    "description": "冬至子时正。守眼钟唯一一次传影照的是钟前的景，不照人：她看见一万年后的坑和引月盘，他看见一万年前满山活的抽灵阵；残骸只剩骨头，骨头就是主干。两人对出最后那根：古代泉眼口偏东三尺，现代引月盘坐的地方，“你截你那头，我截我这头”。光撑了几十息，谁也没看见谁（f-04 留到最后）。",
+    "characters": [
+      "su-qingyue",
+      "lin-fan"
+    ],
+    "locations": [
+      "luoxingting-jin",
+      "luoxingting-gu",
+      "tianshuikeng",
+      "ziqi-lingquan"
+    ]
+  },
+  {
+    "id": "e-d1180-shoushan",
+    "title": "守山决战（今）",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 1180,
+    "chapter": 356,
+    "description": "冬至夜，第 1180 天戌时到子时（第 349–351、356 章）。巡眼卫打节点，马扒皮调度板上全是杂灵根，引月盘抓不住他们；孟岳当众冲金丹，没结成，交出掌门印；林凡去救东一号时胖子、刘二丫挡住砸钟的人；王长老把名牌墙变成阵挡住沈既望一盏茶，最上头那块石牌不动。子时中刘大爷推着藏纯血魔核的炉灰车引偏引月盘；林凡在坑里一万年的浊气里结五行回环丹（现代一万年来北荒第一个金丹），绝灵剑截断引月盘和残骸之间的粗线，断纹剩六道。现代这头当夜还是原本的历史，守的是一道伤口和那张桌子。",
+    "characters": [
+      "lin-fan",
+      "ma-papi",
+      "tang-guo",
+      "li-pangzi",
+      "liu-daye",
+      "wang-zhanglao",
+      "xiandai-zhangmen",
+      "liu-erya",
+      "sun-xiaoliu",
+      "shen-jiwang",
+      "chen-zimo",
+      "zhao-er"
+    ],
+    "locations": [
+      "tianshuikeng",
+      "zhenfasi",
+      "qingyundian",
+      "luoxingting-jin",
+      "hushan-dazhen-jin",
+      "zhenfasi-paiqiang",
+      "laji-julingzhen"
+    ]
+  },
+  {
+    "id": "e-d1180-fengmen",
+    "title": "苏清月化神，封入地眼",
+    "kind": "story",
+    "eraId": "ancient",
+    "storyDay": 1180,
+    "chapter": 358,
+    "description": "冬至子时中到子时末（第 357–358 章）。现代那头一断，翻转少了一股力，抽灵阵停了；地眼被抽伤往里塌，涌出的精气是凉的。她抱着柳如烟在凉的精气里破入化神；把外锁纹交给石砚，留三条规矩（石桌的纹每月描一遍；坑压着，别让东西出来也别让人进去；刻了锁的石头不许动，等来补环的人）；揣着《灯下杂录》走进泉里，元神当门闩，把自己和地眼一起封住。",
+    "characters": [
+      "su-qingyue",
+      "shi-yan",
+      "qin-zhao",
+      "gui-momo",
+      "liu-ruyan",
+      "xiao-man",
+      "a-man",
+      "lu-ming"
+    ],
+    "locations": [
+      "ziqi-lingquan"
+    ]
+  },
+  {
+    "id": "e-chg-fengyin",
+    "title": "甜水坑底下封着她",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 359,
+    "description": "冬至子时之后的下一个子时（第 1181 天子时）古代的改动整体落地，全书最后一次“只有林凡记得”。全宗的人记得的都是那夜守的是一道封印，守的是她。",
+    "before": "坑底下是塌了的地眼留下的一道伤口，什么人都没有；刘大爷的“压着它”是黑雾吃人、别让人下去送死；那一夜大家守的是一口塌坑和一张桌子",
+    "after": "黑泥底下透出一圈淡白的光，是一道封印；刘大爷：“我爹说，坑底下有个看门的”，说他一直这么说；胖子：“昨夜咱们守封印守得真险”",
+    "characters": [
+      "lin-fan",
+      "liu-daye",
+      "li-pangzi",
+      "su-qingyue"
+    ],
+    "locations": [
+      "tianshuikeng"
+    ]
+  },
+  {
+    "id": "e-chg-guiju",
+    "title": "规矩簿和补阵岗的账：“守封印”",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 359,
+    "description": "同一次落地。“压着它”“别让人进去”“石牌不许动”一条条有了新的意思（第 361 章石砚定的阵堂石令）。",
+    "before": "阵法司规矩簿第一条“石牌不许动”；外务房旧账“落星亭补阵岗，月补朱砂，不许撤。阵堂石令”",
+    "after": "规矩簿第一条后面多了半行“石牌不许动，背有外锁，等补环的人”；补阵岗那一行后面多了三个字“守封印”",
+    "characters": [
+      "wang-zhanglao",
+      "ma-papi",
+      "lin-fan",
+      "shi-yan"
+    ],
+    "locations": [
+      "zhenfasi",
+      "waiwufang",
+      "zhenfasi-paiqiang"
+    ]
+  },
+  {
+    "id": "e-chg-moye",
+    "title": "《青云通史》末页改写",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 360,
+    "description": "第 1182 天（f-40 改写）。那半个“月”是她名字里的。末页那几行是小满后来修史时写的，“首徒石氏守其门”是她替石砚加的（第 361 章）。",
+    "before": "青云历三万二千零三年，冬，大劫。宗门高层尽殁。诸峰十去其七，藏经阁焚其五层。自此青云不振，弟子星散，山门十年无炊烟。（下面老墨里半个“月”）",
+    "after": "青云历三万二千零三年，冬至，大劫。掌门玄衡挡于泉口，殁；执法堂首座雷渊截东枢，殁；诸峰高层殁者六。月使柳氏殁于泉边，玄微伏诛。藏经阁焚其一层。圣女苏氏清月，化神，入地眼守之。首徒石氏守其门。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "xuan-heng",
+      "lei-yuan",
+      "liu-ruyan",
+      "xuan-wei",
+      "shi-yan",
+      "xiao-man"
+    ],
+    "locations": []
+  },
+  {
+    "id": "e-chg-cangjingge",
+    "title": "藏经阁只烧了一层",
+    "kind": "change",
+    "eraId": null,
+    "chapter": 360,
+    "description": "大劫夜桂嬷嬷在五层拿禁制一层层压住书架，火只吃掉一层（第 355 章）。现代回响：第 366 章苏清月在藏经阁半山小楼二楼看见多出来的一架“五层旧架”，桂嬷嬷守下来的那层书一代代抄到今天，里面有一本《枯木汲气篇》的抄本（f-18 回扣，“虽迟，不死”）。",
+    "before": "藏经阁焚其五层；《枯木汲气篇》现代早已失传",
+    "after": "藏经阁焚其一层；现代藏经阁二楼多一架“五层旧架”，有《枯木汲气篇》抄本",
+    "characters": [
+      "gui-momo",
+      "su-qingyue",
+      "lin-fan",
+      "kumu"
+    ],
+    "locations": [
+      "cangjingge-gu",
+      "cangjingge-jin",
+      "cangjingge-wuceng"
+    ]
+  },
+  {
+    "id": "e-tr-manman",
+    "title": "最后的盲盒：“慢慢吃。开春。”",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 360,
+    "description": "第 348 章她把盲盒埋进泉边东壁石缝（从坑底往东七步，跟第一卷蜜罐一个地方）；第 1182 天林凡在甜水坑东壁大石头底下挖出：化神手笔的封印一万年一丝灵气没漏，一罐雪蜂冬蜜满满的，底下压着桂嬷嬷那块玉牌（最后一行“冬至后，圣女回揽月居用早膳”），罐底刻“慢慢吃。开春。”他把蜜分成五十几块，一夜一块吃到开春。",
+    "characters": [
+      "su-qingyue",
+      "lin-fan",
+      "gui-momo"
+    ],
+    "locations": [
+      "ziqi-lingquan",
+      "tianshuikeng"
+    ]
+  },
+  {
+    "id": "e-shiyan-zhentang",
+    "title": "石砚掌阵堂，定阵堂石令",
+    "kind": "history",
+    "eraId": "ancient",
+    "year": 32004,
+    "yearLabel": "青云历 32004 年起（第 361 章，石砚视角跳几十年）",
+    "description": "大劫后第一个早晨，十三岁的石砚把死了的人一个个点完；山门外雪地里明烛那盏灯第二年开春才灭。他后来掌阵堂，名牌刻好挂上正堂最上头时把师尊的外锁纹刻在背面，定下阵堂石令：落星亭补阵岗，月补朱砂，不许撤；坑压着，百味堂刘管事每旬往里倒炉灰（刘大爷的祖上）；石牌不许动，等补环的人。陆鸣进丹峰，阿蛮后来做执法堂首座，小满修史写下末页。",
+    "characters": [
+      "shi-yan",
+      "lu-ming",
+      "a-man",
+      "xiao-man",
+      "liu-guanshi"
+    ],
+    "locations": [
+      "zhentang",
+      "luoxingting-gu",
+      "baiweitang"
+    ]
+  },
+  {
+    "id": "e-qinzhao-fengzhu",
+    "title": "秦照做剑峰峰主",
+    "kind": "history",
+    "eraId": "ancient",
+    "year": 32004,
+    "yearLabel": "青云历 32004 年起（第 363 章，秦照视角跳几十年）",
+    "description": "秦照做了剑峰峰主，左手剑；每年冬至在演武坪那块青石上刻一道，刻完到泉边站一会儿：“七十四，还约着。”桂嬷嬷守着空的揽月居，每天摆一副早膳碗筷。大白过了好些年飞回万妖谷。秦照老了，刻下第三百一十一道。",
+    "characters": [
+      "qin-zhao",
+      "gui-momo",
+      "da-bai"
+    ],
+    "locations": [
+      "jianfeng-yanwuping",
+      "lanyueju"
+    ]
+  },
+  {
+    "id": "e-d1245-kaimen",
+    "title": "开春开门，第一次见面",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 1245,
+    "chapter": 364,
+    "description": "开春头一个子时（约第 1245 天，第 364–365 章）。王长老自己摘下石牌，背面是石砚的外锁纹；守眼钟一整个子时都亮，林凡金丹托着一句一句念口诀，最后一句“你那边，今天怎么样？”，坑底的黑水一层层变清。她十九岁站在清水里，两人谁也不认得谁的脸（f-04 兑现）：“你比本座想的……脏。”“一万年零一个冬天。”",
+    "characters": [
+      "lin-fan",
+      "su-qingyue",
+      "wang-zhanglao",
+      "tu-ye",
+      "li-pangzi",
+      "ma-papi"
+    ],
+    "locations": [
+      "tianshuikeng",
+      "zhenfasi",
+      "luoxingting-jin",
+      "zhenfasi-paiqiang"
+    ]
+  },
+  {
+    "id": "e-d1265-tianshui",
+    "title": "甜水",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 1265,
+    "chapter": 369,
+    "description": "开春（约第 1265 天）。掀开的坑里积起一汪清水，刘大爷先喝：“不甜。凉的。……好喝。”从前那个甜是病。紫竹林枯桩上冒出一根紫竹笋；外门排队喝甜水，她也喝了一碗。",
+    "characters": [
+      "liu-daye",
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "tianshuikeng",
+      "kuzhuang"
     ]
   }
 ]

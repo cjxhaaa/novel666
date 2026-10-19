@@ -400,9 +400,9 @@
     "title": "推出只在朔望通",
     "kind": "story",
     "eraId": "modern",
-    "storyDay": 3,
+    "storyDay": 4,
     "chapter": 4,
-    "description": "第二夜他灌自己的灵力白灌，倒在亭里；从圆环三十格只两格通、截口齐整推出只在朔望子时通，一回话费一包朱砂加一块碎灵石的灵力。",
+    "description": "第 2 天夜里他灌自己的灵力，圆环只泛暗红，丹田灌空；第 4 天回亭趴着看圆环，看出内沿三十格只一东一西两格没被截、截口齐整，推出只在朔望子时通，下回九月初一，在亭柱上刻下十二道杠。",
     "characters": [
       "lin-fan",
       "li-pangzi"
@@ -413,12 +413,12 @@
   },
   {
     "id": "e-004",
-    "title": "一盏风灯换来《青云通史》",
+    "title": "修好风灯，借来《青云通史》",
     "kind": "story",
     "eraId": "modern",
     "storyDay": 6,
     "chapter": 5,
-    "description": "林凡在刘大爷的旧书摊用修好的风灯换来垫泡面碗的《青云通史》，书里真有她那股紫气，圣女页写着“剑意时有凝滞”。",
+    "description": "林凡用刘大爷写书价的朱砂墨锭修好只亮半边的风灯，借来垫泡面碗的《青云通史》半个月；书里真有她那股紫气，圣女页写着“剑意时有凝滞，秘不示人，唯师妹柳氏知之”。",
     "characters": [
       "lin-fan",
       "liu-daye"
@@ -432,9 +432,9 @@
     "title": "罚背渣晶，头一回见墟",
     "kind": "story",
     "eraId": "modern",
-    "storyDay": 9,
-    "chapter": 8,
-    "description": "林凡被罚去乱石沟墟关背渣晶七天，第一次见墟、墟卫、墟时香和被雾吃垮的外门弟子；他背得最多，不咳。",
+    "storyDay": 8,
+    "chapter": 7,
+    "description": "林凡被罚去乱石沟墟关背渣晶七天（第 8–14 天），第一次见墟、验灵签、墟时香和被雾吃垮的四组杂役；他背得最多，雾扑到脸上只是凉，不咳。",
     "characters": [
       "lin-fan",
       "he-quezi"
@@ -471,7 +471,7 @@
     "eraId": null,
     "storyDay": 16,
     "chapter": 11,
-    "description": "第 16 天他灌到掉回凝气一层才接通；她定下约法三章：不问名字、不问长相、不问年纪，谁没来等一刻钟；他讲“我眼神好，没办法”，她记下了；口述古版聚火纹；他讲泡面。",
+    "description": "第 16 天他灌到掉回凝气一层才接通；她信了他那边是“以后”，定下约法三章：不问名字、不问长相、不问年纪，他补一条谁来不了等一刻钟；他讲三十包朱砂和“我眼神好，没办法”，她记下了；大白吞了一块中品灵石。",
     "characters": [
       "lin-fan",
       "su-qingyue"
@@ -488,7 +488,7 @@
     "eraId": "modern",
     "storyDay": 19,
     "chapter": 14,
-    "description": "赵二、阵法司学徒先后失手，林凡把古版聚火纹截成三段修好食堂的灶，胡师傅当众给三块碎灵石，被马扒皮抽走两块。",
+    "description": "赵二揭告示修灶失手（第 7 天），林凡照她口述的原版修了两回都灭火，第 19 天把限火纹截成三段、引灵口收窄一半修好食堂的灶，胡师傅当众给三块碎灵石，第二天被马扒皮抽走两块。",
     "characters": [
       "lin-fan",
       "hu-shifu",
@@ -573,9 +573,9 @@
     "title": "渣晶滤过能吃也能灌环",
     "kind": "story",
     "eraId": "modern",
-    "storyDay": 36,
+    "storyDay": 37,
     "chapter": 27,
-    "description": "渣晶生吸中了雾毒，第 37 天学会拿细脉当滤子滤过再吃、再灌圆环，话费从一百一十文降到二十文；马扒皮第二天来验亭，盯着圆环上的焦黑看了很久。",
+    "description": "渣晶碾粉生吸中了雾毒（第 35 天），第 37 天学会握在掌心先吐三口、拿细脉当滤子滤过再吃、再灌圆环，话费从一百一十文降到二十文；马扒皮第二天来验亭，盯着圆环上的焦黑看了很久。",
     "characters": [
       "lin-fan",
       "ma-papi"
@@ -592,13 +592,13 @@
     "eraId": "modern",
     "storyDay": 38,
     "chapter": 28,
-    "description": "林凡破凝气三层（烘袜子）。",
+    "description": "第 38 天夜里，九月二十三，林凡在后山坑边照枯木吐三口，层壁自己让开，破凝气三层（烘袜子）。",
     "characters": [
       "lin-fan",
       "li-pangzi"
     ],
     "locations": [
-      "lanyuepo"
+      "tianshuikeng"
     ]
   },
   {
@@ -606,13 +606,14 @@
     "title": "最后一页",
     "kind": "story",
     "eraId": "modern",
-    "storyDay": 41,
+    "storyDay": 42,
     "chapter": 30,
-    "description": "蒸开《通史》粘住的末页：“青云历三万二千零三年，冬，大劫。宗门高层尽殁……”下面一团老墨，边上半个“月”字；离大劫三年。",
+    "description": "九月二十七借食堂灶的蒸汽蒸开《通史》粘住的后半本，末页：“青云历三万二千零三年，冬，大劫。宗门高层尽殁……”下面一团老墨，边上半个“月”字；离她那边的大劫三年。",
     "characters": [
       "lin-fan"
     ],
     "locations": [
+      "waimen-shitang",
       "lanyuepo"
     ]
   },
@@ -660,13 +661,16 @@
     "eraId": "modern",
     "storyDay": 52,
     "chapter": 38,
-    "description": "林凡破凝气四层，断左肋一根细脉，土方子续上，留三分疼。",
+    "description": "第 52 天夜里四更后，林凡在落星亭破凝气四层，硬推土那一股，断了左肋下一条细脉；第 56 天自己琢磨的土方子续上，留三分疼（第 39 章）。",
     "characters": [
       "lin-fan",
-      "lao-suntou"
+      "li-pangzi",
+      "tang-guo",
+      "zhou-popo"
     ],
     "locations": [
-      "lanyuepo"
+      "luoxingting-jin",
+      "huang-yaotian"
     ]
   },
   {
@@ -736,10 +740,12 @@
       "hou-duizheng",
       "zhao-er",
       "qian-youyu",
+      "sun-xiaoliu",
       "ma-papi"
     ],
     "locations": [
-      "luanshigou-xuguan"
+      "luanshigou-xuguan",
+      "luanshigou-chakou"
     ]
   },
   {
@@ -812,7 +818,8 @@
       "hou-duizheng"
     ],
     "locations": [
-      "waiwufang"
+      "waiwufang",
+      "qingyundian"
     ]
   },
   {
@@ -827,7 +834,7 @@
       "lin-fan"
     ],
     "locations": [
-      "qingyundian"
+      "qingyundian-pianting"
     ]
   },
   {
@@ -2852,7 +2859,7 @@
     "eraId": null,
     "storyDay": 66,
     "chapter": 57,
-    "description": "开泉大典她违师命救下五灵根的石砚，第 55 天石砚过了考校算落定，第 60 天子时落地（林凡正在亭里）；第 66 天他看见《通史》圣女页多出一行、阵法司石牌认得出一个“石”字。代价：她被禁足二十日。",
+    "description": "开泉大典（第 45 天）她违师命救下五灵根的石砚，石砚考校过了留下来（第 60 天她说“前几天”），第 60 天子时落地（林凡正在亭里）；第 66 天他先看见阵法司名牌墙最上头那块石牌认得出一个“石”字（第 56 章），回去翻《通史》圣女页多出一行（第 57 章）。代价：她被禁足二十日。",
     "characters": [
       "lin-fan",
       "su-qingyue",
@@ -2873,13 +2880,13 @@
     "eraId": null,
     "storyDay": 68,
     "chapter": 58,
-    "description": "救石砚的牵连：柳如烟的事还没落定，《通史》那一页成了一团新墨（未定之事）。",
+    "description": "救石砚的牵连：柳如烟的事还没落定，《通史》后半本那一页成了一团新墨（未定之事），和末页发黄发脆的老墨一新一老并排；第 67 天夜里他点灯对书，第 68 天天亮看清。",
     "characters": [
       "lin-fan",
       "liu-ruyan"
     ],
-    "before": "“是岁冬，大雪封山……”",
-    "after": "“是岁冬，圣女师妹柳氏”后面一团新墨"
+    "before": "“是岁冬，大雪封山七日，百味堂开仓，诸峰弟子食粥三日。”",
+    "after": "“是岁冬，圣女师妹柳氏”后面一大团黑而边软的新墨"
   },
   {
     "id": "e-chg-liushi-zi",

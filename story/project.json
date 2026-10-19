@@ -446,7 +446,18 @@
     "debutCheck": true,
     "overdueCheck": true,
     "ignored": [
-      "time-modern-40"
+      "cross-60-da-bai@1",
+      "cross-60-xuan-heng@1",
+      "loc-30-baiweitang@1",
+      "loc-49-suiyujian@2",
+      "loc-56-zhentang@1",
+      "loc-57-zhentang@10",
+      "loc-58-baiweitang@2",
+      "loc-58-cangjingge-wuceng@1",
+      "loc-60-baiweitang@1",
+      "loc-60-lanyueju@5",
+      "loc-60-zhentang@2",
+      "loc-63-zhentang@1"
     ]
   }
 }

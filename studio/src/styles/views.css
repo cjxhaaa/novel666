@@ -1209,3 +1209,41 @@ mark {
 .source-bar > span.grow {
   white-space: normal;
 }
+
+/* 故事日历：工具条、横向滚动 */
+.cal-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 6px 24px 8px;
+  border-bottom: 1px solid var(--line);
+}
+.cal-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  cursor: grab;
+}
+.cal-scroll:active {
+  cursor: grabbing;
+}
+.cal-lane-label {
+  position: sticky;
+  left: 0;
+  z-index: 4;
+  display: inline-block;
+  background: var(--bg);
+  border-radius: 0 8px 8px 0;
+}
+.cal-ch.tiny {
+  padding: 0 2px;
+  text-align: center;
+  text-overflow: clip;
+}
+.cal-foot {
+  padding: 12px 0 0;
+  position: sticky;
+  left: 0;
+  width: max-content;
+}

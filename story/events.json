@@ -3449,5 +3449,199 @@
     ],
     "before": "泉东壁大石头底下",
     "after": "坑边往东七步"
+  },
+  {
+    "id": "e-v1-24",
+    "title": "黑雾冒头，“压着它”",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 32,
+    "chapter": 24,
+    "description": "坑东壁挖蜜留下的窟窿淌出一缕黑雾，碰到林凡吐的浊气就缩回坑底；刘大爷推一车炉灰全压上，讲这坑原是一眼泉、后来变黑，倒垃圾是“压着它”，老话“那泉里的水，别喝”；送他一只锈铜铃。",
+    "characters": [
+      "lin-fan",
+      "liu-daye"
+    ],
+    "locations": [
+      "tianshuikeng",
+      "luoxingting-jin"
+    ]
+  },
+  {
+    "id": "e-v1-36",
+    "title": "马扒皮的考核章程",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 50,
+    "chapter": 36,
+    "description": "补阵岗实务改在阵法司正堂考：默画手册照明纹“以手册为准，私增私减，不计”、修复外务房指定阵盘、限一炷香，冲林凡来；手册附录小注写着“第十三版起删去原版最外一道，经考证系多余”。",
+    "characters": [
+      "lin-fan",
+      "ma-papi",
+      "tang-guo"
+    ],
+    "locations": [
+      "waiwufang",
+      "zhenfasi"
+    ]
+  },
+  {
+    "id": "e-v1-37",
+    "title": "唐果的三更",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 51,
+    "chapter": 37,
+    "description": "林凡一句“你眼里就只有账”，三更去赔不是，看见唐果画符画到半筐废符；她讲她爹作保被拖垮，“原来我画符也在省”；他看出她该粗的笔画只画一半粗，她重画出一张很稳的中品，账上记“画符一法，此账另记”。",
+    "characters": [
+      "lin-fan",
+      "tang-guo"
+    ],
+    "locations": [
+      "tangji"
+    ]
+  },
+  {
+    "id": "e-v1-46",
+    "title": "她溜来了",
+    "kind": "story",
+    "eraId": null,
+    "storyDay": 60,
+    "chapter": 46,
+    "description": "年考第一天夜里，香快烧到一半她才跑来：十月初一犯门规被禁足二十日，今夜嬷嬷开门；她救了一个五灵根的孩子；说被动过手脚的阵纹摸着发涩；听出他“喘气吸到一半就停”，知道他有话。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "locations": [
+      "luoxingting-jin"
+    ]
+  },
+  {
+    "id": "e-v1-48",
+    "title": "试墟关",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 61,
+    "chapter": 48,
+    "description": "外门下乱石沟墟，侯队正照名次发签点香；林凡存档二层最后进，一炷香走出来验灵签一指没白，换新签再进，走过引绳尽头往深处去，在白石壁上摸到一道道老凿痕。",
+    "characters": [
+      "lin-fan",
+      "hou-duizheng",
+      "he-quezi",
+      "zhao-er",
+      "tang-guo",
+      "li-pangzi"
+    ],
+    "locations": [
+      "luanshigou-xu",
+      "luanshigou-xuguan"
+    ]
+  },
+  {
+    "id": "e-v1-50",
+    "title": "带人出来",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 61,
+    "chapter": 50,
+    "description": "孙小六、钱有余签白九成倒在岔口，赵二违规二进也垮了；林凡用原版聚火纹在渣晶堆上烧起一人高的火吓退黑獾，用墟绳拴着三个人拖出墟口；秤上三粒整墟晶、十七颗碎墟晶。",
+    "characters": [
+      "lin-fan",
+      "sun-xiaoliu",
+      "qian-youyu",
+      "zhao-er"
+    ],
+    "locations": [
+      "luanshigou-xu"
+    ]
+  },
+  {
+    "id": "e-v1-56",
+    "title": "最上头那块石牌",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 66,
+    "chapter": 56,
+    "description": "阵法司名牌墙最左一列最上头那块原本认不出字的石牌，如今清清楚楚一个“石”字，别人都说一直就是；王长老讲阵法司早年叫阵堂、有一任主事是五灵根，“最上头那块不许动”；后屋压着一只镇墟历六百多年的聚火盘，限火纹截成三段。",
+    "characters": [
+      "lin-fan",
+      "wang-zhanglao"
+    ],
+    "locations": [
+      "zhenfasi"
+    ]
+  },
+  {
+    "id": "e-v1-61",
+    "title": "头一回守夜",
+    "kind": "story",
+    "eraId": "modern",
+    "storyDay": 73,
+    "chapter": 61,
+    "description": "林凡以外门弟子身份上乱石沟墟关守夜，和赵二裹一条毯子坐哨塔；补关墙照明纹多画最外一道，束光打进墟口，雾里黑獾的眼睛全退了；赵二说“腊月大比，凝气组你去”。",
+    "characters": [
+      "lin-fan",
+      "zhao-er",
+      "he-quezi"
+    ],
+    "locations": [
+      "luanshigou-xuguan"
+    ]
+  },
+  {
+    "id": "e-tr-tongling",
+    "title": "锈铜铃",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 24,
+    "description": "刘大爷他爹从坑底刨出的锈铜铃，鎏金铜胎，纹路和石桌一样，挂回檐下第七颗锈钉，风过只有它晃、一声不响；原是落星亭四十九只风铃里的一只。",
+    "characters": [
+      "liu-daye",
+      "lin-fan"
+    ],
+    "before": "落星亭檐下四十九只风铃之一",
+    "after": "坑底刨出的锈铜铃，挂在第七颗钉上，不响"
+  },
+  {
+    "id": "e-tr-shipai",
+    "title": "阵堂 → 阵法司的石字牌",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 56,
+    "description": "阵法司名牌墙最上头那块石牌，石氏那一行落地之后只剩一个“石”字；师门规矩“最上头那块不许动”。石砚一脉代代传下的东西。",
+    "characters": [
+      "wang-zhanglao",
+      "lin-fan"
+    ],
+    "before": "阵堂主事名牌",
+    "after": "阵法司最上头一块“石”字牌"
+  },
+  {
+    "id": "e-tr-jiehuo",
+    "title": "截三段的聚火纹",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 56,
+    "description": "林凡修灶想出的截三段，她教给石砚，阵堂传下来成了阵法司“截纹留骨架”的老手法；后屋那只镇墟历六百多年的聚火盘，截口位置和他截灶台的三刀几乎一样。",
+    "characters": [
+      "lin-fan",
+      "su-qingyue"
+    ],
+    "before": "林凡教她、她教石砚的截法",
+    "after": "阵法司的老手法"
+  },
+  {
+    "id": "e-tr-huaxiang",
+    "title": "偏厅的圣女画像",
+    "kind": "trace",
+    "eraId": null,
+    "chapter": 60,
+    "description": "青云殿偏厅三百年前的圣女像，白衣持剑、剑穗青色，霉得只剩右半张脸；木牌“揽月峰，历代圣女所居”。林凡在画前把线索一笔笔对上，猜到“本座”就是圣女。",
+    "characters": [
+      "lin-fan"
+    ],
+    "before": "揽月峰，历代圣女所居",
+    "after": "偏厅里霉了半张脸的画像"
   }
 ]

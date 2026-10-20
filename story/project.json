@@ -330,6 +330,21 @@
       "eraId": null
     },
     {
+      "day": 16,
+      "label": "九月初一子时，灌到掉层才接通",
+      "eraId": null
+    },
+    {
+      "day": 30,
+      "label": "九月十五，“你今天声音不对”",
+      "eraId": null
+    },
+    {
+      "day": 42,
+      "label": "《通史》末页：三年后大劫",
+      "eraId": "modern"
+    },
+    {
       "day": 45,
       "label": "开泉大典，她违师命，禁足",
       "eraId": "ancient"
@@ -341,7 +356,17 @@
     },
     {
       "day": 60,
-      "label": "外门年考（第 60–62 天）",
+      "label": "外门年考，第 60 天修为关、阵法关",
+      "eraId": "modern"
+    },
+    {
+      "day": 61,
+      "label": "试墟关，碎玉涧破五层",
+      "eraId": "modern"
+    },
+    {
+      "day": 66,
+      "label": "《通史》多出石氏那一行",
       "eraId": "modern"
     },
     {

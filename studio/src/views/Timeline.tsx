@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { uid, useStore } from '../store';
 import { chapterEra, kindOf } from '../lib/analysis';
 import { Icon } from '../components/Icon';
@@ -47,8 +47,8 @@ export function Timeline() {
           <Icon name="plus" size={15} /> 事件
         </button>
       </div>
-      <div className="split" style={{ gridTemplateColumns: current ? '1fr 340px' : '1fr', flex: 1, minHeight: 0 }}>
-        <div style={{ minHeight: 0, overflow: 'auto' }}>
+      <div className="split" style={{ gridTemplateColumns: current ? 'minmax(0, 1fr) 340px' : 'minmax(0, 1fr)', flex: 1, minHeight: 0 }}>
+        <div style={{ minHeight: 0, minWidth: 0, overflow: mode === 'calendar' ? 'hidden' : 'auto' }}>
           {mode === 'river' && <River />}
           {mode === 'calendar' && <Calendar />}
           {mode === 'cross' && <Crossings />}
@@ -140,6 +140,13 @@ function River() {
   );
 }
 
+const ZOOMS = [
+  { dw: 66, label: '日' },
+  { dw: 28, label: '周' },
+  { dw: 10, label: '月' },
+  { dw: 3, label: '全书' },
+];
+
 function Calendar() {
   const project = useStore((s) => s.data.project);
   const chapters = useStore((s) => s.data.chapters);
@@ -147,8 +154,18 @@ function Calendar() {
   const cursor = useStore((s) => s.cursor);
   const go = useStore((s) => s.go);
   const select = useStore((s) => s.select);
-  const DW = 66;
+  const [zoom, setZoom] = useState(() => {
+    try {
+      return Number(localStorage.getItem('cal-zoom') ?? 0) || 0;
+    } catch {
+      return 0;
+    }
+  });
+  const DW = ZOOMS[zoom]?.dw ?? 66;
+  const LW = 160;
+  const scRef = useRef<HTMLDivElement>(null);
   const maxDay = Math.max(10, ...chapters.map((c) => c.dayEnd ?? c.dayStart ?? 0), ...(project.keyDays ?? []).map((k) => k.day), ...events.map((e) => e.storyDay ?? 0)) + 2;
+  const step = DW >= 40 ? 5 : DW >= 20 ? 10 : DW >= 8 ? 30 : 100;
 
   // 泳道：每个时代一条，跨时代（亭）单独一条
   const lanes = [
@@ -165,68 +182,175 @@ function Calendar() {
       const placed = list.map((c) => {
         const s = c.dayStart!;
         const e = c.dayEnd ?? s;
-        let row = ends.findIndex((x) => x < s);
+        // 按像素排行：缩小以后一天里的几章不挤在一起
+        const left = (s - 1) * DW;
+        const right = Math.max(e * DW, left + 18);
+        let row = ends.findIndex((x) => x <= left);
         if (row < 0) {
           row = ends.length;
-          ends.push(e);
-        } else ends[row] = e;
+          ends.push(right);
+        } else ends[row] = right;
         return { c, row };
       });
       out.set(lane.id, placed);
     }
     return out;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [chapters, project]);
+  }, [chapters, project, DW]);
+
+  // 每卷的起始天，用来跳转
+  const volStarts = useMemo(
+    () =>
+      project.volumes
+        .map((v) => {
+          const ds = chapters.filter((c) => c.volumeId === v.id && c.dayStart != null).map((c) => c.dayStart!);
+          return { id: v.id, name: v.name.replace(/：.*$/, ''), day: ds.length ? Math.min(...ds) : null };
+        })
+        .filter((v): v is { id: string; name: string; day: number } => v.day != null),
+    [project.volumes, chapters],
+  );
+
+  const scrollToDay = (day: number) => {
+    const el = scRef.current;
+    if (el) el.scrollLeft = Math.max(0, (day - 1) * DW - 10); // 让这一天紧挨着左边的泳道名
+  };
+
+  // 换缩放时，视野正中那一天不动
+  const centerDay = useRef<number | null>(null);
+  const changeZoom = (z: number) => {
+    const el = scRef.current;
+    if (el) centerDay.current = (el.scrollLeft + el.clientWidth / 2 - LW) / DW + 1;
+    setZoom(z);
+    try {
+      localStorage.setItem('cal-zoom', String(z));
+    } catch {
+      /* 存不了就算了 */
+    }
+  };
+  useEffect(() => {
+    const el = scRef.current;
+    if (!el || centerDay.current == null) return;
+    el.scrollLeft = Math.max(0, LW + (centerDay.current - 1) * DW - el.clientWidth / 2);
+    centerDay.current = null;
+  }, [DW]);
+
+  // 第一次打开停在当前章附近
+  useEffect(() => {
+    const c = chapters.find((x) => x.num === cursor);
+    if (c?.dayStart) scrollToDay(c.dayStart);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // 滚轮竖着滚也让日历横着走；按住 Shift 照常竖滚
+  useEffect(() => {
+    const el = scRef.current;
+    if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      if (e.ctrlKey || e.shiftKey) return;
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      el.scrollLeft += e.deltaY;
+      e.preventDefault();
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, []);
+
+  // 按住空白处拖动平移
+  const drag = useRef<{ x: number; y: number; l: number; t: number } | null>(null);
+  const onPointerDown = (e: React.PointerEvent) => {
+    if (e.button !== 0 || (e.target as HTMLElement).closest('.cal-ch, .cal-event, button')) return;
+    const el = scRef.current!;
+    drag.current = { x: e.clientX, y: e.clientY, l: el.scrollLeft, t: el.scrollTop };
+    el.setPointerCapture(e.pointerId);
+  };
+  const onPointerMove = (e: React.PointerEvent) => {
+    const d = drag.current;
+    if (!d) return;
+    const el = scRef.current!;
+    el.scrollLeft = d.l - (e.clientX - d.x);
+    el.scrollTop = d.t - (e.clientY - d.y);
+  };
+  const onPointerUp = (e: React.PointerEvent) => {
+    if (!drag.current) return;
+    drag.current = null;
+    scRef.current?.releasePointerCapture(e.pointerId);
+  };
+
+  const cur = chapters.find((x) => x.num === cursor);
 
   return (
-    <div className="calendar" style={{ width: 160 + maxDay * DW + 40 }}>
-      <div className="cal-head" style={{ marginLeft: 160 }}>
-        {Array.from({ length: maxDay }, (_, i) => (
-          <span key={i} style={{ width: DW }} className={`nums ${(i + 1) % 5 === 0 ? '' : 'faint'}`}>
-            {(i + 1) % 5 === 0 || i === 0 ? i + 1 : '·'}
-          </span>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minWidth: 0 }}>
+      <div className="cal-bar">
+        <span className="faint">缩放</span>
+        <Seg value={String(zoom)} onChange={(v) => changeZoom(Number(v))} options={ZOOMS.map((z, i) => ({ value: String(i), label: z.label }))} />
+        <span className="faint" style={{ marginLeft: 12 }}>
+          跳到
+        </span>
+        {volStarts.map((v) => (
+          <button key={v.id} className="btn" onClick={() => scrollToDay(v.day)} title={`故事第 ${v.day} 天`}>
+            {v.name}
+          </button>
         ))}
+        {cur?.dayStart != null && (
+          <button className="btn" onClick={() => scrollToDay(cur.dayStart!)}>
+            当前章
+          </button>
+        )}
+        <span className="grow" />
+        <span className="faint" style={{ fontSize: 12 }}>
+          滚轮或按住拖动左右移动
+        </span>
       </div>
-      <div className="cal-body">
-        {(project.keyDays ?? []).map((k) => (
-          <div key={k.day + k.label} className="cal-key" style={{ left: 160 + (k.day - 1) * DW + DW / 2, ['--c' as any]: project.eras.find((e) => e.id === k.eraId)?.color ?? 'var(--gold)' }}>
-            <span>{k.label}</span>
+      <div ref={scRef} className="cal-scroll" onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp}>
+        <div className="calendar" style={{ width: LW + maxDay * DW + 40 }}>
+          <div className="cal-head" style={{ marginLeft: LW }}>
+            {Array.from({ length: maxDay }, (_, i) => (
+              <span key={i} style={{ width: DW }} className={`nums ${(i + 1) % step === 0 ? '' : 'faint'}`}>
+                {(i + 1) % step === 0 || i === 0 ? i + 1 : DW >= 20 ? '·' : ''}
+              </span>
+            ))}
           </div>
-        ))}
-        {lanes.map((lane) => {
-          const placed = laid.get(lane.id) ?? [];
-          const rowsN = Math.max(1, ...placed.map((p) => p.row + 1));
-          const evs = events.filter((e) => e.storyDay != null && (lane.id === '__cross' ? !e.eraId : e.eraId === lane.id));
-          return (
-            <div key={lane.id} className="cal-lane" style={{ height: 30 + rowsN * 34 }}>
-              <div className="cal-lane-label" style={{ color: lane.color }}>
-                {lane.label}
+          <div className="cal-body">
+            {(project.keyDays ?? []).map((k) => (
+              <div key={k.day + k.label} className="cal-key" style={{ left: LW + (k.day - 1) * DW + DW / 2, ['--c' as any]: project.eras.find((e) => e.id === k.eraId)?.color ?? 'var(--gold)' }}>
+                <span>{k.label}</span>
               </div>
-              {evs.map((e) => (
-                <span key={e.id} className="cal-event" title={`${e.title}\n${e.description}`} style={{ left: 160 + (e.storyDay! - 1) * DW + DW / 2, ['--c' as any]: kindMeta(e.kind).color }} onClick={() => select({ event: e.id })} />
-              ))}
-              {placed.map(({ c, row }) => {
-                const k = kindOf(project, c.kind);
-                const s = c.dayStart!;
-                const e = c.dayEnd ?? s;
-                return (
-                  <div
-                    key={c.num}
-                    className={`cal-ch ${c.status} ${c.num === cursor ? 'cursor' : ''}`}
-                    style={{ left: 160 + (s - 1) * DW + 2, width: (e - s + 1) * DW - 4, top: 24 + row * 34, ['--c' as any]: k?.color }}
-                    title={`第 ${c.num} 章 ${c.title}\n${c.days ?? ''}\n${c.recap ?? c.plan}`}
-                    onClick={() => go('chapters', { chapter: c.num })}
-                  >
-                    <b className="nums">{c.num}</b> {c.title}
+            ))}
+            {lanes.map((lane) => {
+              const placed = laid.get(lane.id) ?? [];
+              const rowsN = Math.max(1, ...placed.map((p) => p.row + 1));
+              const evs = events.filter((e) => e.storyDay != null && (lane.id === '__cross' ? !e.eraId : e.eraId === lane.id));
+              return (
+                <div key={lane.id} className="cal-lane" style={{ height: 30 + rowsN * 34 }}>
+                  <div className="cal-lane-label" style={{ color: lane.color }}>
+                    {lane.label}
                   </div>
-                );
-              })}
-            </div>
-          );
-        })}
-      </div>
-      <div className="faint" style={{ padding: '12px 0 0 160px' }}>
-        两边的日子同步流逝。章节按“故事时间”的起止天摆放，没有填天数的章不显示。圆点是故事事件。
+                  {evs.map((e) => (
+                    <span key={e.id} className="cal-event" title={`${e.title}\n${e.description}`} style={{ left: LW + (e.storyDay! - 1) * DW + DW / 2, ['--c' as any]: kindMeta(e.kind).color }} onClick={() => select({ event: e.id })} />
+                  ))}
+                  {placed.map(({ c, row }) => {
+                    const k = kindOf(project, c.kind);
+                    const s = c.dayStart!;
+                    const e = c.dayEnd ?? s;
+                    const w = Math.max((e - s + 1) * DW - 4, 14);
+                    return (
+                      <div
+                        key={c.num}
+                        className={`cal-ch ${c.status} ${c.num === cursor ? 'cursor' : ''} ${w < 40 ? 'tiny' : ''}`}
+                        style={{ left: LW + (s - 1) * DW + 2, width: w, top: 24 + row * 34, ['--c' as any]: k?.color }}
+                        title={`第 ${c.num} 章 ${c.title}\n${c.days ?? ''}\n${c.recap || c.plan}`}
+                        onClick={() => go('chapters', { chapter: c.num })}
+                      >
+                        <b className="nums">{c.num}</b> {w >= 40 ? c.title : ''}
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </div>
+          <div className="faint cal-foot">两边的日子同步流逝。章节按“故事时间”的起止天摆放，没有填天数的章不显示。圆点是故事事件。</div>
+        </div>
       </div>
     </div>
   );

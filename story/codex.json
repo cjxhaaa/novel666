@@ -1584,6 +1584,16 @@
     }
   },
   {
+    "id": "x-18.10",
+    "category": "紫气与黑雾",
+    "title": "天墟最深处与冬至夜",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "18.10 天墟最深处与冬至夜（作者底牌）"
+    }
+  },
+  {
     "id": "x-19.1",
     "category": "人物",
     "title": "概述（档案在哪）",
@@ -1642,6 +1652,16 @@
     "source": {
       "doc": "bible.md",
       "heading": "19.6 主要人物的归宿"
+    }
+  },
+  {
+    "id": "x-19.7",
+    "category": "人物",
+    "title": "第六、七卷的新人物",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "19.7 第六、七卷的新人物"
     }
   },
   {
@@ -1845,6 +1865,36 @@
     }
   },
   {
+    "id": "x-20.21",
+    "category": "势力",
+    "title": "镇墟总司的分裂与清算",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "20.21 镇墟总司的分裂与清算（第六、七卷）"
+    }
+  },
+  {
+    "id": "x-20.22",
+    "category": "势力",
+    "title": "承月台、护月队与长生名额",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "20.22 承月台、护月队与长生名额（第六、七卷）"
+    }
+  },
+  {
+    "id": "x-20.23",
+    "category": "势力",
+    "title": "十地各处的宗门与地方",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "20.23 十地各处的宗门与地方（第六、七卷）"
+    }
+  },
+  {
     "id": "x-21.1",
     "category": "地理",
     "title": "概述",
@@ -1965,6 +2015,56 @@
     }
   },
   {
+    "id": "x-21.13",
+    "category": "地理",
+    "title": "南疆",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "21.13 南疆"
+    }
+  },
+  {
+    "id": "x-21.14",
+    "category": "地理",
+    "title": "西漠",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "21.14 西漠"
+    }
+  },
+  {
+    "id": "x-21.15",
+    "category": "地理",
+    "title": "东洲",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "21.15 东洲"
+    }
+  },
+  {
+    "id": "x-21.16",
+    "category": "地理",
+    "title": "海外五洲",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "21.16 海外五洲"
+    }
+  },
+  {
+    "id": "x-21.17",
+    "category": "地理",
+    "title": "天墟深处",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "21.17 天墟深处（第七卷）"
+    }
+  },
+  {
     "id": "x-22.1",
     "category": "历史",
     "title": "概述",
@@ -2082,6 +2182,16 @@
     "source": {
       "doc": "bible.md",
       "heading": "22.12 现代近事"
+    }
+  },
+  {
+    "id": "x-22.13",
+    "category": "历史",
+    "title": "第六、七卷：十钟与冬至",
+    "body": "",
+    "source": {
+      "doc": "bible.md",
+      "heading": "22.13 第六、七卷：十钟与冬至（镇墟历 1217–1219）"
     }
   },
   {

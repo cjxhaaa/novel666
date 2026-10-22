@@ -471,11 +471,11 @@ export function contextPack(data: StoryData, texts: Record<number, string>, char
     L.push('');
   }
 
-  const changes = events.filter((e) => e.kind === 'change' && (e.chapter ?? 0) < n);
+  const changes = events.filter((e) => e.kind === 'trace' && e.chapter != null && e.chapter < n);
   if (changes.length) {
-    L.push('## 已发生的历史改动（只有林凡记得旧版本）');
+    L.push('## 已经读懂的古今痕迹（古今同一条时间线，现代的东西一直就在）');
     L.push('');
-    for (const e of changes) L.push(`- 第 ${e.chapter} 章：${e.title}${e.before ? `｜原：${e.before}` : ''}${e.after ? `｜现：${e.after}` : ''}`);
+    for (const e of changes) L.push(`- 第 ${e.chapter} 章：${e.title}${e.before ? `｜古：${e.before}` : ''}${e.after ? `｜今：${e.after}` : ''}`);
     L.push('');
   }
 

@@ -17,7 +17,7 @@ description: 写或改小说《落星传音》的正文章节、调整大纲、�
    ```bash
    node studio/scripts/cli.mjs context N
    ```
-   输出到 `story/context/chapNN.md`。里面有本章计划和各剧情线任务、前五章实际写了什么、后三章安排（别提前写掉）、相关人物在本章开写时的状态和关系、相关地点（含古今对照）、未收伏笔、已发生的历史改动、必守设定。如果 `studio/node_modules` 不存在，先在 `studio/` 里 `npm install`。
+   输出到 `story/context/chapNN.md`。里面有本章计划和各剧情线任务、前五章实际写了什么、后三章安排（别提前写掉）、相关人物在本章开写时的状态和关系、相关地点（含古今对照）、未收伏笔、已经读懂的古今痕迹、必守设定。如果 `studio/node_modules` 不存在，先在 `studio/` 里 `npm install`。
 2. 读 `outline.md`：本章及前后两章的安排。
 3. 上下文里没覆盖、但本章涉及的设定，去 `bible.md` 或 `story/` 里查。凡是涉及落星亭（哪些夜能通）、墟、镇墟司、境界、地点、钱、紫气，都先查，不凭记忆写。
 
@@ -123,7 +123,7 @@ description: 写或改小说《落星传音》的正文章节、调整大纲、�
 - **`story/characters.json`**：人物状态有变化（境界、伤势、处境、知道的秘密、称呼……）就给那个人加一条 `{ "chapter": N, "key": "…", "value": "…" }`，同一个 key 的新值会盖住旧值。本章原有带“（计划）”的条目，按正文实际写的改掉或删掉。
 - **`story/relations.json`**：关系进入新阶段时，在 `progressions` 里加 `{ "chapter": N, "label": "…" }`。
 - **`story/foreshadows.json`**：新埋的伏笔加一条（`planted`、`payoff`、`payoffChapters`，远期留空数组）；收了的改 `"status": "resolved"` 并填 `resolvedIn`。
-- **`story/events.json`**：发生历史改动时加一条 `kind: "change"`，写清 `before` / `after` 和 `chapter`。
+- **`story/events.json`**：林凡读懂或挖到一处古今痕迹时加一条 `kind: "trace"`，`before` 写古代那头的事，`after` 写现代一直就在的样子，填 `chapter`。全书古今是同一条定好的时间线，不写“历史被改”（bible 5.5）。
 - **出现新的有名字的人物或地点**：加进 `story/characters.json` / `story/locations.json`（别名写进 `aliases`，古今对照用 `counterpartId` 互相指向并共用坐标）。新的世界观、规则、名词才写进 `bible.md`。
 - **正文偏离了大纲**：改 `outline.md` 对应章节和 `story/chapters.json` 的 `plan`，并告诉用户改了什么。
 

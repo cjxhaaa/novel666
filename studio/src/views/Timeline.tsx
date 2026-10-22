@@ -8,7 +8,7 @@ import type { EventKind, WorldEvent } from '../../shared/types';
 const KINDS: { value: EventKind; label: string; color: string }[] = [
   { value: 'history', label: '历史', color: 'var(--moon)' },
   { value: 'story', label: '故事', color: 'var(--text-2)' },
-  { value: 'change', label: '历史改动', color: 'var(--cinnabar)' },
+  { value: 'change', label: '改动（旧）', color: 'var(--cinnabar)' },
   { value: 'trace', label: '痕迹', color: 'var(--jade)' },
   { value: 'future', label: '将来', color: 'var(--gold)' },
 ];
@@ -40,7 +40,7 @@ export function Timeline() {
           className="btn"
           onClick={() => {
             const id = uid('e');
-            mutate('events', (d) => void d.push({ id, title: '新事件', kind: mode === 'calendar' ? 'story' : mode === 'cross' ? 'change' : 'history', eraId: null, description: '' }), '新建事件');
+            mutate('events', (d) => void d.push({ id, title: '新事件', kind: mode === 'calendar' ? 'story' : mode === 'cross' ? 'trace' : 'history', eraId: null, description: '' }), '新建事件');
             select({ event: id });
           }}
         >
@@ -395,7 +395,7 @@ function Crossings() {
           </div>
         );
       })}
-      {!list.length && <div className="empty">还没有历史改动或古今痕迹。</div>}
+      {!list.length && <div className="empty">还没有古今痕迹。</div>}
     </div>
   );
 }

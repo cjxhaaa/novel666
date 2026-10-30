@@ -28,6 +28,19 @@ const webApi: StudioApi = {
   readDoc: (rel) => post('readDoc', { rel }),
   writeDoc: (rel, text) => post('writeDoc', { rel, text }),
   listDocs: () => post('listDocs'),
+  listBooks: () => post('listBooks'),
+  openBook: (path) => post('openBook', { path }),
+  addBook: async () => {
+    alert('浏览器预览模式下不能添加书，请在桌面端使用。');
+    return null;
+  },
+  createBook: async () => {
+    alert('浏览器预览模式下不能新建书，请在桌面端使用。');
+    return null;
+  },
+  removeBook: async () => {
+    alert('浏览器预览模式下不能改书架，请在桌面端使用。');
+  },
   onExternalChange(cb) {
     const hot = import.meta.hot;
     if (!hot) return () => {};

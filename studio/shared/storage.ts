@@ -1,7 +1,7 @@
 // Node 侧的存储实现。Electron 主进程和 Vite 开发服务器共用这一份。
 import { promises as fs, watch, type FSWatcher } from 'node:fs';
 import path from 'node:path';
-import type { ChapterFileInfo, CollectionName, OpenResult, Project, StoryData } from './types';
+import type { BookInfo, ChapterFileInfo, CollectionName, OpenResult, Project, StoryData } from './types';
 import { COLLECTIONS } from './types';
 
 export const STORY_DIR = 'story';
@@ -228,4 +228,74 @@ export function watchProject(root: string, onChange: (paths: string[]) => void):
     } catch {}
   }
   return () => watchers.forEach((w) => w.close());
+}
+
+// ---------- 书架 ----------
+
+const WORD_RE = /[\p{Script=Han}A-Za-z0-9　-〿＀-￯“”‘’—…·]/gu;
+
+async function mtime(p: string) {
+  try {
+    return (await fs.stat(p)).mtimeMs;
+  } catch {
+    return 0;
+  }
+}
+
+/** 书架卡片用的概况：只读 project、chapters 和正文，不初始化目录 */
+export async function bookInfo(root: string): Promise<BookInfo> {
+  const dir = path.join(root, STORY_DIR);
+  if (!(await exists(root))) return { path: root, exists: false, title: path.basename(root), done: 0, planned: 0, words: 0, volumes: 0 };
+  const project = await readJson<Partial<Project> | null>(path.join(dir, 'project.json'), null).catch(() => null);
+  const chapters = await readJson<{ num: number; status?: string }[]>(path.join(dir, 'chapters.json'), []).catch(() => []);
+  const texts = await readChapters(root).catch(() => ({}) as Record<number, string>);
+  let words = 0;
+  for (const t of Object.values(texts)) words += t.match(WORD_RE)?.length ?? 0;
+  const done = chapters.reduce((m, c) => (c.status === 'done' && c.num > m ? c.num : m), 0);
+  const vols = project?.volumes ?? [];
+  const cur = vols.find((v) => (v.from ?? 1) <= done + 1 && done + 1 <= (v.to ?? Infinity)) ?? vols[vols.length - 1];
+  let updatedAt = await mtime(dir);
+  for (const name of COLLECTIONS) updatedAt = Math.max(updatedAt, await mtime(path.join(dir, `${name}.json`)));
+  const pat = project?.chapterFilePattern ?? 'chapters/chap{NN}.md';
+  updatedAt = Math.max(updatedAt, await mtime(safeJoin(root, path.dirname(pat))));
+  return {
+    path: root,
+    exists: true,
+    title: project?.title || path.basename(root),
+    logline: project?.logline,
+    done,
+    planned: chapters.length,
+    words,
+    volumes: vols.length,
+    currentVolume: cur?.name,
+    updatedAt: updatedAt || undefined,
+  };
+}
+
+const BAD_NAME = /[\/:*?"<>|]/g;
+
+/** 在 parent 下新建一本书：story/ 初始化，再放上设定集、大纲、进度和给 Claude 看的说明 */
+export async function createBook(parent: string, title: string): Promise<string> {
+  const name = title.trim().replace(BAD_NAME, '').replace(/\s+/g, ' ');
+  if (!name) throw new Error('书名不能为空');
+  const root = path.join(parent, name);
+  if (await exists(root)) {
+    const entries = await fs.readdir(root);
+    if (entries.length) throw new Error(`“${name}”这个目录已经存在，而且不是空的`);
+  }
+  await fs.mkdir(path.join(root, 'chapters'), { recursive: true });
+  const { data } = await openProject(root);
+  data.project.title = name;
+  await saveCollection(root, 'project', data.project);
+  const files: Record<string, string> = {
+    'bible.md': `# 《${name}》设定集\n\n> 世界观和规则只写在这里。人物、地点、伏笔、剧情线、章节规划写在 story/，用星图书房维护。\n\n## 1. 总纲\n\n### 1.1 这是一本什么书\n\n### 1.2 全书走向\n\n## 2. 世界\n\n## 3. 人物\n`,
+    'outline.md': `# 《${name}》大纲\n\n> 近的章节写到章级（标题加一两句内容），远的只写阶段目标。\n\n## 第一卷：（卷名）（1–60）\n`,
+    'progress.md': `# 写作进度\n\n## 1. 进度\n\n- **当前**：还没开写。\n\n## 2. 已写章节\n\n每章一行，格式：\`章号｜标题｜故事第几天｜发生了什么（一句话）\`\n`,
+    'CLAUDE.md': `# ${name}\n\n（一两句话说清这本书写什么。）\n\n## 文件\n\n- \`bible.md\`：设定集，世界观和规则的唯一来源\n- \`outline.md\`：大纲\n- \`progress.md\`：写作进度、已写章节\n- \`chapters/\`：正文，每章一个文件 \`chapNN.md\`\n- \`story/\`：桌面软件“星图书房”的结构化数据，人物、关系、地点、伏笔、剧情线、章节规划、世界脉络的唯一来源\n`,
+  };
+  for (const [rel, text] of Object.entries(files)) {
+    const f = path.join(root, rel);
+    if (!(await exists(f))) await fs.writeFile(f, text);
+  }
+  return root;
 }

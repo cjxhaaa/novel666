@@ -16,6 +16,7 @@ import { Timeline } from './views/Timeline';
 import { Foreshadows } from './views/Foreshadows';
 import { Codex } from './views/Codex';
 import { Guard } from './views/Guard';
+import { Bookshelf } from './views/Bookshelf';
 import { NAV } from './nav';
 
 
@@ -103,6 +104,8 @@ export default function App() {
       toasts: st.toasts,
       canUndo: st.undoStack.length > 0,
       load: st.load,
+      loadShelf: st.loadShelf,
+      backToShelf: st.backToShelf,
       pickRoot: st.pickRoot,
       go: st.go,
       undo: st.undo,
@@ -114,7 +117,7 @@ export default function App() {
   const warnCount = issues.filter((i) => i.severity !== 'info').length;
 
   useEffect(() => {
-    s.load();
+    s.loadShelf();
     return api.onExternalChange((paths) => useStore.getState().onExternalChange(paths));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -155,10 +158,10 @@ export default function App() {
   };
 
   return (
-    <div className="app">
+    <div className={`app ${s.status === 'shelf' ? 'on-shelf' : ''}`}>
       <StarField />
       <header className="titlebar">
-        <div className="brand">
+        <div className={`brand ${s.status === 'ready' ? 'no-drag clickable' : ''}`} onClick={() => s.status === 'ready' && s.backToShelf()} title={s.status === 'ready' ? '回书架' : undefined}>
           <BrandMark />
           <span>星图书房</span>
           {s.status === 'ready' && (
@@ -184,9 +187,9 @@ export default function App() {
         <button className="btn ghost sm icon no-drag" title="切换主题（夜空 / 宣纸）" onClick={() => setTheme(theme === 'night' ? 'paper' : 'night')}>
           <Icon name={theme === 'night' ? 'sun' : 'moon'} size={16} />
         </button>
-        {api.platform === 'electron' && (
-          <button className="btn ghost sm icon no-drag" title={`打开其他小说目录（当前：${s.root ?? '无'}）`} onClick={s.pickRoot}>
-            <Icon name="folder" size={16} />
+        {s.status === 'ready' && (
+          <button className="btn ghost sm no-drag" title={`回书架（当前：${s.root ?? '无'}）`} onClick={s.backToShelf}>
+            <Icon name="codex" size={16} /> 书架
           </button>
         )}
       </header>
@@ -209,12 +212,13 @@ export default function App() {
       <main className="main">
         {s.status === 'loading' && <div className="empty">正在展开星图…</div>}
         {s.status === 'noroot' && <Welcome />}
+        {s.status === 'shelf' && <Bookshelf />}
         {s.status === 'error' && (
           <div className="empty">
             <div className="big">载入失败</div>
             <div className="selectable">{s.error}</div>
-            <button className="btn" onClick={s.load}>
-              重试
+            <button className="btn" onClick={s.loadShelf}>
+              回书架
             </button>
           </div>
         )}

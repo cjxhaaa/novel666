@@ -13,6 +13,11 @@ contextBridge.exposeInMainWorld('studioNative', {
   readDoc: call('readDoc'),
   writeDoc: call('writeDoc'),
   listDocs: call('listDocs'),
+  listBooks: call('listBooks'),
+  openBook: call('openBook'),
+  addBook: call('addBook'),
+  createBook: call('createBook'),
+  removeBook: call('removeBook'),
   onExternalChange(cb: (paths: string[]) => void) {
     const h = (_e: unknown, paths: string[]) => cb(paths);
     ipcRenderer.on('studio:changed', h);

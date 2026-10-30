@@ -284,7 +284,7 @@ export interface OpenResult {
 }
 
 /** 渲染进程可调用的存储接口；Electron 走 IPC，浏览器开发预览走 HTTP。 */
-export interface StudioApi {
+export interface StudioApi extends ShelfApi {
   getRoot(): Promise<string | null>;
   pickRoot(): Promise<string | null>;
   open(): Promise<OpenResult | null>;
@@ -297,4 +297,35 @@ export interface StudioApi {
   listDocs(): Promise<string[]>;
   onExternalChange(cb: (paths: string[]) => void): () => void;
   platform: 'electron' | 'web';
+}
+
+/** 书架上的一本书：只读的概况，打开以后才载入全部数据 */
+export interface BookInfo {
+  path: string;
+  /** 目录还在不在（搬走、删掉的书仍留在书架上，标成找不到） */
+  exists: boolean;
+  title: string;
+  logline?: string;
+  /** 已写完的章数 / 规划的章数 */
+  done: number;
+  planned: number;
+  /** 正文总字数 */
+  words: number;
+  volumes: number;
+  /** 正在写的那一卷 */
+  currentVolume?: string;
+  /** story/ 和正文里最近一次改动的时间（毫秒） */
+  updatedAt?: number;
+}
+
+export interface ShelfApi {
+  listBooks(): Promise<BookInfo[]>;
+  /** 打开书架上的一本，并把它挪到最前 */
+  openBook(path: string): Promise<void>;
+  /** 选一个已有的小说目录放上书架 */
+  addBook(): Promise<string | null>;
+  /** 选一个上级目录，在里面新建一本 */
+  createBook(title: string): Promise<string | null>;
+  /** 只从书架上拿下来，不删文件 */
+  removeBook(path: string): Promise<void>;
 }

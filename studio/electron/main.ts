@@ -10,7 +10,15 @@ let unwatch: (() => void) | null = null;
 
 const configFile = () => path.join(app.getPath('userData'), 'config.json');
 
-async function loadConfig(): Promise<{ root?: string }> {
+interface Config {
+  root?: string;
+  /** 书架上的书，最近打开的在前 */
+  library?: string[];
+}
+
+let cfg: Config = {};
+
+async function loadConfig(): Promise<Config> {
   try {
     return JSON.parse(await fs.readFile(configFile(), 'utf8'));
   } catch {
@@ -18,9 +26,18 @@ async function loadConfig(): Promise<{ root?: string }> {
   }
 }
 
-async function saveConfig(cfg: { root?: string }) {
+async function saveConfig() {
   await fs.mkdir(path.dirname(configFile()), { recursive: true });
   await fs.writeFile(configFile(), JSON.stringify(cfg, null, 2));
+}
+
+const same = (a: string, b: string) => path.resolve(a).toLowerCase() === path.resolve(b).toLowerCase();
+
+/** 放上书架；front 为真时挪到最前 */
+function shelve(p: string, front = false) {
+  const rest = (cfg.library ?? []).filter((x) => !same(x, p));
+  const had = rest.length !== (cfg.library ?? []).length;
+  cfg.library = front || !had ? [p, ...rest] : cfg.library;
 }
 
 /** 首次启动时，如果软件就放在小说仓库的 studio/ 里，直接打开上一级目录 */
@@ -90,8 +107,43 @@ ipcMain.handle('studio:pickRoot', async () => {
   });
   if (res.canceled || !res.filePaths[0]) return null;
   setRoot(res.filePaths[0]);
-  await saveConfig({ root: res.filePaths[0] });
+  cfg.root = res.filePaths[0];
+  shelve(res.filePaths[0], true);
+  await saveConfig();
   return root;
+});
+ipcMain.handle('studio:listBooks', () => Promise.all((cfg.library ?? []).map((p) => store.bookInfo(p))));
+ipcMain.handle('studio:openBook', async (_e, p: string) => {
+  if (!existsSync(p)) throw new Error('这本书的目录找不到了：' + p);
+  setRoot(p);
+  cfg.root = p;
+  shelve(p, true);
+  await saveConfig();
+});
+ipcMain.handle('studio:addBook', async () => {
+  const res = await dialog.showOpenDialog(win!, { title: '选择一本小说的目录', properties: ['openDirectory'] });
+  const p = res.filePaths[0];
+  if (res.canceled || !p) return null;
+  shelve(p);
+  await saveConfig();
+  return p;
+});
+ipcMain.handle('studio:createBook', async (_e, title: string) => {
+  const res = await dialog.showOpenDialog(win!, { title: `把《${title}》放在哪个目录下`, properties: ['openDirectory', 'createDirectory'] });
+  const parent = res.filePaths[0];
+  if (res.canceled || !parent) return null;
+  const p = await store.createBook(parent, title);
+  shelve(p, true);
+  await saveConfig();
+  return p;
+});
+ipcMain.handle('studio:removeBook', async (_e, p: string) => {
+  cfg.library = (cfg.library ?? []).filter((x) => !same(x, p));
+  if (root && same(root, p)) {
+    setRoot(null);
+    cfg.root = undefined;
+  }
+  await saveConfig();
 });
 ipcMain.handle('studio:open', async () => (root ? store.openProject(root) : null));
 ipcMain.handle('studio:save', (_e, name, value) => store.saveCollection(need(), name, value));
@@ -103,8 +155,13 @@ ipcMain.handle('studio:writeDoc', (_e, rel: string, t: string) => store.writeDoc
 ipcMain.handle('studio:listDocs', () => store.listDocs(need()));
 
 app.whenReady().then(async () => {
-  const cfg = await loadConfig();
+  cfg = await loadConfig();
   const r = cfg.root && existsSync(cfg.root) ? cfg.root : guessRoot();
+  // 老版本只记一个目录：第一次启动时把它放上书架
+  if (!cfg.library) {
+    cfg.library = r ? [r] : [];
+    await saveConfig();
+  }
   setRoot(r);
   createWindow();
 });

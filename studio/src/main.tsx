@@ -5,5 +5,6 @@ import './styles/ui.css';
 import './styles/views.css';
 import './styles/codex.css';
 import './styles/places.css';
+import './styles/shelf.css';
 
 createRoot(document.getElementById('root')!).render(<App />);

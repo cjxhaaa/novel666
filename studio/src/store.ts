@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { produce, type Draft } from 'immer';
-import type { CollectionName, StoryData } from '../shared/types';
+import type { BookInfo, CollectionName, StoryData } from '../shared/types';
 import { api } from './api';
 import { sourceDocs } from './lib/docs';
 
@@ -42,7 +42,10 @@ interface UndoEntry {
 }
 
 interface State {
-  status: 'loading' | 'noroot' | 'ready' | 'error';
+  status: 'loading' | 'shelf' | 'noroot' | 'ready' | 'error';
+  /** 书架上的书 */
+  books: BookInfo[];
+  shelfLoading: boolean;
   error?: string;
   root: string | null;
   data: StoryData;
@@ -62,6 +65,12 @@ interface State {
   undoStack: UndoEntry[];
 
   load(): Promise<void>;
+  loadShelf(): Promise<void>;
+  openBook(path: string): Promise<void>;
+  backToShelf(): Promise<void>;
+  addBook(): Promise<void>;
+  createBook(title: string): Promise<void>;
+  removeBook(path: string): Promise<void>;
   loadDocs(paths: string[]): Promise<void>;
   pickRoot(): Promise<void>;
   onExternalChange(paths: string[]): Promise<void>;
@@ -130,6 +139,8 @@ export const useStore = create<State>((set, get) => {
 
   return {
     status: 'loading',
+    books: [],
+    shelfLoading: false,
     root: null,
     data: empty,
     texts: {},
@@ -165,6 +176,56 @@ export const useStore = create<State>((set, get) => {
       } catch (e: any) {
         set({ status: 'error', error: String(e?.message ?? e) });
       }
+    },
+
+    async loadShelf() {
+      set({ shelfLoading: true });
+      try {
+        const [books, root] = await Promise.all([api.listBooks(), api.getRoot()]);
+        set({ books, root, status: 'shelf', shelfLoading: false });
+      } catch (e: any) {
+        set({ status: 'error', error: String(e?.message ?? e), shelfLoading: false });
+      }
+    },
+
+    async openBook(path) {
+      try {
+        await api.openBook(path);
+      } catch (e: any) {
+        return get().toast(String(e?.message ?? e), 'error');
+      }
+      set({ status: 'loading', undoStack: [], view: 'dashboard', sel: {}, texts: {}, docs: {}, dirtyTexts: {} });
+      await get().load();
+    },
+
+    async backToShelf() {
+      // 先把没写盘的正文和设定写完，再离开
+      await Promise.all(Object.keys(get().dirtyTexts).map((k) => get().saveText(+k)));
+      for (let i = 0; i < 40 && get().pending > 0; i++) await new Promise((r) => setTimeout(r, 100));
+      set({ paletteOpen: false, contextFor: null });
+      await get().loadShelf();
+    },
+
+    async addBook() {
+      const p = await api.addBook();
+      if (p) await get().loadShelf();
+    },
+
+    async createBook(title) {
+      try {
+        const p = await api.createBook(title);
+        if (!p) return;
+        get().toast(`已新建《${title.trim()}》`, 'ok');
+        await get().openBook(p);
+      } catch (e: any) {
+        get().toast(String(e?.message ?? e), 'error');
+      }
+    },
+
+    async removeBook(path) {
+      await api.removeBook(path);
+      if (get().root === path) set({ root: null });
+      await get().loadShelf();
     },
 
     async loadDocs(paths) {

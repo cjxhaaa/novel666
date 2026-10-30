@@ -30,6 +30,8 @@ function studioApi(): Plugin {
             case 'readDoc': out = await store.readDoc(root, body.rel); break;
             case 'writeDoc': await store.writeDoc(root, body.rel, body.text); break;
             case 'listDocs': out = await store.listDocs(root); break;
+            case 'listBooks': out = [await store.bookInfo(root)]; break;
+            case 'openBook': break;
             default: res.statusCode = 404;
           }
           res.setHeader('Content-Type', 'application/json; charset=utf-8');

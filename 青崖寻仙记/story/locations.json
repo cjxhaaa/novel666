@@ -1,16 +1,26 @@
 [
   {
+    "id": "luoxia-area",
+    "name": "落霞一带",
+    "aliases": [],
+    "eraId": null,
+    "kind": "region",
+    "description": "落霞镇和镇子西北的后山、青崖观。南去州府走官道。",
+    "notes": "",
+    "x": 500,
+    "y": 500
+  },
+  {
     "id": "luoxia",
     "name": "落霞镇",
     "aliases": [],
     "eraId": null,
-    "kind": "town",
-    "parentId": null,
+    "kind": "city",
+    "parentId": "luoxia-area",
     "region": "落霞镇一带",
     "description": "傍落霞溪的小镇，西北后山，南去州府的官道。",
-    "x": 400,
-    "y": 400,
-    "r": 20,
+    "x": 600,
+    "y": 650,
     "notes": ""
   },
   {
@@ -21,13 +31,12 @@
       "牌坊"
     ],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "镇口，狗蛋蹲在柱脚。",
-    "x": 400,
-    "y": 520,
-    "r": 20,
+    "x": 500,
+    "y": 760,
     "notes": ""
   },
   {
@@ -35,13 +44,12 @@
     "name": "告示牌",
     "aliases": [],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "十字路口的告示牌。",
-    "x": 400,
-    "y": 420,
-    "r": 20,
+    "x": 500,
+    "y": 480,
     "notes": ""
   },
   {
@@ -49,13 +57,12 @@
     "name": "土地庙",
     "aliases": [],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "老道坐在门槛上；庙前空地讲道；哑庙祝；第二卷土地庙会。",
-    "x": 330,
-    "y": 380,
-    "r": 20,
+    "x": 300,
+    "y": 400,
     "notes": ""
   },
   {
@@ -63,13 +70,12 @@
     "name": "回春堂",
     "aliases": [],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "孙家药铺，柜台、三只药炉、库房。",
-    "x": 450,
-    "y": 390,
-    "r": 20,
+    "x": 610,
+    "y": 400,
     "notes": ""
   },
   {
@@ -79,13 +85,12 @@
       "客栈"
     ],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "阿福；通铺、上房；窗边白衣客。",
-    "x": 420,
-    "y": 450,
-    "r": 20,
+    "x": 580,
+    "y": 580,
     "notes": ""
   },
   {
@@ -95,13 +100,12 @@
       "茶楼"
     ],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "柳莺；二楼摆寿宴。",
-    "x": 380,
-    "y": 450,
-    "r": 20,
+    "x": 420,
+    "y": 590,
     "notes": ""
   },
   {
@@ -109,13 +113,12 @@
     "name": "集市",
     "aliases": [],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "万宝楼的摊子、糖人摊；贾半仙树荫下说书。",
-    "x": 450,
-    "y": 460,
-    "r": 20,
+    "x": 680,
+    "y": 650,
     "notes": ""
   },
   {
@@ -123,13 +126,12 @@
     "name": "听雨楼",
     "aliases": [],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "申时开楼，楼后小巷；班主红姑。",
-    "x": 470,
-    "y": 430,
-    "r": 20,
+    "x": 740,
+    "y": 500,
     "notes": ""
   },
   {
@@ -139,13 +141,12 @@
       "药田"
     ],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "王婶的药田，田边老井。",
-    "x": 330,
-    "y": 460,
-    "r": 20,
+    "x": 230,
+    "y": 640,
     "notes": ""
   },
   {
@@ -155,13 +156,12 @@
       "溪边"
     ],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "绕镇而过，天灯节溪边放灯；下游芦苇荡。",
-    "x": 420,
-    "y": 520,
-    "r": 20,
+    "x": 500,
+    "y": 860,
     "notes": ""
   },
   {
@@ -169,13 +169,12 @@
     "name": "芦苇荡",
     "aliases": [],
     "eraId": null,
-    "kind": "place",
-    "parentId": "xiaxi",
+    "kind": "site",
+    "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "溪下游，刘三的篷船。",
-    "x": 480,
-    "y": 560,
-    "r": 20,
+    "x": 820,
+    "y": 900,
     "notes": ""
   },
   {
@@ -185,13 +184,12 @@
       "竹林"
     ],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "山脚竹林，阴面朽木长灵芝，阿蛮在这儿下套。",
-    "x": 300,
-    "y": 320,
-    "r": 20,
+    "x": 160,
+    "y": 200,
     "notes": ""
   },
   {
@@ -201,13 +199,12 @@
       "如意坊"
     ],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "侯掌柜，大堂押大小，里屋账本。",
-    "x": 460,
-    "y": 480,
-    "r": 20,
+    "x": 720,
+    "y": 760,
     "notes": ""
   },
   {
@@ -215,13 +212,12 @@
     "name": "巡检司",
     "aliases": [],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
     "description": "胡里正、冯捕头。",
-    "x": 440,
-    "y": 420,
-    "r": 20,
+    "x": 390,
+    "y": 470,
     "notes": ""
   },
   {
@@ -231,13 +227,13 @@
       "观里"
     ],
     "eraId": null,
-    "kind": "place",
-    "parentId": null,
+    "kind": "sect",
+    "parentId": "luoxia-area",
     "region": "落霞镇一带",
     "description": "后山崖上的破观：三清殿、东厢弟子房、藏经阁、丹房、灵田、灵眼、静室。从镇上爬石阶一个时辰。",
-    "x": 250,
-    "y": 200,
-    "r": 20,
+    "x": 400,
+    "y": 330,
+    "r": 80,
     "notes": ""
   },
   {
@@ -247,13 +243,12 @@
       "泉眼"
     ],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "qingyaguan",
     "region": "落霞镇一带",
     "description": "后山脚下一汪泛青光的泉，四周埋着聚灵阵的阵石。",
-    "x": 240,
-    "y": 180,
-    "r": 20,
+    "x": 600,
+    "y": 520,
     "notes": ""
   },
   {
@@ -261,13 +256,12 @@
     "name": "静室",
     "aliases": [],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "qingyaguan",
     "region": "落霞镇一带",
     "description": "泉眼边上的小屋。",
-    "x": 230,
-    "y": 175,
-    "r": 20,
+    "x": 700,
+    "y": 460,
     "notes": ""
   },
   {
@@ -275,13 +269,13 @@
     "name": "后山",
     "aliases": [],
     "eraId": null,
-    "kind": "area",
-    "parentId": null,
+    "kind": "region",
+    "parentId": "luoxia-area",
     "region": "落霞镇一带",
     "description": "青崖观后门外的山林。师父葬在一棵老松底下。",
-    "x": 220,
-    "y": 140,
-    "r": 20,
+    "x": 230,
+    "y": 180,
+    "r": 150,
     "notes": ""
   },
   {
@@ -289,13 +283,12 @@
     "name": "松岗",
     "aliases": [],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "houshan",
     "region": "落霞镇一带",
     "description": "老松；岗后藤萝石缝那头是阿蛮的营地。",
-    "x": 200,
-    "y": 150,
-    "r": 20,
+    "x": 420,
+    "y": 420,
     "notes": ""
   },
   {
@@ -303,13 +296,12 @@
     "name": "山溪谷",
     "aliases": [],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "houshan",
     "region": "落霞镇一带",
     "description": "卧牛石、劈开的老松。",
-    "x": 260,
-    "y": 130,
-    "r": 20,
+    "x": 660,
+    "y": 360,
     "notes": ""
   },
   {
@@ -319,13 +311,12 @@
       "断崖"
     ],
     "eraId": null,
-    "kind": "place",
+    "kind": "site",
     "parentId": "houshan",
     "region": "落霞镇一带",
     "description": "阴湿石隙，七叶一枝花，小貂。",
-    "x": 180,
-    "y": 110,
-    "r": 20,
+    "x": 300,
+    "y": 220,
     "notes": ""
   }
 ]

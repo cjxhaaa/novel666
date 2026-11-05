@@ -10,8 +10,9 @@
     "payoffChapters": [
       25
     ],
-    "status": "open",
-    "notes": ""
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 25
   },
   {
     "id": "f-02",
@@ -83,8 +84,9 @@
     "payoffChapters": [
       24
     ],
-    "status": "open",
-    "notes": ""
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 24
   },
   {
     "id": "f-07",
@@ -110,8 +112,9 @@
     "payoffChapters": [
       20
     ],
-    "status": "open",
-    "notes": ""
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 20
   },
   {
     "id": "f-09",
@@ -124,8 +127,9 @@
     "payoffChapters": [
       26
     ],
-    "status": "open",
-    "notes": ""
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 26
   },
   {
     "id": "f-10",

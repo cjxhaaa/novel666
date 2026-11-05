@@ -104,6 +104,31 @@
         "chapter": 18,
         "key": "欠账",
         "value": "三十块灵石，九十天（故事第 99 天过完到期）；身上一百四十两出头"
+      },
+      {
+        "chapter": 20,
+        "key": "灵石",
+        "value": "一块（压在借据上）"
+      },
+      {
+        "chapter": 20,
+        "key": "本事",
+        "value": "能把丹田的气引到打狗棒上；神识铺三四丈"
+      },
+      {
+        "chapter": 26,
+        "key": "随身",
+        "value": "兽骨盾在听雨楼被打散；收着镇魂钟、玉竹笛、回春散"
+      },
+      {
+        "chapter": 27,
+        "key": "神识",
+        "value": "能铺五六丈，看得见骰盅里的点数"
+      },
+      {
+        "chapter": 28,
+        "key": "银两",
+        "value": "冯捕头还了二十两本钱加一百两县里赏银"
       }
     ]
   },
@@ -259,7 +284,13 @@
         "value": "嘴快，机灵，叫许安“哥”，好面子"
       }
     ],
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 24,
+        "key": "处境",
+        "value": "上青崖观当知客，穿最小的道袍，袖子挽三道"
+      }
+    ]
   },
   {
     "id": "suxian",
@@ -277,7 +308,13 @@
         "value": "话少，冷，一句顶三句"
       }
     ],
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 26,
+        "key": "处境",
+        "value": "身契赎回，上青崖观住东厢"
+      }
+    ]
   },
   {
     "id": "qianmancang",
@@ -326,7 +363,13 @@
         "value": "直，笑起来不收着，北边口音"
       }
     ],
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 21,
+        "key": "认识",
+        "value": "知道许安是青崖观观主；营地别跟旁人说"
+      }
+    ]
   },
   {
     "id": "liuying",
@@ -421,7 +464,13 @@
     "color": "#6a5a40",
     "summary": "镇南木匠，借如意坊十两印子钱给婆娘治病，滚到八十两。如意坊封后带徒弟上山修观。",
     "fields": [],
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 28,
+        "key": "处境",
+        "value": "借据烧了；答应带徒弟上山修木活，不收工钱"
+      }
+    ]
   },
   {
     "id": "axiu",
@@ -447,7 +496,13 @@
     "color": "#3e4a5e",
     "summary": "落霞镇里正，收如意坊孝敬；封坊后摘了顶戴。",
     "fields": [],
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 28,
+        "key": "处境",
+        "value": "摘了顶戴"
+      }
+    ]
   },
   {
     "id": "fengbutou",
@@ -460,7 +515,13 @@
     "color": "#2f3a48",
     "summary": "巡检司捕快，正直，管不动上头；封坊后暂管巡检司。",
     "fields": [],
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 28,
+        "key": "处境",
+        "value": "暂管巡检司"
+      }
+    ]
   },
   {
     "id": "liusan",
@@ -482,7 +543,7 @@
     "eraId": "main",
     "group": "落霞镇",
     "crossEra": false,
-    "debutChapter": 23,
+    "debutChapter": 22,
     "color": "#4a6a7a",
     "summary": "溪边钓鱼补网的老渔夫。",
     "fields": [],
@@ -495,11 +556,17 @@
     "eraId": "main",
     "group": "赵家",
     "crossEra": false,
-    "debutChapter": 27,
+    "debutChapter": 22,
     "color": "#6a2a2a",
     "summary": "如意赌坊掌柜，出千、放印子钱；本钱是赵府出的。",
     "fields": [],
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 28,
+        "key": "处境",
+        "value": "在邻县被抓，招了如意坊本钱是赵府出的"
+      }
+    ]
   },
   {
     "id": "linxiansheng",

@@ -1,0 +1,516 @@
+[
+  {
+    "id": "xuan",
+    "name": "许安",
+    "aliases": [],
+    "eraId": "main",
+    "group": "主角",
+    "crossEra": false,
+    "debutChapter": 1,
+    "color": "#c8553d",
+    "summary": "十六岁的孤儿，南边破庙长大，讨饭北上寻仙。落霞镇一天里被老道云鹤子收为徒弟；拜师第七夜师父没下手，死在静室门外，他接下青崖观和三十块灵石的债，收了小芷、素弦、狗蛋、阿蛮四个人，撑到收债日还清。",
+    "fields": [
+      {
+        "key": "身份",
+        "value": "孤儿；第二卷青崖观观主"
+      },
+      {
+        "key": "年龄",
+        "value": "16"
+      },
+      {
+        "key": "修为",
+        "value": "凡人，掌心发烫（第1天）；夜里引气入体（第9章）；炼气一层（第15章）；收债日前后炼气三层"
+      },
+      {
+        "key": "灵根",
+        "value": "三灵根"
+      },
+      {
+        "key": "随身",
+        "value": "破庙老乞丐留下的旧储物袋，里头一根打狗棒、一张平安符；三十两（第1章被摸走，第4章摸回）"
+      },
+      {
+        "key": "性格",
+        "value": "手脚快、眼尖、肯吃苦，不轻信人；别人对他好一分他记十分。话少，说的多是实在话，偶尔冒一句破庙里学来的俏皮话。会犯错，会怕。"
+      },
+      {
+        "key": "说话方式",
+        "value": "短、实在，不文绉绉；对长辈客气，对同龄人随口。"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "yunhezi",
+    "name": "云鹤子",
+    "aliases": [
+      "老道",
+      "师父"
+    ],
+    "eraId": "main",
+    "group": "师父",
+    "crossEra": false,
+    "debutChapter": 2,
+    "color": "#5d6b74",
+    "summary": "青崖观老观主，干瘦，咳嗽，八岁上山，炼气六十年没筑基。押地契向万宝楼借三十块灵石布聚灵阵冲筑基未成，寿元将尽，收许安本为夺舍；第七夜在静室门外坐到天亮没进去，死在门口。第一卷要到山魈那一仗后才报名号，此前叫“老道”。",
+    "fields": [
+      {
+        "key": "身份",
+        "value": "青崖观观主"
+      },
+      {
+        "key": "说话方式",
+        "value": "慢，爱讲山上的旧事，讲着讲着自己先笑；一提到账、提到修为就摆摆手不想多说。"
+      },
+      {
+        "key": "想要",
+        "value": "青崖观别断在他手里"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "xiaoshunzi",
+    "name": "小顺子",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 1,
+    "color": "#b5743a",
+    "summary": "集市上的小扒手，半大小子，两颗虎牙，嘴甜。爹娘走得早，只摸外乡人。",
+    "fields": [
+      {
+        "key": "说话方式",
+        "value": "快、热络，自称“小爷”"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "sunzhanggui",
+    "name": "孙掌柜",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 2,
+    "color": "#4f6b4a",
+    "summary": "回春堂掌柜，孙家行医三代，拨算盘，精打细算，心不坏。收债日替许安作保。",
+    "fields": [
+      {
+        "key": "说话方式",
+        "value": "慢条斯理，一句话里先算账"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "xiaozhi",
+    "name": "小芷",
+    "aliases": [],
+    "eraId": "main",
+    "group": "弟子",
+    "crossEra": false,
+    "debutChapter": 2,
+    "color": "#6f8f5a",
+    "summary": "回春堂的小学徒，十二三岁，守药炉，想当丹师；第一卷送许安小药葫芦；第二卷医闹后跟许安上山学炼丹（第33章）。",
+    "fields": [
+      {
+        "key": "说话方式",
+        "value": "爱念叨，叫许安“大哥哥”"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "miaozhu",
+    "name": "哑庙祝",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 2,
+    "color": "#8a6a3c",
+    "summary": "土地庙的哑庙祝，扫地。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "wangshen",
+    "name": "王婶",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 3,
+    "color": "#8a7a4a",
+    "summary": "王家药田的婶子，家里耕牛被山魈咬死。第二卷上山请许安看老井，灵苗被赵家家丁偷。收债日挑一担药材上山。",
+    "fields": [
+      {
+        "key": "说话方式",
+        "value": "大嗓门，热心，一口一个“婶子”"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "goudan",
+    "name": "狗蛋",
+    "aliases": [],
+    "eraId": "main",
+    "group": "弟子",
+    "crossEra": false,
+    "debutChapter": 3,
+    "color": "#6b6155",
+    "summary": "镇口牌坊下的小乞丐，卖消息，想去州府大酒楼门口当迎客的伙计。第二卷被赌鬼刘三拐走，许安救出后上山当知客（第24章）。",
+    "fields": [
+      {
+        "key": "说话方式",
+        "value": "嘴快，机灵，叫许安“哥”，好面子"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "suxian",
+    "name": "素弦",
+    "aliases": [],
+    "eraId": "main",
+    "group": "弟子",
+    "crossEra": false,
+    "debutChapter": 3,
+    "color": "#3f5f7a",
+    "summary": "听雨楼的琴师，天音阁弟子，半年前师门一夜之间散了，她带伤流落落霞镇，昏了三天，醒来身契已在红姑手里（契上写药钱三百两，她只知道这个数；实际药钱三十两，手印是昏迷时被按的）。第二卷许安赎出身契，上山（第26章）。",
+    "fields": [
+      {
+        "key": "说话方式",
+        "value": "话少，冷，一句顶三句"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "qianmancang",
+    "name": "钱满仓",
+    "aliases": [],
+    "eraId": "main",
+    "group": "万宝楼",
+    "crossEra": false,
+    "debutChapter": 4,
+    "color": "#a4823a",
+    "summary": "万宝楼落霞镇的管事，胖，笑眯眯，拨算盘。替东家收青崖观的债，讲规矩，有分寸。",
+    "fields": [
+      {
+        "key": "说话方式",
+        "value": "自称“钱某”，生意人口气"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "jiabanxian",
+    "name": "贾半仙",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 4,
+    "color": "#596a8a",
+    "summary": "集市树荫下说书的，醒木，眨眼睛，“信不信由你”。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "aman",
+    "name": "阿蛮",
+    "aliases": [],
+    "eraId": "main",
+    "group": "弟子",
+    "crossEra": false,
+    "debutChapter": 5,
+    "color": "#5a6b3a",
+    "summary": "二十来岁的猎户，北边口音，使三股猎叉。原是北边黑石寨的猎户，放跑屠家要卖的一窝雪狼崽子、戳瞎屠二郎一只眼，躲进这片山三年。第二卷认识许安是观主（第21章），屠二郎找上门后上山巡山（第35章）。",
+    "fields": [
+      {
+        "key": "说话方式",
+        "value": "直，笑起来不收着，北边口音"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "liuying",
+    "name": "柳莺",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 6,
+    "color": "#9a5a6a",
+    "summary": "柳家茶楼东家的女儿，赵三公子逼婚，柳家欠赵家的钱。许安救下她。收债日扶柳老爷上山借五块灵石。",
+    "fields": [
+      {
+        "key": "说话方式",
+        "value": "温和，叫许安“公子”，后叫“观主”"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "zhaosan",
+    "name": "赵三公子",
+    "aliases": [
+      "赵三"
+    ],
+    "eraId": "main",
+    "group": "赵家",
+    "crossEra": false,
+    "debutChapter": 6,
+    "color": "#7b5aa6",
+    "summary": "赵家纨绔，摇扇子，带打手。",
+    "fields": [
+      {
+        "key": "说话方式",
+        "value": "嚣张"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "xiaoer",
+    "name": "阿福",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 8,
+    "color": "#9a7a52",
+    "summary": "悦来客栈的小二，肩搭白毛巾，嘴碎，什么消息都知道；舅舅在镇口打更。",
+    "fields": [
+      {
+        "key": "说话方式",
+        "value": "“客官”“观主”不离口"
+      }
+    ],
+    "progressions": []
+  },
+  {
+    "id": "baiyike",
+    "name": "白衣客",
+    "aliases": [],
+    "eraId": "main",
+    "group": "过客",
+    "crossEra": false,
+    "debutChapter": 8,
+    "color": "#c9c4b8",
+    "summary": "戴斗笠的白衣人，剑不离手，在客栈窗边坐了一整天，天灯节夜里牵马往南走。本书只是影子。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "honggu",
+    "name": "红姑",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 8,
+    "color": "#9a3b3b",
+    "summary": "听雨楼班主，嗑瓜子，把素弦的身契转卖给州府戏班。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "chenmujiang",
+    "name": "陈木匠",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 22,
+    "color": "#6a5a40",
+    "summary": "镇南木匠，借如意坊十两印子钱给婆娘治病，滚到八十两。如意坊封后带徒弟上山修观。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "axiu",
+    "name": "阿秀",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 22,
+    "color": "#9a6a5a",
+    "summary": "陈木匠的闺女。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "lizheng",
+    "name": "胡里正",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 23,
+    "color": "#3e4a5e",
+    "summary": "落霞镇里正，收如意坊孝敬；封坊后摘了顶戴。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "fengbutou",
+    "name": "冯捕头",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 23,
+    "color": "#2f3a48",
+    "summary": "巡检司捕快，正直，管不动上头；封坊后暂管巡检司。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "liusan",
+    "name": "刘三",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 23,
+    "color": "#555555",
+    "summary": "烂赌鬼，原先撑船，欠如意坊五百两印子钱，拐了狗蛋等三个孩子想卖掉还债。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "laozhou",
+    "name": "老周",
+    "aliases": [],
+    "eraId": "main",
+    "group": "落霞镇",
+    "crossEra": false,
+    "debutChapter": 23,
+    "color": "#4a6a7a",
+    "summary": "溪边钓鱼补网的老渔夫。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "houzhanggui",
+    "name": "侯掌柜",
+    "aliases": [],
+    "eraId": "main",
+    "group": "赵家",
+    "crossEra": false,
+    "debutChapter": 27,
+    "color": "#6a2a2a",
+    "summary": "如意赌坊掌柜，出千、放印子钱；本钱是赵府出的。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "linxiansheng",
+    "name": "林先生",
+    "aliases": [
+      "青衫客"
+    ],
+    "eraId": "main",
+    "group": "过客",
+    "crossEra": false,
+    "debutChapter": 29,
+    "color": "#2a2a32",
+    "summary": "青衫、摇折扇的瘦高个，拿钱杀人的那伙人里排“肆”的；咬毒自尽。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "liubiaotou",
+    "name": "刘镖头",
+    "aliases": [],
+    "eraId": "main",
+    "group": "过客",
+    "crossEra": false,
+    "debutChapter": 32,
+    "color": "#6a5040",
+    "summary": "走镖的络腮胡，翻后山时被小貂挠了一爪中毒。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "tuanzi",
+    "name": "团子",
+    "aliases": [
+      "小貂"
+    ],
+    "eraId": "main",
+    "group": "弟子",
+    "crossEra": false,
+    "debutChapter": 33,
+    "color": "#cccccc",
+    "summary": "断崖石洞里守着七叶一枝花的小貂，被许安放过，顺着药香找上山，小芷起名团子（第35章）。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "tuerlang",
+    "name": "屠二郎",
+    "aliases": [
+      "独眼"
+    ],
+    "eraId": "main",
+    "group": "过客",
+    "crossEra": false,
+    "debutChapter": 34,
+    "color": "#3a2a2a",
+    "summary": "北边黑石寨屠家老二，独眼，腰缠铁鞭，牵驯狼。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "zhaoguanjia",
+    "name": "赵家管家",
+    "aliases": [],
+    "eraId": "main",
+    "group": "赵家",
+    "crossEra": false,
+    "debutChapter": 38,
+    "color": "#6b3a3a",
+    "summary": "替赵老爷出面，客气得叫人发冷。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "gongfeng",
+    "name": "万宝楼供奉",
+    "aliases": [
+      "供奉",
+      "灰袍人"
+    ],
+    "eraId": "main",
+    "group": "万宝楼",
+    "crossEra": false,
+    "debutChapter": 39,
+    "color": "#4a4458",
+    "summary": "灰袍人，炼气八层，一句话不说，盯着灵眼看。",
+    "fields": [],
+    "progressions": []
+  },
+  {
+    "id": "zhaolaoye",
+    "name": "赵老爷",
+    "aliases": [],
+    "eraId": "main",
+    "group": "赵家",
+    "crossEra": false,
+    "debutChapter": 39,
+    "color": "#7a2e2a",
+    "summary": "赵家家主，要青崖观的灵眼；收债日坐在轿子里没露面。",
+    "fields": [],
+    "progressions": []
+  }
+]

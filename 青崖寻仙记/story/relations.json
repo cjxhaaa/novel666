@@ -1,0 +1,44 @@
+[
+  {
+    "id": "r-xu-yun",
+    "from": "xuan",
+    "to": "yunhezi",
+    "label": "路人：扶一个咳嗽的老道去赊药",
+    "progressions": []
+  },
+  {
+    "id": "r-xu-zhi",
+    "from": "xuan",
+    "to": "xiaozhi",
+    "label": "帮她看过药炉的外乡人",
+    "progressions": []
+  },
+  {
+    "id": "r-xu-gd",
+    "from": "xuan",
+    "to": "goudan",
+    "label": "两文钱一个馒头",
+    "progressions": []
+  },
+  {
+    "id": "r-xu-su",
+    "from": "xuan",
+    "to": "suxian",
+    "label": "后巷听过三遍琴的人",
+    "progressions": []
+  },
+  {
+    "id": "r-xu-man",
+    "from": "xuan",
+    "to": "aman",
+    "label": "一起打过狼",
+    "progressions": []
+  },
+  {
+    "id": "r-xu-qian",
+    "from": "xuan",
+    "to": "qianmancang",
+    "label": "打听过仙缘的生面孔",
+    "progressions": []
+  }
+]

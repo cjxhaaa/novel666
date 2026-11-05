@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "title": "青崖寻仙记",
+  "eras": [
+    {
+      "id": "main",
+      "name": "主",
+      "label": "主时间线",
+      "color": "#8fb3ff"
+    }
+  ],
+  "chapterKinds": [
+    {
+      "id": "main",
+      "name": "正",
+      "eraId": "main",
+      "color": "#8fb3ff"
+    }
+  ],
+  "volumes": [
+    {
+      "id": "v1",
+      "name": "第一卷：落霞镇一日",
+      "from": 1,
+      "to": 10,
+      "summary": "故事第 1 天，开春天灯节。"
+    },
+    {
+      "id": "v2",
+      "name": "第二卷：青崖观篇",
+      "from": 11,
+      "to": 40,
+      "summary": "故事第 2–100 天：拜师七天（第 2–8 天），当观主九十天（第 9–99 天），收债日（第 100 天）。"
+    }
+  ],
+  "stages": [
+    {
+      "id": "s1",
+      "volumeId": "v1",
+      "name": "落霞镇一日",
+      "from": 1,
+      "to": 10,
+      "summary": ""
+    },
+    {
+      "id": "s2",
+      "volumeId": "v2",
+      "name": "拜师七天",
+      "from": 11,
+      "to": 18,
+      "summary": ""
+    },
+    {
+      "id": "s3",
+      "volumeId": "v2",
+      "name": "当观主",
+      "from": 19,
+      "to": 38,
+      "summary": ""
+    },
+    {
+      "id": "s4",
+      "volumeId": "v2",
+      "name": "收债日",
+      "from": 39,
+      "to": 40,
+      "summary": ""
+    }
+  ],
+  "chapterFilePattern": "chapters/chap{NN}.md",
+  "calendarLabel": "故事第 N 天",
+  "keyDays": [
+    {
+      "day": 1,
+      "label": "天灯节",
+      "eraId": null
+    },
+    {
+      "day": 8,
+      "label": "拜师第七夜",
+      "eraId": null
+    },
+    {
+      "day": 9,
+      "label": "安葬，当观主第一天",
+      "eraId": null
+    },
+    {
+      "day": 38,
+      "label": "万宝楼对账（观主第三十天）",
+      "eraId": null
+    },
+    {
+      "day": 83,
+      "label": "土地庙会（观主第七十五天）",
+      "eraId": null
+    },
+    {
+      "day": 100,
+      "label": "收债日",
+      "eraId": null
+    }
+  ],
+  "guard": {
+    "bannedPhrases": [
+      "倒吸一口凉气",
+      "一阵青一阵白",
+      "陷入了短暂的沉默",
+      "翻了个白眼"
+    ],
+    "maxNotXisY": 2,
+    "pauseBeats": [
+      "没说话",
+      "没有说话",
+      "没接话",
+      "没有回答",
+      "没有声音",
+      "沉默",
+      "过了很久",
+      "好一会儿",
+      "过了一会儿",
+      "停了一下",
+      "顿了顿",
+      "“嗯。”"
+    ],
+    "maxPauseBeats": 3,
+    "maxScenes": 3,
+    "crossEraCheck": true,
+    "locationEraCheck": true,
+    "debutCheck": true,
+    "overdueCheck": true
+  },
+  "logline": "孤儿许安在落霞镇过了一天，被土地庙的老道收为徒弟；七天后师父想夺他的身子，到了那一夜却在门外坐到天亮，自己死了。"
+}

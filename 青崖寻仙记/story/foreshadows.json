@@ -70,8 +70,9 @@
       39,
       40
     ],
-    "status": "open",
-    "notes": ""
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 40
   },
   {
     "id": "f-06",
@@ -99,8 +100,9 @@
       33,
       40
     ],
-    "status": "open",
-    "notes": ""
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 40
   },
   {
     "id": "f-08",
@@ -142,8 +144,9 @@
       37,
       39
     ],
-    "status": "open",
-    "notes": ""
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 39
   },
   {
     "id": "f-11",

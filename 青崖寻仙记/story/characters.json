@@ -39,7 +39,38 @@
         "value": "短、实在，不文绉绉；对长辈客气，对同龄人随口。"
       }
     ],
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 1,
+        "key": "处境",
+        "value": "进镇第一天，钱袋被小顺子摸走，身无分文"
+      },
+      {
+        "chapter": 4,
+        "key": "处境",
+        "value": "钱袋摸回来了；揭了山魈的榜"
+      },
+      {
+        "chapter": 6,
+        "key": "银两",
+        "value": "卖灵芝得一百两，身上一百多两"
+      },
+      {
+        "chapter": 9,
+        "key": "修为",
+        "value": "引气入体（夜里在客栈通铺上）"
+      },
+      {
+        "chapter": 9,
+        "key": "伤",
+        "value": "背撞在竹子上，左胳膊抬不起来，兽骨盾裂了一道缝"
+      },
+      {
+        "chapter": 10,
+        "key": "处境",
+        "value": "跟云鹤子上山拜师"
+      }
+    ]
   },
   {
     "id": "yunhezi",
@@ -68,7 +99,13 @@
         "value": "青崖观别断在他手里"
       }
     ],
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 9,
+        "key": "称呼",
+        "value": "报了名号云鹤子，住在山上"
+      }
+    ]
   },
   {
     "id": "xiaoshunzi",
@@ -95,7 +132,7 @@
     "eraId": "main",
     "group": "落霞镇",
     "crossEra": false,
-    "debutChapter": 2,
+    "debutChapter": 1,
     "color": "#4f6b4a",
     "summary": "回春堂掌柜，孙家行医三代，拨算盘，精打细算，心不坏。收债日替许安作保。",
     "fields": [
@@ -122,7 +159,13 @@
         "value": "爱念叨，叫许安“大哥哥”"
       }
     ],
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 7,
+        "key": "送的东西",
+        "value": "空药葫芦给了许安"
+      }
+    ]
   },
   {
     "id": "miaozhu",
@@ -285,7 +328,7 @@
     "eraId": "main",
     "group": "落霞镇",
     "crossEra": false,
-    "debutChapter": 8,
+    "debutChapter": 1,
     "color": "#9a7a52",
     "summary": "悦来客栈的小二，肩搭白毛巾，嘴碎，什么消息都知道；舅舅在镇口打更。",
     "fields": [
@@ -316,7 +359,7 @@
     "eraId": "main",
     "group": "落霞镇",
     "crossEra": false,
-    "debutChapter": 8,
+    "debutChapter": 7,
     "color": "#9a3b3b",
     "summary": "听雨楼班主，嗑瓜子，把素弦的身契转卖给州府戏班。",
     "fields": [],

@@ -4,14 +4,28 @@
     "from": "xuan",
     "to": "yunhezi",
     "label": "路人：扶一个咳嗽的老道去赊药",
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 9,
+        "label": "竹林里他捏着没用上的符来了：好身手"
+      },
+      {
+        "chapter": 10,
+        "label": "子时收徒：缺一个传人，明早跟老道上山"
+      }
+    ]
   },
   {
     "id": "r-xu-zhi",
     "from": "xuan",
     "to": "xiaozhi",
     "label": "帮她看过药炉的外乡人",
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 7,
+        "label": "送来灵芝的大哥哥，送他空药葫芦"
+      }
+    ]
   },
   {
     "id": "r-xu-gd",
@@ -25,14 +39,24 @@
     "from": "xuan",
     "to": "suxian",
     "label": "后巷听过三遍琴的人",
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 8,
+        "label": "听懂了那个音的人；她说药钱三百两"
+      }
+    ]
   },
   {
     "id": "r-xu-man",
     "from": "xuan",
     "to": "aman",
     "label": "一起打过狼",
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 9,
+        "label": "一起守竹林打跑山魈"
+      }
+    ]
   },
   {
     "id": "r-xu-qian",

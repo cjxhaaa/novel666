@@ -23,8 +23,9 @@
     "payoffChapters": [
       16
     ],
-    "status": "open",
-    "notes": ""
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 16
   },
   {
     "id": "f-03",
@@ -36,8 +37,9 @@
     "payoffChapters": [
       16
     ],
-    "status": "open",
-    "notes": ""
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 16
   },
   {
     "id": "f-04",
@@ -50,8 +52,9 @@
     "payoffChapters": [
       16
     ],
-    "status": "open",
-    "notes": ""
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 16
   },
   {
     "id": "f-05",

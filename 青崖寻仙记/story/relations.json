@@ -12,6 +12,18 @@
       {
         "chapter": 10,
         "label": "子时收徒：缺一个传人，明早跟老道上山"
+      },
+      {
+        "chapter": 11,
+        "label": "师徒：问八字、问家里有没有人惦记"
+      },
+      {
+        "chapter": 14,
+        "label": "起疑后当面问过，选了信他"
+      },
+      {
+        "chapter": 16,
+        "label": "他在门外坐了一夜，到底没进去"
       }
     ]
   },
@@ -63,6 +75,11 @@
     "from": "xuan",
     "to": "qianmancang",
     "label": "打听过仙缘的生面孔",
-    "progressions": []
+    "progressions": [
+      {
+        "chapter": 18,
+        "label": "债主和观主：推回五十两银票，到期那天再见"
+      }
+    ]
   }
 ]

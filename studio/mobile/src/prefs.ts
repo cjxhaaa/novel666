@@ -21,6 +21,16 @@ export const FONTS: { id: FontId; name: string; family: string }[] = [
   { id: 'hei', name: '黑体', family: "system-ui, 'MiSans', 'HarmonyOS Sans SC', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" },
 ];
 
+/** 翻页方式：上下滚动，或者一页一页翻（平移、覆盖、无动画） */
+export type TurnMode = 'scroll' | 'slide' | 'cover' | 'none';
+
+export const TURN_OPTS: { v: TurnMode; label: string }[] = [
+  { v: 'scroll', label: '上下滚动' },
+  { v: 'slide', label: '左右平移' },
+  { v: 'cover', label: '覆盖' },
+  { v: 'none', label: '无动画' },
+];
+
 export interface ReadPrefs {
   font: FontId;
   size: number;
@@ -36,9 +46,10 @@ export interface ReadPrefs {
   bold: boolean;
   /** 阅读时藏起状态栏和导航条 */
   fullscreen: boolean;
+  turn: TurnMode;
 }
 
-export const DEFAULT_READ: ReadPrefs = { font: 'song', size: 19, line: 1.95, para: 0.9, letter: 0.02, margin: 22, indent: true, bold: false, fullscreen: true };
+export const DEFAULT_READ: ReadPrefs = { font: 'song', size: 19, line: 1.95, para: 0.9, letter: 0.02, margin: 22, indent: true, bold: false, fullscreen: true, turn: 'scroll' };
 
 export const LIMITS = { size: [14, 30] as const };
 

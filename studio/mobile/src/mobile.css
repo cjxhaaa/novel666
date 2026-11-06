@@ -1704,3 +1704,54 @@ details[open] summary {
     opacity: 0.8;
   }
 }
+
+/* ---------- 翻页模式：正文一页一页翻 ---------- */
+.page.reader.paged {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.pager {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: calc(30px + var(--safe-top));
+  bottom: calc(28px + var(--safe-bottom));
+  overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.pager-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--bg);
+}
+.pager-layer.top {
+  box-shadow: 8px 0 18px -6px rgba(0, 0, 0, 0.45);
+}
+.pager-strip {
+  height: 100%;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  will-change: transform;
+}
+/* 分栏里标题、段落不在页脚断成半行 */
+.pager-strip h2,
+.pager-strip h4 {
+  break-after: avoid;
+}
+.pager-strip .prose-end,
+.pager-strip .unwritten h2 {
+  break-inside: avoid;
+}
+.pager-strip h2 {
+  margin-top: 0.4em;
+}
+.pager-strip p {
+  orphans: 1;
+  widows: 1;
+}

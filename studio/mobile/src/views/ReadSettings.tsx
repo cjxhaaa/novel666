@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { DEFAULT_READ, FONTS, LETTER_OPTS, LIMITS, LINE_OPTS, MARGIN_OPTS, PARA_OPTS, THEMES, type ReadPrefs } from '../prefs';
+import { DEFAULT_READ, FONTS, LETTER_OPTS, LIMITS, LINE_OPTS, MARGIN_OPTS, PARA_OPTS, THEMES, TURN_OPTS, type ReadPrefs } from '../prefs';
 import { useApp } from '../store';
 
 /** 正文的排版样式，阅读页和设置预览共用 */
@@ -81,6 +81,16 @@ export function ReadSettings() {
       </div>
 
       <div className="rs-row">
+        <span className="rs-label">翻页</span>
+        <div className="seg rs-seg">
+          {TURN_OPTS.map((o) => (
+            <button key={o.v} className={read.turn === o.v ? 'on' : ''} onClick={() => setRead({ turn: o.v })}>
+              {o.label}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="rs-row">
         <span className="rs-label">行距</span>
         <Opts value={read.line} opts={LINE_OPTS} onPick={(line) => setRead({ line })} />
       </div>
@@ -108,7 +118,7 @@ export function ReadSettings() {
           <button className={`btn ${read.fullscreen ? 'on' : ''}`} onClick={() => setRead({ fullscreen: !read.fullscreen })}>
             全屏阅读
           </button>
-          <button className="btn ghost" onClick={() => setRead(DEFAULT_READ)}>
+          <button className="btn ghost" onClick={() => setRead({ ...DEFAULT_READ, turn: read.turn })}>
             恢复默认
           </button>
         </div>

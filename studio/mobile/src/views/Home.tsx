@@ -25,19 +25,26 @@ function coverOf(title: string) {
 
 const BOOK_W = 124;
 const GAP = 30;
+/** 一层的高度：.shelf-row 的 min-height 加 margin-bottom */
+const ROW_H = 268 + 18;
 
-/** 一层放几本：按屏幕宽度算 */
-function usePerRow() {
+/** 一层放几本按宽度算；空板子摆几层按高度算，摆满一屏，书少也像一整面书架 */
+function useShelfSize() {
   const ref = useRef<HTMLDivElement>(null);
-  const [n, setN] = useState(2);
+  const [size, setSize] = useState({ perRow: 2, rows: 2 });
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const ro = new ResizeObserver(() => setN(Math.max(2, Math.floor((el.clientWidth - 24 + GAP) / (BOOK_W + GAP)))));
+    const ro = new ResizeObserver(() =>
+      setSize({
+        perRow: Math.max(2, Math.floor((el.clientWidth - 24 + GAP) / (BOOK_W + GAP))),
+        rows: Math.max(2, Math.ceil(el.clientHeight / ROW_H)),
+      }),
+    );
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
-  return [ref, n] as const;
+  return [ref, size] as const;
 }
 
 function seenAt(id: string) {
@@ -104,29 +111,31 @@ export function Home() {
   const setSheet = useApp((s) => s.setSheet);
   const theme = useApp((s) => s.theme);
   const dark = THEMES.find((t) => t.id === theme)?.dark;
-  const [ref, perRow] = usePerRow();
+  const [ref, { perRow, rows: minRows }] = useShelfSize();
   const last = lastBook();
   const rows: LocalBook[][] = [];
   for (let k = 0; k < books.length; k += perRow) rows.push(books.slice(k, k + perRow));
-  // 至少摆两层，空书架也像个书架
-  while (rows.length < 2) rows.push([]);
+  while (rows.length < minRows) rows.push([]);
   const words = books.reduce((a, b) => a + b.info.words, 0);
   return (
     <div className="page home">
       {dark && <StarField />}
-      <header className="home-head">
-        <BrandMark size={26} />
-        <span className="brand">星图书房</span>
-        <span className="grow" />
-        <button className="icon-btn" onClick={() => setSheet('settings')} aria-label="设置">
-          <Icon name="gear" size={21} />
-        </button>
-      </header>
-      <SyncCard />
-      <ApkBanner />
-      <div className="shelf-head">
-        <h1>书架</h1>
-        <div className="sub">{books.length ? `${books.length} 本 · 共 ${fmtWan(words)} 字` : '还是空的'}</div>
+      {/* 上面这一截固定不动，只有下面的书架能上下滑 */}
+      <div className="home-top">
+        <header className="home-head">
+          <BrandMark size={26} />
+          <span className="brand">星图书房</span>
+          <span className="grow" />
+          <button className="icon-btn" onClick={() => setSheet('settings')} aria-label="设置">
+            <Icon name="gear" size={21} />
+          </button>
+        </header>
+        <SyncCard />
+        <ApkBanner />
+        <div className="shelf-head">
+          <h1>书架</h1>
+          <div className="sub">{books.length ? `${books.length} 本 · 共 ${fmtWan(words)} 字` : '还是空的'}</div>
+        </div>
       </div>
       <div className="shelf" ref={ref}>
         {rows.map((row, k) => (

@@ -67,8 +67,13 @@ export async function discover(): Promise<{ host: string; name?: string }[]> {
 }
 
 /** 安卓端自己写的插件：系统栏的底色和图标深浅跟着 App 的底色走 */
-const BarColor = registerPlugin<{ set(o: { color: string; dark: boolean }): Promise<void> }>('BarColor');
+const BarColor = registerPlugin<{ set(o: { color: string; dark: boolean }): Promise<void>; fullscreen(o: { on: boolean }): Promise<void> }>('BarColor');
 
 export function setSystemBars(dark: boolean, color: string) {
   BarColor.set({ color, dark }).catch(() => {});
+}
+
+/** 全屏阅读：藏起状态栏和导航条，从边上划一下会临时露出来 */
+export function setFullscreen(on: boolean) {
+  BarColor.fullscreen({ on }).catch(() => {});
 }

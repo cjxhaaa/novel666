@@ -105,6 +105,9 @@ export function ReadSettings() {
           <button className={`btn ${read.bold ? 'on' : ''}`} onClick={() => setRead({ bold: !read.bold })}>
             加粗
           </button>
+          <button className={`btn ${read.fullscreen ? 'on' : ''}`} onClick={() => setRead({ fullscreen: !read.fullscreen })}>
+            全屏阅读
+          </button>
           <button className="btn ghost" onClick={() => setRead(DEFAULT_READ)}>
             恢复默认
           </button>

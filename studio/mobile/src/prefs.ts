@@ -34,9 +34,11 @@ export interface ReadPrefs {
   margin: number;
   indent: boolean;
   bold: boolean;
+  /** 阅读时藏起状态栏和导航条 */
+  fullscreen: boolean;
 }
 
-export const DEFAULT_READ: ReadPrefs = { font: 'song', size: 19, line: 1.95, para: 0.9, letter: 0.02, margin: 22, indent: true, bold: false };
+export const DEFAULT_READ: ReadPrefs = { font: 'song', size: 19, line: 1.95, para: 0.9, letter: 0.02, margin: 22, indent: true, bold: false, fullscreen: true };
 
 export const LIMITS = { size: [14, 30] as const };
 
@@ -94,5 +96,17 @@ export function loadTheme(): ThemeId {
 export function saveTheme(t: ThemeId) {
   try {
     localStorage.setItem('xt:theme', t);
+    // 记住最近用的深色和浅色，“日间 / 夜间”一键切换时用
+    localStorage.setItem(THEMES.find((x) => x.id === t)?.dark ? 'xt:theme-dark' : 'xt:theme-light', t);
   } catch {}
+}
+
+/** 日夜切换的目标：换到上次用的另一类底色 */
+export function oppositeTheme(t: ThemeId): ThemeId {
+  const dark = THEMES.find((x) => x.id === t)?.dark;
+  try {
+    const saved = localStorage.getItem(dark ? 'xt:theme-light' : 'xt:theme-dark') as ThemeId | null;
+    if (saved && THEMES.some((x) => x.id === saved)) return saved;
+  } catch {}
+  return dark ? 'paper' : 'night';
 }

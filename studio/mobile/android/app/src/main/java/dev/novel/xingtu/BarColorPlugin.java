@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.Window;
 
 import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.getcapacitor.Plugin;
@@ -40,6 +41,23 @@ public class BarColorPlugin extends Plugin {
             WindowInsetsControllerCompat c = WindowCompat.getInsetsController(w, decor);
             c.setAppearanceLightStatusBars(!dark);
             c.setAppearanceLightNavigationBars(!dark);
+            call.resolve();
+        });
+    }
+
+    /** 全屏阅读：藏起状态栏和导航条，从屏幕边上划一下会临时露出来 */
+    @PluginMethod
+    public void fullscreen(PluginCall call) {
+        final boolean on = call.getBoolean("on", false);
+        getActivity().runOnUiThread(() -> {
+            Window w = getActivity().getWindow();
+            WindowInsetsControllerCompat c = WindowCompat.getInsetsController(w, w.getDecorView());
+            if (on) {
+                c.setSystemBarsBehavior(WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+                c.hide(WindowInsetsCompat.Type.systemBars());
+            } else {
+                c.show(WindowInsetsCompat.Type.systemBars());
+            }
             call.resolve();
         });
     }

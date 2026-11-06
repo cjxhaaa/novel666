@@ -4,7 +4,7 @@ import type { SyncBook } from '../../shared/types';
 import { deleteBook, kvGet, kvSet, putFiles } from './db';
 import { describeChanges, loadBook, type Change, type Loaded, type LocalBook } from './book';
 import { discover, hello, HttpError, native, request } from './net';
-import { LIMITS, loadRead, loadTheme, saveRead, saveTheme, type ReadPrefs, type ThemeId } from './prefs';
+import { LIMITS, loadRead, loadTheme, oppositeTheme, saveRead, saveTheme, type ReadPrefs, type ThemeId } from './prefs';
 
 export interface Server {
   /** ip:端口 */
@@ -54,6 +54,7 @@ interface State {
   ensureBook(id: string): Promise<void>;
   setTheme(t: ThemeId): void;
   setRead(p: Partial<ReadPrefs>): void;
+  toggleDayNight(): void;
   forget(): Promise<void>;
 }
 
@@ -191,6 +192,10 @@ export const useApp = create<State>((set, get) => ({
   setTheme(theme) {
     saveTheme(theme);
     set({ theme });
+  },
+
+  toggleDayNight() {
+    get().setTheme(oppositeTheme(get().theme));
   },
 
   setRead(patch) {

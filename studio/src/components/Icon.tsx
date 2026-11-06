@@ -36,8 +36,11 @@ const P: Record<string, string> = {
   check: 'M5 12l4.5 4.5L19 7',
   warn: 'M12 4 2.5 20h19L12 4Zm0 6v4m0 3v.01',
   info: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-11v6m0-9v.01',
+  phone: 'M8 2.5h8a1.5 1.5 0 0 1 1.5 1.5v16a1.5 1.5 0 0 1-1.5 1.5H8A1.5 1.5 0 0 1 6.5 20V4A1.5 1.5 0 0 1 8 2.5ZM11 18.5h2',
   drag: 'M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01',
   swap: 'M7 7h13l-4-4M17 17H4l4 4',
+  gear: 'M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM19.4 13.5l1.6 1.2-2 3.5-1.9-.7a7 7 0 0 1-2.1 1.2l-.3 2h-4l-.3-2a7 7 0 0 1-2.1-1.2l-1.9.7-2-3.5 1.6-1.2a7 7 0 0 1 0-3L2.4 9.3l2-3.5 1.9.7a7 7 0 0 1 2.1-1.2l.3-2h4l.3 2a7 7 0 0 1 2.1 1.2l1.9-.7 2 3.5-1.6 1.2a7 7 0 0 1 0 3Z',
+  wifi: 'M2 8.5a15 15 0 0 1 20 0M5.5 12a10 10 0 0 1 13 0M9 15.5a5 5 0 0 1 6 0M12 19h.01',
 };
 
 export function Icon({ name, size = 18, stroke = 1.6, style }: { name: string; size?: number; stroke?: number; style?: React.CSSProperties }) {

@@ -6,6 +6,7 @@ import { BrandMark, Icon } from './components/Icon';
 import { StarField } from './components/StarField';
 import { CommandPalette } from './components/CommandPalette';
 import { ContextPackModal } from './components/ContextPack';
+import { PhoneSyncButton } from './components/PhoneSync';
 import { useIssues } from './lib/derived';
 import { Dashboard } from './views/Dashboard';
 import { PlotGrid } from './views/PlotGrid';
@@ -184,6 +185,7 @@ export default function App() {
             <SaveState />
           </>
         )}
+        <PhoneSyncButton />
         <button className="btn ghost sm icon no-drag" title="切换主题（夜空 / 宣纸）" onClick={() => setTheme(theme === 'night' ? 'paper' : 'night')}>
           <Icon name={theme === 'night' ? 'sun' : 'moon'} size={16} />
         </button>

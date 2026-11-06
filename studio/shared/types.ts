@@ -296,6 +296,12 @@ export interface StudioApi extends ShelfApi {
   writeDoc(rel: string, text: string): Promise<void>;
   listDocs(): Promise<string[]>;
   onExternalChange(cb: (paths: string[]) => void): () => void;
+  /** 手机同步；浏览器预览里没有，返回 null */
+  syncStatus(): Promise<SyncStatus | null>;
+  setSync(enabled: boolean): Promise<SyncStatus | null>;
+  /** 换一个配对码，已配对的手机要重新输入 */
+  resetSyncKey(): Promise<SyncStatus | null>;
+  onSynced(cb: (s: SyncStatus) => void): () => void;
   platform: 'electron' | 'web';
 }
 
@@ -328,4 +334,42 @@ export interface ShelfApi {
   createBook(title: string): Promise<string | null>;
   /** 只从书架上拿下来，不删文件 */
   removeBook(path: string): Promise<void>;
+}
+
+// ---------- 手机同步 ----------
+
+/** 同步服务给手机的一本书：概况和每个文件的指纹（sha1），手机据此只拉改过的文件 */
+export interface SyncBook {
+  /** 由桌面端目录算出的稳定编号 */
+  id: string;
+  title: string;
+  info: Omit<BookInfo, 'path'>;
+  /** 相对书目录的路径 → 文件内容的 sha1 */
+  files: Record<string, string>;
+}
+
+export interface SyncHello {
+  app: 'xingtu';
+  /** 电脑名 */
+  name: string;
+  /** 配对码对不对 */
+  authorized: boolean;
+  /** 能不能从 /xingtu.apk 下载安卓安装包 */
+  apk: boolean;
+}
+
+/** 桌面端“手机同步”面板显示的状态 */
+export interface SyncStatus {
+  enabled: boolean;
+  running: boolean;
+  port: number;
+  /** 配对码 */
+  key: string;
+  /** 本机的局域网地址，常用的在前 */
+  addresses: string[];
+  /** 打包好的安卓安装包能不能从手机下载 */
+  apk: boolean;
+  error?: string;
+  /** 最近一次手机来拉取 */
+  last?: { at: number; files: number; from: string };
 }

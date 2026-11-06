@@ -18,6 +18,14 @@ contextBridge.exposeInMainWorld('studioNative', {
   addBook: call('addBook'),
   createBook: call('createBook'),
   removeBook: call('removeBook'),
+  syncStatus: call('syncStatus'),
+  setSync: call('setSync'),
+  resetSyncKey: call('resetSyncKey'),
+  onSynced(cb: (s: unknown) => void) {
+    const h = (_e: unknown, s: unknown) => cb(s);
+    ipcRenderer.on('studio:synced', h);
+    return () => ipcRenderer.removeListener('studio:synced', h);
+  },
   onExternalChange(cb: (paths: string[]) => void) {
     const h = (_e: unknown, paths: string[]) => cb(paths);
     ipcRenderer.on('studio:changed', h);

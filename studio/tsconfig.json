@@ -14,5 +14,5 @@
     "types": ["node", "vite/client"],
     "noEmit": true
   },
-  "include": ["src", "shared", "electron", "scripts/cli.ts", "vite.config.ts"]
+  "include": ["src", "shared", "electron", "mobile/src", "mobile/vite.config.ts", "scripts/cli.ts", "vite.config.ts"]
 }

@@ -26,6 +26,18 @@ node studio/scripts/cli.mjs guard 31     # 检查第 31 章；不带章号检查
 
 命令行默认处理 studio 的上一级目录；处理别的书要加 `--root <那本书的目录>`。
 
+## 手机版
+
+手机上看书、查人物、伏笔和设定（只读，离线也能看）。电脑上改完，手机连同一个 Wi-Fi，点一下“同步”就把书架上所有书的改动拉过去，只拉改过的文件。
+
+- **桌面端**：星图书房开着就开着同步服务（HTTP 5210、UDP 5211 应答手机的广播）。标题栏的“手机”按钮里有二维码、配对码，也可以关掉。第一次开启时 Windows 防火墙会问，选“专用网络”并允许。
+- **安卓 App**：`npm run apk` 打包（需要 Android Studio），输出 `release/xingtu.apk`。桌面端开着时手机扫“手机”面板里的二维码，打开的页面上有下载链接。App 里点“同步”会自动找到电脑，第一次输入配对码。路由器拦了广播的话，点“手动输入电脑地址”。
+- **iPhone / 没装 App**：扫码直接用网页版（配对码在码里）。网页版是电脑发过来的，电脑关了就打不开。
+- `npm run mobile`：在浏览器里调手机端界面（http://localhost:5299）。
+- 不开界面只开同步服务：`node studio/scripts/cli.mjs serve [配对码] [其他书目录...]`。
+
+手机端源码在 `mobile/`（React，和桌面端共用 `shared/` 与 `src/lib/` 的纯函数），安卓工程在 `mobile/android/`（Capacitor），自动发现电脑的 UDP 广播是 `DiscoveryPlugin.java`。同步协议见 `shared/sync.ts`。
+
 ## 数据放在哪
 
 分工：**世界观和规则**只写在 `bible.md`；**人物、关系、地点、伏笔、剧情线、章节规划**只写在 `story/`。软件“设定”页里的条目按小节标题引用 `bible.md`，显示的永远是 bible.md 的最新内容；点“在原文中编辑”会跳到 bible.md 的那一节。

@@ -9,10 +9,12 @@
   "scripts": {
     "dev": "node scripts/dev.mjs",
     "web": "vite",
-    "build": "tsc --noEmit && vite build && node scripts/build-electron.mjs",
+    "build": "tsc --noEmit && vite build && vite build --config mobile/vite.config.ts && node scripts/build-electron.mjs",
     "start": "electron .",
     "dist": "npm run build && electron-builder --win portable --publish never",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "mobile": "vite --config mobile/vite.config.ts",
+    "apk": "node scripts/build-apk.mjs"
   },
   "build": {
     "appId": "dev.novel.star-atlas-studio",
@@ -23,6 +25,7 @@
     "files": [
       "dist/**",
       "dist-electron/**",
+      "mobile/dist/**",
       "package.json"
     ],
     "win": {
@@ -33,6 +36,9 @@
     }
   },
   "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/core": "^8.6.0",
     "@codemirror/lang-markdown": "^6.5.2",
     "@codemirror/state": "^6.7.6",
     "@codemirror/view": "^6.43.14",
@@ -41,13 +47,16 @@
     "immer": "^11.1.21",
     "lxgw-wenkai-webfont": "^1.7.0",
     "marked": "^18.1.1",
+    "qrcode": "^1.5.4",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "zustand": "^5.0.15"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.6.0",
     "@types/d3-force": "^3.0.10",
     "@types/node": "^26.6.5",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",

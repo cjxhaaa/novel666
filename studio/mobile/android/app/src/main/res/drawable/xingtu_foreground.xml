@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 星图书房的图标：一颗坠落的星，和桌面端的品牌标一样 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M32,32 L61,61"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="linear"
+                android:startX="32" android:startY="32"
+                android:endX="61" android:endY="61"
+                android:startColor="#00E8C27A"
+                android:endColor="#FFE8C27A" />
+        </aapt:attr>
+    </path>
+    <path android:pathData="M64,64m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="64" android:centerY="64"
+                android:gradientRadius="15"
+                android:startColor="#FFFFF6DC"
+                android:centerColor="#FFF0CF86"
+                android:endColor="#00E8C27A" />
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#FFFFF8E6"
+        android:pathData="M64,52 L66.8,61.2 76,64 66.8,66.8 64,76 61.2,66.8 52,64 61.2,61.2Z" />
+</vector>

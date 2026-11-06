@@ -48,6 +48,10 @@ const webApi: StudioApi = {
     hot.on('studio:changed', h);
     return () => hot.off?.('studio:changed', h);
   },
+  syncStatus: async () => null,
+  setSync: async () => null,
+  resetSyncKey: async () => null,
+  onSynced: () => () => {},
   platform: 'web',
 };
 

@@ -121,26 +121,46 @@ async function pattern(root: string) {
   return p?.chapterFilePattern ?? 'chapters/chap{NN}.md';
 }
 
-/** 读出所有已存在的章节正文 */
-export async function readChapters(root: string): Promise<Record<number, string>> {
+/** 已存在的章节文件：章号 → 相对仓库根目录的路径 */
+export async function chapterFileMap(root: string): Promise<Record<number, string>> {
   const pat = await pattern(root);
-  const dir = safeJoin(root, path.dirname(pat));
+  const rel = path.dirname(pat);
   const out: Record<number, string> = {};
   let files: string[] = [];
   try {
-    files = await fs.readdir(dir);
+    files = await fs.readdir(safeJoin(root, rel));
   } catch {
     return out;
   }
   const base = path.basename(pat).replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace('\\{NN\\}', '(\\d+)').replace('\\{N\\}', '(\\d+)');
   const re = new RegExp(`^${base}$`);
+  for (const f of files) {
+    const m = f.match(re);
+    if (m) out[Number(m[1])] = path.posix.join(rel.replace(/\\/g, '/'), f);
+  }
+  return out;
+}
+
+/** 读出所有已存在的章节正文 */
+export async function readChapters(root: string): Promise<Record<number, string>> {
+  const out: Record<number, string> = {};
   await Promise.all(
-    files.map(async (f) => {
-      const m = f.match(re);
-      if (!m) return;
-      out[Number(m[1])] = (await fs.readFile(path.join(dir, f), 'utf8')).replace(/^﻿/, '');
+    Object.entries(await chapterFileMap(root)).map(async ([n, rel]) => {
+      out[Number(n)] = (await fs.readFile(safeJoin(root, rel), 'utf8')).replace(/^﻿/, '');
     }),
   );
+  return out;
+}
+
+/** 手机同步的文件：根目录的 markdown 文档、story/ 下的集合、章节正文（不含生成的写作上下文） */
+export async function syncFileList(root: string): Promise<string[]> {
+  const out: string[] = [];
+  for (const f of await fs.readdir(root)) if (f.toLowerCase().endsWith('.md')) out.push(f);
+  for (const name of COLLECTIONS) {
+    const rel = `${STORY_DIR}/${name}.json`;
+    if (await exists(path.join(root, rel))) out.push(rel);
+  }
+  out.push(...Object.values(await chapterFileMap(root)));
   return out;
 }
 

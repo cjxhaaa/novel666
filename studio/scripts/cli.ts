@@ -2,10 +2,12 @@
 //   node studio/scripts/cli.mjs context 31     生成第 31 章的写作上下文 → story/context/chap31.md
 //   node studio/scripts/cli.mjs guard 31       检查第 31 章（不带章号则检查全部）
 //   node studio/scripts/cli.mjs ignore <key>   把确认过的误报标为“确认无误”
+//   node studio/scripts/cli.mjs serve [配对码]  不开界面，只开手机同步服务
 import path from 'node:path';
 import { openProject, readChapters, readDoc, saveCollection, writeDoc } from '../shared/storage';
 import { contextPack, RULES, runGuard, scanMentions } from '../src/lib/analysis';
 import { sourceDocs } from '../src/lib/docs';
+import { lanAddresses, newKey, startSyncServer } from '../shared/sync';
 
 async function load(root: string) {
   const { data } = await openProject(root);
@@ -69,11 +71,28 @@ async function main() {
     return;
   }
 
+  if (cmd === 'serve') {
+    const key = arg ?? newKey();
+    const studio = process.env.STUDIO_CLI_DIR ?? '.';
+    const books = [root, ...args.slice(2).map((p) => path.resolve(p))];
+    const srv = await startSyncServer({
+      key: () => key,
+      books: () => books,
+      webDir: path.join(studio, 'mobile', 'dist'),
+      apk: path.join(studio, 'release', 'xingtu.apk'),
+      onPull: (files, from) => console.log(`${new Date().toLocaleTimeString()} ${from} 拉取了 ${files} 个文件`),
+    });
+    console.log(`手机同步已开启，配对码 ${key}`);
+    for (const ip of lanAddresses()) console.log(`  http://${ip}:${srv.port}/#k=${key}`);
+    return;
+  }
+
   console.log(`用法：
   node studio/scripts/cli.mjs context <章号> [--stdout]   生成写作上下文到 story/context/chapNN.md
   node studio/scripts/cli.mjs guard [章号]                 运行设定守卫（不带章号检查全部）
   node studio/scripts/cli.mjs ignore <key...>             把误报标为“确认无误”（key 见 guard 输出的〔〕）
   node studio/scripts/cli.mjs unignore <key...>           取消确认
+  node studio/scripts/cli.mjs serve [配对码] [其他书目录...]  不开界面，只开手机同步服务
   可选：--root <小说仓库目录>，默认是 studio 的上一级`);
   process.exitCode = cmd ? 1 : 0;
 }

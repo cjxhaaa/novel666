@@ -2,6 +2,8 @@ import { app, BrowserWindow, dialog, ipcMain, shell } from 'electron';
 import { promises as fs, existsSync } from 'node:fs';
 import path from 'node:path';
 import * as store from '../shared/storage';
+import * as sync from '../shared/sync';
+import type { SyncStatus } from '../shared/types';
 
 const DEV_URL = process.env.VITE_DEV_SERVER_URL;
 let win: BrowserWindow | null = null;
@@ -14,6 +16,8 @@ interface Config {
   root?: string;
   /** 书架上的书，最近打开的在前 */
   library?: string[];
+  /** 手机同步：默认开着，配对码第一次启动时生成 */
+  sync?: { enabled: boolean; key: string };
 }
 
 let cfg: Config = {};
@@ -54,6 +58,51 @@ function setRoot(r: string | null) {
   unwatch?.();
   unwatch = null;
   if (r) unwatch = store.watchProject(r, (paths) => win?.webContents.send('studio:changed', paths));
+}
+
+// ---------- 手机同步 ----------
+
+let syncServer: sync.SyncServer | null = null;
+let syncError: string | undefined;
+let syncLast: SyncStatus['last'];
+
+function syncStatus(): SyncStatus {
+  const apk = path.join(app.getAppPath(), 'release', 'xingtu.apk');
+  return {
+    enabled: !!cfg.sync?.enabled,
+    running: !!syncServer,
+    port: sync.SYNC_PORT,
+    key: cfg.sync?.key ?? '',
+    addresses: sync.lanAddresses(),
+    apk: existsSync(apk),
+    error: syncError,
+    last: syncLast,
+  };
+}
+
+async function applySync() {
+  const want = !!cfg.sync?.enabled;
+  if (want && !syncServer) {
+    try {
+      syncServer = await sync.startSyncServer({
+        key: () => cfg.sync?.key ?? '',
+        books: () => cfg.library ?? [],
+        webDir: path.join(app.getAppPath(), 'mobile', 'dist'),
+        apk: path.join(app.getAppPath(), 'release', 'xingtu.apk'),
+        onPull: (files, from) => {
+          syncLast = { at: Date.now(), files, from };
+          win?.webContents.send('studio:synced', syncStatus());
+        },
+      });
+      syncError = undefined;
+    } catch (e: any) {
+      syncError = e?.code === 'EADDRINUSE' ? `端口 ${sync.SYNC_PORT} 被占用了（是不是开了两个星图书房？）` : String(e?.message ?? e);
+    }
+  } else if (!want && syncServer) {
+    await syncServer.stop();
+    syncServer = null;
+  }
+  return syncStatus();
 }
 
 function need(): string {
@@ -153,6 +202,17 @@ ipcMain.handle('studio:writeChapter', (_e, n: number, t: string) => store.writeC
 ipcMain.handle('studio:readDoc', (_e, rel: string) => store.readDoc(need(), rel));
 ipcMain.handle('studio:writeDoc', (_e, rel: string, t: string) => store.writeDoc(need(), rel, t));
 ipcMain.handle('studio:listDocs', () => store.listDocs(need()));
+ipcMain.handle('studio:syncStatus', () => syncStatus());
+ipcMain.handle('studio:setSync', async (_e, enabled: boolean) => {
+  cfg.sync = { key: cfg.sync?.key ?? sync.newKey(), enabled };
+  await saveConfig();
+  return applySync();
+});
+ipcMain.handle('studio:resetSyncKey', async () => {
+  cfg.sync = { enabled: !!cfg.sync?.enabled, key: sync.newKey() };
+  await saveConfig();
+  return syncStatus();
+});
 
 app.whenReady().then(async () => {
   cfg = await loadConfig();
@@ -162,11 +222,17 @@ app.whenReady().then(async () => {
     cfg.library = r ? [r] : [];
     await saveConfig();
   }
+  if (!cfg.sync) {
+    cfg.sync = { enabled: true, key: sync.newKey() };
+    await saveConfig();
+  }
   setRoot(r);
   createWindow();
+  applySync();
 });
 
 app.on('window-all-closed', () => {
   unwatch?.();
+  syncServer?.stop();
   app.quit();
 });

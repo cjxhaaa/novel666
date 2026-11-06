@@ -65,3 +65,10 @@ export async function discover(): Promise<{ host: string; name?: string }[]> {
   // 网页版本身就是电脑发过来的
   return /^https?:$/.test(location.protocol) ? [{ host: location.host }] : [];
 }
+
+/** 安卓端自己写的插件：系统栏的底色和图标深浅跟着 App 的底色走 */
+const BarColor = registerPlugin<{ set(o: { color: string; dark: boolean }): Promise<void> }>('BarColor');
+
+export function setSystemBars(dark: boolean, color: string) {
+  BarColor.set({ color, dark }).catch(() => {});
+}

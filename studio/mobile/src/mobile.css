@@ -45,6 +45,101 @@
   color-scheme: light;
 }
 
+:root[data-theme='black'] {
+  --bg: #000000;
+  --bg-2: #070707;
+  --panel: #111214;
+  --panel-2: #191a1d;
+  --hover: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --text: #b9bcc6;
+  --text-2: #8a8e99;
+  --text-3: #5d616b;
+  --gold: #c9a464;
+  --gold-soft: rgba(201, 164, 100, 0.14);
+  color-scheme: dark;
+}
+
+:root[data-theme='gray'] {
+  --bg: #2a2e35;
+  --bg-2: #30353d;
+  --panel: #353a43;
+  --panel-2: #3d434d;
+  --hover: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --text: #cdd1d8;
+  --text-2: #a3a9b4;
+  --text-3: #7c838f;
+  --gold: #e0bd7c;
+  --gold-soft: rgba(224, 189, 124, 0.15);
+  color-scheme: dark;
+}
+
+:root[data-theme='white'] {
+  --bg: #f7f7f5;
+  --bg-2: #efefec;
+  --panel: #ffffff;
+  --panel-2: #f1f1ee;
+  --hover: rgba(0, 0, 0, 0.05);
+  --line: rgba(0, 0, 0, 0.09);
+  --line-strong: rgba(0, 0, 0, 0.18);
+  --text: #222222;
+  --text-2: #555555;
+  --text-3: #8e8e8e;
+  --gold: #9a6a1c;
+  --gold-soft: rgba(154, 106, 28, 0.1);
+  --cinnabar: #c23b25;
+  --moon: #3a64b8;
+  --jade: #2f8f73;
+  --danger: #c93030;
+  --warn: #b7791f;
+  color-scheme: light;
+}
+
+:root[data-theme='green'] {
+  --bg: #cfe6cf;
+  --bg-2: #c4dec4;
+  --panel: #dcefdc;
+  --panel-2: #c9e1c9;
+  --hover: rgba(20, 60, 20, 0.07);
+  --line: rgba(20, 60, 20, 0.12);
+  --line-strong: rgba(20, 60, 20, 0.24);
+  --text: #21321f;
+  --text-2: #445a42;
+  --text-3: #6f856c;
+  --gold: #8a5d12;
+  --gold-soft: rgba(138, 93, 18, 0.12);
+  --cinnabar: #b5381f;
+  --moon: #2f5ca8;
+  --jade: #1f7a4f;
+  --danger: #b82a2a;
+  --warn: #a56a12;
+  color-scheme: light;
+}
+
+:root[data-theme='sepia'] {
+  --bg: #e6d2ac;
+  --bg-2: #dcc69c;
+  --panel: #efdfbf;
+  --panel-2: #e0caa0;
+  --hover: rgba(80, 50, 10, 0.08);
+  --line: rgba(80, 50, 10, 0.14);
+  --line-strong: rgba(80, 50, 10, 0.27);
+  --text: #3d2c17;
+  --text-2: #624a2c;
+  --text-3: #8c7352;
+  --gold: #8b4f0f;
+  --gold-soft: rgba(139, 79, 15, 0.12);
+  --cinnabar: #a83418;
+  --moon: #3a5a98;
+  --jade: #2c7356;
+  --danger: #b02a22;
+  --warn: #9c600c;
+  color-scheme: light;
+}
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -147,7 +242,7 @@ h4 {
   color: #1a1306;
   font-weight: 600;
 }
-:root[data-theme='paper'] .btn.primary {
+:root:is([data-theme='paper'], [data-theme='white'], [data-theme='green'], [data-theme='sepia']) .btn.primary {
   color: #fffaf0;
 }
 .btn.ghost {
@@ -317,7 +412,7 @@ h4 {
   letter-spacing: 0.1em;
   box-shadow: 0 8px 24px -8px color-mix(in srgb, var(--gold) 70%, transparent);
 }
-:root[data-theme='paper'] .sync-btn {
+:root:is([data-theme='paper'], [data-theme='white'], [data-theme='green'], [data-theme='sepia']) .sync-btn {
   color: #fffaf0;
 }
 .sync-btn:active {
@@ -816,9 +911,6 @@ details[open] summary {
 /* ---------- 阅读 ---------- */
 .prose {
   padding: 8px 22px 24px;
-  font-family: var(--font-read);
-  line-height: 1.95;
-  letter-spacing: 0.02em;
   text-align: justify;
   overflow-wrap: anywhere;
 }
@@ -837,8 +929,8 @@ details[open] summary {
   line-height: 1.5;
 }
 .prose p {
-  margin: 0 0 0.9em;
-  text-indent: 2em;
+  margin: 0 0 var(--para, 0.9em);
+  text-indent: var(--indent, 2em);
 }
 .prose hr {
   border: none;
@@ -872,30 +964,6 @@ details[open] summary {
 .unwritten p {
   font-size: 0.9em;
   text-indent: 0;
-}
-.read-panel {
-  position: sticky;
-  top: calc(55px + var(--safe-top));
-  z-index: 15;
-  margin: 0 12px;
-  padding: 12px 14px;
-  border-radius: 0 0 14px 14px;
-  background: var(--panel);
-  border: 1px solid var(--line-strong);
-  border-top: none;
-  box-shadow: 0 16px 30px -16px rgba(0, 0, 0, 0.6);
-}
-.rp-row,
-.set-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 0;
-}
-.rp-row > span:first-child {
-  width: 40px;
-  color: var(--text-3);
-  font-size: 13px;
 }
 .read-nav {
   display: flex;
@@ -1077,4 +1145,127 @@ details[open] summary {
   font-size: 13.5px;
   line-height: 1.7;
   max-width: 300px;
+}
+
+/* ---------- 阅读设置 ---------- */
+.sheet-mask.light {
+  background: transparent;
+}
+.sheet-mask.light .sheet {
+  max-height: 62vh;
+  box-shadow: 0 -16px 40px -12px rgba(0, 0, 0, 0.45);
+}
+.set-sub {
+  margin: 14px 0 4px;
+  font-size: 13px;
+  color: var(--gold);
+}
+.rs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.rs-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+}
+.rs-row.top {
+  align-items: flex-start;
+  padding-top: 8px;
+}
+.rs-label {
+  width: 34px;
+  flex: none;
+  font-size: 13px;
+  color: var(--text-3);
+}
+.rs-row.top .rs-label {
+  padding-top: 10px;
+}
+.rs-step {
+  min-height: 34px;
+  padding: 0 10px;
+  font-family: var(--font-read);
+}
+.rs-range {
+  flex: 1;
+  min-width: 0;
+  accent-color: var(--gold);
+}
+.rs-val {
+  width: 24px;
+  text-align: right;
+  color: var(--text-2);
+}
+.rs-seg {
+  flex: 1;
+  display: flex;
+}
+.rs-seg button {
+  flex: 1;
+  text-align: center;
+  padding: 7px 0;
+}
+.rs-fonts {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+}
+.rs-font {
+  flex: 1;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--line-strong);
+  background: var(--panel-2);
+  text-align: center;
+  font-size: 17px;
+}
+.rs-font.on {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--gold-soft);
+}
+.rs-themes {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 6px;
+}
+.rs-theme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  color: var(--text-3);
+}
+.rs-theme .sw {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  font-family: var(--font-read);
+  font-size: 16px;
+}
+.rs-theme.on .sw {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.rs-theme.on .nm {
+  color: var(--gold);
+}
+.rs-toggles {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.rs-toggles .btn {
+  min-height: 34px;
+  padding: 0 12px;
+  font-size: 13.5px;
 }

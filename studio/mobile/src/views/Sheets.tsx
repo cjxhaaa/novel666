@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useApp } from '../store';
 import { Sheet } from '../ui';
+import { ReadSettings } from './ReadSettings';
 
 const close = () => useApp.getState().setSheet(null);
 
@@ -51,27 +52,9 @@ export function SettingsSheet() {
   const [confirm, setConfirm] = useState(false);
   return (
     <Sheet title="设置" onClose={close}>
-      <div className="set-row">
-        <span>底色</span>
-        <span className="grow" />
-        <button className={`btn ${s.theme === 'night' ? 'on' : ''}`} onClick={() => s.setTheme('night')}>
-          夜空
-        </button>
-        <button className={`btn ${s.theme === 'paper' ? 'on' : ''}`} onClick={() => s.setTheme('paper')}>
-          宣纸
-        </button>
-      </div>
-      <div className="set-row">
-        <span>正文字号</span>
-        <span className="grow" />
-        <button className="btn" onClick={() => s.setFontSize(s.fontSize - 1)}>
-          A−
-        </button>
-        <span className="nums">{s.fontSize}</span>
-        <button className="btn" onClick={() => s.setFontSize(s.fontSize + 1)}>
-          A+
-        </button>
-      </div>
+      <h4 className="set-sub">阅读</h4>
+      <ReadSettings />
+      <h4 className="set-sub">同步</h4>
       <div className="set-row">
         <span>电脑</span>
         <span className="grow muted ellipsis">{s.server ? `${s.server.name ?? ''} ${s.server.host}` : '还没连过'}</span>

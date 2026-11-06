@@ -4,6 +4,7 @@ import type { SyncBook } from '../../shared/types';
 import { deleteBook, kvGet, kvSet, putFiles } from './db';
 import { describeChanges, loadBook, type Change, type Loaded, type LocalBook } from './book';
 import { discover, hello, HttpError, native, request } from './net';
+import { LIMITS, loadRead, loadTheme, saveRead, saveTheme, type ReadPrefs, type ThemeId } from './prefs';
 
 export interface Server {
   /** ip:端口 */
@@ -41,8 +42,8 @@ interface State {
   sync: SyncState;
   sheet: Sheet;
   book?: Loaded;
-  theme: 'night' | 'paper';
-  fontSize: number;
+  theme: ThemeId;
+  read: ReadPrefs;
   init(): Promise<void>;
   go(r: Route, replace?: boolean): void;
   back(): void;
@@ -51,23 +52,10 @@ interface State {
   pair(key: string): Promise<void>;
   setHost(host: string): Promise<void>;
   ensureBook(id: string): Promise<void>;
-  setTheme(t: 'night' | 'paper'): void;
-  setFontSize(n: number): void;
+  setTheme(t: ThemeId): void;
+  setRead(p: Partial<ReadPrefs>): void;
   forget(): Promise<void>;
 }
-
-const pref = (k: string, d: string) => {
-  try {
-    return localStorage.getItem(`xt:${k}`) ?? d;
-  } catch {
-    return d;
-  }
-};
-const setPref = (k: string, v: string) => {
-  try {
-    localStorage.setItem(`xt:${k}`, v);
-  } catch {}
-};
 
 const BATCH = 40;
 
@@ -80,8 +68,8 @@ export const useApp = create<State>((set, get) => ({
   books: [],
   sync: { phase: 'idle', text: '' },
   sheet: null,
-  theme: pref('theme', 'night') as 'night' | 'paper',
-  fontSize: Number(pref('font', '19')),
+  theme: loadTheme(),
+  read: loadRead(),
 
   async init() {
     const books = (await kvGet<LocalBook[]>('books')) ?? [];
@@ -201,14 +189,15 @@ export const useApp = create<State>((set, get) => ({
   },
 
   setTheme(theme) {
-    setPref('theme', theme);
+    saveTheme(theme);
     set({ theme });
   },
 
-  setFontSize(n) {
-    const v = Math.max(14, Math.min(28, n));
-    setPref('font', String(v));
-    set({ fontSize: v });
+  setRead(patch) {
+    const read = { ...get().read, ...patch };
+    read.size = Math.max(LIMITS.size[0], Math.min(LIMITS.size[1], read.size));
+    saveRead(read);
+    set({ read });
   },
 
   async forget() {

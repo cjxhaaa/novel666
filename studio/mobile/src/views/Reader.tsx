@@ -2,7 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { marked } from 'marked';
 import { countChars } from '../../../src/lib/analysis';
 import { useApp } from '../store';
-import { Icon, TopBar } from '../ui';
+import { Icon, Sheet, TopBar } from '../ui';
+import { proseStyle, ReadSettings } from './ReadSettings';
 
 interface Pos {
   num: number;
@@ -27,10 +28,7 @@ function savePos(book: string, p: Pos) {
 export function Reader({ num }: { num: number }) {
   const book = useApp((s) => s.book)!;
   const go = useApp((s) => s.go);
-  const fontSize = useApp((s) => s.fontSize);
-  const setFontSize = useApp((s) => s.setFontSize);
-  const theme = useApp((s) => s.theme);
-  const setTheme = useApp((s) => s.setTheme);
+  const read = useApp((s) => s.read);
   const [panel, setPanel] = useState(false);
   const ch = book.data.chapters.find((c) => c.num === num);
   const text = book.texts[num];
@@ -84,29 +82,11 @@ export function Reader({ num }: { num: number }) {
         }
       />
       {panel && (
-        <div className="read-panel">
-          <div className="rp-row">
-            <span>字号</span>
-            <button className="btn" onClick={() => setFontSize(fontSize - 1)}>
-              A−
-            </button>
-            <span className="nums">{fontSize}</span>
-            <button className="btn" onClick={() => setFontSize(fontSize + 1)}>
-              A+
-            </button>
-          </div>
-          <div className="rp-row">
-            <span>底色</span>
-            <button className={`btn ${theme === 'night' ? 'on' : ''}`} onClick={() => setTheme('night')}>
-              <Icon name="moon" size={16} /> 夜空
-            </button>
-            <button className={`btn ${theme === 'paper' ? 'on' : ''}`} onClick={() => setTheme('paper')}>
-              <Icon name="sun" size={16} /> 宣纸
-            </button>
-          </div>
-        </div>
+        <Sheet title="阅读设置" onClose={() => setPanel(false)} light>
+          <ReadSettings />
+        </Sheet>
       )}
-      <article className="prose" style={{ fontSize }} onClick={() => panel && setPanel(false)}>
+      <article className="prose" style={proseStyle(read)}>
         {text != null ? (
           <>
             <div dangerouslySetInnerHTML={{ __html: html }} />

@@ -32,14 +32,14 @@ export function TopBar({ title, sub, right, onBack }: { title: ReactNode; sub?: 
   );
 }
 
-export function Sheet({ title, children, onClose }: { title: string; children: ReactNode; onClose: () => void }) {
+export function Sheet({ title, children, onClose, light }: { title: string; children: ReactNode; onClose: () => void; light?: boolean }) {
   useEffect(() => {
     const h = () => onClose();
     window.addEventListener('popstate', h);
     return () => window.removeEventListener('popstate', h);
   }, [onClose]);
   return (
-    <div className="sheet-mask" onClick={(e) => e.target === e.currentTarget && onClose()}>
+    <div className={`sheet-mask ${light ? 'light' : ''}`} onClick={(e) => e.target === e.currentTarget && onClose()}>
       <div className="sheet">
         <div className="sheet-grip" />
         <h3>{title}</h3>

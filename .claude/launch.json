@@ -4,9 +4,26 @@
     {
       "name": "studio-web",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "studio", "run", "web"],
+      "runtimeArgs": [
+        "--prefix",
+        "studio",
+        "run",
+        "web"
+      ],
       "port": 5199,
       "url": "http://127.0.0.1:5199"
+    },
+    {
+      "name": "mobile",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "studio",
+        "run",
+        "mobile"
+      ],
+      "port": 5299,
+      "url": "http://localhost:5299"
     }
   ]
 }

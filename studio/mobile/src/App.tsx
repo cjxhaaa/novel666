@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { scrollMemo, useApp } from './store';
 import { FONTS, THEMES } from './prefs';
 import { native, setSystemBars } from './net';
@@ -7,6 +7,7 @@ import { BookPage } from './views/BookPage';
 import { Reader } from './views/Reader';
 import { DocPage } from './views/Docs';
 import { PersonPage } from './views/People';
+import { Splash } from './views/Splash';
 import { HostSheet, PairSheet, SettingsSheet } from './views/Sheets';
 
 export default function App() {
@@ -16,6 +17,10 @@ export default function App() {
   const theme = useApp((s) => s.theme);
   const book = useApp((s) => s.book);
   const font = useApp((s) => s.read.font);
+  // 开屏：show 时只有开屏，开始淡出（leaving）时才把书架摆出来，免得抢开屏动画的首帧
+  const [splash, setSplash] = useState<'show' | 'leaving' | 'gone'>('show');
+  const leaveSplash = useCallback(() => setSplash('leaving'), []);
+  const endSplash = useCallback(() => setSplash('gone'), []);
   const ensureBook = useApp((s) => s.ensureBook);
 
   useEffect(() => {
@@ -25,8 +30,10 @@ export default function App() {
     const t = THEMES.find((x) => x.id === theme)!;
     document.documentElement.dataset.theme = theme;
     document.querySelector('meta[name=theme-color]')?.setAttribute('content', t.bg);
-    if (native) setSystemBars(t.dark, t.bg);
-  }, [theme]);
+    // 开屏时系统栏和开屏一样是夜色
+    const on = splash !== 'gone';
+    if (native) setSystemBars(on || t.dark, on ? '#060913' : t.bg);
+  }, [theme, splash]);
   // 设定集、大纲这些文档也用选中的字体
   useEffect(() => {
     document.documentElement.style.setProperty('--font-read', FONTS.find((f) => f.id === font)!.family);
@@ -42,10 +49,10 @@ export default function App() {
     requestAnimationFrame(() => window.scrollTo(0, y));
   }, [route, loading]);
 
-  if (!ready) return null;
+  // 开屏放在固定的位置，数据载入前后都是同一个，动画不会重来
   return (
     <div className="app">
-      {route.v === 'home' ? (
+      {!ready || splash === 'show' ? null : route.v === 'home' ? (
         <Home />
       ) : loading ? (
         <div className="empty">正在翻开…</div>
@@ -61,6 +68,7 @@ export default function App() {
       {sheet === 'pair' && <PairSheet />}
       {sheet === 'host' && <HostSheet />}
       {sheet === 'settings' && <SettingsSheet />}
+      {splash !== 'gone' && <Splash onLeave={leaveSplash} onDone={endSplash} />}
     </div>
   );
 }

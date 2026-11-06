@@ -4,5 +4,6 @@
   "webDir": "mobile/dist",
   "android": {
     "path": "mobile/android"
-  }
+  },
+  "backgroundColor": "#060913"
 }

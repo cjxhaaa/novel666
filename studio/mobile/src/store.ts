@@ -123,6 +123,11 @@ export const useApp = create<State>((set, get) => ({
     const meta = get().books.find((b) => b.id === id);
     if (!meta) return;
     set({ book: await loadBook(meta) });
+    // 书架上的“在读”飘带和“新”字：记下最近打开的书、看过的那次同步
+    try {
+      localStorage.setItem('xt:last-book', id);
+      localStorage.setItem(`xt:seen:${id}`, String(meta.changedAt ?? 0));
+    } catch {}
   },
 
   async syncNow() {

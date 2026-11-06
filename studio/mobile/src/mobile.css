@@ -478,68 +478,263 @@ h4 {
   font-size: 12.5px;
 }
 
+/* 书架：和桌面端一样，线装书立在木板上，书名和进度写在木板下面 */
+.home > *:not(.starfield) {
+  position: relative;
+  z-index: 1;
+}
+.shelf-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 6px 4px 14px;
+}
+.shelf-head h1 {
+  font-family: var(--font-read);
+  font-size: 26px;
+  letter-spacing: 0.3em;
+}
+.shelf-head .sub {
+  font-size: 12.5px;
+  color: var(--text-3);
+}
+
 .shelf {
+  --plank: #5a3d24;
+  --plank-hi: #7a5534;
+  --plank-lo: #3b2715;
+}
+:root:is([data-theme='paper'], [data-theme='white'], [data-theme='green'], [data-theme='sepia']) .shelf {
+  --plank: #a87a4c;
+  --plank-hi: #c49866;
+  --plank-lo: #7d5630;
+}
+
+.shelf-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 268px;
+  padding: 14px 12px 0;
+  margin-bottom: 18px;
+}
+.shelf-row::before {
+  /* 木板 */
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 194px;
+  height: 13px;
+  border-radius: 3px;
+  background: linear-gradient(to bottom, var(--plank-hi), var(--plank) 40%, var(--plank-lo));
+  box-shadow:
+    0 10px 16px -8px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+.shelf-row::after {
+  /* 书板后面的一道影子，像书架的背板 */
+  content: '';
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  top: 4px;
+  height: 190px;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.18));
+  pointer-events: none;
+  z-index: -1;
+}
+:root:is([data-theme='paper'], [data-theme='white'], [data-theme='green'], [data-theme='sepia']) .shelf-row::after {
+  background: linear-gradient(to bottom, rgba(90, 60, 25, 0), rgba(90, 60, 25, 0.1));
+}
+.shelf-empty {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  top: 40px;
+  text-align: center;
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--text-3);
+}
+
+.shelf-item {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-.book-card {
-  display: flex;
-  width: 100%;
-  border-radius: 14px;
-  overflow: hidden;
-  background: var(--panel);
-  border: 1px solid var(--line);
-}
-.book-card:active {
-  background: var(--panel-2);
-}
-.spine {
-  width: 8px;
+  align-items: center;
   flex: none;
-  background: linear-gradient(180deg, var(--gold), var(--cinnabar));
 }
-.book-main {
-  flex: 1;
-  min-width: 0;
-  padding: 14px 16px;
+
+/* 线装书封面：右边订线，左上题签 */
+.book-cover {
+  position: relative;
+  width: 124px;
+  height: 180px;
+  border-radius: 3px 6px 6px 3px;
+  background:
+    radial-gradient(120% 80% at 20% 10%, rgba(255, 255, 255, 0.08), transparent 60%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.02) 0 2px, transparent 2px 4px),
+    linear-gradient(135deg, var(--c1), var(--c2));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    -3px 0 0 rgba(0, 0, 0, 0.25) inset,
+    0 14px 22px -12px rgba(0, 0, 0, 0.75),
+    5px 0 0 -1px #e9e2cf,
+    6px 1px 0 -1px #d5ccb3;
+  transform-origin: bottom center;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
 }
-.book-title {
-  font-family: var(--font-read);
-  font-size: 20px;
-  font-weight: 700;
+.book-cover:active {
+  transform: translateY(-8px) rotate(-1.2deg);
 }
-.book-logline {
-  margin-top: 4px;
+.book-cover.current {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    -3px 0 0 rgba(0, 0, 0, 0.25) inset,
+    0 14px 22px -12px rgba(0, 0, 0, 0.75),
+    5px 0 0 -1px #e9e2cf,
+    6px 1px 0 -1px #d5ccb3,
+    0 0 0 1px rgba(232, 194, 122, 0.55),
+    0 0 22px -6px rgba(232, 194, 122, 0.5);
+}
+
+/* 订线：右边一排针脚 */
+.book-binding {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 8px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 14px 0;
+}
+.book-binding span {
+  display: block;
+  width: 12px;
+  height: 2px;
+  margin-left: -5px;
+  border-radius: 1px;
+  background: rgba(240, 232, 210, 0.7);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* 题签：左上一条竖着的纸签 */
+.book-slip {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 30px;
+  max-height: 132px;
+  padding: 8px 0;
+  background: #f1ead6;
+  border: 1px solid rgba(80, 55, 25, 0.25);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+}
+.book-slip::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border: 1px solid rgba(160, 40, 30, 0.35);
+  pointer-events: none;
+}
+.book-slip span {
+  writing-mode: vertical-rl;
+  font-family: 'LXGW WenKai', var(--font-read);
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  color: #2a241c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-height: 114px;
+}
+
+.book-ribbon {
+  position: absolute;
+  right: 18px;
+  bottom: -10px;
+  padding: 8px 3px 12px;
+  writing-mode: vertical-rl;
+  font-size: 10.5px;
+  letter-spacing: 0.15em;
+  color: #fff6e6;
+  background: #e0644f;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 86%, 0 100%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 有新同步过来的内容：右上角一枚小印 */
+.book-fresh {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  background: #b8382a;
+  color: #fff3e0;
+  font-family: 'LXGW WenKai', var(--font-read);
   font-size: 13px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  transform: rotate(6deg);
+}
+
+/* 木板下面的书名、进度 */
+.book-caption {
+  width: 100%;
+  margin-top: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.book-name {
+  font-family: 'LXGW WenKai', var(--font-read);
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.book-meta {
+  font-size: 11.5px;
   color: var(--text-2);
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.book-progress {
+  height: 3px;
+  margin: 2px 10px;
+  border-radius: 2px;
+  background: var(--line);
+  overflow: hidden;
+}
+.book-progress i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(to right, var(--gold), var(--cinnabar));
+}
+.book-news {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--jade);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-.book-stats {
-  display: flex;
-  gap: 14px;
-  margin-top: 10px;
-  font-size: 13px;
-  color: var(--text-3);
-}
-.book-stats b {
-  color: var(--text);
-  font-weight: 600;
-}
-.book-changes {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
-  font-size: 12.5px;
-  color: var(--jade);
-  line-height: 1.6;
-}
-.book-changes .when {
-  color: var(--text-3);
-  margin-right: 6px;
 }
 
 /* ---------- 书内 ---------- */
@@ -1358,4 +1553,126 @@ details[open] summary {
   min-height: 34px;
   padding: 0 12px;
   font-size: 13.5px;
+}
+
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---------- 开屏 ---------- */
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(90% 60% at 50% 42%, #111a33 0%, #060913 70%);
+  transition: opacity 0.45s ease;
+}
+.splash.leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+.sp-star {
+  position: absolute;
+  border-radius: 50%;
+  background: #c9d6ff;
+  opacity: 0;
+  animation: sp-twinkle 2.4s ease-in-out infinite;
+}
+.sp-mark {
+  margin-top: -60px;
+}
+.sp-tail {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  animation: sp-draw 0.7s cubic-bezier(0.55, 0, 0.25, 1) 0.1s forwards;
+}
+.sp-glow {
+  transform-origin: 118px 118px;
+  transform: scale(0);
+  animation: sp-glow 1.1s ease-out 0.7s forwards;
+}
+.sp-core {
+  transform-origin: 118px 118px;
+  transform: scale(0) rotate(-45deg);
+  animation: sp-pop 0.55s cubic-bezier(0.3, 1.6, 0.5, 1) 0.72s forwards;
+}
+.sp-title {
+  margin-top: 6px;
+  font-family: 'LXGW WenKai', var(--font-read);
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  padding-left: 0.35em;
+  color: #e8c27a;
+}
+.sp-title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: sp-rise 0.6s ease-out forwards;
+}
+.sp-sub {
+  margin-top: 10px;
+  font-size: 13px;
+  letter-spacing: 0.5em;
+  padding-left: 0.5em;
+  color: #6c7597;
+  opacity: 0;
+  animation: sp-fade 0.6s ease-out 1.5s forwards;
+}
+.splash.still * {
+  animation-duration: 0.01s !important;
+  animation-delay: 0s !important;
+}
+@keyframes sp-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes sp-glow {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  45% {
+    transform: scale(1.35);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+}
+@keyframes sp-pop {
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes sp-rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes sp-fade {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes sp-twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }

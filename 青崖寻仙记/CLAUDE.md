@@ -19,6 +19,8 @@ node studio/scripts/cli.mjs guard N --root 青崖寻仙记     # 检查第 N 章
 
 ## 写作规范
 
+用户提过的通用写作要求在 `../.claude/skills/writing-rules/SKILL.md`，先读那一份；下面是这本书自己的规矩。
+
 流程照 `../.claude/skills/novel-writer/SKILL.md` 的“开写前”“写完自检”“写完同步”走（落星亭、墟、紫气那些是《落星传音》的设定，这本书没有）。下面是这本书自己的规矩，和那份冲突时以这里为准。
 
 ### 篇幅和格式

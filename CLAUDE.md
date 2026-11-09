@@ -13,7 +13,7 @@
 - `archive_v1/`：弃置的旧稿和旧设定，只作参考，不再维护，内容与新设定冲突时以新设定为准
 - `archive_v2/`：第一版（古今双线并行）的正文第 1–68 章、设定集、大纲和进度，只作参考，不再维护；第二版从第 1 章重写
 
-写正文、改大纲或改设定时，使用 `novel-writer` skill（`.claude/skills/novel-writer/SKILL.md`）。
+写正文、改大纲或改设定时，使用 `novel-writer` skill（`.claude/skills/novel-writer/SKILL.md`）。用户提过的通用写作要求汇总在 `writing-rules` skill（`.claude/skills/writing-rules/SKILL.md`），所有书都照它写。
 
 ## 另一本：青崖寻仙记
 

@@ -6,56 +6,58 @@
       7,
       8
     ],
-    "payoff": "第 25 章回春堂翻出诊簿，手印是昏迷时按的",
+    "payoff": "第 28 章回春堂翻出诊簿，手印是昏迷时按的",
     "payoffChapters": [
-      25
+      28
     ],
     "status": "resolved",
     "notes": "",
-    "resolvedIn": 25
+    "resolvedIn": 28
   },
   {
     "id": "f-02",
-    "text": "“就我一个”：师父问家里还有没有人惦记",
+    "text": "“就我一个”：师父问家里还有没有人惦记，说“也好”",
     "planted": [
       11
     ],
-    "payoff": "第 16 章《寄魂换躯》页边朱笔写着许安的生辰，许安想起泉边那句就我一个",
+    "payoff": "第 22 章《寄魂换躯》页边朱笔写着许安的生辰，许安想起泉边那句就我一个",
     "payoffChapters": [
-      16
+      22
     ],
     "status": "resolved",
     "notes": "",
-    "resolvedIn": 16
+    "resolvedIn": 22
   },
   {
     "id": "f-03",
-    "text": "“师父在门外替你护法”",
+    "text": "“师父在门外守着”",
     "planted": [
-      15
+      21
     ],
-    "payoff": "第 16 章他真坐在门外，死在门槛外",
+    "payoff": "第 22 章他真坐在门外，死在门槛外",
     "payoffChapters": [
-      16
+      22
     ],
     "status": "resolved",
     "notes": "",
-    "resolvedIn": 16
+    "resolvedIn": 22
   },
   {
     "id": "f-04",
-    "text": "书架上刚抽走的一本书、静室红光与甜香、新埋的阵石、帕子上的血",
+    "text": "书架上刚抽走的一本书、帕子上的血、合他灵根的三块新阵石、“你先喝一口”、静室红光与甜香",
     "planted": [
       12,
-      14
+      14,
+      20,
+      21
     ],
-    "payoff": "第 16 章师父手边的《寄魂换躯》，许安自己对上",
+    "payoff": "第 22 章师父手边两册《寄魂换躯》，许安自己对上",
     "payoffChapters": [
-      16
+      22
     ],
     "status": "resolved",
     "notes": "",
-    "resolvedIn": 16
+    "resolvedIn": 22
   },
   {
     "id": "f-05",
@@ -64,15 +66,16 @@
       4,
       10
     ],
-    "payoff": "第 18 章借据，第 39–40 章收债日",
+    "payoff": "第 12 章殿外的半句，第 24 章对账还有五十一天，第 41–42 章收债日",
     "payoffChapters": [
-      18,
-      39,
-      40
+      12,
+      24,
+      41,
+      42
     ],
     "status": "resolved",
     "notes": "",
-    "resolvedIn": 40
+    "resolvedIn": 42
   },
   {
     "id": "f-06",
@@ -81,13 +84,13 @@
       3,
       10
     ],
-    "payoff": "第 24 章“跟州府大酒楼门口迎客也差不多吧”，破碗揣进怀里",
+    "payoff": "第 27 章“跟州府大酒楼门口迎客也差不多吧”，破碗揣进怀里",
     "payoffChapters": [
-      24
+      27
     ],
     "status": "resolved",
     "notes": "",
-    "resolvedIn": 24
+    "resolvedIn": 27
   },
   {
     "id": "f-07",
@@ -95,14 +98,14 @@
     "planted": [
       7
     ],
-    "payoff": "第 33 章她上山；第 40 章",
+    "payoff": "第 35 章她上山，葫芦挂在丹炉边；第 43 章头一回叫师父",
     "payoffChapters": [
-      33,
-      40
+      35,
+      43
     ],
     "status": "resolved",
     "notes": "",
-    "resolvedIn": 40
+    "resolvedIn": 43
   },
   {
     "id": "f-08",
@@ -110,13 +113,13 @@
     "planted": [
       5
     ],
-    "payoff": "第 20 章营地那摞兽骨",
+    "payoff": "第 16 章营地那摞兽骨",
     "payoffChapters": [
-      20
+      16
     ],
     "status": "resolved",
     "notes": "",
-    "resolvedIn": 20
+    "resolvedIn": 16
   },
   {
     "id": "f-09",
@@ -125,38 +128,158 @@
       3,
       8
     ],
-    "payoff": "第 26 章那支曲子从头弹到了尾，琴声没有停",
+    "payoff": "第 29 章那支曲子从头弹到了尾，琴声没有停；第 42 章她在三清殿檐下弹这个音，告诉许安什么时候动",
     "payoffChapters": [
-      26
+      29,
+      42
     ],
     "status": "resolved",
     "notes": "",
-    "resolvedIn": 26
+    "resolvedIn": 42
   },
   {
     "id": "f-10",
     "text": "赵家要的是灵眼",
     "planted": [
-      18
+      24
     ],
-    "payoff": "第 37 章客栈里家丁的话；第 39 章供奉盯着灵眼",
+    "payoff": "第 39 章赵家长工“那叫灵眼”；第 41–42 章供奉一直盯着灵眼",
     "payoffChapters": [
-      37,
-      39
+      39,
+      42
     ],
     "status": "resolved",
     "notes": "",
-    "resolvedIn": 39
+    "resolvedIn": 42
   },
   {
     "id": "f-11",
     "text": "令牌“肆”",
     "planted": [
-      29
+      32
     ],
     "payoff": "",
     "payoffChapters": [],
     "status": "open",
     "notes": "本书不收，留给后面"
+  },
+  {
+    "id": "f-12",
+    "text": "藏经阁扫出的兽纹铜扣",
+    "planted": [
+      12
+    ],
+    "payoff": "",
+    "payoffChapters": [],
+    "status": "open",
+    "notes": "和林先生令牌正面的兽是同一只，本书不点破"
+  },
+  {
+    "id": "f-13",
+    "text": "素弦收到的州府来信：天音阁旧址叫开当铺的东家买下了",
+    "planted": [
+      40
+    ],
+    "payoff": "",
+    "payoffChapters": [],
+    "status": "open",
+    "notes": "本书不往下写"
+  },
+  {
+    "id": "f-14",
+    "text": "上品聚气丹“在州府碰上了”",
+    "planted": [
+      19
+    ],
+    "payoff": "第 33 章万宝楼账簿：去年冬天就买下了，“说先放着，等用得上的那天”",
+    "payoffChapters": [
+      33
+    ],
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 33
+  },
+  {
+    "id": "f-15",
+    "text": "照灵盘：“老道八岁那年也按过，一道也没亮”",
+    "planted": [
+      11
+    ],
+    "payoff": "第 43 章收债日后许安拿它给四个弟子照",
+    "payoffChapters": [
+      43
+    ],
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 43
+  },
+  {
+    "id": "f-16",
+    "text": "后山的钥匙交给许安，静室那把挂在师父腰上带走",
+    "planted": [
+      14
+    ],
+    "payoff": "第 22 章许安想起那一个月静室从没开过；第 23 章从师父腰上解下",
+    "payoffChapters": [
+      22,
+      23
+    ],
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 23
+  },
+  {
+    "id": "f-17",
+    "text": "“补泉边那座聚灵阵”的三十块灵石",
+    "planted": [
+      12
+    ],
+    "payoff": "第 22 章三块新阵石底下的陶罐里，三十块灵石烧成了灰白的渣",
+    "payoffChapters": [
+      22
+    ],
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 22
+  },
+  {
+    "id": "f-18",
+    "text": "观规末条“最后一条，没有人守过”",
+    "planted": [
+      12
+    ],
+    "payoff": "第 18 章他在回春堂过夜，头一回没守成",
+    "payoffChapters": [
+      18
+    ],
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 18
+  },
+  {
+    "id": "f-19",
+    "text": "庙会那天香烟绕土地像三圈，往青崖观飘",
+    "planted": [
+      40
+    ],
+    "payoff": "第 42 章山门前老槐无风起风，阴风卷到泉边",
+    "payoffChapters": [
+      42
+    ],
+    "status": "resolved",
+    "notes": "",
+    "resolvedIn": 42
+  },
+  {
+    "id": "f-20",
+    "text": "深林静得出奇，山里的妖兽一窝窝往观这边跑",
+    "planted": [
+      38,
+      43
+    ],
+    "payoff": "",
+    "payoffChapters": [],
+    "status": "open",
+    "notes": "本书不点破"
   }
 ]

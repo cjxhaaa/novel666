@@ -47,7 +47,7 @@
     "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
-    "description": "十字路口的告示牌。",
+    "description": "十字路口的告示牌，常贴三张悬赏，落款里正和万宝楼，交了差第二天换新的。",
     "x": 500,
     "y": 480,
     "notes": ""
@@ -60,7 +60,7 @@
     "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
-    "description": "老道坐在门槛上；庙前空地讲道；哑庙祝；第二卷土地庙会。",
+    "description": "老道坐在门槛上；庙前空地讲道；哑庙祝；土地公是三百年前敲锣领全镇上高坡的打更老汉；青崖的石阶从庙边起；第二卷土地庙会（观主第四十六天）。",
     "x": 300,
     "y": 400,
     "notes": ""
@@ -73,7 +73,7 @@
     "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
-    "description": "孙家药铺，柜台、三只药炉、库房。",
+    "description": "孙家药铺，柜台、三只药炉、库房（顶上一扇天窗，红狐狸从这儿进出）、煎药的小屋。",
     "x": 610,
     "y": 400,
     "notes": ""
@@ -119,6 +119,19 @@
     "description": "万宝楼的摊子、糖人摊；贾半仙树荫下说书。",
     "x": 680,
     "y": 650,
+    "notes": ""
+  },
+  {
+    "id": "wanbaolou",
+    "name": "万宝楼",
+    "aliases": [],
+    "eraId": null,
+    "kind": "site",
+    "parentId": "luoxia",
+    "region": "落霞镇一带",
+    "description": "集市往北一条街上的两层小楼，钱满仓坐柜台；卖灵石、符、丹，放灵石的债，养着供奉。",
+    "x": 700,
+    "y": 560,
     "notes": ""
   },
   {
@@ -215,7 +228,7 @@
     "kind": "site",
     "parentId": "luoxia",
     "region": "落霞镇一带",
-    "description": "胡里正、冯捕头。",
+    "description": "十字路口往东一座青砖院子，门口一对石狮子；胡里正、冯捕头。",
     "x": 390,
     "y": 470,
     "notes": ""
@@ -230,10 +243,25 @@
     "kind": "sect",
     "parentId": "luoxia-area",
     "region": "落霞镇一带",
-    "description": "后山崖上的破观：三清殿、东厢弟子房、藏经阁、丹房、灵田、灵眼、静室。从镇上爬石阶一个时辰。",
+    "description": "后山崖上的破观：山门一对石狮子、门外一棵老槐；三清殿、东厢弟子房六间、藏经阁、西厢丹房、后门外灵田、灵眼、静室。从镇上爬石阶三百零八级，一个时辰。",
     "x": 400,
     "y": 330,
     "r": 80,
+    "notes": ""
+  },
+  {
+    "id": "shanmen",
+    "name": "山门",
+    "aliases": [
+      "老槐"
+    ],
+    "eraId": null,
+    "kind": "site",
+    "parentId": "qingyaguan",
+    "region": "落霞镇一带",
+    "description": "石砌山门，匾斜挂；一对脸叫风雨磨平的石狮子，门外一棵两人合抱的老槐；狗蛋在这儿招呼香客；收债日老槐无风起风。",
+    "x": 300,
+    "y": 250,
     "notes": ""
   },
   {
@@ -246,9 +274,24 @@
     "kind": "site",
     "parentId": "qingyaguan",
     "region": "落霞镇一带",
-    "description": "后山脚下一汪泛青光的泉，四周埋着聚灵阵的阵石。",
+    "description": "后山脚下一汪泛青光的泉，四周一圈十二块刻纹的阵石（师祖布的聚灵阵）；师父埋的三块新阵石那一夜裂成灰白，底下陶罐里是烧成灰白渣的三十块灵石；许安的主场，收债日在这里站住。",
     "x": 600,
     "y": 520,
+    "notes": ""
+  },
+  {
+    "id": "lingtian",
+    "name": "灵田",
+    "aliases": [
+      "梯田"
+    ],
+    "eraId": null,
+    "kind": "site",
+    "parentId": "qingyaguan",
+    "region": "落霞镇一带",
+    "description": "后门外几级梯田，挨着灵眼，土黑透青光；第二级田坎下埋着“青崖观师徒七人”的石碑；灵草四天一茬。",
+    "x": 480,
+    "y": 640,
     "notes": ""
   },
   {
@@ -259,7 +302,7 @@
     "kind": "site",
     "parentId": "qingyaguan",
     "region": "落霞镇一带",
-    "description": "泉眼边上的小屋。",
+    "description": "泉眼边上的小石屋，打坐用；照灵盘的旧木匣收在里头；师父出门那个月锁着，钥匙挂在他腰上；夺舍那一夜地上画满朱砂纹；后来小芷的药炉搬进来熬药。",
     "x": 700,
     "y": 460,
     "notes": ""
@@ -272,10 +315,25 @@
     "kind": "region",
     "parentId": "luoxia-area",
     "region": "落霞镇一带",
-    "description": "青崖观后门外的山林。师父葬在一棵老松底下。",
+    "description": "青崖观后门外的山林，后门边一道矮门有锁。坡顶老松下是师祖和云鹤子的坟。",
     "x": 230,
     "y": 180,
     "r": 150,
+    "notes": ""
+  },
+  {
+    "id": "laosong",
+    "name": "坡顶老松",
+    "aliases": [
+      "老松底下"
+    ],
+    "eraId": null,
+    "kind": "site",
+    "parentId": "houshan",
+    "region": "落霞镇一带",
+    "description": "梯田上望得见的坡顶老松，树冠伸出雾外；底下师祖的坟，云鹤子葬在旁边，一圈石头，没有碑。",
+    "x": 520,
+    "y": 280,
     "notes": ""
   },
   {
@@ -286,7 +344,7 @@
     "kind": "site",
     "parentId": "houshan",
     "region": "落霞镇一带",
-    "description": "老松；岗后藤萝石缝那头是阿蛮的营地。",
+    "description": "岗顶一棵老松；岗后藤萝石缝那头是阿蛮的营地（第 36 章被屠二郎烧了）。",
     "x": 420,
     "y": 420,
     "notes": ""
@@ -314,7 +372,7 @@
     "kind": "site",
     "parentId": "houshan",
     "region": "落霞镇一带",
-    "description": "阴湿石隙，七叶一枝花，小貂。",
+    "description": "阴湿石隙，七叶一枝花，守花的小貂；再往里石缝更深处还有几处。",
     "x": 300,
     "y": 220,
     "notes": ""

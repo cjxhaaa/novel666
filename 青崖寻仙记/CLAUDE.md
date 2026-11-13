@@ -56,5 +56,5 @@ node studio/scripts/cli.mjs guard N --root 青崖寻仙记     # 检查第 N 章
 
 ### 和游戏的关系
 
-- 剧情照 `outline.md`，台词和细节去游戏源码（`C:\Users\40501\xiuxian_game`）里查（`src/data/events.ts`、`night.ts`、`act2*.ts`、`src/ui/screens/possess.ts`），能用的照用。
+- 剧情照 `outline.md`，台词和细节去游戏源码（`C:\Users\40501\fusheng-wendao`）里查（`src/data/events.ts`、`night.ts`、`act2*.ts`、`src/ui/screens/possess.ts`），能用的照用。
 - 游戏的界面说法（好感、判定、时段、神识上限多一格）不进正文，改成故事里的事。
